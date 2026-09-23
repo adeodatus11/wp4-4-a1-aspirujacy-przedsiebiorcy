@@ -4,6 +4,8 @@ Opracowanie merytoryczne materiałów źródłowych programu **WP4.4.A1** (*Cons
 
 Projekt Erasmus+ **WIN4SMEs CoVE**, COVE Polska.
 
+[Otwórz stronę programu](https://adeodatus11.github.io/wp4-4-a1-aspirujacy-przedsiebiorcy/) · [Wyniki przeglądu](https://adeodatus11.github.io/wp4-4-a1-aspirujacy-przedsiebiorcy/analiza.html)
+
 ## Co tu jest
 
 Statyczna strona — 12 stron HTML, bez zależności zewnętrznych w przeglądarce.
