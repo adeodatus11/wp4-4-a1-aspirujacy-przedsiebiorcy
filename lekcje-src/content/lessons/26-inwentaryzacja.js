@@ -1,0 +1,356 @@
+import { choice, methods, note, number, text } from '../schema.js';
+
+export default {
+  id: '26',
+  order: 26,
+  part: 'B',
+  title: 'Inwentaryzacja',
+  subtitle: 'W systemie jest 60 butelek oleju, na półce 55. Jak policzyć towar, wycenić różnice i dowiedzieć się, skąd się wzięły.',
+  duration: 90,
+  sessions: [45, 45],
+  han: ['HAN.02.5'],
+  tags: ['spis z natury', 'arkusz spisowy', 'niedobór', 'nadwyżka', 'ubytki naturalne'],
+  realia: [],
+  audience: {
+    adults:
+      'Dla właścicieli sklepów inwentaryzacja to moment prawdy o stratach. Zwróć uwagę na wyjaśnianie różnic: najczęściej nie są to kradzieże, tylko błędy w dokumentach. Zasady inwentaryzacji w konkretnej firmie warto ustalić z księgową.',
+  },
+  format: {
+    name: 'Spis z natury na arkuszu i wyjaśnianie różnic',
+    student:
+      'Pracujesz w sklepie spożywczo-przemysłowym w Gnieźnie podczas inwentaryzacji. Poznasz przebieg spisu, wypełnisz arkusz spisowy, policzysz niedobory i nadwyżki, a potem wyjaśnisz, skąd się wzięły.',
+    teacher:
+      'Pierwsza lekcja: przebieg inwentaryzacji i arkusz spisowy z wyceną różnic. Druga: ubytki naturalne i wyjaśnianie przyczyn. Pilnuj języka: różnica to nie od razu kradzież — najpierw sprawdza się dokumenty.',
+    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach („liczący” i „zapisujący”, po przerwie zamiana).',
+    methods: [methods.przypadek, methods.jawne, methods.przyklady],
+  },
+  objectives: [
+    'Opisuję przebieg inwentaryzacji i role osób, które w niej uczestniczą.',
+    'Wypełniam arkusz spisowy i liczę różnice ilościowe i wartościowe.',
+    'Odróżniam ubytek naturalny w normie od niedoboru ponad normę.',
+    'Wskazuję możliwe przyczyny różnic i sposób ich sprawdzenia.',
+  ],
+  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Długopis (nie ołówek!) do ćwiczenia na papierze — nie jest konieczny'],
+  teacherGuide: {
+    preparation:
+      'Możesz przygotować na ławce kilka przedmiotów (np. 12 długopisów, 7 zeszytów) i listę „z systemu” z innymi liczbami — pary policzą je jak w spisie z natury.',
+    summary:
+      'Inwentaryzacja porównuje stan rzeczywisty (spis z natury) ze stanem w ewidencji. Liczy komisja spisowa, przy obecności osoby materialnie odpowiedzialnej. Arkusze wypełnia się trwale, bez pustych wierszy, a poprawki parafuje. Różnice wycenia się w cenach ewidencyjnych. Niedobór w granicach normy ubytków naturalnych to koszt, ponad normę — wymaga wyjaśnienia.',
+  },
+  sections: [
+    {
+      id: 'start',
+      label: 'Start',
+      title: 'Po co liczyć towar?',
+      grouping: 'solo',
+      intro: 'Kierowniczka sklepu ogłasza inwentaryzację w niedzielę wieczorem, po zamknięciu.',
+      ...note(
+        5,
+        'Każdy odpowiada sam. Zapytaj, dlaczego inwentaryzację robi się zwykle po zamknięciu sklepu.',
+        'Dlaczego spis robi się, gdy sklep jest zamknięty?',
+        'Bo w trakcie sprzedaży stan się zmienia i nie da się porównać liczb.',
+        'Myślenie, że inwentaryzacja służy tylko do wykrycia kradzieży.',
+        'Wymień trzy przyczyny, dla których stan w systemie może różnić się od półki.',
+      ),
+      activities: [
+        choice(
+          'q-cel',
+          'Jaki jest główny cel inwentaryzacji?',
+          [
+            'Porównanie stanu rzeczywistego z ewidencją',
+            'Sprawdzenie, który pracownik kradnie towar',
+            'Ustalenie cen sprzedaży na następny rok',
+            'Posprzątanie magazynu przed świętami',
+          ],
+          0,
+          'Spis z natury pokazuje, ile towaru naprawdę jest. Porównanie z ewidencją ujawnia różnice, które trzeba wyjaśnić.',
+          [
+            null,
+            'Różnice mogą mieć wiele przyczyn. Inwentaryzacja ich nie przesądza.',
+            'Ceny ustala się osobno. Inwentaryzacja dotyczy ilości i wartości zapasu.',
+            'Porządek przy okazji pomaga, ale nie jest celem.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'przebieg',
+      label: 'Przebieg',
+      title: 'Krok po kroku',
+      grouping: 'pair',
+      intro: 'Inwentaryzacja ma ustalony przebieg. Każdy krok zostawia ślad w dokumentach.',
+      reading: {
+        title: 'Przebieg inwentaryzacji',
+        paragraphs: [
+          'Kierownik wydaje zarządzenie: termin, zakres, skład komisji spisowej. Komisja to co najmniej dwie osoby, które nie odpowiadają materialnie za liczony towar. Osoba materialnie odpowiedzialna jest przy spisie i podpisuje arkusze.',
+          'Spis z natury polega na policzeniu, zważeniu albo zmierzeniu towaru. Arkusze spisowe są numerowane, wypełniane długopisem, bez pustych wierszy; poprawki się parafuje. Potem towar się wycenia, porównuje z ewidencją, wyjaśnia różnice i rozlicza.',
+        ],
+      },
+      ...note(
+        12,
+        'Pary układają kolejność. Zapytaj, dlaczego osoba materialnie odpowiedzialna nie może być w komisji.',
+        'Dlaczego kasjerka odpowiedzialna za towar nie liczy go sama?',
+        'Bo liczyłaby towar, za którego braki odpowiada. Komisja z innych osób daje wiarygodny wynik.',
+        'Liczenie towaru przez jedną osobę bez drugiej do kontroli.',
+        'Ułóż listę rzeczy do przygotowania dzień przed spisem (arkusze, długopisy, waga, porządek w towarze).',
+      ),
+      activities: [
+        {
+          type: 'sequence',
+          id: 'q-kroki',
+          question: 'Ułóż kroki inwentaryzacji w kolejności.',
+          items: [
+            'Zarządzenie kierownika: termin, zakres, komisja',
+            'Przygotowanie towaru i arkuszy spisowych',
+            'Spis z natury: liczenie, ważenie, mierzenie',
+            'Wycena towaru i porównanie z ewidencją',
+            'Wyjaśnienie przyczyn różnic',
+            'Rozliczenie różnic w księgach',
+          ],
+          explanation: 'Najpierw decyzja i przygotowanie, potem liczenie, porównanie, wyjaśnienie i rozliczenie.',
+        },
+        choice(
+          'q-komisja',
+          'Kto może być członkiem komisji spisowej w dziale spożywczym?',
+          [
+            'Pracownik działu chemii, który nie odpowiada za żywność',
+            'Kasjerka odpowiedzialna materialnie za dział spożywczy',
+            'Dowolny klient, który zgodzi się pomóc w niedzielę',
+            'Kierowca dostawcy, który zna towary z dostaw',
+          ],
+          0,
+          'Członek komisji nie odpowiada materialnie za liczony towar.',
+          [
+            null,
+            'Osoba materialnie odpowiedzialna jest obecna przy spisie, ale nie jest członkiem komisji.',
+            'Komisję tworzą pracownicy wskazani w zarządzeniu, nie przypadkowe osoby.',
+            'Kierowca to osoba spoza firmy. Nie może liczyć towaru w imieniu sklepu.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'zasady',
+      label: 'Zasady spisu',
+      title: 'Arkusz do sprawdzenia',
+      grouping: 'pair',
+      intro: 'Kierowniczka przegląda arkusze z poprzedniej godziny. Sprawdź, co jest nie tak.',
+      ...note(
+        13,
+        'Pary zaznaczają błędy. Wyjaśnij, dlaczego zakreśla się puste wiersze.',
+        'Po co zakreślać puste wiersze na końcu arkusza?',
+        'Żeby nikt nie mógł później dopisać towaru, którego nie policzono.',
+        'Wpisywanie ołówkiem i poprawianie przez zamazanie.',
+        'Policzcie przedmioty na ławce i wpiszcie je na kartce jak na arkuszu spisowym.',
+      ),
+      activities: [
+        {
+          type: 'spotErrors',
+          id: 'q-arkusz',
+          title: 'Notatki kierowniczki z kontroli arkuszy',
+          context: 'Zaznacz to, co narusza zasady spisu.',
+          lines: [
+            { text: 'Arkusze mają numery od 1 do 12.' },
+            { text: 'Arkusz nr 4 wypełniono ołówkiem.', error: 'Arkusz wypełnia się trwale, długopisem — ołówek można zetrzeć.' },
+            { text: 'Na arkuszu nr 5 liczbę „18” zamazano korektorem i wpisano „16”.', error: 'Poprawka: przekreślenie, nowa liczba i parafka osoby poprawiającej. Bez korektora.' },
+            { text: 'Kartony z wodą przeliczono, otwierając jeden do sprawdzenia zawartości.' },
+            { text: 'Na końcu arkusza nr 7 zostało 10 pustych, niezakreślonych wierszy.', error: 'Puste wiersze trzeba zakreślić, żeby nie można było nic dopisać.' },
+            { text: 'Osoba materialnie odpowiedzialna była obecna i podpisała arkusze.' },
+          ],
+          explanation: 'Trzy błędy: ołówek, korektor, niezakreślone wiersze. Każdy z nich podważa wiarygodność spisu.',
+        },
+      ],
+    },
+    {
+      id: 'arkusz',
+      label: 'Arkusz',
+      title: 'Różnice inwentaryzacyjne',
+      grouping: 'pair',
+      intro: 'Komisja policzyła cztery towary. Uzupełnij różnice ze znakiem (− niedobór, + nadwyżka) i ich wartość w cenach ewidencyjnych.',
+      breakAfter: true,
+      ...note(
+        15,
+        'Pary liczą. Po przerwie zamiana ról i wyjaśnianie różnic. Arkusze są zapisane na urządzeniu.',
+        'Czy nadwyżka mąki „wyrównuje” niedobór oleju?',
+        'Nie automatycznie. To różne towary — każdą różnicę wyjaśnia się osobno. Kompensata jest możliwa tylko w szczególnych przypadkach i na określonych zasadach.',
+        'Sumowanie niedoborów i nadwyżek w jedną liczbę.',
+        'Policz, ile wyniosłaby różnica oleju, gdyby cena ewidencyjna wynosiła 9,49 zł (−47,45 zł).',
+      ),
+      activities: [
+        {
+          type: 'docForm',
+          id: 'doc-arkusz',
+          title: 'Zestawienie różnic — arkusz nr 3',
+          context: 'Wartość różnicy ze znakiem, w złotych.',
+          points: 6,
+          doc: {
+            title: 'Porównanie spisu z natury z ewidencją',
+            table: {
+              head: ['Towar', 'Ewidencja', 'Spis', 'Cena', 'Różnica (szt.)', 'Wartość różnicy'],
+              rows: [
+                ['Cukier 1 kg', '120', '118', '3,49', { f: 'cr' }, { f: 'cw' }],
+                ['Mąka pszenna 1 kg', '80', '81', '2,99', { f: 'mr' }, { f: 'mw' }],
+                ['Olej rzepakowy 1 l', '60', '55', '8,99', { f: 'or' }, { f: 'ow' }],
+                ['Ryż 1 kg', '45', '45', '5,49', '0', '0,00'],
+              ],
+            },
+            after: [
+              ['Razem niedobory', { f: 'nd' }],
+              ['Razem nadwyżki', { f: 'nw' }],
+            ],
+          },
+          fields: {
+            cr: { label: 'Cukier — różnica', answer: -2, hint: 'Spis − ewidencja.' },
+            cw: { label: 'Cukier — wartość różnicy', answer: -6.98, hint: 'Różnica × cena, ze znakiem.' },
+            mr: { label: 'Mąka — różnica', answer: 1, hint: 'Spis − ewidencja.' },
+            mw: { label: 'Mąka — wartość różnicy', answer: 2.99, hint: 'Różnica × cena.' },
+            or: { label: 'Olej — różnica', answer: -5, hint: 'Spis − ewidencja.' },
+            ow: { label: 'Olej — wartość różnicy', answer: -44.95, hint: 'Różnica × cena, ze znakiem.' },
+            nd: { label: 'Razem niedobory', answer: 51.93, hint: 'Suma wartości niedoborów (bez znaku).' },
+            nw: { label: 'Razem nadwyżki', answer: 2.99, hint: 'Suma wartości nadwyżek.' },
+          },
+          explanation: 'Niedobory: cukier 6,98 zł + olej 44,95 zł = 51,93 zł. Nadwyżka: mąka 2,99 zł. Każdą różnicę trzeba wyjaśnić osobno.',
+        },
+      ],
+    },
+    {
+      id: 'ubytki',
+      label: 'Ubytki',
+      title: 'Ubytki naturalne',
+      grouping: 'pair',
+      intro: 'Po przerwie — zamiana ról. Niektóre towary tracą masę same z siebie: warzywa wysychają, mięso traci wodę. Sklep ma ustaloną normę ubytków naturalnych.',
+      reading: {
+        title: 'Norma ubytków',
+        paragraphs: [
+          'Firma ustala normy ubytków naturalnych dla towarów, które tracą masę lub psują się w zwykłych warunkach — zwykle jako procent sprzedaży albo obrotu. Niedobór w granicach normy to normalny koszt. Niedobór ponad normę trzeba wyjaśnić; jeśli powstał z winy pracownika, może on odpowiadać materialnie.',
+        ],
+        example: {
+          question: 'Marchew: sprzedaż w październiku 800 kg, norma ubytku 2% sprzedaży, niedobór w spisie 20 kg.',
+          steps: ['Ubytek dopuszczalny: 800 × 0,02 = 16 kg.', 'Niedobór ponad normę: 20 − 16 = 4 kg.', '16 kg to koszt sklepu, 4 kg trzeba wyjaśnić.'],
+          answer: '4 kg ponad normę.',
+        },
+      },
+      ...note(
+        15,
+        'Przykład razem, potem pary liczą ziemniaki. Zapytaj, dlaczego normy nie stosuje się do oleju w butelkach.',
+        'Dlaczego olej w butelkach nie ma normy ubytku naturalnego?',
+        'Bo zamknięta butelka nie wysycha ani nie traci masy. Brak butelki to nie ubytek naturalny.',
+        'Liczenie normy od stanu magazynu zamiast od sprzedaży (zgodnie z zasadą firmy).',
+        'Policz normę dla jabłek: sprzedaż 1200 kg, norma 1,5% (18 kg).',
+      ),
+      activities: [
+        number('q-ponad-norme', 'Ziemniaki: sprzedaż w październiku 1500 kg, norma ubytku 2% sprzedaży, niedobór w spisie 42 kg. Ile kilogramów to niedobór ponad normę?', 12, 'Norma: 1500 × 0,02 = 30 kg. Ponad normę: 42 − 30 = 12 kg.', {
+          unit: 'kg',
+          mistakes: [
+            { value: 30, text: '30 kg to ubytek w normie. Pytanie dotyczy nadwyżki ponad normę.' },
+            { value: 42, text: 'Odejmij od niedoboru ubytek dopuszczalny (2% sprzedaży).' },
+          ],
+        }),
+        choice(
+          'q-norma-olej',
+          'Czy niedobór 5 butelek oleju można rozliczyć jako ubytek naturalny?',
+          [
+            'Nie, zamknięte butelki nie tracą masy',
+            'Tak, każdy towar ma normę ubytku 2%',
+            'Tak, jeśli niedobór jest mniejszy niż 10 sztuk',
+            'Tak, bo olej jest artykułem spożywczym',
+          ],
+          0,
+          'Ubytki naturalne dotyczą towarów, które tracą masę lub psują się z natury. Brak butelek wymaga wyjaśnienia.',
+          [
+            null,
+            'Normy ustala się dla konkretnych towarów, które naturalnie tracą masę.',
+            'Liczba sztuk nie decyduje — decyduje rodzaj towaru.',
+            'Bycie żywnością nie wystarczy. Olej w zamkniętej butelce nie wysycha.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'przyczyny',
+      label: 'Przyczyny',
+      title: 'Skąd różnice?',
+      grouping: 'pair',
+      intro: 'Różnica to sygnał, a nie wyrok. Najpierw sprawdza się dokumenty.',
+      ...note(
+        15,
+        'Pary dopasowują przyczyny. Przy oleju zapytaj, jakie dokumenty sprawdzić najpierw.',
+        'Od czego zaczniesz wyjaśnianie niedoboru oleju?',
+        'Od dokumentów z ostatnich dni: WZ i zwroty do dostawcy, przesunięcia MM, korekty, uszkodzone butelki spisane z półki.',
+        'Od razu szukanie winnego wśród pracowników.',
+        'Ułóż listę dokumentów do sprawdzenia przy niedoborze.',
+      ),
+      activities: [
+        {
+          type: 'matching',
+          id: 'q-przyczyny',
+          question: 'Jaki to rodzaj przyczyny różnicy?',
+          options: ['Błąd w dokumentach', 'Pomyłka przy spisie', 'Ubytek naturalny', 'Kradzież'],
+          rows: [
+            { label: 'Dostawy 10 butelek oleju nie wprowadzono do systemu (brak PZ)', correct: 0, explanation: 'Wtedy w spisie wyjdzie nadwyżka, bo w systemie jest mniej, niż na półce.' },
+            { label: 'Jeden karton cukru policzono dwa razy', correct: 1 },
+            { label: 'Ziemniaki wyschły w magazynie przez miesiąc', correct: 2 },
+            { label: 'Nagranie z monitoringu: klient chowa olej do torby', correct: 3 },
+            { label: 'Zwrot 5 butelek do dostawcy bez wystawionego dokumentu', correct: 0 },
+          ],
+          explanation: 'Większość różnic to błędy w dokumentach i przy spisie. Kradzież stwierdza się na podstawie dowodów.',
+        },
+        choice(
+          'q-olej',
+          'Brakuje 5 butelek oleju. Co robisz najpierw?',
+          [
+            'Sprawdzam dokumenty: zwroty, przesunięcia, spisane uszkodzenia',
+            'Zgłaszam kradzież na policję z listą pracowników zmiany',
+            'Potrącam kasjerce 44,95 zł z wypłaty za brak oleju',
+            'Dopisuję 5 butelek do spisu, żeby się zgadzało z systemem',
+          ],
+          0,
+          'Najpierw dokumenty: często różnica wynika z niewprowadzonego zwrotu albo uszkodzenia.',
+          [
+            null,
+            'Nie masz dowodów. Pochopne oskarżenie jest krzywdzące i może być bezprawne.',
+            'Odpowiedzialność materialną ustala się według przepisów, a nie od razu z wypłaty.',
+            'To fałszowanie spisu.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'sprawdzenie',
+      label: 'Sprawdzenie',
+      title: 'Wyjaśnienie różnicy',
+      grouping: 'solo',
+      intro: 'Sprawdzenie na nowych danych i notatka do kierowniczki.',
+      ...note(
+        15,
+        'Samodzielnie. Przeczytaj 2–3 notatki: czy mówią o faktach, czy o domysłach?',
+        'Co powinno być w notatce wyjaśniającej różnicę?',
+        'Towar, wielkość różnicy, co sprawdzono, co znaleziono, wniosek i ewentualne działanie na przyszłość.',
+        'Notatka bez sprawdzenia dokumentów, oparta na podejrzeniach.',
+        'Napisz zalecenie, które zmniejszy podobne różnice w przyszłości.',
+      ),
+      activities: [
+        number('q-kawa', 'Kawa mielona 500 g: ewidencja 40 szt., spis 37 szt., cena ewidencyjna 21,90 zł. Jaka jest wartość różnicy (ze znakiem)?', -65.7, '(37 − 40) × 21,90 = −3 × 21,90 = −65,70 zł (niedobór).', {
+          unit: 'zł',
+          mistakes: [{ value: 65.7, text: 'Wartość jest dobra, ale to niedobór — wpisz ze znakiem minus.' }],
+        }),
+        text(
+          'q-notatka',
+          'Okazało się, że 5 butelek oleju oddano dostawcy jako uszkodzone, ale nikt nie wystawił dokumentu. Napisz notatkę dla kierowniczki.',
+          'Niedobór oleju rzepakowego 1 l: 5 szt. (44,95 zł). Sprawdzono dokumenty z ostatnich 7 dni. Ustalono, że 18.10 pięć butelek z pękniętymi nakrętkami oddano kierowcy dostawcy jako uszkodzone, bez dokumentu zwrotu. Wniosek: różnica wynika z braku dokumentu, nie z kradzieży. Proponuję wystawić dokument zwrotu i wprowadzić zasadę: każdy zwrot do dostawcy tylko z dokumentem podpisanym przez kierowcę.',
+          { minLength: 80, rows: 6, criteria: ['Jest towar i wielkość różnicy.', 'Jest opis, co sprawdzono.', 'Jest wniosek oparty na faktach.', 'Jest propozycja na przyszłość.'] },
+        ),
+        {
+          type: 'resultCard',
+          id: 'karta',
+          badges: [
+            { min: 0, name: 'Do powtórki', text: 'Wróć do przebiegu inwentaryzacji i arkusza.' },
+            { min: 0.6, name: 'Liczysz różnice', text: 'Powtórz ubytki naturalne i wyjaśnianie przyczyn.' },
+            { min: 0.85, name: 'Komisja spisowa', text: 'Przeprowadzisz spis, wycenisz różnice i wyjaśnisz je na faktach.' },
+          ],
+        },
+      ],
+    },
+  ],
+  exitTicket: 'Spis z natury robi komisja, przy osobie materialnie odpowiedzialnej. Arkusz: długopis, bez pustych wierszy, poprawki z parafką. Różnica = spis − ewidencja, wyceniona w cenach ewidencyjnych. Ubytek w normie to koszt, ponad normę — do wyjaśnienia, zaczynając od dokumentów.',
+};
