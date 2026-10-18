@@ -5,3 +5,5 @@ __pycache__/
 .qa/
 *.zip
 node_modules/
+lekcje-src/test-results/
+lekcje-src/playwright-report/

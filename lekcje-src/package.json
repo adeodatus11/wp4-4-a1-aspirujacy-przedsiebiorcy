@@ -1,0 +1,23 @@
+{
+  "name": "pracownia-lekcje",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interaktywne lekcje handlu i przedsiębiorczości (HAN.01, HAN.02) dla szkoły i dorosłych",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "check": "npm test && npm run build && npm run test:e2e"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.0",
+    "@playwright/test": "1.56.1",
+    "vite": "7.1.12"
+  }
+}
