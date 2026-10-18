@@ -7,6 +7,7 @@ export default defineConfig({
   publicDir: '../public',
   base: './',
   esbuild: { jsx: 'automatic' },
-  build: { outDir: '../../lekcje', emptyOutDir: true },
+  // Treść 34 lekcji jest w jednym pakiecie (ok. 220 kB po kompresji), żeby działała też offline z dysku.
+  build: { outDir: '../../lekcje', emptyOutDir: true, chunkSizeWarningLimit: 800 },
   server: { fs: { allow: ['..'] } },
 });

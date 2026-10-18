@@ -1,0 +1,362 @@
+import { choice, methods, note, number, text } from '../schema.js';
+
+const idea = {
+  type: 'info',
+  tone: 'case',
+  title: 'Pomysł bazowy: lokalne produkty z Sądecczyzny',
+  paragraphs: [
+    'Ola i Kuba z Nowego Sącza chcą sprzedawać miód i konfitury od trzech znajomych producentów: w soboty na targu i przez prosty sklep internetowy. Na start mają 5000 zł oszczędności. Jeśli masz własny pomysł, możesz pracować na nim — liczby w zadaniach dotyczą jednak pomysłu bazowego.',
+  ],
+  list: [
+    'Miód wielokwiatowy 400 g: zakup od pszczelarza 22 zł za słoik.',
+    'Plan sprzedaży: około 6000 zł miesięcznie (targ i internet).',
+    'Na początku nie są płatnikami VAT — korzystają ze zwolnienia podmiotowego, więc nie doliczają VAT do cen.',
+    'Rozmawiali z 12 osobami na targu: 7 kupuje miód regularnie, 5 pytało o zakup przez internet z wysyłką.',
+  ],
+};
+
+export default {
+  id: '34',
+  order: 34,
+  part: 'B',
+  title: 'Projekt końcowy: mój sklep',
+  subtitle: 'Wszystko w jednym: klient, oferta, cena, formalności, zakupy, gotówka na trzy miesiące i krótka prezentacja.',
+  duration: 90,
+  sessions: [45, 45],
+  han: ['HAN.02.3', 'HAN.02.4'],
+  tags: ['projekt', 'plan sprzedaży', 'formalności', 'cash flow', 'prezentacja'],
+  realia: ['nierejestrowana', 'vatZwolnienie', 'kasaFiskalna'],
+  audience: {
+    adults:
+      'Dla dorosłych to pierwszy szkic własnego planu. Zachęć, żeby pracowali na swoim pomyśle, a liczby z pomysłu bazowego traktowali jako wzór. Formalności (działalność nierejestrowana, VAT, kasa fiskalna, ZUS) to orientacja — przed decyzją trzeba sprawdzić aktualne przepisy i porozmawiać z księgową lub doradcą w urzędzie pracy.',
+  },
+  format: {
+    name: 'Projekt w krokach z wykorzystaniem wcześniejszych lekcji',
+    student:
+      'Przygotowujesz plan małego sklepu: kto jest klientem, co i za ile sprzedajesz, jakie formalności trzeba załatwić, ile kupić na start, czy wystarczy gotówki i jak to przedstawić w dwie minuty.',
+    teacher:
+      'Projekt łączy lekcje 16–29: segment, 4P, cenę z marżą, plan zakupów i cash flow. Pierwsza lekcja: klient, oferta, cena, formalności. Druga: zakupy, gotówka i prezentacja. Uczniowie mogą pracować na pomyśle bazowym albo własnym; zadania z punktami są na pomyśle bazowym.',
+    grouping: 'Pary albo trójki (projekt zespołowy); dorośli mogą pracować indywidualnie na własnym pomyśle. Etap 7 to prezentacje przed grupą.',
+    methods: [methods.przypadek, methods.feedback, methods.metapoznanie],
+  },
+  objectives: [
+    'Opisuję klienta i ofertę sklepu.',
+    'Ustalam cenę z marżą i sprawdzam formalności na start.',
+    'Planuję zakupy i gotówkę na trzy miesiące.',
+    'Przedstawiam plan w dwie minuty, z liczbami i ograniczeniami.',
+  ],
+  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Kartka lub arkusz na plan', 'Stoper do prezentacji'],
+  teacherGuide: {
+    preparation: 'Przypomnij krótko lekcje 16 (segment), 17 (4P), 19 (marża), 28 (plan zakupów) i 29 (gotówka). Ustal kolejność prezentacji w etapie 7 — każda ma 2 minuty i 1 minutę na pytania.',
+    summary:
+      'Plan małego sklepu zaczyna się od klienta i dowodów popytu, a nie od logo. Cena wynika z kosztu i marży. Formalności zależą od skali: przy 6000 zł miesięcznie limit działalności nierejestrowanej jest przekroczony, więc trzeba zarejestrować firmę; zwolnienie z VAT działa do 240 000 zł rocznie; kasa fiskalna jest potrzebna po przekroczeniu 20 000 zł sprzedaży dla osób prywatnych. Handel żywnością wymaga też rejestracji w sanepidzie. Gotówka na start musi wystarczyć na pierwszy, najdroższy miesiąc.',
+  },
+  sections: [
+    {
+      id: 'start',
+      label: 'Start',
+      title: 'Od czego zacząć?',
+      grouping: 'pair',
+      intro: 'Przeczytaj pomysł bazowy. Kuba chce od razu zamówić logo i 500 słoików z naklejką sklepu.',
+      ...note(
+        5,
+        'Pary wybierają. Krótko: dorośli i uczniowie, którzy mają własny pomysł, zapisują go w jednym zdaniu na kartce.',
+        'Co jest pierwszym krokiem: logo czy klient?',
+        'Klient i dowód, że kupi. Logo i duże zamówienie — po sprawdzeniu popytu.',
+        'Wydawanie oszczędności na wygląd firmy przed pierwszą sprzedażą.',
+        'Zapisz w jednym zdaniu własny pomysł na sklep.',
+      ),
+      activities: [
+        idea,
+        choice(
+          'q-start',
+          'Co Ola i Kuba powinni zrobić najpierw?',
+          [
+            'Sprawdzić sprzedaż na małej partii, np. kilka sobót na targu',
+            'Zamówić logo i 500 słoików z naklejką, żeby wyglądać profesjonalnie',
+            'Wynająć lokal w centrum Nowego Sącza na rok z góry',
+            'Kupić reklamę w lokalnym radiu na cały pierwszy miesiąc',
+          ],
+          0,
+          'Mała partia sprawdzi, czy i ile klienci kupią, zanim firma wyda większość oszczędności.',
+          [
+            null,
+            '500 słoików to 11 000 zł — więcej niż oszczędności, bez dowodu, że się sprzedadzą.',
+            'Roczny lokal to duży stały koszt przed sprawdzeniem sprzedaży.',
+            'Reklama bez sprawdzonej oferty i ceny to ryzykowny wydatek.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'klient',
+      label: 'Klient',
+      title: 'Klient i oferta',
+      grouping: 'pair',
+      intro: 'Opisz klienta i sprawdź, czy elementy oferty do niego pasują (lekcje 16 i 17).',
+      ...note(
+        12,
+        'Pary piszą opis segmentu i wybierają spójną decyzję. Przejdź po klasie i dopytuj: skąd wiecie, że ten klient istnieje?',
+        'Skąd Ola i Kuba wiedzą, że ktoś kupi przez internet?',
+        'Z rozmów na targu: 5 z 12 osób pytało o wysyłkę. To sygnał, nie pewność — trzeba sprawdzić.',
+        'Opis klienta „wszyscy, którzy lubią miód”.',
+        'Opisz drugi segment (np. firmy kupujące prezenty świąteczne dla pracowników).',
+      ),
+      activities: [
+        idea,
+        text(
+          'q-segment',
+          'Opisz głównego klienta sklepu: kto, jaka potrzeba, jak kupuje (pomysł bazowy albo własny).',
+          'Mieszkańcy Nowego Sącza i okolic, którzy regularnie kupują miód i cenią produkty od znanego pszczelarza. Kupują w soboty na targu, a część chciałaby zamawiać przez internet z wysyłką do domu.',
+          { minLength: 40, criteria: ['Jest konkretna grupa.', 'Jest potrzeba.', 'Jest sposób zakupu.'] },
+        ),
+        choice(
+          'q-spojnosc',
+          'Która decyzja najlepiej pasuje do klientów z targu?',
+          [
+            'Etykieta z nazwą pasieki i miejscowością',
+            'Sprzedaż tylko przez internet, bez targu',
+            'Słoiki bez etykiet, żeby było taniej',
+            'Cena dwukrotnie wyższa niż u pszczelarza na targu obok',
+          ],
+          0,
+          'Klienci cenią produkty od znanego pszczelarza — etykieta z pasieką i miejscem to dowód pochodzenia.',
+          [
+            null,
+            'Klienci z targu kupują na targu — rezygnacja z niego traci główny kanał.',
+            'Bez etykiety klient nie wie, skąd jest miód. Etykieta jest też wymagana przy sprzedaży żywności.',
+            'Klient widzi obok konkurencję. Cena musi wynikać z kosztu, marży i rynku.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'cena',
+      label: 'Cena',
+      title: 'Cena słoika',
+      grouping: 'pair',
+      intro: 'Słoik miodu kosztuje Olę i Kubę 22 zł. Chcą mieć 30% marży (lekcja 19). Nie doliczają VAT, bo korzystają ze zwolnienia.',
+      ...note(
+        13,
+        'Pary liczą. Zapytaj, jak zaokrąglić cenę na targu (np. 32 zł) i co to zmienia w marży.',
+        'Dlaczego nie 22 × 1,3?',
+        'Bo 30% marży to procent ceny sprzedaży. 22 × 1,3 = 28,60 zł to narzut, a marża wyniosłaby około 23%.',
+        'Liczenie narzutu zamiast marży.',
+        'Policz marżę przy cenie zaokrąglonej do 32 zł ((32 − 22) ÷ 32 ≈ 31%).',
+      ),
+      activities: [
+        number('q-cena', 'Jaka powinna być cena słoika przy marży 30%? Zaokrąglij do groszy.', 31.43, '22 ÷ (1 − 0,30) = 22 ÷ 0,70 = 31,43 zł.', {
+          unit: 'zł',
+          mistakes: [{ value: 28.6, text: 'To narzut 30% od ceny zakupu. Marżę liczysz od ceny sprzedaży: 22 ÷ 0,7.' }],
+        }),
+        number('q-zarobek', 'Ile zostaje Oli i Kubie na jednym słoiku sprzedanym za 31,43 zł?', 9.43, '31,43 − 22,00 = 9,43 zł. Z tego pokrywają koszty targu, wysyłki, strony i inne.', { unit: 'zł' }),
+      ],
+    },
+    {
+      id: 'formalnosci',
+      label: 'Formalności',
+      title: 'Co trzeba załatwić',
+      grouping: 'pair',
+      intro: 'Kuba myśli, że „na początek można bez rejestracji”. Sprawdź to na liczbach z planu: około 6000 zł sprzedaży miesięcznie.',
+      breakAfter: true,
+      reading: {
+        title: 'Progi na 2026 rok (do sprawdzenia przed startem)',
+        paragraphs: [
+          'Działalność nierejestrowana: przychód do 225% płacy minimalnej w kwartale, w 2026 r. 10 813,50 zł. Zwolnienie podmiotowe z VAT: do 240 000 zł sprzedaży w roku. Kasa fiskalna: obowiązkowa po przekroczeniu 20 000 zł rocznej sprzedaży dla osób prywatnych (w niektórych branżach od początku). Handel żywnością wymaga też zgłoszenia do sanepidu.',
+        ],
+      },
+      ...note(
+        15,
+        'Pary liczą i odpowiadają. Podkreśl, że to orientacja — konkretną sytuację trzeba sprawdzić w urzędzie, na biznes.gov.pl albo z księgową. Po przerwie: zakupy i gotówka.',
+        'Co Ola i Kuba muszą załatwić przed pierwszą sobotą na targu?',
+        'Przy planowanej skali — rejestrację działalności (CEIDG), zgłoszenie do sanepidu jako handel żywnością, sprawdzenie zasad targowiska. Kasa — gdy przekroczą 20 000 zł sprzedaży dla osób prywatnych.',
+        'Mylenie limitu miesięcznego z kwartalnym. Przekonanie, że mała firma zawsze może działać bez rejestracji.',
+        'Sprawdź na biznes.gov.pl, jak zarejestrować działalność w CEIDG i ile to kosztuje (wpis jest bezpłatny).',
+      ),
+      activities: [
+        idea,
+        number('q-kwartal', 'Ile wyniesie sprzedaż w kwartale przy 6000 zł miesięcznie?', 18000, '3 × 6000 = 18 000 zł.', { unit: 'zł' }),
+        choice(
+          'q-rejestracja',
+          'Czy Ola i Kuba mogą działać bez rejestracji firmy?',
+          [
+            'Nie: 18 000 zł to więcej niż limit kwartalny',
+            'Tak, bo sprzedają tylko w soboty',
+            'Tak, bo miód kupują od innych, a nie produkują',
+            'Tak, przez pierwszy rok każda firma może działać bez rejestracji',
+          ],
+          0,
+          'Limit działalności nierejestrowanej to 10 813,50 zł w kwartale (2026 r.). Przy 18 000 zł trzeba zarejestrować działalność.',
+          [
+            null,
+            'Liczy się przychód, a nie liczba dni sprzedaży.',
+            'Odsprzedaż też jest działalnością. Liczy się przychód.',
+            'Nie ma takiej zasady. Jest limit przychodu.',
+          ],
+        ),
+        choice(
+          'q-vat',
+          'Czy na start muszą być płatnikami VAT?',
+          [
+            'Nie muszą: zwolnienie działa do 240 000 zł rocznie',
+            'Muszą, bo każda zarejestrowana firma płaci VAT',
+            'Muszą, bo sprzedają żywność',
+            'Nie muszą nigdy, bo sprzedają produkty od rolników',
+          ],
+          0,
+          'Przy około 72 000 zł rocznie mieszczą się w zwolnieniu podmiotowym. Mogą też zrezygnować ze zwolnienia, jeśli im się to opłaca.',
+          [
+            null,
+            'Rejestracja firmy nie oznacza automatycznie VAT.',
+            'Sprzedaż żywności nie wyklucza zwolnienia podmiotowego.',
+            'Po przekroczeniu 240 000 zł rocznie zwolnienie przestaje działać.',
+          ],
+        ),
+        {
+          type: 'multi',
+          id: 'q-lista',
+          question: 'Co trzeba załatwić lub sprawdzić przed startem? Zaznacz wszystko, co dotyczy pomysłu bazowego.',
+          options: [
+            'Wpis działalności do CEIDG',
+            'Zgłoszenie do sanepidu (handel żywnością)',
+            'Zasady i opłaty na targowisku',
+            'Kasa fiskalna przed pierwszą sprzedażą w każdej branży',
+            'Regulamin sklepu internetowego z prawem odstąpienia',
+          ],
+          correct: [0, 1, 2, 4],
+          explanation: 'Rejestracja, sanepid, targowisko, regulamin e-sklepu. Kasa fiskalna — po przekroczeniu limitu 20 000 zł (w ich branży nie od pierwszej sprzedaży).',
+          hint: 'Jedna odpowiedź dotyczy tylko niektórych branż.',
+        },
+      ],
+    },
+    {
+      id: 'zakupy',
+      label: 'Zakupy',
+      title: 'Ile kupić na pierwszy miesiąc',
+      grouping: 'pair',
+      intro: 'Po przerwie. Ola i Kuba szacują: 4 soboty po 25 słoików i 40 słoików przez internet. Na koniec miesiąca chcą mieć 30 słoików zapasu, na start nie mają żadnego (lekcja 28).',
+      ...note(
+        12,
+        'Pary liczą. Zapytaj, co zrobią, jeśli po dwóch sobotach sprzedaż będzie o połowę mniejsza.',
+        'Jak ograniczyć ryzyko, że miód się nie sprzeda?',
+        'Kupować częściej mniejsze partie od pszczelarza, sprawdzić sprzedaż po dwóch sobotach i dostosować zamówienie.',
+        'Kupowanie całego zapasu na kilka miesięcy z góry.',
+        'Policz zakup przy sprzedaży o 20% niższej (112 słoików prognozy + 30 = 142).',
+      ),
+      activities: [
+        number('q-zakup', 'Ile słoików kupić na pierwszy miesiąc?', 170, 'Prognoza: 4 × 25 + 40 = 140. Zakup: 140 + 30 − 0 = 170 słoików.', {
+          unit: 'słoików',
+          mistakes: [{ value: 140, text: 'To prognoza sprzedaży. Dodaj zapas na koniec miesiąca (30).' }],
+        }),
+        number('q-koszt', 'Ile kosztuje ten zakup?', 3740, '170 × 22 zł = 3740 zł.', { unit: 'zł' }),
+      ],
+    },
+    {
+      id: 'gotowka',
+      label: 'Gotówka',
+      title: 'Trzy miesiące gotówki',
+      grouping: 'pair',
+      intro: 'Pierwszy miesiąc jest najdroższy: miód, namiot i stół na targ, strona sklepu, opakowania do wysyłki. Uzupełnij salda (lekcja 29).',
+      ...note(
+        15,
+        'Pary uzupełniają tabelę. Zapytaj, co by się stało, gdyby w pierwszym miesiącu sprzedali o połowę mniej.',
+        'Czy 5000 zł wystarczy na start?',
+        'Przy tych założeniach tak — najniższe saldo to 1800 zł. Gdyby sprzedaż w pierwszym miesiącu była o połowę niższa (wpływy 2000 zł), saldo spadłoby do −200 zł.',
+        'Nieprzenoszenie salda na kolejny miesiąc.',
+        'Dopisz do wydatków składkę zdrowotną (około 433 zł miesięcznie w 2026 r.) i policz salda ponownie.',
+      ),
+      activities: [
+        {
+          type: 'docForm',
+          id: 'doc-cashflow',
+          title: 'Gotówka — pierwsze trzy miesiące',
+          points: 4,
+          doc: {
+            title: 'Plan gotówki: sklep z lokalnymi produktami',
+            table: {
+              head: ['Miesiąc', 'Saldo na początek', 'Wpływy', 'Wydatki', 'Saldo na koniec'],
+              rows: [
+                ['1', '5000', '4000', '7200', { f: 's1' }],
+                ['2', { f: 'p2' }, '6000', '5000', { f: 's2' }],
+                ['3', '2800', '6500', '5200', { f: 's3' }],
+              ],
+            },
+          },
+          fields: {
+            s1: { label: 'Miesiąc 1 — saldo na koniec', answer: 1800, hint: 'Saldo na początek + wpływy − wydatki.' },
+            p2: { label: 'Miesiąc 2 — saldo na początek', answer: 1800, hint: 'To saldo na koniec miesiąca 1.' },
+            s2: { label: 'Miesiąc 2 — saldo na koniec', answer: 2800, hint: 'Saldo na początek + wpływy − wydatki.' },
+            s3: { label: 'Miesiąc 3 — saldo na koniec', answer: 4100, hint: 'Saldo na początek + wpływy − wydatki.' },
+          },
+          explanation: 'Salda: 1800, 2800, 4100 zł. Najtrudniejszy jest pierwszy miesiąc — wtedy zostaje najmniej gotówki.',
+        },
+        choice(
+          'q-bufor',
+          'W którym momencie ryzyko braku gotówki jest największe?',
+          [
+            'Pod koniec pierwszego miesiąca',
+            'Pod koniec trzeciego miesiąca',
+            'W drugim miesiącu, bo wpływy są największe',
+            'Ryzyka nie ma, bo każdy miesiąc kończy się na plus',
+          ],
+          0,
+          'Najniższe saldo (1800 zł) jest po pierwszym miesiącu, gdy wydatki startowe są największe.',
+          [
+            null,
+            'Po trzecim miesiącu saldo jest najwyższe (4100 zł).',
+            'W drugim miesiącu saldo rośnie.',
+            'Salda są dodatnie przy założonej sprzedaży. Jeśli sprzedaż będzie niższa, mogą spaść poniżej zera.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'prezentacja',
+      label: 'Prezentacja',
+      title: 'Dwie minuty o Twoim sklepie',
+      grouping: 'class',
+      intro: 'Przygotuj prezentację planu dla partnera, banku albo grupy. Mów o klientach, liczbach i o tym, czego jeszcze nie wiesz.',
+      ...note(
+        18,
+        'Każda para lub osoba ma 2 minuty i 1 minutę na pytania. Grupa ocenia według listy kontrolnej. Zapisz na tablicy najczęstsze pytania słuchaczy.',
+        'Jakie pytanie słuchaczy było najtrudniejsze i dlaczego?',
+        'Zwykle o ryzyko: „co jeśli sprzedaż będzie mniejsza?” — dobra prezentacja ma na to odpowiedź.',
+        'Prezentacja bez liczb albo bez ograniczeń („wszystko na pewno się uda”).',
+        'Przygotuj wersję prezentacji na 30 sekund.',
+      ),
+      activities: [
+        text(
+          'q-pitch',
+          'Napisz prezentację w 5–6 zdaniach: klient, oferta, cena, formalności, gotówka, ryzyko.',
+          'Sprzedajemy miód i konfitury od trzech pszczelarzy z Sądecczyzny — na sobotnim targu i przez internet. Z 12 rozmów na targu 7 osób kupuje miód regularnie, a 5 pytało o wysyłkę. Słoik miodu kupujemy za 22 zł, sprzedajemy za około 31,50 zł (marża 30%). Rejestrujemy działalność w CEIDG i zgłaszamy handel żywnością w sanepidzie; na start korzystamy ze zwolnienia z VAT. Mamy 5000 zł oszczędności — po pierwszym miesiącu zostaje 1800 zł. Największe ryzyko to niższa sprzedaż na początku, dlatego kupujemy towar mniejszymi partiami i sprawdzamy wyniki po dwóch sobotach.',
+          { minLength: 150, rows: 8, criteria: ['Jest klient i dowód popytu.', 'Jest cena z marżą.', 'Są formalności.', 'Jest plan gotówki.', 'Jest nazwane ryzyko i sposób jego ograniczenia.'] },
+        ),
+        {
+          type: 'checklist',
+          id: 'q-lista-projektu',
+          title: 'Czy Twój plan ma wszystkie elementy?',
+          items: [
+            'Klient: kto, jaka potrzeba, jak kupuje',
+            'Dowód popytu (rozmowy, test, pierwsze zamówienia)',
+            'Oferta i cena z policzoną marżą',
+            'Lista formalności do sprawdzenia',
+            'Plan zakupów na pierwszy miesiąc',
+            'Plan gotówki na trzy miesiące',
+            'Największe ryzyko i co z nim zrobię',
+          ],
+          note: 'To Twoja lista kontrolna. Prowadzący ocenia projekt osobno, po prezentacji.',
+        },
+        {
+          type: 'resultCard',
+          id: 'karta',
+          badges: [
+            { min: 0, name: 'Plan w budowie', text: 'Wróć do ceny, formalności i gotówki.' },
+            { min: 0.6, name: 'Plan z liczbami', text: 'Dopracuj prezentację i ryzyka.' },
+            { min: 0.85, name: 'Gotowy plan sklepu', text: 'Masz klienta, cenę, formalności, zakupy i gotówkę — i wiesz, czego jeszcze nie wiesz.' },
+          ],
+        },
+      ],
+    },
+  ],
+  exitTicket: 'Najpierw klient i dowód popytu. Cena = koszt ÷ (1 − marża). Formalności zależą od skali: limit działalności nierejestrowanej, zwolnienie z VAT, kasa fiskalna, sanepid przy żywności. Gotówka na start musi wystarczyć na najdroższy, pierwszy miesiąc.',
+};
