@@ -45,5 +45,319 @@
     "duration": 10
    }
   ]
+ },
+ {
+  "n": 2,
+  "title": "Przedsiębiorczość na własnych zasadach",
+  "duration": 95,
+  "stages": [
+   {
+    "label": "Po co",
+    "title": "Po co Ci firma",
+    "duration": 10
+   },
+   {
+    "label": "Zasoby",
+    "title": "Co masz na start — w liczbach",
+    "duration": 12
+   },
+   {
+    "label": "Trzy role",
+    "title": "Specjalista, menedżer, przedsiębiorca",
+    "duration": 14
+   },
+   {
+    "label": "Nawyk",
+    "title": "Jeden nawyk i jedna rzecz mniej",
+    "duration": 10
+   },
+   {
+    "label": "Forma firmy",
+    "title": "Bez rejestracji, firma czy spółka?",
+    "duration": 14
+   },
+   {
+    "label": "ZUS i podatek",
+    "title": "Ile kosztuje prowadzenie firmy",
+    "duration": 20
+   },
+   {
+    "label": "Pytania",
+    "title": "Lista spraw do sprawdzenia przed startem",
+    "duration": 15
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "title": "Sprawdź pomysł u klientów",
+  "duration": 90,
+  "stages": [
+   {
+    "label": "Uprzejmość",
+    "title": "„Świetny pomysł!” to jeszcze nie popyt",
+    "duration": 8
+   },
+   {
+    "label": "Problem",
+    "title": "Problem, klient, rozwiązanie",
+    "duration": 10
+   },
+   {
+    "label": "Hipoteza",
+    "title": "Hipoteza, którą da się obalić",
+    "duration": 10
+   },
+   {
+    "label": "Rynek",
+    "title": "Od mieszkańców do klientów",
+    "duration": 12
+   },
+   {
+    "label": "Pytania",
+    "title": "Pytaj o to, co się wydarzyło",
+    "duration": 14
+   },
+   {
+    "label": "Rozmowa",
+    "title": "Gdy rozmówca chwali",
+    "duration": 10
+   },
+   {
+    "label": "Test",
+    "title": "Najmniejszy test, który coś rozstrzygnie",
+    "duration": 10
+   },
+   {
+    "label": "Próg",
+    "title": "Próg decyzji — przed testem",
+    "duration": 8
+   },
+   {
+    "label": "Decyzja",
+    "title": "Fakty, wnioski, decyzja",
+    "duration": 8
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "title": "Zbuduj model, który się spina",
+  "duration": 100,
+  "stages": [
+   {
+    "label": "Lean Canvas",
+    "title": "Dziewięć pól na jednej kartce",
+    "duration": 12
+   },
+   {
+    "label": "Wartość",
+    "title": "Klient, alternatywa, najmniejsze rozwiązanie",
+    "duration": 12
+   },
+   {
+    "label": "Twoja godzina",
+    "title": "Ile kosztuje Twoja godzina",
+    "duration": 16
+   },
+   {
+    "label": "Próg",
+    "title": "Ile trzeba sprzedać, żeby zarabiać",
+    "duration": 10
+   },
+   {
+    "label": "Gotówka",
+    "title": "Zysk na papierze, pusto na koncie",
+    "duration": 16
+   },
+   {
+    "label": "Gorszy wariant",
+    "title": "Co, jeśli sprzedaż będzie niższa?",
+    "duration": 8
+   },
+   {
+    "label": "Proces",
+    "title": "Jeden proces, który ktoś inny wykona",
+    "duration": 14
+   },
+   {
+    "label": "Miernik",
+    "title": "Jedna liczba na tydzień i uczciwa przewaga",
+    "duration": 12
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "title": "Narzędzia, które wykonują pracę",
+  "duration": 85,
+  "stages": [
+   {
+    "label": "Strona oferty",
+    "title": "Strona, która odpowiada na pytania klienta",
+    "duration": 15
+   },
+   {
+    "label": "Zanim ruszy",
+    "title": "Co musi być na stronie, zanim przyjmiesz zamówienie",
+    "duration": 8
+   },
+   {
+    "label": "Zadanie dla AI",
+    "title": "Jedno zadanie i pomiar bez AI",
+    "duration": 10
+   },
+   {
+    "label": "Polecenie",
+    "title": "Polecenie, które ogranicza zgadywanie",
+    "duration": 15
+   },
+   {
+    "label": "Dane",
+    "title": "Przykłady bez danych klientów",
+    "duration": 10
+   },
+   {
+    "label": "Sprawdzanie",
+    "title": "Kryteria, błędy i moment, w którym przejmuje człowiek",
+    "duration": 14
+   },
+   {
+    "label": "Bilans",
+    "title": "Czy to się opłaca — razem ze sprawdzaniem",
+    "duration": 13
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "title": "Dotrzyj do właściwych ludzi",
+  "duration": 93,
+  "stages": [
+   {
+    "label": "Segmenty",
+    "title": "Kto ma problem, który rozwiązujesz",
+    "duration": 12
+   },
+   {
+    "label": "Wybór grupy",
+    "title": "Który segment wybrać na początek",
+    "duration": 14
+   },
+   {
+    "label": "Pozycjonowanie",
+    "title": "Dlaczego mają wybrać Ciebie — w jednym zdaniu",
+    "duration": 12
+   },
+   {
+    "label": "Obietnica",
+    "title": "Obietnica, za którą stoi dowód",
+    "duration": 12
+   },
+   {
+    "label": "Kanał",
+    "title": "Kanał, który dociera do tej jednej osoby",
+    "duration": 14
+   },
+   {
+    "label": "Test 14 dni",
+    "title": "Test, w którym zmieniasz jedną rzecz",
+    "duration": 15
+   },
+   {
+    "label": "Miernik",
+    "title": "Liczby, które mówią o sprzedaży",
+    "duration": 14
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "title": "Mniej strat, więcej wartości",
+  "duration": 88,
+  "stages": [
+   {
+    "label": "E, S, G",
+    "title": "Trzy obszary — wybierz jeden, na który masz wpływ",
+    "duration": 12
+   },
+   {
+    "label": "Kontrahent",
+    "title": "Ankieta od klienta to nie obowiązek ustawowy",
+    "duration": 10
+   },
+   {
+    "label": "Pomiar bazowy",
+    "title": "Tydzień pomiaru, zanim cokolwiek zmienisz",
+    "duration": 14
+   },
+   {
+    "label": "Działanie",
+    "title": "Jedno działanie i jedna osoba odpowiedzialna",
+    "duration": 12
+   },
+   {
+    "label": "Cel i koszt",
+    "title": "Cel na 30 dni i ile to kosztuje",
+    "duration": 10
+   },
+   {
+    "label": "Wynik",
+    "title": "Wynik absolutny i wynik na jednostkę",
+    "duration": 16
+   },
+   {
+    "label": "Komunikat",
+    "title": "Uczciwy komunikat o wyniku",
+    "duration": 14
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "title": "Opowiedz o firmie i policz potrzeby",
+  "duration": 102,
+  "stages": [
+   {
+    "label": "Dla kogo",
+    "title": "Ten sam projekt, różni odbiorcy",
+    "duration": 10
+   },
+   {
+    "label": "Sześć kart",
+    "title": "Sześć kart i zero ogólników",
+    "duration": 14
+   },
+   {
+    "label": "Dowody",
+    "title": "Dowody, że ktoś za to płaci",
+    "duration": 12
+   },
+   {
+    "label": "Zespół i rynek",
+    "title": "Rynek, który obsłużysz, i zespół, który to wykona",
+    "duration": 10
+   },
+   {
+    "label": "Kwota",
+    "title": "Kwota, która wynika z planu",
+    "duration": 18
+   },
+   {
+    "label": "Źródła",
+    "title": "Skąd pieniądze i co za nie oddajesz",
+    "duration": 16
+   },
+   {
+    "label": "Bank i partner",
+    "title": "Ten sam pitch dla banku i dla wspólnika",
+    "duration": 10
+   },
+   {
+    "label": "Próba",
+    "title": "Trzy minuty, trudne pytania i jedna poprawka",
+    "duration": 12
+   }
+  ]
  }
 ]

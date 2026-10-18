@@ -48,21 +48,21 @@
       [
         "Które pytanie wspiera coaching?",
         [
-          "Dlaczego po prostu nie zatrudnisz pracownika?",
           "Jakie rozwiązania już rozważasz?",
+          "Dlaczego po prostu nie zatrudnisz pracownika?",
           "Czy przyznasz, że musisz podnieść ceny?"
         ],
-        1,
+        0,
         "Pytanie otwarte poszerza wybór uczestnika. Pozostałe sugerują gotową odpowiedź."
       ],
       [
         "Który cel jest pod Twoją kontrolą?",
         [
           "Klienci przestaną spóźniać się z płatnością.",
-          "Wdrożę przypomnienie o terminie płatności dla kolejnych pięciu faktur.",
-          "Konkurencja podniesie ceny."
+          "Konkurencja podniesie ceny.",
+          "Wdrożę przypomnienie o terminie płatności dla kolejnych pięciu faktur."
         ],
-        1,
+        2,
         "Możesz wdrożyć przypomnienia; nie kontrolujesz decyzji klientów ani konkurencji."
       ],
       [
@@ -130,30 +130,30 @@
         "Co najlepiej wspiera stałe działanie?",
         [
           "Czekanie na pełną pewność.",
-          "Jeden regularny termin pracy i przegląd wyniku.",
-          "Jak największa lista zadań."
+          "Jak największa lista zadań.",
+          "Jeden regularny termin pracy i przegląd wyniku."
         ],
-        1,
+        2,
         "Mały rytm działania pozwala sprawdzać postęp i korygować plan."
       ],
       [
         "Co zrobić przed uznaniem, że można działać bez rejestracji?",
         [
-          "Sprawdzić aktualne warunki i wyłączenia w oficjalnym poradniku.",
           "Założyć, że mały przychód zawsze wystarczy.",
+          "Sprawdzić aktualne warunki i wyłączenia w oficjalnym poradniku.",
           "Poczekać na pierwszą kontrolę."
         ],
-        0,
+        1,
         "Warunki zależą od przepisów i rodzaju działalności; niewielka skala nie rozstrzyga wszystkiego."
       ],
       [
         "Co oznacza rola przedsiębiorcy w tym modelu?",
         [
-          "Wyłącznie wykonywanie usługi.",
           "Wybór kierunku rozwoju i rozpoznawanie szans.",
+          "Wyłącznie wykonywanie usługi.",
           "Wyłącznie rozliczanie faktur."
         ],
-        1,
+        0,
         "Model rozróżnia pracę operacyjną, organizację i kierunek rozwoju."
       ]
     ],
@@ -234,10 +234,10 @@
         "Co mówi liczba mieszkańców z GUS?",
         [
           "Dokładną liczbę kupujących.",
-          "Kontekst i potencjalną wielkość obszaru badania.",
-          "Gwarantowany popyt."
+          "Gwarantowany popyt.",
+          "Kontekst i potencjalną wielkość obszaru badania."
         ],
-        1,
+        2,
         "Dane zastane opisują rynek, ale nie potwierdzają same w sobie gotowości do zakupu."
       ]
     ],
@@ -296,31 +296,31 @@
       [
         "Co przenosisz na początek kolejnego miesiąca w cash flow?",
         [
-          "Przychód ze sprzedaży.",
           "Saldo końcowe poprzedniego miesiąca.",
+          "Przychód ze sprzedaży.",
           "Wyłącznie zysk netto."
         ],
-        1,
+        0,
         "Ciągłość sald pozwala ocenić dostępne środki w kolejnych miesiącach."
       ],
       [
         "Które zdanie jest prawdziwe?",
         [
-          "Rosnąca sprzedaż zawsze poprawia gotówkę.",
           "Firma może mieć zysk i jednocześnie problem z płynnością.",
+          "Rosnąca sprzedaż zawsze poprawia gotówkę.",
           "Faktura zawsze oznacza wpływ tego samego dnia."
         ],
-        1,
+        0,
         "Terminy płatności i wcześniejsze wydatki mogą powodować niedobór gotówki."
       ],
       [
         "Co warto zrobić przed automatyzacją?",
         [
-          "Opisać i uprościć proces.",
           "Kupić najdroższy system.",
-          "Zwiększyć liczbę powtórzeń ręcznych."
+          "Zwiększyć liczbę powtórzeń ręcznych.",
+          "Opisać i uprościć proces."
         ],
-        0,
+        2,
         "Narzędzie wzmacnia sposób pracy; nie usuwa samo niejasnych zasad."
       ]
     ],
@@ -379,10 +379,10 @@
         "Co należy wliczyć do czasu pracy z AI?",
         [
           "Wyłącznie czas generowania.",
-          "Przygotowanie, generowanie i weryfikację.",
-          "Tylko czas logowania."
+          "Tylko czas logowania.",
+          "Przygotowanie, generowanie i weryfikację."
         ],
-        1,
+        2,
         "Oszczędność jest realna dopiero po uwzględnieniu całej pracy."
       ],
       [
@@ -472,20 +472,20 @@
         "Co jest bliżej efektu biznesowego?",
         [
           "Liczba wyświetleń bez kontekstu.",
-          "Liczba kwalifikowanych zapytań i zamówień.",
-          "Liczba opublikowanych postów."
+          "Liczba opublikowanych postów.",
+          "Liczba kwalifikowanych zapytań i zamówień."
         ],
-        1,
+        2,
         "Miernik powinien odpowiadać celowi; sama aktywność nie świadczy o skuteczności."
       ],
       [
         "Jaka obietnica jest lepsza?",
         [
-          "Najlepsza firma na świecie.",
           "Konkretna korzyść, którą firma potrafi potwierdzić.",
+          "Najlepsza firma na świecie.",
           "Dowolna, jeśli zwiększa kliknięcia."
         ],
-        1,
+        0,
         "Obietnica musi być zrozumiała, wiarygodna i możliwa do dotrzymania."
       ]
     ],
@@ -544,20 +544,20 @@
         "Jaki charakter ma VSME?",
         [
           "Jest automatycznie obowiązkowy dla każdej małej firmy.",
-          "Służy dobrowolnemu raportowaniu przez MŚP.",
-          "Dotyczy wyłącznie reklamy."
+          "Dotyczy wyłącznie reklamy.",
+          "Służy dobrowolnemu raportowaniu przez MŚP."
         ],
-        1,
+        2,
         "Sam standard VSME nie ustanawia powszechnego obowiązku raportowania."
       ],
       [
         "Co umożliwia uczciwe porównanie odpadów?",
         [
-          "Samo wrażenie pracownika.",
           "Ta sama jednostka, okres i uwzględnienie skali działalności.",
+          "Samo wrażenie pracownika.",
           "Porównanie dowolnych dwóch liczb."
         ],
-        1,
+        0,
         "Różnice sprzedaży i okresów mogą zmieniać wynik bez poprawy procesu."
       ],
       [
@@ -626,21 +626,21 @@
       [
         "Z czego powinna wynikać kwota finansowania?",
         [
-          "Z okrągłej liczby dobrze wyglądającej na slajdzie.",
           "Z planu wydatków, wpływów, terminów i bufora.",
+          "Z okrągłej liczby dobrze wyglądającej na slajdzie.",
           "Z kwoty pozyskanej przez dowolną inną firmę."
         ],
-        1,
+        0,
         "Finansowanie ma pokryć konkretną potrzebę i doprowadzić do określonego rezultatu."
       ],
       [
         "Co wiąże się z finansowaniem udziałowym?",
         [
           "Zawsze brak jakichkolwiek konsekwencji dla własności.",
-          "Podział własności i uzgodnienie praw inwestora.",
-          "Automatyczna spłata jak przy zwykłym kredycie."
+          "Automatyczna spłata jak przy zwykłym kredycie.",
+          "Podział własności i uzgodnienie praw inwestora."
         ],
-        1,
+        2,
         "Udziały oznaczają prawa właścicielskie; szczegóły zależą od umowy."
       ],
       [

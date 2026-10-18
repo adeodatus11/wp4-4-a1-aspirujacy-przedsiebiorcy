@@ -51,9 +51,12 @@ for m in course:
     assert len(m['fields'])==6 and len(m['quiz'])==3
     assert len(m['steps'])>=4 and len(m['rubric'])==3
     for q in m['quiz']:assert len(q[1])==3 and q[2] in range(3) and len(q[3])>20
+    assert len({q[2] for q in m['quiz']})>1, f'moduł {m["n"]}: poprawna odpowiedź zawsze na tym samym miejscu'
     d=docs[ROOT/f'modul-{m["n"]}.html']
     assert len(d.headings)==1
     assert {'sedno','przyklad','cwiczenie','projekt','quiz','dla-prowadzacego','zrodla'}<=d.ids
+positions=[q[2] for m in course for q in m['quiz']]
+assert all(positions.count(i)>=len(positions)//4 for i in range(3)), f'quizy: nierówny rozkład poprawnych odpowiedzi {positions}'
 curriculum=json.loads((ROOT/'src/curriculum.json').read_text())
 lessons=json.loads((ROOT/'src/lekcje.json').read_text())
 assert len(curriculum['mappings'])==27

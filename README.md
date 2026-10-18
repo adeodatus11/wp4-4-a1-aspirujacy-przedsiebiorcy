@@ -7,6 +7,7 @@ Samodzielna platforma programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowa
 - Osiem modułów: coaching, postawa przedsiębiorcza, walidacja, model biznesowy i Lean, cyfryzacja i AI, marketing, ESG, pitch i finansowanie.
 - Pełne wcześniejsze opracowania oraz nowe wprowadzenia, osiem polskich przypadków fikcyjnych i instrukcje ćwiczeń.
 - 48 pól projektu, 24 pytania z wyjaśnieniami, lokalny zapis postępów.
+- Do każdego modułu ścieżka pracy własnej (lekcje/index.html#/modul/N, 85–102 min): 7–9 etapów z wyjaśnieniem, polskim przypadkiem, zadaniami z informacją zwrotną i wszystkimi sześcioma polami projektu. Wpisy trafiają do „Mojego projektu”. Na końcu nie ma karty oceny — jest podsumowanie: rezultat modułu, uzupełnione pola, co przygotować na spotkanie w grupie i jak pracować bez grupy.
 - Eksport/import kopii JSON, notatki TXT, druk projektu i usuwanie danych.
 - Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
 - Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
@@ -42,7 +43,7 @@ Wymagane Python 3.10+ i zależność z requirements.txt, a do zmian w lekcjach N
 ```sh
 python3 -m pip install -r requirements.txt
 npm --prefix lekcje-src ci
-npm --prefix lekcje-src run build   # buduje lekcje/, src/lekcje.json i src/trening.json
+npm --prefix lekcje-src run build   # buduje lekcje/, src/lekcje.json, src/trening.json i src/moduly.json
 python3 build.py                    # strony serwisu, mapa, XLSX, ZIP, cache offline
 python3 -m http.server 8000
 ```
@@ -54,10 +55,11 @@ Otwórz http://localhost:8000. Kolejność ma znaczenie: build.py czyta katalog 
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
 | lekcje-src/content/lessons/NN-*.js | treść 29 lekcji: etapy, wyjaśnienia, zadania, klucze, notatki prowadzącego |
 | lekcje-src/content/trainings/*.js | pięć treningów: ściąga i pula zadań z generatorami danych |
+| lekcje-src/content/modules/NN-*.js | ścieżki pracy własnej do ośmiu modułów; nazwy pól projektu muszą być takie jak w src/course.json |
 | lekcje-src/content/realia.js | polskie fakty prawne i liczbowe z datą sprawdzenia |
 | lekcje-src/app, components, lib | aplikacja lekcji (React + Vite), punktacja i zapis |
 | src/curriculum.json | formalna mapa odniesień; pole lessons wskazuje numery lekcji 01–34 |
-| src/lekcje.json, src/trening.json | katalogi lekcji i treningów generowane przez build w lekcje-src |
+| src/lekcje.json, src/trening.json, src/moduly.json | katalogi lekcji, treningów i ścieżek modułów generowane przez build w lekcje-src |
 | offline.py | generowanie manifestu oraz cache materiałów (z lekcje/) |
 | school.py | strona szkola.html, mapa CSV i wpisy wyszukiwarki dla lekcji |
 | src/resources.json | źródła zewnętrzne i metadane weryfikacji |

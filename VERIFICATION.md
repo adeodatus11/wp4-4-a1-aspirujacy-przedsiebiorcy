@@ -6,7 +6,7 @@ Wszystkie zmiany dotyczą wyłącznie repozytorium wp4-4-a1-aspirujacy-przedsieb
 
 - Generator kończy się poprawnie: 8 modułów, 17 źródeł, materiały do druku, XLSX, ZIP.
 - 38 dokumentów HTML serwisu: lokalne linki, kotwice, brak powtórzonych identyfikatorów, etykiety formularzy i jeden H1 na stronę modułu.
-- Każdy moduł ma 6 pól projektu, 3 pytania z wyjaśnieniami, co najmniej 4 kroki ćwiczenia i 3 kryteria informacji zwrotnej.
+- Każdy moduł ma 6 pól projektu, 3 pytania z wyjaśnieniami, co najmniej 4 kroki ćwiczenia i 3 kryteria informacji zwrotnej. Poprawna odpowiedź w quizach nie stoi zawsze na tym samym miejscu (rozkład 8/8/8 na 24 pytania; walidator tego pilnuje).
 - Scenariusze serwisu sumują się do 165 minut. Moduł ma 390 min, program 52 h. Dłuższe scenariusze wcześniejszego opracowania są oznaczone własnym rzeczywistym czasem.
 - Odczyt XML arkusza XLSX i obliczenie wszystkich formuł na danych przykładowych: salda końcowe 1500, 0, 500, 3500, 7000, 11000 PLN.
 - Pakiet offline zawiera wszystkie lokalne zasoby swoich stron; link do ponownego pobrania ZIP w samej paczce kieruje do instrukcji offline.
@@ -41,3 +41,11 @@ Playwright w Chromium (npm --prefix lekcje-src run test:e2e, 42 testy): każda l
 Nowe fakty w treningu (limit i 7 dni przy działalności nierejestrowanej, ulga na start, zwolnienie z KSeF do 10 000 zł miesięcznie, proporcjonalny limit VAT, składki pracodawcy 5790,28 zł przy płacy minimalnej, zakaz fałszywych opinii) potwierdzono w wyszukiwarce w portalach branżowych; serwisy gov.pl były niedostępne z sieci środowiska. Przed zajęciami warto sprawdzić bieżące kwoty.
 
 Ograniczenia: brak pilotażu z uczniami i dorosłymi; czasy etapów i rytm powtórek są założeniem autorskim. Lekcje nie zastępują programu magazynowo-sprzedażowego używanego na egzaminie ani obsługi prawdziwej kasy.
+
+## Ścieżki pracy własnej do modułów
+
+Osiem ścieżek (lekcje/index.html#/modul/1–8, łącznie 743 min) realizuje treść modułów programu: każdy etap ma wyjaśnienie, przypadek fikcyjny z polskimi realiami i zadania; wszystkie 48 pól projektu jest wypełnianych w ścieżkach i zapisywanych w „Moim projekcie”. Moduł kończy podsumowanie bez punktacji.
+
+Sprawdzane automatycznie (tests/modules.test.mjs): tytuł zgodny ze stroną modułu, suma minut etapów, 75–120 min na ścieżkę, co najmniej 8 zadań z informacją zwrotną, wyjaśnienie każdej błędnej odpowiedzi, każde pole projektu dokładnie raz i z nazwą jak w src/course.json, brak karty oceny, limit tekstu do czytania, brak form rodzajowych i łatania tekstu w kodzie, istniejące wpisy realiów. Playwright: każda ścieżka przechodzona etapami, podsumowanie liczy pola, wpis widać w moj-projekt.html, 390 px bez poziomego przewijania, axe na wybranych etapach modułów 1, 6 i 8.
+
+Nowe realia (lekcje-src/content/realia.js, sprawdzone 18.10.2026): dane firmy na stronie, cookies, dane klientów w narzędziach AI, zgody na marketing e-mail/SMS/telefon, VSME, hasła ekologiczne (dyrektywa 2024/825 — stan wdrożenia w Polsce do potwierdzenia), źródła finansowania. Nie przeprowadzono audytu prawnego.
