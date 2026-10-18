@@ -134,7 +134,9 @@ Moduł 1 to pierwsze spotkanie grupy – kolejność ma znaczenie:
 2. **Feedback Circle (30 min)** – uczestnicy dzielą się odpowiedzią na pytanie 2 (wewnętrzne lęki i przeszkody). To najtrudniejsze pytanie i najsilniejszy budulec bezpieczeństwa psychologicznego. **Rekomendowane stacjonarnie.**
 3. **Pitch Practice (30 min)** – każdy w 60–90 s odpowiada na pytanie 1 (jedna zmiana, którą mógłbym wprowadzić dziś). Ćwiczenie zwięzłości.
 
-### Faza 3 – Blok interaktywny (2,5–3 h)
+### Faza 3 – Wariant bazowy wcześniejszego opracowania (170 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 | Blok | Czas | Treść |
 |---|---|---|
 | Otwarcie i kontrakt grupowy | 20 min | Zasady: poufność, brak oceniania, „grupa to sojusznicy, nie konkurenci" |

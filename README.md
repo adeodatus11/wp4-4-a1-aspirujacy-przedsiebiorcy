@@ -1,91 +1,74 @@
-# Program coachingowy dla aspirujących przedsiębiorców
+# Pracownia przedsiębiorczości
 
-Opracowanie merytoryczne materiałów źródłowych programu **WP4.4.A1** (*Consulting and coaching programme for aspiring entrepreneurs*) wraz z projektem wdrożenia dla pilotażu w Polsce.
+Serwis programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowadzącego**. Osiem modułów, polskie uzupełnienia, projekt uczestnika i komplet własnych materiałów warsztatowych. Statyczny HTML/CSS/JS, bez kont i backendu. Gotowe strony są wersjonowane i działają na GitHub Pages z katalogu głównego.
 
-Projekt Erasmus+ **WIN4SMEs CoVE**, COVE Polska.
+## Dla uczestnika
 
-[Otwórz stronę programu](https://adeodatus11.github.io/wp4-4-a1-aspirujacy-przedsiebiorcy/) · [Wyniki przeglądu](https://adeodatus11.github.io/wp4-4-a1-aspirujacy-przedsiebiorcy/analiza.html)
+- Osiem modułów: coaching, postawa przedsiębiorcza, walidacja, model biznesowy i Lean, cyfryzacja i AI, marketing, ESG, pitch i finansowanie.
+- Pełne wcześniejsze opracowania oraz nowe wprowadzenia, osiem polskich przypadków fikcyjnych i instrukcje ćwiczeń.
+- 48 pól projektu, 24 pytania z wyjaśnieniami, lokalny zapis postępów.
+- Eksport/import kopii JSON, notatki TXT, druk projektu i usuwanie danych.
+- Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
+- Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
 
-## Co tu jest
+## Dla prowadzącego
 
-Statyczna strona — 12 stron HTML, bez zależności zewnętrznych w przeglądarce.
+Scenariusze 165 minut, instrukcje, przykładowe rozwiązania, klucze quizów i rubryki informacji zwrotnej. Cały moduł: 90 min przygotowania + 90 min małych grup + 165 min warsztatu + 45 min wdrożenia = **6,5 h**, pełny cykl **52 h**. Dodatkowy coaching organizowany poza serwisem.
 
-| Strona | Zawartość |
-|---|---|
-| `analiza.html` | Wyniki przeglądu, mapa materiałów, status planu i rezultaty, ograniczenia |
-| `index.html` | Przegląd: grupy docelowe, struktura modułu, lista modułów, kluczowe daty |
-| `przeglad.html` | Pełny przegląd programu, cztery filary, checklista wdrożeniowa, literatura |
-| `modul-1.html` … `modul-8.html` | Osiem modułów: treść merytoryczna, Coach Corner, scenariusz realizacji, wskazówki dla prowadzącego, materiały do przygotowania |
-| `wdrozenie.html` | Projekt wdrożenia, harmonogram, analiza rekrutacji i weryfikacji grupy docelowej, szkielet raportu końcowego |
+Widok zmienia prezentację, nie stanowi autoryzacji: oba widoki są publiczne. Prowadzący nie otrzymuje dostępu do notatek ani wyników uczestników. Brak funkcji administracyjnych, rekrutacyjnych i certyfikacji.
 
-Każdy moduł ma tę samą strukturę: **cel i efekty uczenia się → treść merytoryczna ze studiami przypadków → Coach Corner → scenariusz realizacji z rozpiską czasową → wskazówki dla prowadzącego z tabelą typowych pułapek → checklista materiałów.**
+## Uruchomienie i zmiany
 
-## Moduły
+Wymagane Python 3.10+ i zależność z requirements.txt:
 
-| Nr | Moduł | Wymiar |
-|---|---|---|
-| 1 | Coaching — konsultacje indywidualne i w małych grupach | 6–8 h |
-| 2 | Postawa przedsiębiorcza — samoświadomość i motywacja | 6–8 h |
-| 3 | Walidacja pomysłu — dopasowanie problem–rozwiązanie | 6–8 h |
-| 4 | Model biznesowy — Lean / Business Model Canvas | 6–8 h |
-| 5 | Narzędzia cyfrowe — web, e-commerce, AI | 6–8 h |
-| 6 | Marketing / PR — grupa docelowa, STP, komunikacja | 6–8 h |
-| 7 | Zielona gospodarka — zrównoważony rozwój i ESG | 6–8 h |
-| 8 | Pitch i pieniądze — finansowanie i inwestorzy | 6–8 h |
-
-## Struktura repozytorium
-
-```
-.
-├── index.html            strona główna
-├── przeglad.html         przegląd programu
-├── modul-1..8.html       moduły
-├── wdrozenie.html        wdrożenie i rekrutacja
-├── assets/
-│   ├── site.css          arkusz stylów (jasny i ciemny motyw)
-│   └── site.js           przełącznik motywu, zwijana nawigacja
-├── src/                  źródła Markdown — tu wprowadza się zmiany treści
-└── build.py              generator HTML
-```
-
-## Jak wprowadzać zmiany
-
-Treść edytuje się **w plikach `src/*.md`**, nie w HTML. Potem:
-
-```bash
+```sh
 python3 -m pip install -r requirements.txt
 python3 build.py
+python3 -m http.server 8000
 ```
 
-Skrypt nadpisuje wszystkie strony poza `index.html`, którą utrzymuje się ręcznie.
+Otwórz http://localhost:8000. Generator odtwarza wszystkie strony, dane wyszukiwarki, dokumenty do druku, XLSX i ZIP. Nie edytuj wygenerowanych HTML bezpośrednio.
 
-## Do uzupełnienia
+| Źródło | Zastosowanie |
+|---|---|
+| src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
+| src/resources.json | źródła zewnętrzne i metadane weryfikacji |
+| src/01…08*.md | pełne opracowania bazowe modułów |
+| src/00*, 09*, 10* | dokumentacja wcześniejszego przeglądu, zachowana jako archiwum |
+| portal.py, product_extras.py | szablony i generowanie serwisu oraz narzędzi |
+| markdown_tools.py | konwersja Markdown |
+| assets/core.js | logika formatu projektu, wyszukiwania, quizów i kalkulacji |
+| assets/site.js | obsługa interfejsu, zapisu, eksportu i importu |
+| assets/site.css, print.css | układ responsywny i druk |
 
-Braki odziedziczone po materiałach źródłowych, oznaczone w treści pomarańczowym paskiem:
+Arkusz i pakiet offline są generowane deterministycznie. ZIP jest śledzony pomimo reguły ignorowania plików ZIP; przy pierwszym dodaniu użyj git add -f downloads/pakiet-offline.zip.
 
-- **Szablon Lean Canvas** (moduł 4) — w materiale źródłowym w miejscu szablonu autor zostawił notatkę roboczą.
-- **Szablony finansowe i planowania cash flow** (moduł 4, odesłanie z modułu 8).
-- **Prezentacje warsztatowe AI** (moduł 5): odczytane i opracowane 23.09.2026; przygotować polskie przykłady warsztatowe.
-- **Lokalizacja przykładów** — materiały źródłowe są osadzone w kontekście węgierskim; lista miejsc do wymiany znajduje się w `wdrozenie.html`, sekcja 12.
+## Sprawdzenie
 
-## Źródła
+```sh
+python3 tests/validate.py
+npm ci
+npm test
+```
 
-Materiały źródłowe: dokument programowy *Consulting and coaching programme for aspiring entrepreneurs*, dokumenty modułowe, Coach Corner, nagrania wideo, `Fundamentals of Lean Thinking`, template raportowy WP4.4 A1.
+Zależność npm służy wyłącznie testom. Strona nie potrzebuje Node ani bibliotek z CDN. Kontrola Pythona sprawdza linki, kotwice, etykiety, treści, czasy, formuły XLSX i zawartość offline. Testy JS sprawdzają obliczenia, import/eksport, wyszukiwanie i zachowanie interfejsu w DOM. Szczegóły i ograniczenia: VERIFICATION.md.
 
-Projekt wdrożenia: Wiesław Filipiak, Maciej Najwer, Zespół Szkół Zawodowych nr 5 we Wrocławiu, listopad 2025.
+## Dane i prywatność
 
-Okres testowania: **1.09.2025 – 28.02.2027**. Raport krajowy: **15.04.2027**.
+localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora i wybrany widok. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
 
-## Licencja i finansowanie
+## Zakres materiałów i aktualność
 
-Finansowane przez Unię Europejską. Wyrażone poglądy i opinie są jedynie opiniami autorów i niekoniecznie odzwierciedlają poglądy Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA). Unia Europejska ani EACEA nie ponoszą za nie odpowiedzialności.
+W repozytorium nie ma oryginalnych MP4, DOCX, PPTX i PDF przywołanych w opracowaniach. Produkt nie udostępnia ich kopii; można przejść program z materiałami tekstowymi i własnymi ćwiczeniami. Kursy i dokumenty PARP, PFR i pozostałych instytucji to opcjonalne odnośniki, z zachowaniem praw wydawców.
 
-Materiał modułu 4 zawiera fragmenty programu Digital Coach (Ch. Prinz, B. Kuhlenkötter, Ruhr University Bochum, 2020) udostępnione na licencji CC BY 4.0.
+Polskie uzupełnienia i katalog źródeł: 18.10.2026. Strony Biznes.gov.pl potwierdzono w indeksie oficjalnego portalu, ponieważ bezpośredni odczyt zwracał 403. Aktualność warunków prawnych, finansowania i standardów ESG wymaga sprawdzenia przed ich zastosowaniem do konkretnej firmy. Nie przenosimy dawnych węgierskich progów do polskiej instrukcji. Starsze kwoty i przykłady zagraniczne są kontekstem historycznym. Brak potwierdzonych wyników pilotażu.
 
-## Przegląd 23.09.2026
+## Autorstwo i finansowanie
 
-Zakres i ustalenia: `analiza.html`. Nagrania zinwentaryzowano bez transkrypcji. Strona rozróżnia założenia programu od potwierdzonych wyników; brak wypełnionego raportu pilotażu w przejrzanych dokumentach. Scenariusze są propozycjami metodycznymi. Dokumenty źródłowe i filmy nie są publikowane w repozytorium.
+Baza: Consulting and coaching programme for aspiring entrepreneurs, materiały modułowe, Coach Corner. Projekt wdrożenia: Wiesław Filipiak, Maciej Najwer, ZSZ nr 5 we Wrocławiu, listopad 2025. Polskie przypadki, quizy, karty i scenariusze 165 min są nowymi propozycjami dydaktycznymi. Materiał modułu 4 zawiera fragmenty Digital Coach (Ch. Prinz, B. Kuhlenkötter, Ruhr University Bochum, 2020), CC BY 4.0. Lean Canvas: koncepcja Ash Maurya; własny układ karty.
 
-## GitHub Pages
+Finansowane przez Unię Europejską. Poglądy i opinie są poglądami autorów i niekoniecznie odzwierciedlają stanowisko UE lub EACEA. UE ani EACEA nie ponoszą za nie odpowiedzialności.
 
-Publikacja z gałęzi `main`, katalog główny `/`. Po zmianie treści uruchom generator, dodaj wygenerowane HTML do commita i wykonaj push. Plik `.nojekyll` zapewnia publikację gotowych plików.
+## Publikacja
+
+Zachowano istniejący model GitHub Pages: gałąź main, katalog /. Zmiany w gałęzi roboczej nie zmieniają publicznego serwisu. Po przejrzeniu i scaleniu należy publikować gotowe HTML razem z assets i downloads. Plik .nojekyll pozostaje w repozytorium.

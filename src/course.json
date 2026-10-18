@@ -1,0 +1,662 @@
+[
+  {
+    "n": 1,
+    "title": "Od celu do działania",
+    "topic": "Coaching",
+    "icon": "↗",
+    "subtitle": "Ustal, co chcesz zmienić. Zaplanuj pierwszy krok, który zależy od Ciebie.",
+    "outcome": "Kontrakt rozwojowy i plan działania na 14 dni.",
+    "concepts": [
+      [
+        "Coaching, mentoring i doradztwo",
+        "Coach pomaga uporządkować myślenie i wybrać własne działanie. Mentor dzieli się doświadczeniem, a doradca proponuje rozwiązania w obszarze swojej specjalizacji. Zanim zaczniesz rozmowę, nazwij rodzaj wsparcia, którego potrzebujesz. Pytania o podatki, prawo czy warunki kredytu kieruj do odpowiedniego specjalisty."
+      ],
+      [
+        "Rozmowa GROW",
+        "Goal: jaki konkretny rezultat chcesz osiągnąć? Reality: co wiesz o obecnej sytuacji i jakie masz dowody? Options: jakie co najmniej trzy rozwiązania bierzesz pod uwagę? Will: co zrobisz, do kiedy i po czym rozpoznasz wykonanie? Cel powinien opisywać zmianę w Twoim działaniu, a nie zachowanie innych osób."
+      ],
+      [
+        "Bezpieczna informacja zwrotna",
+        "Ustal poufność, prawo do odmowy odpowiedzi i zasady rozmowy. Oddziel obserwację od interpretacji: „w trzech zamówieniach brakowało daty” jest użyteczniejsze niż „jesteś chaotyczny”. Zapytaj o zgodę na informację zwrotną, podaj obserwację, opisz skutek i zaproś rozmówcę do wybrania kolejnego kroku."
+      ]
+    ],
+    "caseTitle": "Pracownia rowerowa z Wrocławia",
+    "caseText": "Marta samodzielnie prowadzi serwis rowerowy. W sezonie odbiera telefony podczas napraw i kończy pracę po godzinach. Mówi: „potrzebuję więcej klientów”. Po zapisaniu tygodnia pracy widzi jednak, że największym problemem jest przerywanie zadań i brak terminów odbioru. To sytuacja fikcyjna, przygotowana do ćwiczeń w polskich realiach.",
+    "caseTask": "Jaki cel na dwa tygodnie będzie zależał od Marty? Zapisz trzy pytania, które pomogą jej wybrać działanie, bez podsuwania rozwiązania.",
+    "caseAnswer": "Przykładowy cel: przez 10 dni zapisywać każde zlecenie z terminem odbioru i pod koniec dnia sprawdzać opóźnienia. Pytania: kiedy najczęściej przerywasz pracę? Co już ograniczało liczbę przerw? Którą zmianę możesz przetestować przez tydzień? Większa liczba klientów nie usuwa wykrytego problemu.",
+    "fields": [
+      "Mój cel na 14 dni — zachowanie i miernik",
+      "Sytuacja dzisiaj — fakty, ograniczenia, zasoby",
+      "Trzy możliwe sposoby działania",
+      "Wybrany pierwszy krok i termin",
+      "Potrzebne wsparcie i zasady poufności",
+      "Data sprawdzenia efektu i pytanie do coacha"
+    ],
+    "steps": [
+      "Przez 5 minut opisz jedną sytuację, którą chcesz zmienić.",
+      "W parze przejdź przez GROW. Osoba pytająca nie proponuje rozwiązań; po 10 minutach zamieńcie role.",
+      "Zapisz pierwszy krok i miernik wykonania. Sprawdź, czy masz wpływ na oba.",
+      "Po 14 dniach porównaj plan z działaniem. Zanotuj, co pomagało i co zmienisz."
+    ],
+    "teacherFocus": "Pilnuj granicy między coachingiem a poradą specjalistyczną. Nie zmuszaj do ujawniania finansów ani osobistych trudności. Praca na sytuacji wymyślonej jest równoprawną alternatywą.",
+    "rubric": [
+      "Cel opisuje obserwowalne działanie uczestnika.",
+      "Plan ma termin i sposób sprawdzenia.",
+      "Uczestnik rozróżnia pytanie coachingowe i poradę."
+    ],
+    "quiz": [
+      [
+        "Które pytanie wspiera coaching?",
+        [
+          "Dlaczego po prostu nie zatrudnisz pracownika?",
+          "Jakie rozwiązania już rozważasz?",
+          "Czy przyznasz, że musisz podnieść ceny?"
+        ],
+        1,
+        "Pytanie otwarte poszerza wybór uczestnika. Pozostałe sugerują gotową odpowiedź."
+      ],
+      [
+        "Który cel jest pod Twoją kontrolą?",
+        [
+          "Klienci przestaną spóźniać się z płatnością.",
+          "Wdrożę przypomnienie o terminie płatności dla kolejnych pięciu faktur.",
+          "Konkurencja podniesie ceny."
+        ],
+        1,
+        "Możesz wdrożyć przypomnienia; nie kontrolujesz decyzji klientów ani konkurencji."
+      ],
+      [
+        "Do czego służy etap Reality?",
+        [
+          "Do oceny charakteru uczestnika.",
+          "Do zebrania faktów o obecnej sytuacji.",
+          "Do wybrania narzędzia reklamowego."
+        ],
+        1,
+        "Najpierw rozpoznajesz sytuację na podstawie faktów, dopiero potem tworzysz warianty działania."
+      ]
+    ],
+    "resources": [
+      "parp-coaching"
+    ]
+  },
+  {
+    "n": 2,
+    "title": "Przedsiębiorczość na własnych zasadach",
+    "topic": "Postawa przedsiębiorcza",
+    "icon": "◎",
+    "subtitle": "Poznaj swoje zasoby, ograniczenia i powody, dla których chcesz prowadzić firmę.",
+    "outcome": "Mapa zasobów, jeden nawyk i lista spraw do sprawdzenia przed startem.",
+    "concepts": [
+      [
+        "Pomysł potrzebuje rytmu pracy",
+        "Motywacja pomaga rozpocząć, ale regularne działanie wymaga prostego rytmu. Wybierz jeden wynik tygodnia, zarezerwuj czas i sprawdź rezultat. Oddziel to, czego nie wiesz o rynku, od swoich obaw. Rozmowa z klientem może zmniejszyć niepewność rynkową, a ograniczenie liczby zadań — przeciążenie."
+      ],
+      [
+        "Trzy role właściciela",
+        "Specjalista wykonuje usługę, menedżer organizuje powtarzalną pracę, a przedsiębiorca wybiera kierunek. W małej firmie jedna osoba pełni wszystkie role. Zapisz rzeczywisty podział czasu i sprawdź, czy zostaje miejsce na rozmowę z klientami i rozwój. Lista „przestaję robić” bywa równie potrzebna jak plan nowych działań."
+      ],
+      [
+        "Start w polskich realiach",
+        "Przed sprzedażą sprawdź formę prowadzenia działalności, wymagane uprawnienia, podatki, ubezpieczenia i obowiązki wobec klientów. Działalność nierejestrowana ma warunki i ograniczenia; nie jest automatycznie dostępna dla każdego pomysłu. Aktualne warunki sprawdzaj w Biznes.gov.pl. Wynik ćwiczenia to lista pytań do weryfikacji, a nie decyzja podatkowa oparta wyłącznie na kursie."
+      ]
+    ],
+    "caseTitle": "Rodzinna stolarnia w Oleśnicy",
+    "caseText": "Kuba przejmuje część obowiązków w rodzinnej stolarni. Chce sprzedawać przez internet, ale codziennie osobiście uzgadnia wszystkie zamówienia. Założyciel firmy nadal zatwierdza każdą cenę. Kuba uważa, że brakuje mu odwagi. W praktyce nie ustalono zakresu jego decyzji. Przykład jest fikcyjny.",
+    "caseTask": "Oddziel problem kompetencji od problemu uprawnień. Zaproponuj jeden mały eksperyment i jedną rozmowę, które pomogą Kubie.",
+    "caseAnswer": "Ustalić, jakie zamówienia Kuba może wyceniać samodzielnie, np. według uzgodnionego cennika. Przetestować to na pięciu zamówieniach i omówić marżę, czas odpowiedzi oraz błędy. Sama motywacja nie zastąpi jasnego podziału odpowiedzialności.",
+    "fields": [
+      "Po co chcę prowadzić lub rozwijać firmę",
+      "Moje zasoby: umiejętności, czas, kontakty, środki",
+      "Ograniczenia i sprawy poza moim wpływem",
+      "Podział tygodnia: specjalista / menedżer / przedsiębiorca",
+      "Jeden nawyk i jedna rzecz, z której rezygnuję",
+      "Pytania formalne do sprawdzenia i termin konsultacji"
+    ],
+    "steps": [
+      "Zapisz trzy własne powody prowadzenia firmy i koszt, który jesteś gotów ponieść.",
+      "Oceń swój tydzień: podział trzech ról musi sumować się do 100%.",
+      "Wybierz nawyk na dwa tygodnie: kiedy, gdzie i jak go sprawdzisz?",
+      "Otwórz poradnik Biznes.gov.pl. Zapisz trzy wymagania dotyczące swojego pomysłu i źródło ich weryfikacji."
+    ],
+    "teacherFocus": "Nie utożsamiaj przedsiębiorczości z jednym typem osobowości. Dla osoby bez firmy wykorzystaj tydzień nauki lub pracy. Nie rekomenduj jednej formy opodatkowania całej grupie.",
+    "rubric": [
+      "Uczestnik nazywa własną motywację i ograniczenia.",
+      "Podział czasu sumuje się do 100%.",
+      "Plan nawyku i lista pytań formalnych są konkretne."
+    ],
+    "quiz": [
+      [
+        "Co najlepiej wspiera stałe działanie?",
+        [
+          "Czekanie na pełną pewność.",
+          "Jeden regularny termin pracy i przegląd wyniku.",
+          "Jak największa lista zadań."
+        ],
+        1,
+        "Mały rytm działania pozwala sprawdzać postęp i korygować plan."
+      ],
+      [
+        "Co zrobić przed uznaniem, że można działać bez rejestracji?",
+        [
+          "Sprawdzić aktualne warunki i wyłączenia w oficjalnym poradniku.",
+          "Założyć, że mały przychód zawsze wystarczy.",
+          "Poczekać na pierwszą kontrolę."
+        ],
+        0,
+        "Warunki zależą od przepisów i rodzaju działalności; niewielka skala nie rozstrzyga wszystkiego."
+      ],
+      [
+        "Co oznacza rola przedsiębiorcy w tym modelu?",
+        [
+          "Wyłącznie wykonywanie usługi.",
+          "Wybór kierunku rozwoju i rozpoznawanie szans.",
+          "Wyłącznie rozliczanie faktur."
+        ],
+        1,
+        "Model rozróżnia pracę operacyjną, organizację i kierunek rozwoju."
+      ]
+    ],
+    "resources": [
+      "parp-start",
+      "biznes-start",
+      "ceidg",
+      "nierejestrowana"
+    ]
+  },
+  {
+    "n": 3,
+    "title": "Sprawdź pomysł u klientów",
+    "topic": "Walidacja pomysłu",
+    "icon": "⌕",
+    "subtitle": "Zamień przypuszczenia w pytania i zbierz dowody, zanim zainwestujesz.",
+    "outcome": "Karta eksperymentu i scenariusz pięciu rozmów z klientami.",
+    "concepts": [
+      [
+        "Hipoteza, którą można obalić",
+        "„Ludzie chcą wygody” jest zbyt szerokie. Użyteczna hipoteza wskazuje konkretny segment, sytuację, problem i zachowanie. Przed eksperymentem zapisz, jaki wynik oznacza kontynuację, a jaki zmianę pomysłu. Próg jest Twoją decyzją na potrzeby testu; nie staje się statystycznym dowodem popytu."
+      ],
+      [
+        "Pytaj o zachowanie, nie o pochwałę",
+        "Zamiast pytać „czy kupisz moją usługę?”, poproś o opis ostatniej podobnej sytuacji: co się wydarzyło, jak klient sobie poradził, ile to kosztowało? Nie prezentuj rozwiązania przed poznaniem problemu. Zapisuj obserwacje oddzielnie od interpretacji. Udział w rozmowie jest dobrowolny; zbieraj tylko potrzebne dane."
+      ],
+      [
+        "Policz lokalny rynek",
+        "Bank Danych Lokalnych GUS pomaga rozpoznać gminę lub powiat: liczbę mieszkańców, strukturę wieku czy podmioty gospodarcze. Zapisz jednostkę, okres i definicję wskaźnika. Liczba mieszkańców nie jest liczbą klientów. Połącz dane zastane z rozmowami i małym testem oferty; nie uogólniaj pięciu wywiadów na cały rynek."
+      ]
+    ],
+    "caseTitle": "Mobilny serwis rowerowy na Krzykach",
+    "caseText": "Ola chce dojeżdżać z naprawami rowerów do klientów we Wrocławiu. W ankiecie znajomi chwalą pomysł. Nie wie jednak, czy zapłacą za dojazd. Planuje tydzień testowy na jednym osiedlu z ograniczoną liczbą terminów. Wszystkie dane i postacie są fikcyjne.",
+    "caseTask": "Zapisz hipotezę, próg decyzji i najmniejszy test. Jak odróżnisz zainteresowanie od gotowości do zapłaty?",
+    "caseAnswer": "Hipoteza: określona grupa mieszkańców wybierze płatną naprawę z dojazdem w podanej cenie i terminie. Test może polegać na rozmowach oraz zapisach na rzeczywistą, jasno opisaną usługę, po sprawdzeniu warunków jej świadczenia. Dowodem silniejszym od polubienia jest konkretna rezerwacja; faktyczna płatność jest jeszcze silniejsza. Nie należy pozorować sprzedaży ani ukrywać warunków.",
+    "fields": [
+      "Segment i problem klienta",
+      "Hipoteza: spodziewane zachowanie w konkretnej sytuacji",
+      "Pięć pytań o ostatnie doświadczenie klienta",
+      "Test: metoda, czas, koszt, sposób pozyskania rozmówców",
+      "Miernik i próg decyzji ustalone przed testem",
+      "Wynik, dowody i decyzja: kontynuuję / zmieniam / zatrzymuję"
+    ],
+    "steps": [
+      "W BDL znajdź jeden wskaźnik dla swojej gminy; zapisz okres i jednostkę.",
+      "Przygotuj pięć pytań o realne doświadczenia i przetestuj je w parze.",
+      "Zaplanuj pięć rozmów z osobami z wybranego segmentu, nie tylko ze znajomymi.",
+      "Ustal miernik testu oferty. Po teście oddziel dane od wniosków i zdecyduj, co dalej."
+    ],
+    "teacherFocus": "Pięć rozmów to ćwiczenie odkrywania problemu, nie reprezentatywne badanie. Zwracaj uwagę na pytania sugerujące i selekcję wygodnych rozmówców.",
+    "rubric": [
+      "Hipoteza wskazuje segment i obserwowalne zachowanie.",
+      "Pytania dotyczą doświadczeń, a nie deklarowanej sympatii.",
+      "Próg decyzji powstaje przed testem."
+    ],
+    "quiz": [
+      [
+        "Które pytanie daje lepszy materiał do walidacji?",
+        [
+          "Czy to świetny pomysł?",
+          "Jak ostatnio rozwiązałeś ten problem?",
+          "Czy polecisz nas wszystkim?"
+        ],
+        1,
+        "Opis przeszłego zachowania daje więcej informacji niż uprzejma deklaracja."
+      ],
+      [
+        "Kiedy ustalić próg decyzji?",
+        [
+          "Przed rozpoczęciem testu.",
+          "Po wyniku, żeby wyglądał dobrze.",
+          "Dopiero po uruchomieniu firmy."
+        ],
+        0,
+        "Wcześniejsze ustalenie progu ogranicza dopasowywanie interpretacji do oczekiwań."
+      ],
+      [
+        "Co mówi liczba mieszkańców z GUS?",
+        [
+          "Dokładną liczbę kupujących.",
+          "Kontekst i potencjalną wielkość obszaru badania.",
+          "Gwarantowany popyt."
+        ],
+        1,
+        "Dane zastane opisują rynek, ale nie potwierdzają same w sobie gotowości do zakupu."
+      ]
+    ],
+    "resources": [
+      "gus",
+      "pfr-walidacja",
+      "nierejestrowana"
+    ]
+  },
+  {
+    "n": 4,
+    "title": "Zbuduj model, który się spina",
+    "topic": "Model biznesowy i Lean",
+    "icon": "▦",
+    "subtitle": "Połącz potrzeby klientów, sposób zarabiania i codzienną pracę firmy.",
+    "outcome": "Lean Canvas, opis jednego procesu i prognoza przepływów na sześć miesięcy.",
+    "concepts": [
+      [
+        "Lean Canvas w dziewięciu polach",
+        "Zapisz problem, segmenty klientów, propozycję wartości, rozwiązanie, kanały, przychody, koszty, kluczowe wskaźniki i przewagę trudną do skopiowania. Zacznij od problemu i klienta. Oznacz założenia, które masz dopiero sprawdzić. Lean Canvas służy testowaniu modelu; nie zastępuje pełnego biznesplanu ani planu operacyjnego."
+      ],
+      [
+        "Przepływ pieniądza to nie zysk",
+        "Przychód, koszt i ruch gotówki mogą wystąpić w różnych terminach. Klient płaci po 30 dniach, a materiały kupujesz dzisiaj. Rozdziel w arkuszu wpływy od wydatków i policz saldo końcowe każdego miesiąca. Saldo początkowe następnego miesiąca to poprzednie saldo końcowe. Ujemne saldo ujawnia potrzebę zmiany planu lub finansowania, nawet jeśli sprzedaż wygląda obiecująco."
+      ],
+      [
+        "Najpierw proces, potem narzędzie",
+        "Wybierz jedną powtarzalną czynność. Opisz początek, kolejne kroki, odpowiedzialność, warunek zakończenia i sposób kontroli. Sprawdź opis z osobą, która wcześniej tego nie robiła. W Lean szukasz oczekiwania, błędów, nadmiarowych ruchów i pracy bez wartości. Automatyzacja ma sens po uporządkowaniu procesu."
+      ]
+    ],
+    "caseTitle": "Piekarnia osiedlowa w Oławie",
+    "caseText": "Piekarnia sprzedaje pieczywo i chce wprowadzić koszyki śniadaniowe dla biur. Zamówienia rosną, ale firmy płacą po miesiącu. Opakowania trzeba kupić z góry. Właścicielka widzi wzrost sprzedaży, a mimo to brakuje pieniędzy na zakupy. To fikcyjny przypadek dydaktyczny.",
+    "caseTask": "Które pola modelu się zmieniają? Dlaczego wzrost przychodów może pogorszyć płynność? Wskaż dwa warianty testu.",
+    "caseAnswer": "Zmieniają się segment, propozycja wartości, kanał, przychody i koszty. Wydatki poprzedzają wpływy. Można przetestować przedpłatę lub krótsze terminy płatności oraz ograniczoną serię zamówień. Każdy wariant trzeba uzgodnić z klientem i uwzględnić w cash flow.",
+    "fields": [
+      "Problem, segment i obecne alternatywy",
+      "Propozycja wartości i najmniejsze rozwiązanie",
+      "Kanały, przychody oraz koszty",
+      "Kluczowy miernik i przewaga — dowody lub założenia",
+      "Proces: początek, kroki, właściciel, kontrola",
+      "Gotówka: wpływy, wydatki, najniższe saldo i reakcja"
+    ],
+    "steps": [
+      "Wypełnij dziewięć pól karty Lean Canvas. Oznacz każde założenie znakiem zapytania.",
+      "W arkuszu cash flow uzupełnij sześć miesięcy. W pierwszej kolumnie wpisz środki dostępne na start.",
+      "Zbuduj drugi wariant: wpływy niższe o 20% lub opóźnione o miesiąc. Porównaj najniższe saldo.",
+      "Opisz jeden proces w pięciu–siedmiu krokach i przetestuj instrukcję w parze."
+    ],
+    "teacherFocus": "Ten moduł ma dużo materiału referencyjnego. Na warsztacie priorytetem są model, gotówka i jeden proces. Rozwinięcia Gerbera oraz Lean można przenieść do pracy własnej. Arkusz jest narzędziem planowania, nie księgowością.",
+    "rubric": [
+      "Canvas łączy problem, klienta i płatnika.",
+      "Cash flow przenosi salda między miesiącami i uwzględnia terminy płatności.",
+      "Opis procesu może wykonać druga osoba."
+    ],
+    "quiz": [
+      [
+        "Co przenosisz na początek kolejnego miesiąca w cash flow?",
+        [
+          "Przychód ze sprzedaży.",
+          "Saldo końcowe poprzedniego miesiąca.",
+          "Wyłącznie zysk netto."
+        ],
+        1,
+        "Ciągłość sald pozwala ocenić dostępne środki w kolejnych miesiącach."
+      ],
+      [
+        "Które zdanie jest prawdziwe?",
+        [
+          "Rosnąca sprzedaż zawsze poprawia gotówkę.",
+          "Firma może mieć zysk i jednocześnie problem z płynnością.",
+          "Faktura zawsze oznacza wpływ tego samego dnia."
+        ],
+        1,
+        "Terminy płatności i wcześniejsze wydatki mogą powodować niedobór gotówki."
+      ],
+      [
+        "Co warto zrobić przed automatyzacją?",
+        [
+          "Opisać i uprościć proces.",
+          "Kupić najdroższy system.",
+          "Zwiększyć liczbę powtórzeń ręcznych."
+        ],
+        0,
+        "Narzędzie wzmacnia sposób pracy; nie usuwa samo niejasnych zasad."
+      ]
+    ],
+    "resources": [
+      "parp-biznesplan",
+      "gus"
+    ]
+  },
+  {
+    "n": 5,
+    "title": "Narzędzia, które wykonują pracę",
+    "topic": "Cyfryzacja i AI",
+    "icon": "✳",
+    "subtitle": "Zbuduj prostą ofertę online i sprawdź jedno użyteczne zastosowanie AI.",
+    "outcome": "Szkic strony oferty i karta małego eksperymentu AI.",
+    "concepts": [
+      [
+        "Strona odpowiada na pytania klienta",
+        "Kto skorzysta? Jaki problem rozwiązujesz? Co dokładnie otrzyma klient i za jaką cenę lub jak uzyska wycenę? Jak wygląda następny krok? Zacznij od treści i jednej czytelnej czynności. Przed uruchomieniem sprzedaży sprawdź obowiązki informacyjne, prywatność, sposób kontaktu i warunki zamówienia. Sama strona wizytówkowa nie staje się automatycznie kompletnym sklepem."
+      ],
+      [
+        "Dobre polecenie i kontrola wyniku",
+        "Podaj zadanie, kontekst, odbiorcę, dane wejściowe, ograniczenia i oczekiwany format. Przykład: „Napisz trzy warianty opisu naprawy roweru dla mieszkańców osiedla, do 60 słów, bez obietnic czasu, którego nie podałem”. Sprawdź fakty, liczby i obietnice. AI może wygenerować wiarygodnie brzmiące informacje bez podstaw."
+      ],
+      [
+        "Mały eksperyment zamiast zakupu w ciemno",
+        "Wybierz jedno zadanie i zmierz czas oraz jakość bez AI. Następnie wykonaj porównywalną próbę z AI. Uwzględnij czas weryfikacji, koszt narzędzia i ryzyko błędu. Korzystaj z danych wymyślonych albo bezpiecznie przygotowanych; nie wklejaj danych klientów i poufnych umów do narzędzia bez sprawdzenia zasad ich przetwarzania."
+      ]
+    ],
+    "caseTitle": "Zakład krawiecki na Nadodrzu",
+    "caseText": "Ania chce szybciej odpowiadać na powtarzalne zapytania o poprawki odzieży. Narzędzie AI ma przygotowywać szkice odpowiedzi na podstawie zatwierdzonego cennika. Nie powinno samodzielnie obiecywać odbioru ani odpisywać klientom bez kontroli. Przypadek jest fikcyjny.",
+    "caseTask": "Przygotuj polecenie dla AI i trzy kryteria oceny. Jakie dane trzeba usunąć z przykładów?",
+    "caseAnswer": "Polecenie powinno ograniczać odpowiedź do danych z cennika i nakazywać pytanie o brakujące informacje. Kryteria: zgodność ceny, brak wymyślonego terminu, zrozumiały kolejny krok. Z przykładów usuń imiona, telefony, adresy i szczegóły pozwalające rozpoznać klientów; użyj danych fikcyjnych.",
+    "fields": [
+      "Zadanie klienta i treść mojej strony oferty",
+      "Wybrane zadanie dla AI i obecny czas wykonania",
+      "Polecenie: zadanie, kontekst, ograniczenia, format",
+      "Dane wejściowe i zasady ich użycia",
+      "Kryteria jakości, błędy i czas sprawdzania",
+      "Wynik eksperymentu i decyzja o dalszym użyciu"
+    ],
+    "steps": [
+      "Napisz nagłówek, opis wartości i wezwanie do działania dla jednej usługi.",
+      "Przygotuj pięć fikcyjnych zapytań klientów i wzorcowe informacje do odpowiedzi.",
+      "Porównaj wykonanie zadania ręcznie i z AI, wliczając weryfikację.",
+      "Zapisz, kiedy człowiek musi przejąć sprawę. Sprawdź materiały UODO i UOKiK właściwe dla zadania."
+    ],
+    "teacherFocus": "Nie wymagaj zakładania płatnego konta AI ani podawania prawdziwych danych. Zapewnij wariant papierowy z gotowymi odpowiedziami do oceny. Lekcja dotyczy doboru i kontroli narzędzia.",
+    "rubric": [
+      "Strona wskazuje odbiorcę, korzyść i kolejny krok.",
+      "Polecenie ogranicza wymyślanie faktów.",
+      "Ocena AI obejmuje jakość, dane i czas kontroli."
+    ],
+    "quiz": [
+      [
+        "Co należy wliczyć do czasu pracy z AI?",
+        [
+          "Wyłącznie czas generowania.",
+          "Przygotowanie, generowanie i weryfikację.",
+          "Tylko czas logowania."
+        ],
+        1,
+        "Oszczędność jest realna dopiero po uwzględnieniu całej pracy."
+      ],
+      [
+        "Jakich danych użyć do ćwiczenia?",
+        [
+          "Pełnej bazy klientów.",
+          "Danych fikcyjnych przygotowanych do zadania.",
+          "Dowolnych umów bez sprawdzania warunków."
+        ],
+        1,
+        "Do nauki nie potrzeba danych identyfikujących realnych klientów."
+      ],
+      [
+        "Co zrobić z konkretną informacją podaną przez AI?",
+        [
+          "Przyjąć ją, jeśli brzmi pewnie.",
+          "Zweryfikować w odpowiednim źródle.",
+          "Uznać, że model zawsze cytuje aktualne prawo."
+        ],
+        1,
+        "Pewny styl odpowiedzi nie potwierdza jej poprawności."
+      ]
+    ],
+    "resources": [
+      "parp-ai",
+      "uodo",
+      "uokik"
+    ]
+  },
+  {
+    "n": 6,
+    "title": "Dotrzyj do właściwych ludzi",
+    "topic": "Marketing i komunikacja",
+    "icon": "◉",
+    "subtitle": "Wybierz odbiorcę, ułóż komunikat i zaplanuj mierzalny test.",
+    "outcome": "Karta STP i plan dwutygodniowego testu komunikacji.",
+    "concepts": [
+      [
+        "Segmentacja, wybór, pozycjonowanie",
+        "Segment to grupa podobna pod względem potrzeb lub zachowania. Targetowanie polega na wyborze segmentu, który możesz obsłużyć. Pozycjonowanie opisuje, dlaczego ta grupa ma wybrać Ciebie zamiast alternatywy. „Wszyscy mieszkańcy” rzadko jest wystarczającym opisem odbiorcy do zaprojektowania komunikatu."
+      ],
+      [
+        "Obietnica potrzebuje dowodu",
+        "Zapisz: dla kogo, w jakiej sytuacji, jaka korzyść i dlaczego można Ci wierzyć. Zastąp ogólne „najwyższa jakość” konkretem, który potrafisz potwierdzić. Opinie muszą być prawdziwe, a sposób ich weryfikacji jasny. Promocje i informacje o cenach sprawdzaj według bieżących wytycznych UOKiK."
+      ],
+      [
+        "Kanał i miernik wynikają z celu",
+        "Wybierz jeden cel i jeden kanał, np. zapytania od lokalnych biur przez bezpośredni kontakt. Zmierz liczbę kontaktów, odpowiedzi, kwalifikowanych zapytań i zamówień. Zasięg jest sygnałem widoczności; nie jest przychodem. Nie zmieniaj naraz odbiorcy, ceny, komunikatu i kanału, bo nie ustalisz, co zadziałało."
+      ]
+    ],
+    "caseTitle": "Śniadania dla małych biur",
+    "caseText": "Piekarnia z Oławy promuje „pieczywo dla każdego” w mediach społecznościowych. Dla koszyków śniadaniowych wybiera jednak osoby organizujące spotkania w biurach do 20 pracowników. Ich problemem jest pewna dostawa i prosty proces zamówienia, a nie liczba odmian chleba. Przykład jest fikcyjny.",
+    "caseTask": "Zapisz jednozdaniowe pozycjonowanie i test komunikatu. Jakie dane pokażą efekt biznesowy?",
+    "caseAnswer": "Przykład: „Dla osób organizujących spotkania w małych biurach przygotowujemy koszyki śniadaniowe z uzgodnioną dostawą i prostym zamówieniem”. Test: ta sama oferta do porównywalnych grup firm, jeden zmieniany element komunikatu. Mierniki: kwalifikowane zapytania i zamówienia, przy określonym koszcie i czasie obsługi.",
+    "fields": [
+      "Segment: potrzeba, sytuacja, zachowanie",
+      "Wybrana grupa i powód wyboru",
+      "Pozycjonowanie w jednym zdaniu",
+      "Obietnica i dowód, który mogę pokazać",
+      "Kanał, komunikat, budżet i harmonogram testu",
+      "Miernik wyniku, próg decyzji i wnioski"
+    ],
+    "steps": [
+      "Podziel potencjalnych klientów na trzy segmenty według potrzeb.",
+      "Porównaj dostępność, pilność problemu i zdolność obsługi każdego segmentu.",
+      "Dla wybranego segmentu napisz dwa komunikaty; zmieniaj jedną rzecz naraz.",
+      "Zaplanuj test na 14 dni i odróżnij miernik widoczności od miernika sprzedaży."
+    ],
+    "teacherFocus": "Pilnuj zgodności obietnicy z realną zdolnością obsługi. Nie zalecaj masowej wysyłki reklam bez sprawdzenia zasad kontaktu i zgód. W ćwiczeniu można symulować kampanię.",
+    "rubric": [
+      "Segment jest opisany przez potrzebę lub zachowanie.",
+      "Komunikat wskazuje korzyść i dowód.",
+      "Test ma cel, termin i miernik biznesowy."
+    ],
+    "quiz": [
+      [
+        "Co oznacza STP?",
+        [
+          "Sprzedaż, technologia, płatność.",
+          "Segmentacja, wybór rynku docelowego, pozycjonowanie.",
+          "Strategia tanich produktów."
+        ],
+        1,
+        "STP porządkuje decyzję o odbiorcy i miejscu oferty na rynku."
+      ],
+      [
+        "Co jest bliżej efektu biznesowego?",
+        [
+          "Liczba wyświetleń bez kontekstu.",
+          "Liczba kwalifikowanych zapytań i zamówień.",
+          "Liczba opublikowanych postów."
+        ],
+        1,
+        "Miernik powinien odpowiadać celowi; sama aktywność nie świadczy o skuteczności."
+      ],
+      [
+        "Jaka obietnica jest lepsza?",
+        [
+          "Najlepsza firma na świecie.",
+          "Konkretna korzyść, którą firma potrafi potwierdzić.",
+          "Dowolna, jeśli zwiększa kliknięcia."
+        ],
+        1,
+        "Obietnica musi być zrozumiała, wiarygodna i możliwa do dotrzymania."
+      ]
+    ],
+    "resources": [
+      "parp-marketing",
+      "uokik"
+    ]
+  },
+  {
+    "n": 7,
+    "title": "Mniej strat, więcej wartości",
+    "topic": "Zrównoważony rozwój i ESG",
+    "icon": "❋",
+    "subtitle": "Wybierz małe usprawnienie i zmierz wpływ na firmę oraz otoczenie.",
+    "outcome": "Plan jednego działania ESG z wartością bazową i miernikiem.",
+    "concepts": [
+      [
+        "Trzy obszary wpływu",
+        "E obejmuje środowisko, np. energię, wodę, odpady. S dotyczy ludzi: warunków pracy, bezpieczeństwa, dostępności i relacji. G to sposób zarządzania: odpowiedzialności, przejrzystości i przeciwdziałania nadużyciom. Zacznij od tego, na co masz wpływ i co jest istotne dla Twojej działalności."
+      ],
+      [
+        "Dobrowolny standard i obowiązki to różne sprawy",
+        "VSME wspiera dobrowolne raportowanie przez MŚP. Pytanie od kontrahenta nie oznacza automatycznie objęcia firmy ustawowym obowiązkiem pełnego raportowania. Zakres obowiązków zależy od aktualnych przepisów i sytuacji firmy. Korzystaj z aktualnych materiałów PARP oraz EFRAG; nie przenoś węgierskich progów i terminów z bazowego opracowania na Polskę."
+      ],
+      [
+        "Porównuj przy tej samej jednostce",
+        "Zapisz wartość bazową, okres, źródło danych i jednostkę. Całkowite zużycie energii może wzrosnąć wraz ze sprzedażą, choć zużycie na jedno zamówienie maleje. Pokaż oba wyniki i ograniczenia porównania. Unikaj ogólnych deklaracji „eko” bez wskazania konkretnej zmiany i dowodów."
+      ]
+    ],
+    "caseTitle": "Mała kawiarnia we Wrocławiu",
+    "caseText": "Kawiarnia chce ograniczyć odpady żywności. Przez tydzień waży niesprzedane produkty i liczy liczbę zamówień. Potem testuje mniejsze partie wypieku. Nie kupuje od razu nowego sprzętu. Przykład oraz podane zadanie są fikcyjne.",
+    "caseTask": "Zaproponuj miernik, sposób zbierania danych i uczciwy komunikat po teście. Co może zniekształcić porównanie?",
+    "caseAnswer": "Miernik: kilogramy odpadów i kilogramy na 100 zamówień. Porównać podobne dni, zapisać zmianę menu i liczbę zamówień. Komunikat powinien podać okres, zakres i wynik zamiast nazywać całą kawiarnię „zero waste”. Tydzień nie dowodzi trwałego efektu.",
+    "fields": [
+      "Obszar E / S / G i powód wyboru",
+      "Wartość bazowa, jednostka, okres i źródło danych",
+      "Działanie i osoba odpowiedzialna",
+      "Cel na 30 dni i koszt wdrożenia",
+      "Wynik absolutny oraz wynik na jednostkę działalności",
+      "Wniosek, ograniczenia i treść uczciwego komunikatu"
+    ],
+    "steps": [
+      "Wybierz jeden problem: energia, odpady, bezpieczeństwo, dostępność lub zasady współpracy.",
+      "Ustal tygodniowy pomiar bazowy bez zmiany sposobu pracy.",
+      "Zaplanuj małą zmianę i pomiar po jej wdrożeniu.",
+      "Zapisz wynik oraz ograniczenia. Jeśli kontrahent wymaga danych, sprawdź, czego konkretnie potrzebuje."
+    ],
+    "teacherFocus": "Nie ucz historycznych harmonogramów regulacyjnych jako aktualnych. Priorytetem jest mierzalne usprawnienie i rzetelne komunikowanie wyniku. Obowiązek prawny trzeba ustalić indywidualnie.",
+    "rubric": [
+      "Wybrany obszar ma związek z działalnością firmy.",
+      "Pomiar ma jednostkę, okres i źródło.",
+      "Komunikat opisuje konkretny wynik i ograniczenia."
+    ],
+    "quiz": [
+      [
+        "Jaki charakter ma VSME?",
+        [
+          "Jest automatycznie obowiązkowy dla każdej małej firmy.",
+          "Służy dobrowolnemu raportowaniu przez MŚP.",
+          "Dotyczy wyłącznie reklamy."
+        ],
+        1,
+        "Sam standard VSME nie ustanawia powszechnego obowiązku raportowania."
+      ],
+      [
+        "Co umożliwia uczciwe porównanie odpadów?",
+        [
+          "Samo wrażenie pracownika.",
+          "Ta sama jednostka, okres i uwzględnienie skali działalności.",
+          "Porównanie dowolnych dwóch liczb."
+        ],
+        1,
+        "Różnice sprzedaży i okresów mogą zmieniać wynik bez poprawy procesu."
+      ],
+      [
+        "Który komunikat jest bardziej rzetelny?",
+        [
+          "Jesteśmy całkowicie ekologiczni.",
+          "W podanym okresie ograniczyliśmy odpady w opisanym procesie o zmierzoną wartość.",
+          "Nasz produkt nie ma żadnego wpływu na środowisko."
+        ],
+        1,
+        "Konkretny zakres, pomiar i okres pozwalają ocenić deklarację."
+      ]
+    ],
+    "resources": [
+      "parp-esg",
+      "efrag",
+      "efrag-template"
+    ]
+  },
+  {
+    "n": 8,
+    "title": "Opowiedz o firmie i policz potrzeby",
+    "topic": "Pitch i finansowanie",
+    "icon": "↗",
+    "subtitle": "Przygotuj krótką prezentację i wybierz finansowanie dopasowane do swojego planu.",
+    "outcome": "Pitch na trzy minuty, plan wykorzystania środków i porównanie finansowania.",
+    "concepts": [
+      [
+        "Sześć elementów prezentacji",
+        "Pokaż problem i klienta, rozwiązanie i wartość, rynek oraz dowody zainteresowania, model przychodowy, zespół i zdolność wykonania, a na koniec potrzebną kwotę oraz przeznaczenie środków. Dopasuj akcenty do odbiorcy. Bank, inwestor udziałowy i lokalny partner oceniają przedsięwzięcie z różnych perspektyw."
+      ],
+      [
+        "Dług, udziały i środki własne",
+        "Dług wymaga obsługi i spłaty na uzgodnionych warunkach. Kapitał udziałowy oznacza podział własności i uzgodnienia dotyczące decyzji oraz wyjścia inwestora. Środki własne ograniczają zewnętrzne zobowiązania, ale niosą ryzyko osobiste. Dotacje mają warunki i harmonogramy. Żadne źródło nie jest automatycznie najlepsze dla wszystkich firm."
+      ],
+      [
+        "Kwota wynika z planu i kamieni milowych",
+        "Zacznij od prognozy gotówki z modułu 4. Wskaż, na co wydasz środki, jaki rezultat osiągniesz i do kiedy. Oszacuj bufor oraz wariant słabszej sprzedaży. W katalogu PFR szukaj możliwości, ale dostępność naboru, kwalifikowalność i warunki sprawdzaj w dokumentach konkretnego programu. Pitch nie jest gwarancją finansowania."
+      ]
+    ],
+    "caseTitle": "Pracownia napraw i renowacji mebli",
+    "caseText": "Dwie osoby z Dolnego Śląska chcą wynająć większy lokal i kupić sprzęt do renowacji. Mają pierwsze płatne zamówienia, ale nie policzyły kosztów przeprowadzki ani okresu niższej sprzedaży. W prezentacji proszą o okrągłą kwotę, bez planu wydatków. Przykład jest fikcyjny.",
+    "caseTask": "Jak ustalisz kwotę potrzebnego finansowania? Co zmienisz w prezentacji dla banku, a co dla partnera udziałowego?",
+    "caseAnswer": "Uzupełnić cash flow o sprzęt, kaucję, adaptację i okres przejściowy, a następnie oszacować najniższe saldo i bufor. Dla banku pokazać zdolność obsługi długu i ryzyka; dla inwestora udziałowego potencjał rozwoju, rolę zespołu oraz proponowaną współpracę. Warunki wymagają analizy, nie samego atrakcyjnego pitcha.",
+    "fields": [
+      "Problem, klient i rozwiązanie — po jednym zdaniu",
+      "Dowody popytu i model zarabiania",
+      "Zespół, rynek i realna przewaga",
+      "Kwota, wydatki, kamienie milowe i terminy",
+      "Porównanie trzech źródeł finansowania i konsekwencji",
+      "Szkic pitcha, pytania odbiorców i poprawki"
+    ],
+    "steps": [
+      "Wróć do prognozy cash flow i policz potrzebę gotówkową z buforem.",
+      "Porównaj trzy realne opcje finansowania: warunki, ryzyko, koszt i wpływ na decyzje.",
+      "Przygotuj sześć slajdów lub sześć kart i przedstaw je w trzy minuty.",
+      "Zbierz informację zwrotną według rubryki i popraw najsłabszy element. Sprawdź konkretny program w źródle."
+    ],
+    "teacherFocus": "Oceń logikę i dowody, a nie umiejętność występu. Dla lokalnej firmy dopuszczaj pitch do partnera lub banku, bez narracji o VC. Liczby uczestnika mogą pozostać fikcyjne.",
+    "rubric": [
+      "Prezentacja pokazuje problem, wartość i dowody.",
+      "Kwota wynika z planu oraz terminów wydatków.",
+      "Wybór finansowania uwzględnia koszt, ryzyko i własność."
+    ],
+    "quiz": [
+      [
+        "Z czego powinna wynikać kwota finansowania?",
+        [
+          "Z okrągłej liczby dobrze wyglądającej na slajdzie.",
+          "Z planu wydatków, wpływów, terminów i bufora.",
+          "Z kwoty pozyskanej przez dowolną inną firmę."
+        ],
+        1,
+        "Finansowanie ma pokryć konkretną potrzebę i doprowadzić do określonego rezultatu."
+      ],
+      [
+        "Co wiąże się z finansowaniem udziałowym?",
+        [
+          "Zawsze brak jakichkolwiek konsekwencji dla własności.",
+          "Podział własności i uzgodnienie praw inwestora.",
+          "Automatyczna spłata jak przy zwykłym kredycie."
+        ],
+        1,
+        "Udziały oznaczają prawa właścicielskie; szczegóły zależą od umowy."
+      ],
+      [
+        "Czy wpis w katalogu finansowania oznacza przyznanie środków?",
+        [
+          "Tak, każdemu czytelnikowi.",
+          "Nie; trzeba sprawdzić nabór, kryteria i warunki.",
+          "Tak, jeśli pitch trwa trzy minuty."
+        ],
+        1,
+        "Katalog pomaga znaleźć opcje; nie zastępuje oceny kwalifikowalności i wniosku."
+      ]
+    ],
+    "resources": [
+      "pfr-finanse",
+      "pfr-pitch"
+    ]
+  }
+]

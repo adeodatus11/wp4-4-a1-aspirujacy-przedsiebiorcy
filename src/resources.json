@@ -1,0 +1,243 @@
+[
+  {
+    "id": "parp-coaching",
+    "title": "Nowoczesny lider — coaching i rozwój pracowników",
+    "publisher": "Akademia PARP",
+    "url": "https://akademia.parp.gov.pl/course/view.php?id=329",
+    "description": "Kurs uzupełniający o coachingu, GROW i rozwoju. Dostęp do lekcji wymaga zapisu.",
+    "modules": [
+      1
+    ],
+    "type": "Kurs",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "parp-start",
+    "title": "Jak założyć własną firmę?",
+    "publisher": "Akademia PARP",
+    "url": "https://akademia.parp.gov.pl/course/view.php?id=297",
+    "description": "Polskie uzupełnienie drogi od pomysłu do uruchomienia firmy. Lekcje wymagają zapisu.",
+    "modules": [
+      2
+    ],
+    "type": "Kurs",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "biznes-start",
+    "title": "Zanim zarejestrujesz firmę",
+    "publisher": "Biznes.gov.pl",
+    "url": "https://biznes.gov.pl/pl/portal/00120",
+    "description": "Forma działalności i przygotowanie do rejestracji. Aktualne wymagania sprawdzaj w portalu.",
+    "modules": [
+      2
+    ],
+    "type": "Poradnik",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Potwierdzono w indeksie oficjalnego portalu; bezpośredni odczyt zablokowany (403)."
+  },
+  {
+    "id": "ceidg",
+    "title": "Wpis do CEIDG",
+    "publisher": "Biznes.gov.pl",
+    "url": "https://biznes.gov.pl/opisy-procedur/-/proc/736",
+    "description": "Oficjalna procedura rejestracji jednoosobowej działalności gospodarczej.",
+    "modules": [
+      2
+    ],
+    "type": "Procedura",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Potwierdzono w indeksie oficjalnego portalu; bezpośredni odczyt zablokowany (403)."
+  },
+  {
+    "id": "nierejestrowana",
+    "title": "Działalność nierejestrowana",
+    "publisher": "Biznes.gov.pl",
+    "url": "https://biznes.gov.pl/pl/firma/zakladanie-firmy/chce-wiedziec-jak-zalozyc-wlasna-firme/dzialalnosc-nierejestrowa-oraz-inne-sytuacje-w-ktorych-nie-trzeba-rejestrowac-firmy",
+    "description": "Warunki i ograniczenia drobnej działalności bez wpisu. Sprawdź bieżący limit i wyłączenia.",
+    "modules": [
+      2,
+      3
+    ],
+    "type": "Poradnik",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Potwierdzono w indeksie oficjalnego portalu; bezpośredni odczyt zablokowany (403)."
+  },
+  {
+    "id": "gus",
+    "title": "Bank Danych Lokalnych",
+    "publisher": "GUS",
+    "url": "https://bdl.stat.gov.pl/bdl/start",
+    "description": "Dane o gminach, powiatach i regionach. Zapisuj okres, jednostkę oraz definicję wskaźnika.",
+    "modules": [
+      3,
+      4
+    ],
+    "type": "Dane",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "pfr-walidacja",
+    "title": "Budowanie i walidacja biznesu — rozmowa z praktykiem",
+    "publisher": "PFR Startup",
+    "url": "https://startup.pfr.pl/artykul/bartosz-narzelski-zespol-zawsze-zespol-dobry-zespol-naprawi-slaby-produkt-slaby-zespol",
+    "description": "Eksperymenty, rozmowy z klientami i pierwsze wersje usługi. Perspektywa praktyka.",
+    "modules": [
+      3
+    ],
+    "type": "Artykuł",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "parp-biznesplan",
+    "title": "Biznesplan",
+    "publisher": "Akademia PARP",
+    "url": "https://akademia.parp.gov.pl/course/view.php?id=28",
+    "description": "Konstrukcja biznesplanu i wykonalność założeń. Lekcje wymagają zapisu.",
+    "modules": [
+      4
+    ],
+    "type": "Kurs",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "parp-ai",
+    "title": "AI w biznesie — kurs I stopnia",
+    "publisher": "Akademia PARP",
+    "url": "https://akademia.parp.gov.pl/course/view.php?id=303",
+    "description": "Zastosowania AI, ograniczenia i aspekty etyczne. Lekcje wymagają zapisu.",
+    "modules": [
+      5
+    ],
+    "type": "Kurs",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "uodo",
+    "title": "Modele AI i dane osobowe — opinia EROD",
+    "publisher": "UODO",
+    "url": "https://www.uodo.gov.pl/pl/589/3489",
+    "description": "Punkt wyjścia do oceny przetwarzania danych osobowych przez modele AI.",
+    "modules": [
+      5
+    ],
+    "type": "Wytyczne",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "parp-marketing",
+    "title": "Komunikacja marketingowa",
+    "publisher": "Akademia PARP",
+    "url": "https://akademia.parp.gov.pl/course/view.php?id=29",
+    "description": "Dobór odbiorców, kanałów i treści. Lekcje wymagają zapisu.",
+    "modules": [
+      6
+    ],
+    "type": "Kurs",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "uokik",
+    "title": "Sprzedaż poza lokalem i na odległość",
+    "publisher": "UOKiK",
+    "url": "https://prawakonsumenta.uokik.gov.pl/prawo-do-informacji/sprzedaz-poza-lokalem-i-na-odleglosc/",
+    "description": "Obowiązki informacyjne przy sprzedaży na odległość, zamówienia i opinie.",
+    "modules": [
+      5,
+      6
+    ],
+    "type": "Poradnik",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "parp-esg",
+    "title": "ESG — zrównoważony rozwój",
+    "publisher": "PARP",
+    "url": "https://www.parp.gov.pl/component/site/site/esg-zrownowazony-rozwoj",
+    "description": "Polski punkt wejścia do wiedzy, materiałów i wsparcia dla przedsiębiorstw.",
+    "modules": [
+      7
+    ],
+    "type": "Poradnik",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "efrag",
+    "title": "MŚP i raportowanie zrównoważonego rozwoju",
+    "publisher": "EFRAG",
+    "url": "https://www.efrag.org/en/smes-and-sustainability-reporting",
+    "description": "Źródłowe informacje o dobrowolnym raportowaniu. Materiał w języku angielskim.",
+    "modules": [
+      7
+    ],
+    "type": "Standard",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "efrag-template",
+    "title": "VSME — szablon cyfrowy",
+    "publisher": "EFRAG",
+    "url": "https://www.efrag.org/en/vsme-digital-template-and-xbrl-taxonomy",
+    "description": "Zewnętrzny arkusz i instrukcje raportowania. Sprawdź wersję przed użyciem; język angielski.",
+    "modules": [
+      7
+    ],
+    "type": "Szablon",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "pfr-finanse",
+    "title": "Finansowanie przedsięwzięcia",
+    "publisher": "PFR Startup",
+    "url": "https://startup.pfr.pl/finansowanie",
+    "description": "Przegląd możliwości. Dostępność i kwalifikowalność zależą od konkretnego programu.",
+    "modules": [
+      8
+    ],
+    "type": "Katalog",
+    "timeSensitive": true,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  },
+  {
+    "id": "pfr-pitch",
+    "title": "Co powinien zawierać pitch deck?",
+    "publisher": "PFR Startup",
+    "url": "https://startup.pfr.pl/artykul/co-powinien-zawierac-pitch-deck-i-o-czym-zapominaja-polskie-start-upy",
+    "description": "Struktura prezentacji inwestorskiej i typowe braki w pitchach.",
+    "modules": [
+      8
+    ],
+    "type": "Poradnik",
+    "timeSensitive": false,
+    "checkedAt": "2026-10-18",
+    "verification": "Odczytano stronę źródłową."
+  }
+]

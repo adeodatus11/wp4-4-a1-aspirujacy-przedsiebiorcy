@@ -150,7 +150,9 @@ To pytanie o walidację rynkową. Zastanów się, jak zebrać dowody, że ludzie
 2. **Feedback Circle (30 min)** – omówienie wyników rozmów walidacyjnych. Pytanie prowadzące grupy: *„Czy ktoś już zapłacił za próbę rozwiązania tego problemu?"* – **rekomendowane stacjonarnie**.
 3. **Networking Circle (30 min)** – wymiana kontaktów do dalszych rozmów walidacyjnych; uczestnicy mogą walidować pomysły nawzajem w swoich sieciach.
 
-### Faza 3 – Blok interaktywny (2,5–3 h)
+### Faza 3 – Wariant rozszerzony wcześniejszego opracowania (200 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|

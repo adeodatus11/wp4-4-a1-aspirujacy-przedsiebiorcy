@@ -1,0 +1,12 @@
+{
+  "name": "pracownia-przedsiebiorczosci",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Testy statycznego serwisu uczestnika i prowadzącego",
+  "scripts": {
+    "test": "node tests/core.cjs && node tests/interface.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

@@ -310,7 +310,9 @@ Ostatecznie pytanie brzmi nie *dlaczego* dążyć do doskonałości, lecz **jaka
 2. **Pitch Practice** – każdy w 60 s formułuje jedno zdanie wynikające z przecięcia kręgów
 3. **Networking Circle** – wymiana list „do zaprzestania"; szukanie wzorców
 
-### Faza 3 – Blok interaktywny (2,5–3 h)
+### Faza 3 – Wariant rozszerzony wcześniejszego opracowania (220 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|

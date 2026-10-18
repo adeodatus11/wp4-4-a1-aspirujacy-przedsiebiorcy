@@ -726,8 +726,8 @@ Podstawa: **decyzje klientów są poznawczo łatwiejsze, gdy sprzedawca oferuje 
 
 Do modelu finansowego potrzebne są też **proste arkusze kalkulacyjne**, w których wpiszesz oczekiwane przychody, wydatki i zaplanujesz **cash flow** – przepływ pieniędzy do i z firmy.
 
-> ### ⚠️ Luka w materiale źródłowym
-> W oryginale w miejscach, w których powinien znajdować się **szablon Lean Canvas** oraz **proste szablony finansowe i planowania cash flow**, znajdują się notatki robocze autora informujące, że materiałów nie odnaleziono.
+> ### Uzupełnienie luki w materiale źródłowym
+> W oryginale brakowało gotowych szablonów. Serwis uzupełnia je własną [kartą Lean Canvas](downloads/lean-canvas.html), [arkuszem cash flow XLSX](downloads/cash-flow.xlsx) i [kalkulatorem](cash-flow.html). To nowe narzędzia dydaktyczne, a nie odnalezione oryginały.
 > **Do uzupełnienia przed wdrożeniem.** Bez tych dwóch szablonów moduł traci swój główny element praktyczny.
 
 **Strategia finansowa** to „mapa" pokazująca, czy firma jest finansowo zrównoważona i jak może rosnąć w czasie:
@@ -1035,7 +1035,9 @@ Zanim pójdziesz dalej, warto zrozumieć, gdzie twoja firma stoi dzisiaj. Odpowi
 2. **Pitch Practice** – każdy w 90 s prezentuje swój model biznesowy w czterech wymiarach.
 3. **Networking Circle** – wymiana konkretnych narzędzi: kto czego używa (CRM, Trello, Notion, fakturowanie) i co realnie zadziałało.
 
-## Faza 3 – Blok interaktywny (2,5–3 h)
+## Faza 3 – Wariant rozszerzony wcześniejszego opracowania (205 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|
@@ -1081,8 +1083,8 @@ Najczęstsze tematy: strach przed oddaniem kontroli, „nie mam kogo zatrudnić"
 
 - [ ] PDF modułu 4 (PL) – rozważ podział na dwa dokumenty (A+B, C+D)
 - [ ] Wideo z napisami PL
-- [ ] ⚠️ **Szablon Lean Canvas** – BRAK w materiale źródłowym, do opracowania
-- [ ] ⚠️ **Szablony finansowe + arkusz cash flow** – BRAK w materiale źródłowym, do opracowania
+- [ ] [Szablon Lean Canvas — gotowa karta do druku](downloads/lean-canvas.html)
+- [ ] [Arkusz cash flow XLSX — gotowy do pracy](downloads/cash-flow.xlsx) i [kalkulator online](cash-flow.html)
 - [ ] **Arkusz czterech wymiarów modelu biznesowego**
 - [ ] **Arkusz diagnozy trzech ról** – koło z podziałem procentowym
 - [ ] **Szablon SOP / mini-systemu** – pola: zadanie / termin / szablon / kontrola / odpowiedzialny

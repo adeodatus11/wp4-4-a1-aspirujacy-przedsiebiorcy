@@ -357,7 +357,9 @@ Obok fundamentów strategicznych ważną rolę odgrywa komunikacja: obok narzęd
 2. **Feedback Circle** – omówienie segmentów. Grupa stosuje pięć warunków skutecznej segmentacji jako listę kontrolną. **Stacjonarnie.**
 3. **Networking Circle** – wymiana doświadczeń kanałowych: co realnie działa przy małym budżecie.
 
-### Faza 3 – Blok interaktywny (2,5–3 h)
+### Faza 3 – Wariant rozszerzony wcześniejszego opracowania (200 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|

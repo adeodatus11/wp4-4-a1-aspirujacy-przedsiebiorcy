@@ -212,7 +212,9 @@ Efektem jest karta małego eksperymentu: problem, przykładowe dane, zadanie dla
 2. **Networking Circle** – wymiana: kto jakiego narzędzia używa i co realnie zadziałało. Online.
 3. **Pitch Practice** – każdy w 60 s przedstawia: jaką domenę wybrał i dlaczego.
 
-## Faza 3 – Blok interaktywny (2,5–3 h)
+## Faza 3 – Wariant bazowy wcześniejszego opracowania (165 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|

@@ -683,7 +683,9 @@ Droga startupu od koncepcji do sukcesu to w wielu aspektach **wyścig na dwóch 
 2. **Feedback Circle (30 min)** – grupa w roli inwestorów zadaje trudne pytania. Ćwiczenie odporności na pytania follow-up.
 3. **Networking Circle (30 min)** – wymiana kontaktów, informacji o dostępnych programach dotacyjnych, konkursach, lokalnych sieciach aniołów.
 
-## Faza 3 – Blok interaktywny (2,5–3 h)
+## Faza 3 – Wariant rozszerzony wcześniejszego opracowania (220 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|
@@ -737,7 +739,7 @@ Typowe tematy: czy w ogóle szukać inwestora, wycena własnej firmy, przygotowa
 - [ ] **Arkusz symulacji rozwodnienia** – 3 rundy, obliczenia
 - [ ] **Mapa źródeł finansowania** – plakat z osią od 3F do IPO + alternatywy
 - [ ] **Kalkulator CAC/LTV** – prosty arkusz
-- [ ] ⚠️ **Szablony finansowe i cash flow z modułu 4** – moduł 4 odsyła tu po szczegółowe planowanie finansowe; te szablony nadal wymagają opracowania
+- [ ] [Arkusz cash flow z modułu 4](downloads/cash-flow.xlsx) oraz [kalkulator](cash-flow.html) — gotowe narzędzia do planowania potrzeb gotówkowych.
 - [ ] **Zestawienie polskich i europejskich źródeł finansowania dla MŚP** – dotacje, PARP, programy regionalne, sieci aniołów, platformy crowdfundingowe działające w PL, rzędy kwot w PLN/EUR
 - [ ] Lista wsparcia po zakończeniu programu (wymóg strukturalny programu)
 

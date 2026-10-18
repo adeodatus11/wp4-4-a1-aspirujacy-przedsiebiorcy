@@ -15,23 +15,20 @@ Moduł ma przełamać dwa przekonania obecne u właścicieli MŚP:
 
 **Efekty uczenia się.** Po module uczestnik potrafi:
 1. wyjaśnić, czym są trzy filary ESG i jakie wskaźniki obejmują,
-2. odróżnić ESRS (obowiązkowy, duże firmy) od VSME (dobrowolny, MŚP),
+2. odróżnić obowiązki raportowania właściwe dla konkretnej firmy od dobrowolnego standardu VSME,
 3. przeprowadzić wstępną ocenę sytuacji własnej firmy (screening),
 4. wybrać 1–2 cele krótkoterminowe z mierzalnym rezultatem,
 5. przygotować uproszczony raport i zakomunikować go interesariuszom.
 
 ---
 
-## 2. Kontekst regulacyjny – dlaczego to teraz
+## 2. Kontekst regulacyjny — polski punkt odniesienia
 
-Kwestie zrównoważonego rozwoju i ESG (Environmental, Social, Governance) nie dotyczą już wyłącznie dużych firm – stały się nieuniknione dla organizacji **każdej wielkości i w każdej branży**.
+ESG obejmuje wpływ środowiskowy, społeczny i sposób zarządzania. Obowiązki raportowania, należytej staranności i dobrowolne standardy to różne zagadnienia. Nie należy traktować CSRD, CSDDD i ESRS jako jednego obowiązku dotyczącego każdej firmy.
 
-Regulacje Unii Europejskiej wymagają od dużych firm raportowania wyników w zakresie zrównoważonego rozwoju:
-- **dyrektywa CSRD**,
-- **dyrektywa CSDDD**,
-- **standardy ESRS**.
+W programie dla MŚP punktem wyjścia jest dobrowolny standard VSME oraz rzeczywiste potrzeby klientów i partnerów. Zakres ustawowych obowiązków trzeba sprawdzić dla konkretnej firmy na podstawie aktualnych przepisów, wielkości i statusu przedsiębiorstwa. Materiały bazowe z 2025 r. nie ustalają aktualnego harmonogramu dla Polski.
 
-MŚP coraz częściej także mierzą się z tymi oczekiwaniami: **ich klienci, partnerzy i finansujący oczekują odpowiedzialnego działania i przejrzystości.**
+Źródła do bieżącej pracy: [PARP — ESG](https://www.parp.gov.pl/component/site/site/esg-zrownowazony-rozwoj), [EFRAG — MŚP i raportowanie](https://www.efrag.org/en/smes-and-sustainability-reporting), [szablon VSME](https://www.efrag.org/en/vsme-digital-template-and-xbrl-taxonomy). Weryfikacja odnośników: 18.10.2026.
 
 ### 2.1. Dlaczego zrównoważony rozwój stał się nieunikniony
 
@@ -236,29 +233,15 @@ Raport (nawet w formie prezentacji PowerPoint) może być opublikowany jako czę
 
 ---
 
-## 8. Krajowe regulacje ESG (przykład węgierski)
+## 8. Jak ustalić sytuację własnej firmy w Polsce
 
-> ⚠️ **Uwaga lokalizacyjna:** materiał źródłowy opisuje regulacje **węgierskie**. Przy wdrożeniu w Polsce ta sekcja wymaga **całkowitego zastąpienia** aktualnym stanem polskiej implementacji CSRD i powiązanych przepisów. Poniższy zapis zachowano jako wzorzec struktury – pokazuje, jakie informacje trzeba zebrać dla własnego kraju.
+1. Opisz formę, wielkość, status i rolę firmy w łańcuchu dostaw.
+2. Oddziel obowiązek ustawowy od dobrowolnego raportowania oraz warunków współpracy z kontrahentem.
+3. Sprawdź aktualne wymagania w źródłach PARP i odpowiednich aktach prawnych; przy wątpliwościach skonsultuj sytuację ze specjalistą.
+4. Jeśli partner prosi o dane, ustal dokładny zakres, cel, okres i podstawę żądania. Nie zakładaj automatycznie, że potrzebny jest pełny raport.
+5. Do własnej nauki wybierz jeden miernik i działanie. Dobrowolny charakter VSME nie znosi innych obowiązków firmy.
 
-Celem krajowej regulacji ESG jest zgodność z ramami zrównoważonego rozwoju obowiązującymi w Unii Europejskiej i w tym celu podąża ona za zmianami w regulacjach UE.
-
-**Węgierska ustawa ESG** została przyjęta w grudniu 2023, część obowiązków raportowych weszła w życie 1 stycznia 2024. Najnowsza, trzecia nowelizacja miała miejsce latem 2025 – zgodnie z unijnym pakietem Omnibus przyniosła firmom znaczące ułatwienia i **zwolniła z regulacji znaczną liczbę firm**.
-
-### Kogo dotyczy (stan według materiału)
-
-Duże (notowane) firmy interesu publicznego, których wskaźniki finansowe przekroczyły w co najmniej dwóch z poprzednich dwóch lat obrotowych progi:
-- suma bilansowa **10 mld HUF**,
-- roczny przychód netto ze sprzedaży **20 mld HUF**, lub
-- średnie zatrudnienie **500 osób**.
-
-Oraz firmy zatrudniające ponad 500 osób działające w określonych branżach o znaczącym wpływie na środowisko lub społeczeństwo.
-
-### Zwolnienia czasowe dla mniejszych podmiotów
-
-- **Mikro- i małe przedsiębiorstwa:** screening ESG w łańcuchu dostaw dużych firm **nie jest obowiązkowy do 30 czerwca 2027** i nie można od nich żądać danych.
-- **Średnie przedsiębiorstwa:** do 30 czerwca 2027 nie są zobowiązane do wypełniania kwestionariusza ESG, ale **mogą przekazywać dane dobrowolnie**.
-
-> **Wskazówka realizacyjna:** ta informacja jest dwuznaczna dydaktycznie. Z jednej strony zdejmuje presję („nie musisz jeszcze"), z drugiej może zniechęcić do działania. **Ramka do zastosowania:** *„Formalnie masz czas. Ale twój największy klient może o to zapytać jutro – a wtedy przewagę ma ten, kto zaczął wcześniej."*
+Nie przenosimy progów w HUF ani węgierskich zwolnień czasowych do instrukcji dla polskich uczestników. Wcześniejszy tekst opisywał historyczny kontekst innego kraju. Bieżący warsztat koncentruje się na pomiarze i rzetelnym komunikowaniu wyniku.
 
 ---
 
@@ -290,7 +273,9 @@ Oraz firmy zatrudniające ponad 500 osób działające w określonych branżach 
 2. **Feedback Circle** – omówienie zebranych danych o zużyciu. Grupa wskazuje sobie nawzajem szybkie wygrane. **Stacjonarnie.**
 3. **Pitch Practice** – każdy w 60 s przedstawia swój jeden cel zrównoważonego rozwoju na najbliższe 6 miesięcy.
 
-### Faza 3 – Blok interaktywny (2,5–3 h)
+### Faza 3 – Wariant rozszerzony wcześniejszego opracowania (215 min)
+
+> Bieżący scenariusz serwisu trwa 165 minut i znajduje się w widoku prowadzącego. Poniższa rozpiska zachowuje alternatywny zakres zajęć; nie należy łączyć jej z czasem bazowego warsztatu.
 
 | Blok | Czas | Treść i metoda |
 |---|---|---|
@@ -314,7 +299,7 @@ Typowe tematy: „nie stać mnie na inwestycje", presja ze strony dużego klient
 - **Zacznij od pieniędzy, nie od klimatu.** Grupa MŚP reaguje na argument oszczędnościowy. Wszystkie trzy case'y w materiale mają wymiar finansowy (70% mniej papieru, 30% mniej prądu, mniej odpadów) – użyj ich jako wejścia, a wymiar środowiskowy jako konsekwencji.
 - **Ćwiczenie mapowania istniejących praktyk zmienia nastawienie.** Większość uczestników odkrywa, że część działań ESG już prowadzi (segreguje odpady, szkoli pracowników, ma przejrzystą księgowość) – tylko tego nie nazywa ani nie mierzy. To zdejmuje poczucie, że trzeba zaczynać od zera.
 - **Nie zaczynaj od Comprehensive.** Standard VSME jest skalowalny właśnie po to. Uczestnik, któremu pokażesz pełny zakres wskaźników na pierwszej sesji, zrezygnuje.
-- **Zwolnienia czasowe podawaj z kontekstem.** „Do 2027 nie musisz" prowadzi do odłożenia sprawy. Ramka: formalny termin ≠ termin rynkowy; klient może zapytać jutro.
+- **Wymagania ustalaj dla konkretnej firmy.** Nie podawaj historycznych zwolnień z innego kraju jako polskich przepisów.
 - **Cele muszą być małe.** Materiał wprost: *„nie próbuj robić wszystkiego naraz – zacznij od małych kroków"* i *„wybierz 1–2 konkretne cele osiągalne w krótkim terminie"*. Uczestnik z listą 8 celów nie zrealizuje żadnego.
 - **Zaangażowanie pracowników to nie formalność.** Krok 4 jest w materiale osobnym krokiem nieprzypadkowo – to również działanie z filaru S (dobrostan, rozwój, udział).
 - **Uważaj na greenwashing.** Krok 5 mówi o **zewnętrznej weryfikacji danych** dla wiarygodności. Komunikowanie nieweryfikowanych deklaracji jest ryzykiem reputacyjnym większym niż niekomunikowanie niczego.
@@ -337,7 +322,7 @@ Typowe tematy: „nie stać mnie na inwestycje", presja ze strony dużego klient
 
 - [ ] PDF modułu 7 (PL)
 - [ ] Wideo z napisami PL
-- [ ] ⚠️ **Sekcja regulacji krajowych przepisana na polską** – progi, terminy, aktualny stan implementacji CSRD
+- [ ] Sprawdzenie bieżących źródeł i sytuacji uczestnika — bez automatycznego przypisywania obowiązków wszystkim MŚP
 - [ ] **Arkusz zbierania danych bazowych** – energia / woda / papier / odpady, z instrukcją, gdzie szukać (faktury)
 - [ ] **Uproszczony arkusz screeningu** – macierz E / S / G × mocne / słabe strony
 - [ ] **Szablon eco-mappingu** – uproszczona wersja dla małej firmy
