@@ -22,7 +22,7 @@ export default {
   subtitle: 'Firma chce 30 koszyków śniadaniowych na wtorek. Przygotuj ofertę, przedstaw ją w dwie minuty i wyjaśnij, że „odbiór” to nie „dostawa”.',
   duration: 45,
   sessions: [45],
-  han: ['HAN.01.4'],
+  han: ['HAN.01.4', 'HAN.02.4', 'HAN.02.9'],
   tags: ['oferta handlowa', 'prezentacja', 'nieporozumienie', 'rabat'],
   realia: [],
   audience: {

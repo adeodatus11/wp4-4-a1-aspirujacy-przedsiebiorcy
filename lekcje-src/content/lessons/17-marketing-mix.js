@@ -8,7 +8,7 @@ export default {
   subtitle: 'Pudełko na lunch, bidon i torba. Jak z trzech zwykłych rzeczy zrobić ofertę dla osób, które codziennie zabierają jedzenie do pracy.',
   duration: 45,
   sessions: [45],
-  han: ['HAN.02.4'],
+  han: ['HAN.01.3', 'HAN.02.3', 'HAN.02.4'],
   tags: ['4P', 'zestaw', 'promocja', 'spójność oferty'],
   realia: [],
   audience: {

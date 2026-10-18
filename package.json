@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Testy statycznego serwisu uczestnika i prowadzącego",
   "scripts": {
-    "test": "node tests/core.cjs && node tests/lesson-core.cjs && node tests/interface.cjs && node tests/lesson-interface.cjs && node tests/offline.cjs"
+    "test": "node tests/core.cjs && node tests/interface.cjs && node tests/offline.cjs"
   },
   "devDependencies": {
     "linkedom": "0.18.12"

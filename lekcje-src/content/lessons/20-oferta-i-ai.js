@@ -20,7 +20,7 @@ export default {
   subtitle: 'Narzędzie AI napisało ofertę w kilka sekund. Lampa „wodoodporna”, „dostawa gratis” i prośba o prywatne numery pracowników. Co z tym zrobić?',
   duration: 45,
   sessions: [45],
-  han: ['HAN.02.7'],
+  han: ['HAN.01.2', 'HAN.01.6', 'HAN.02.2', 'HAN.02.4', 'HAN.02.7'],
   tags: ['oferta', 'dokumenty handlowe', 'AI', 'dane osobowe'],
   realia: [],
   audience: {

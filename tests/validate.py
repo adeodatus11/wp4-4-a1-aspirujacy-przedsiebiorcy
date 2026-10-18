@@ -55,32 +55,27 @@ for m in course:
     assert len(d.headings)==1
     assert {'sedno','przyklad','cwiczenie','projekt','quiz','dla-prowadzacego','zrodla'}<=d.ids
 curriculum=json.loads((ROOT/'src/curriculum.json').read_text())
-lessons=json.loads((ROOT/'src/lessons.json').read_text())
-assessments=json.loads((ROOT/'src/assessments.json').read_text())
+lessons=json.loads((ROOT/'src/lekcje.json').read_text())
 assert len(curriculum['mappings'])==27
-assert len(lessons)==10 and sum(l['minutes'] for l in lessons)==585
+assert len(lessons)==34 and sum(l['duration'] for l in lessons)==1935
+assert [l['id'] for l in lessons]==[f'{n:02d}' for n in range(1,35)]
 lesson_ids={l['id'] for l in lessons}
 source_ids={s['id'] for s in curriculum['sources']}
 for r in curriculum['mappings']:
     assert r['qualification'] in ('HAN.01','HAN.02')
     assert r['effect']>0 and all(c>0 for c in r['criteria'])
-    assert r['source'] in source_ids and set(r['lessons'])<=lesson_ids
+    assert r['source'] in source_ids and r['lessons'] and set(r['lessons'])<=lesson_ids
     assert all(1<=page<=(9 if r['qualification']=='HAN.01' else 21) for page in r['pages'])
     assert r['limit'] and r['criteriaSummary'] and r['relation'] in ('bezpośrednie','częściowe')
+    # Jednostka efektu musi być wpisana w lekcjach, które go realizują.
+    for lid in r['lessons']:assert r['unit'] in next(l for l in lessons if l['id']==lid)['han'],(r['id'],lid)
 for l in lessons:
-    assert l['minutes'] in (45,90) and sum(t for t,_ in l['agenda'])==l['minutes']
-    assert len(l['worksheet'])==4 and len(l['rubric'])==3
-    assert l['answer'] and l['support'] and l['extension'] and l['exit']
-    assert not any('przerwa' in text.lower() for _,text in l['agenda'])
-    assert any(l['id'] in r['lessons'] for r in curriculum['mappings'])
-    assert len(assessments[l['id']])==5
-    assert sum(q['points'] for q in assessments[l['id']])==10
-    for q in assessments[l['id']]:
-        assert q['type'] in ('choice','number') and q['feedback']
-        if q['type']=='choice':assert len(q['options'])==3 and q['correct'] in range(3)
-        else:assert isinstance(q['expected'],(int,float)) and 0<=q['tolerance']<=1
-    page=ROOT/f'lekcja-han-{int(l["id"][1:]):02d}.html'
-    assert {'sesja','lesson-inputs','lesson-work-form','lesson-timer','karta-oceny','lesson-history','lesson-review-form'}<=docs[page].ids
+    assert l['duration'] in (45,90) and l['part'] in ('A','B') and l['han'] and l['title']
+app=(ROOT/'lekcje/index.html').read_text()
+assert 'type="module"' not in app and re.search(r'<script defer src="\./assets/index-[\w-]+\.js">',app)
+assert all((ROOT/'lekcje'/src).is_file() for src in re.findall(r'(?:src|href)="\./([^"]+)"',app))
+school=docs[ROOT/'szkola.html']
+assert len([x for x in school.links if x.startswith('lekcje/index.html#/lekcja/')])>=34
 for n in range(1,9):
     assert any(n in r['modules'] for r in curriculum['mappings'])
     assert 'school-bridge' in (ROOT/f'modul-{n}.html').read_text()
@@ -108,7 +103,7 @@ with zipfile.ZipFile(ROOT/'downloads/pakiet-offline.zip') as z:
     names=set(z.namelist())
     assert all(f'modul-{n}.html' in names for n in range(1,9))
     assert 'downloads/cash-flow.xlsx' in names and 'assets/core.js' in names
-    assert {'sw.js','manifest.webmanifest','assets/lesson-core.js','assets/lesson-data.js','assets/lesson.js','wyniki-lekcji.html'}<=names
+    assert {'sw.js','manifest.webmanifest','lekcje/index.html','lekcje/favicon.svg'}<=names and any(n.startswith('lekcje/assets/') for n in names)
     for name in names:
         if not name.endswith('.html'):continue
         d=Document(z.read(name).decode())
@@ -122,9 +117,9 @@ worker=(ROOT/'sw.js').read_text()
 precache=json.loads(re.search(r'const FILES=(.*);',worker).group(1))
 assert all((ROOT/path.removeprefix('./')).is_file() for path in precache)
 assert all(not path.endswith('.zip') for path in precache)
-assert len(precache)>70
+assert len(precache)>50 and './lekcje/index.html' in precache
 manifest=json.loads((ROOT/'manifest.webmanifest').read_text())
 assert manifest['scope']=='./' and manifest['display']=='standalone'
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'OK: {len(docs)} dokumentów HTML, linki, etykiety, 24 pytania modułowe i 50 lekcyjnych, 27 odniesień HAN, 10 sesji, XLSX, paczka offline i manifest cache.')
+print(f'OK: {len(docs)} dokumentów HTML, linki, etykiety, 24 pytania modułowe, 34 lekcje handlu (1935 min), 27 odniesień HAN, XLSX, paczka offline i manifest cache.')

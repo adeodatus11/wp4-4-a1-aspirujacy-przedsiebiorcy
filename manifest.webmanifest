@@ -1,8 +1,8 @@
 {
-  "name": "Pracownia przedsiębiorczości — lekcje HAN",
-  "short_name": "Pracownia HAN",
+  "name": "Pracownia przedsiębiorczości",
+  "short_name": "Pracownia",
   "lang": "pl",
-  "start_url": "./szkola.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f7f7f0",

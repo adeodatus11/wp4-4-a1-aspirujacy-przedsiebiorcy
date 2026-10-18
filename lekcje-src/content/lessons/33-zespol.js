@@ -20,7 +20,7 @@ export default {
   subtitle: 'Trzy osoby, 90 minut pracy razem, 30 zł na wydruk i stoisko na sobotę. Kto co robi i kiedy sprawdzacie, czy wszystko się zgadza?',
   duration: 45,
   sessions: [45],
-  han: ['HAN.02.10'],
+  han: ['HAN.01.6', 'HAN.02.3', 'HAN.02.9', 'HAN.02.10'],
   tags: ['praca zespołowa', 'plan', 'podział zadań', 'informacja zwrotna'],
   realia: [],
   audience: {

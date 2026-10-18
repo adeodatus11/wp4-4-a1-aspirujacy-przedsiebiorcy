@@ -8,7 +8,7 @@ export default {
   subtitle: 'Klient oddaje butelki bez paragonu, piekarnia czeka na skrzynki, a na zapleczu rośnie góra kartonów.',
   duration: 45,
   sessions: [45],
-  han: ['HAN.01.3'],
+  han: ['HAN.01.3', 'HAN.02.1'],
   tags: ['system kaucyjny', 'opakowania zwrotne', 'segregacja', 'greenwashing'],
   realia: ['kaucja'],
   audience: {

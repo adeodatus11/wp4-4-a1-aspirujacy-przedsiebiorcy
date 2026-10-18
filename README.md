@@ -11,26 +11,18 @@ Samodzielna platforma programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowa
 - Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
 - Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
 
-## HAN.01 / HAN.02 w zwykłym cyklu szkolnym
+## Lekcje handlu (HAN.01 / HAN.02)
 
-Strona szkola.html łączy program z 27 wybranymi efektami kwalifikacji HAN.01 i HAN.02. Każde odniesienie podaje jednostkę, numer efektu, osobno numery kryteriów, stronę oficjalnego PDF MEN/ORE i zakres powiązania. Opisy efektów są skrótami autorskimi. Zapis kwalifikacji i strukturę potwierdzono również w portalu MEN i ZPE. Mapa bazuje na wskazanym tekście podstawy 2019; nauczyciel dobiera ją do rocznika i programu szkoły.
+Katalog lekcje/ to osobna aplikacja: **34 interaktywne lekcje po polsku** (25 × 45 min i 9 × 90 min, razem 1935 min = 43 jednostki po 45 min). Część A (01–15) dotyczy kwalifikacji HAN.01 — sprzedaż, obsługa klienta, kasa, dokumenty, reklamacje. Część B (16–34) dotyczy HAN.02 — marketing, ceny, zakupy, magazyn, wynik firmy, zespół. Lekcje są dla technikum i szkoły branżowej, ale też dla dorosłych, którzy otwierają sklep, przekwalifikowują się lub sprzedają w internecie.
 
-Pakiet zawiera 10 tematów (7 × 45 min oraz 3 × 90 min, razem 13 lekcji = 585 min): potrzeby klienta, segmentacja i SWOT, 4P, promocja i budżet, ceny i marże, oferta cyfrowa, wynik/gotówka/wskaźniki, plan zespołu, opakowania i rozmowa ofertowa. Każdy ma gotowe dane fikcyjne, kartę ucznia, scenariusz nauczyciela, klucz, rubrykę, wariant wsparcia i rozszerzenia. Przerwa między lekcjami nie jest wliczona w 90 minut pracy. Karty drukują się do PDF; mapa jest też w CSV. Wszystko trafia do paczki offline.
+Każda lekcja ma etapy z czasem, krótkie wyjaśnienia, przykład rozwiązany krok po kroku i zadania z natychmiastową informacją zwrotną: wybór z uzasadnieniem błędnych odpowiedzi, obliczenia z polskim przecinkiem i podpowiedzią do typowego błędu, przyporządkowanie, kolejność, wypełnianie dokumentów (faktura, paragon, PZ/WZ, protokół reklamacji), wyszukiwanie błędów w dokumencie, rozmowy z klientem z rozgałęzieniami i odpowiedzi otwarte z wzorem oraz kryteriami. Na końcu jest karta wyniku do wydruku z samooceną celów.
 
-Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. AI, Lean Canvas, VSME i pitch inwestorski są narzędziami/rozszerzeniami, nie literalnymi obowiązkami podstawy. Pakiet nie zastępuje obsługi kasy, wszystkich czynności magazynowych, księgowości, BHP i języka zawodowego.
+- **Uczę się** — samodzielna nauka; postęp zapisuje się w przeglądarce (klucz pracownia-lekcje-v1).
+- **Prowadzę zajęcia** — przy każdym etapie notatki prowadzącego: co powiedzieć, o co zapytać, typowe błędy, klucz; plan lekcji do druku na A4; w lekcjach 90 min zaznaczona przerwa po 45 min.
 
-## Samodzielne sesje z kartą oceny
+Fakty o polskich realiach (stawki VAT, zwolnienie 240 000 zł od 2026, KSeF, kasy fiskalne, Omnibus, niezgodność towaru z umową, system kaucyjny, normy dźwigania, sprzedaż alkoholu, płaca minimalna 2026, działalność nierejestrowana) są w jednym pliku lekcje-src/content/realia.js z datą sprawdzenia; test pilnuje, by nie były starsze niż rok.
 
-Każda z 10 lekcji HAN ma formularz pracy, 5 pytań końcowych i licznik 45/90 min. Odpowiedzi zapisują się na bieżąco. Można zrobić pauzę, wznowić po odświeżeniu lub zakończyć wcześniej. Upływ czasu kończy sesję i zachowuje kartę; po zamknięciu karty czas aktywnej sesji jest rozliczany przy powrocie. Przy przerwie między lekcjami użyj pauzy.
-
-- Test: 5 × 2 pkt = 10 pkt, liczony automatycznie. Pytania wyboru i obliczeniowe obsługują polski przecinek i tolerancję zaokrągleń. Brak odpowiedzi daje 0 pkt.
-- Praca praktyczna: 3 × 0–2 pkt = 6 pkt, wpis ręczny prowadzącego. Treść otwarta i obserwacja nie są oceniane przez pozorowany automat.
-- Wynik łączny do 16 pkt pojawia się dopiero po wpisaniu wszystkich ocen praktycznych. Wcześniej karta podaje konkretny wynik testu i status oczekiwania na ocenę pracy.
-- Karta zawiera identyfikator, daty, aktywny czas, dane zadania, całą pracę, odpowiedzi z wyjaśnieniami, kryteria i informację zwrotną. Można ją pobrać jako samodzielny HTML albo wydrukować do PDF.
-- Wyniki są dostępne na wyniki-lekcji.html. Zapis obejmuje 3 zakończone próby i jedną aktywną sesję każdej lekcji. Historia zachowuje własną wersję treści oraz klucza. Przy zmianie treści rozpoczętej lekcji zachowaj archiwalną kartę i rozpocznij nową próbę.
-- Kopia JSON obejmuje projekt, sesje i karty. W eksportowanej kopii bieżące sesje są wstrzymane; czas nie upływa podczas przenoszenia. Wczytanie kopii wymaga potwierdzenia zastąpienia lokalnych danych.
-
-Na innym urządzeniu prowadzący może wczytać kopię uczestnika, ocenić pracę i przekazać zaktualizowaną kopię. Nie ma automatycznego przesyłania, kont ani dziennika klasowego. Oba widoki są publiczne, zapis lokalny jest edytowalny, a karta ma charakter dydaktyczny — nie poświadcza tożsamości ani wyniku egzaminu CKE.
+Strona szkola.html pokazuje katalog z filtrami, pokrycie jednostek HAN.01/HAN.02 i mapę 27 wybranych efektów: jednostka, numer efektu, osobno numery kryteriów, strona oficjalnego PDF MEN/ORE i zakres powiązania. Opisy efektów są skrótami autorskimi. Mapa bazuje na podstawie 2019; nauczyciel dobiera ją do rocznika i programu szkoły. Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. Lekcje nie zastępują pracy w programie magazynowo-sprzedażowym, na prawdziwej kasie, praktyk zawodowych ani języka obcego zawodowego. Wynik na karcie nie jest wynikiem egzaminu CKE.
 
 ## Materiały offline
 
@@ -44,25 +36,28 @@ Widok zmienia prezentację, nie stanowi autoryzacji: oba widoki są publiczne. P
 
 ## Uruchomienie i zmiany
 
-Wymagane Python 3.10+ i zależność z requirements.txt:
+Wymagane Python 3.10+ i zależność z requirements.txt, a do zmian w lekcjach Node 20+:
 
 ```sh
 python3 -m pip install -r requirements.txt
-python3 build.py
+npm --prefix lekcje-src ci
+npm --prefix lekcje-src run build   # buduje lekcje/ i src/lekcje.json
+python3 build.py                    # strony serwisu, mapa, XLSX, ZIP, cache offline
 python3 -m http.server 8000
 ```
 
-Otwórz http://localhost:8000. Generator odtwarza wszystkie strony, dane wyszukiwarki, dokumenty do druku, XLSX i ZIP. Nie edytuj wygenerowanych HTML bezpośrednio.
+Otwórz http://localhost:8000. Kolejność ma znaczenie: build.py czyta katalog lekcji z src/lekcje.json i pakuje lekcje/ do ZIP. Nie edytuj wygenerowanych HTML ani lekcje/ bezpośrednio. Aplikacja lekcji jest jednym skryptem bez modułów ES, więc działa także po otwarciu lekcje/index.html z dysku.
 
 | Źródło | Zastosowanie |
 |---|---|
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
-| src/curriculum.json, src/lessons.json | formalna mapa odniesień i autorskie lekcje 45/90 min |
-| src/assessments.json | 50 pytań, klucze, jednostki i tolerancje punktacji lekcji |
-| lesson_sessions.py | generowanie samodzielnych sesji i danych testów |
-| assets/lesson-core.js, assets/lesson.js | zegar, historia, ocena, karty i zapis sesji |
-| offline.py | generowanie manifestu oraz cache materiałów |
-| school.py | generowanie mapy, lekcji i pakietów HAN.01/HAN.02 |
+| lekcje-src/content/lessons/NN-*.js | treść 34 lekcji: etapy, wyjaśnienia, zadania, klucze, notatki prowadzącego |
+| lekcje-src/content/realia.js | polskie fakty prawne i liczbowe z datą sprawdzenia |
+| lekcje-src/app, components, lib | aplikacja lekcji (React + Vite), punktacja i zapis |
+| src/curriculum.json | formalna mapa odniesień; pole lessons wskazuje numery lekcji 01–34 |
+| src/lekcje.json | katalog lekcji generowany przez build w lekcje-src |
+| offline.py | generowanie manifestu oraz cache materiałów (z lekcje/) |
+| school.py | strona szkola.html, mapa CSV i wpisy wyszukiwarki dla lekcji |
 | src/resources.json | źródła zewnętrzne i metadane weryfikacji |
 | src/01…08*.md | pełne opracowania bazowe modułów |
 | src/00*, 09*, 10* | dokumentacja wcześniejszego przeglądu, zachowana jako archiwum |
@@ -80,13 +75,15 @@ Arkusz i pakiet offline są generowane deterministycznie. ZIP jest śledzony pom
 python3 tests/validate.py
 npm ci
 npm test
+npm --prefix lekcje-src test             # kontrakt treści 34 lekcji i punktacja
+npm --prefix lekcje-src run test:e2e     # Playwright + axe w Chromium
 ```
 
-Zależność npm służy wyłącznie testom. Strona nie potrzebuje Node ani bibliotek z CDN. Kontrola Pythona sprawdza linki, kotwice, etykiety, treści, czasy, formuły XLSX i zawartość offline. Testy JS sprawdzają obliczenia, import/eksport, wyszukiwanie i zachowanie interfejsu w DOM. Szczegóły i ograniczenia: VERIFICATION.md.
+Zależności npm w katalogu głównym służą wyłącznie testom. Opublikowana strona nie potrzebuje Node ani bibliotek z CDN. Kontrola Pythona sprawdza linki, kotwice, etykiety, treści, czasy, formuły XLSX i zawartość offline. Testy JS sprawdzają obliczenia, import/eksport, wyszukiwanie i zachowanie interfejsu w DOM. Szczegóły i ograniczenia: VERIFICATION.md.
 
 ## Dane i prywatność
 
-localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora, wybrany widok oraz sesje lekcyjne: pracę, testy, historię wersji i ręczną ocenę. Schemat wersji 1 rozszerzono o pole lessons; wcześniejsze kopie bez tego pola pozostają obsługiwane. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
+localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora i wybrany widok. Lekcje handlu zapisują odpowiedzi i wyniki pod osobnym kluczem pracownia-lekcje-v1. Starsze kopie JSON z polem lessons (dawne sesje HAN) da się wczytać; to pole jest pomijane. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
 
 ## Zakres materiałów i aktualność
 
@@ -102,4 +99,4 @@ Finansowane przez Unię Europejską. Poglądy i opinie są poglądami autorów i
 
 ## Publikacja
 
-Zachowano istniejący model GitHub Pages: gałąź main, katalog /. Zmiany w gałęzi roboczej nie zmieniają publicznego serwisu. Po przejrzeniu i scaleniu należy publikować gotowe HTML razem z assets i downloads. Plik .nojekyll pozostaje w repozytorium.
+Zachowano istniejący model GitHub Pages: gałąź main, katalog /. Zmiany w gałęzi roboczej nie zmieniają publicznego serwisu. Po przejrzeniu i scaleniu należy publikować gotowe HTML razem z assets, downloads i lekcje. Plik .nojekyll pozostaje w repozytorium.

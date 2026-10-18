@@ -1,870 +1,870 @@
 {
-  "checkedAt": "2026-10-18",
-  "method": "Mapa wybranych efektów z tekstu podstawy MEN 2019 udostępnionego przez ORE i portal MEN. Strukturę kwalifikacji porównano z ZPE (etykieta 2025/2026). Opisy w tabeli są autorskimi skrótami; identyfikator efektu i numery kryteriów odsyłają do źródła. Dobór do konkretnego rocznika i szkolnego programu należy do nauczyciela.",
-  "qualifications": [
-    {
-      "id": "HAN.01",
-      "name": "Prowadzenie sprzedaży",
-      "occupations": [
-        "Sprzedawca 522301",
-        "Technik handlowiec 522305",
-        "Technik księgarstwa 522306"
-      ],
-      "units": [
-        "Bezpieczeństwo i higiena pracy",
-        "Podstawy handlu",
-        "Organizowanie sprzedaży",
-        "Sprzedaż towarów",
-        "Język obcy zawodowy",
-        "Kompetencje personalne i społeczne"
-      ]
-    },
-    {
-      "id": "HAN.02",
-      "name": "Prowadzenie działań handlowych",
-      "occupations": [
-        "Technik handlowiec 522305"
-      ],
-      "units": [
-        "Bezpieczeństwo i higiena pracy",
-        "Podstawy handlu",
-        "Planowanie działań sprzedażowych i monitorowanie realizacji budżetu",
-        "Zarządzanie działaniami handlowymi",
-        "Organizacja gospodarki magazynowej",
-        "Prowadzenie działań posprzedażowych",
-        "Sporządzanie dokumentacji ekonomiczno-finansowej",
-        "Język obcy zawodowy",
-        "Kompetencje personalne i społeczne",
-        "Organizacja pracy małych zespołów"
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "id": "ore-sprzedawca",
-      "title": "Podstawa — sprzedawca 522301 (HAN.01)",
-      "publisher": "MEN / ORE",
-      "url": "https://ore.edu.pl/wp-content/uploads/2020/03/sprzedawca.pdf",
-      "edition": "Wyciąg z Dz.U. 2019 poz. 991; 9 stron PDF",
-      "status": "Odczytano pełny tekst jednostek i wskazane kryteria."
-    },
-    {
-      "id": "ore-handlowiec",
-      "title": "Podstawa — technik handlowiec 522305 (HAN.01 i HAN.02)",
-      "publisher": "MEN / ORE",
-      "url": "https://ore.edu.pl/wp-content/uploads/2020/03/technik-handlowiec.pdf",
-      "edition": "Wyciąg z Dz.U. 2019 poz. 991; 21 stron PDF",
-      "status": "Odczytano pełny tekst wskazanych efektów i kryteriów."
-    },
-    {
-      "id": "men-profile",
-      "title": "Technik handlowiec — profil i podstawa",
-      "publisher": "MEN",
-      "url": "https://infozawodowe.men.gov.pl/zawody/technik-handlowiec-1",
-      "edition": "Portal zawodowy MEN",
-      "status": "Potwierdzono kwalifikacje i odnośnik do podstawy."
-    },
-    {
-      "id": "zpe-base",
-      "title": "Podstawa programowa — branża handlowa",
-      "publisher": "ZPE",
-      "url": "https://zpe.gov.pl/podstawa-programowa/ksztalcenie-zawodowe/branza-handlowa",
-      "edition": "Strona z etykietą roku 2025/2026",
-      "status": "Potwierdzono strukturę jednostek HAN.01/HAN.02."
-    },
-    {
-      "id": "eli",
-      "title": "Rozporządzenie MEN z 16 maja 2019 r. — podstawa i akty zmieniające",
-      "publisher": "Dziennik Ustaw / ELI",
-      "url": "https://eli.gov.pl/eli/DU/2019/991/ogl",
-      "edition": "Dz.U. 2019 poz. 991, akt z nowelizacjami",
-      "status": "Potwierdzono metrykę aktu i wykaz zmian; mapa nie zastępuje tekstu właściwego dla rocznika."
-    },
-    {
-      "id": "zpe-business",
-      "title": "Podejmowanie działalności handlowej — przewodnik nauczyciela",
-      "publisher": "ZPE",
-      "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/D8hcwhZIn",
-      "edition": "E-materiał HAN.02",
-      "status": "Odczytano cele i wskazówki; źródło uzupełniające, nie kopia w pakiecie."
-    },
-    {
-      "id": "zpe-sales",
-      "title": "Sprzedaż, asortyment — klient. Stanowisko kasowe",
-      "publisher": "ZPE",
-      "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/DCZQCRfEn",
-      "edition": "Przewodnik HAN.01",
-      "status": "Odczytano opis i powiązania kwalifikacyjne."
-    },
-    {
-      "id": "zpe-merch",
-      "title": "Magazyn i sala sprzedaży — merchandising",
-      "publisher": "ZPE",
-      "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/Duq4X2RQ4",
-      "edition": "Przewodnik dla nauczyciela",
-      "status": "Odczytano opis; materiał dodatkowy do organizowania sprzedaży."
-    },
-    {
-      "id": "cke",
-      "title": "Informator CKE — technik handlowiec",
-      "publisher": "CKE",
-      "url": "https://bip.cke.gov.pl/attachments/download/8552",
-      "edition": "Formuła 2019, aktualizacja indeksowana 25.08.2022",
-      "status": "Potwierdzono wpis w oficjalnym katalogu; pełny odczyt PDF niedostępny. Nie jest podstawą szczegółowej numeracji w mapie."
-    }
-  ],
-  "mappings": [
-    {
-      "id": "h01-need",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.4",
-      "effect": 2,
-      "criteria": [
-        3
-      ],
-      "pages": [
-        5
-      ],
-      "modules": [
-        3,
-        6
-      ],
-      "lessons": [
-        "L01"
-      ],
-      "summary": "Rozpoznanie potrzeb i motywów klienta",
-      "criteriaSummary": "Opisanie, dlaczego klient szuka danego rozwiązania.",
-      "subject": "Obsługa klienta",
-      "relation": "bezpośrednie",
-      "limit": "Rozmowa i wnioski dotyczą wybranego kryterium; nie obejmują całej klasyfikacji klientów.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-present",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.4",
-      "effect": 3,
-      "criteria": [
-        4,
-        6
-      ],
-      "pages": [
-        5
-      ],
-      "modules": [
-        6,
-        8
-      ],
-      "lessons": [
-        "L10"
-      ],
-      "summary": "Prezentowanie asortymentu i oferty",
-      "criteriaSummary": "Pokazanie korzyści użytkowych i warunków sprzedaży.",
-      "subject": "Pracownia sprzedaży",
-      "relation": "bezpośrednie",
-      "limit": "Prezentacja oferty towarowej, nie prezentacja inwestorska.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-talk",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.4",
-      "effect": 4,
-      "criteria": [
-        2,
-        3,
-        4
-      ],
-      "pages": [
-        5
-      ],
-      "modules": [
-        1,
-        6
-      ],
-      "lessons": [
-        "L01",
-        "L10"
-      ],
-      "summary": "Rozmowa z klientem w procesie sprzedaży",
-      "criteriaSummary": "Etapy rozmowy i dopasowanie sposobu jej prowadzenia.",
-      "subject": "Obsługa klienta",
-      "relation": "bezpośrednie",
-      "limit": "Informacja zwrotna wymaga obserwacji scenki, nie samego quizu.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-mix",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.3",
-      "effect": 6,
-      "criteria": [
-        1,
-        4
-      ],
-      "pages": [
-        4
-      ],
-      "modules": [
-        6
-      ],
-      "lessons": [
-        "L03"
-      ],
-      "summary": "Marketing przy organizowaniu sprzedaży",
-      "criteriaSummary": "Zastosowanie 4P i zasad marketingu handlowego.",
-      "subject": "Marketing w handlu",
-      "relation": "częściowe",
-      "limit": "Karta 4P nie zastępuje praktycznej ekspozycji ani rozmieszczenia towarów.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-price",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.3",
-      "effect": 5,
-      "criteria": [
-        4
-      ],
-      "pages": [
-        4
-      ],
-      "modules": [
-        4,
-        8
-      ],
-      "lessons": [
-        "L05"
-      ],
-      "summary": "Cena w przygotowaniu towaru do sprzedaży",
-      "criteriaSummary": "Obliczenia ceny z uwzględnieniem marży i rabatu.",
-      "subject": "Kalkulacje handlowe",
-      "relation": "bezpośrednie",
-      "limit": "Dotyczy obliczeń, a nie wszystkich czynności przygotowania towaru.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-it",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.2",
-      "effect": 2,
-      "criteria": [
-        1
-      ],
-      "pages": [
-        2
-      ],
-      "modules": [
-        5
-      ],
-      "lessons": [
-        "L06"
-      ],
-      "summary": "Technologia informacyjna w zadaniach handlowych",
-      "criteriaSummary": "Użycie narzędzi biurowych do przygotowania materiału.",
-      "subject": "Pracownia handlowa",
-      "relation": "częściowe",
-      "limit": "Ćwiczenie nie uczy obsługi pełnego systemu sprzedażowego; AI jest opcjonalnym narzędziem.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-doc",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.2",
-      "effect": 1,
-      "criteria": [
-        1,
-        2
-      ],
-      "pages": [
-        2
-      ],
-      "modules": [
-        5,
-        6
-      ],
-      "lessons": [
-        "L06"
-      ],
-      "summary": "Dobór dokumentów i sposobu ich przygotowania",
-      "criteriaSummary": "Rozróżnienie oferty, zamówienia i innych pism oraz wybór programu.",
-      "subject": "Dokumentacja handlowa",
-      "relation": "częściowe",
-      "limit": "Lekcja ćwiczy ofertę i dobór dokumentu, bez pełnego obiegu dokumentacji.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-sheet",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.4",
-      "effect": 8,
-      "criteria": [
-        1
-      ],
-      "pages": [
-        6
-      ],
-      "modules": [
-        4,
-        5
-      ],
-      "lessons": [
-        "L05",
-        "L07"
-      ],
-      "summary": "Narzędzia komputerowe wspierające sprzedaż",
-      "criteriaSummary": "Wykonanie obliczeń w arkuszu kalkulacyjnym.",
-      "subject": "Pracownia handlowa",
-      "relation": "bezpośrednie",
-      "limit": "Praca na kalkulatorze serwisu nie zastępuje arkusza — uczeń powinien użyć XLSX lub programu arkuszowego.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-pack",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.3",
-      "effect": 4,
-      "criteria": [
-        3,
-        4,
-        5
-      ],
-      "pages": [
-        4
-      ],
-      "modules": [
-        7
-      ],
-      "lessons": [
-        "L09"
-      ],
-      "summary": "Zarządzanie opakowaniami w placówce handlowej",
-      "criteriaSummary": "Zasady obiegu, segregacji i ewidencji opakowań.",
-      "subject": "Organizacja sprzedaży",
-      "relation": "bezpośrednie",
-      "limit": "Ćwiczenie obejmuje opakowania; raport VSME pozostaje rozszerzeniem.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-plan",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.6",
-      "effect": 3,
-      "criteria": [
-        2,
-        3,
-        5,
-        8
-      ],
-      "pages": [
-        8
-      ],
-      "modules": [
-        1,
-        2
-      ],
-      "lessons": [
-        "L08"
-      ],
-      "summary": "Organizowanie własnego zadania",
-      "criteriaSummary": "Cel, lista czynności, terminy i ocena wykonania.",
-      "subject": "Kompetencje personalne i społeczne",
-      "relation": "bezpośrednie",
-      "limit": "Plan oraz refleksja są dowodem pracy; samo obejrzenie modułu nie wystarczy.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-develop",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.6",
-      "effect": 5,
-      "criteria": [
-        3,
-        4
-      ],
-      "pages": [
-        8
-      ],
-      "modules": [
-        1,
-        2
-      ],
-      "lessons": [
-        "L08"
-      ],
-      "summary": "Rozwój zawodowy",
-      "criteriaSummary": "Wybór celu rozwoju oraz sposobów uczenia się.",
-      "subject": "Kompetencje personalne i społeczne",
-      "relation": "bezpośrednie",
-      "limit": "Coaching służy pracy nad celem; nie jest osobnym obowiązkowym elementem podstawy.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h01-data",
-      "qualification": "HAN.01",
-      "unit": "HAN.01.6",
-      "effect": 6,
-      "criteria": [
-        2
-      ],
-      "pages": [
-        8
-      ],
-      "modules": [
-        5
-      ],
-      "lessons": [
-        "L06"
-      ],
-      "summary": "Poufność i ochrona informacji zawodowych",
-      "criteriaSummary": "Bezpieczne przetwarzanie i przekazywanie danych.",
-      "subject": "Pracownia handlowa",
-      "relation": "częściowe",
-      "limit": "Ocena ryzyka ujawnienia danych w ćwiczeniu, bez audytu zgodności RODO.",
-      "source": "ore-sprzedawca"
-    },
-    {
-      "id": "h02-market",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 1,
-      "criteria": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "pages": [
-        11
-      ],
-      "modules": [
-        3,
-        6
-      ],
-      "lessons": [
-        "L02"
-      ],
-      "summary": "Wykorzystanie danych o rynku",
-      "criteriaSummary": "Źródła, SWOT, segmentacja i potrzeby na podstawie analizy.",
-      "subject": "Marketing w handlu",
-      "relation": "bezpośrednie",
-      "limit": "Pakiet danych jest fikcyjny. Nie udaje reprezentatywnego badania rynku.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-need",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 2,
-      "criteria": [
-        1,
-        3
-      ],
-      "pages": [
-        11
-      ],
-      "modules": [
-        3,
-        6
-      ],
-      "lessons": [
-        "L01"
-      ],
-      "summary": "Wstępna ocena potrzeb rynku",
-      "criteriaSummary": "Ustalenie oczekiwań odbiorców dla konkretnej działalności.",
-      "subject": "Badania rynku",
-      "relation": "bezpośrednie",
-      "limit": "Wnioski dotyczą analizowanego przypadku.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-decision",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 3,
-      "criteria": [
-        1,
-        3
-      ],
-      "pages": [
-        11
-      ],
-      "modules": [
-        3,
-        4
-      ],
-      "lessons": [
-        "L02"
-      ],
-      "summary": "Decyzja handlowa wynikająca z analizy",
-      "criteriaSummary": "Uzasadnienie decyzji oraz przedstawienie wniosków o popycie.",
-      "subject": "Marketing w handlu",
-      "relation": "częściowe",
-      "limit": "Lekcja nie obejmuje pełnej prognozy i wyznaczania zamówień.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-promo",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 4,
-      "criteria": [
-        3,
-        4
-      ],
-      "pages": [
-        11,
-        12
-      ],
-      "modules": [
-        6
-      ],
-      "lessons": [
-        "L03",
-        "L04"
-      ],
-      "summary": "Promocja dopasowana do oferty",
-      "criteriaSummary": "Wybór narzędzia i opracowanie planu promocji na danych wejściowych.",
-      "subject": "Marketing w handlu",
-      "relation": "bezpośrednie",
-      "limit": "Uczeń przygotowuje plan, nie musi publikować reklamy.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-budget",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 5,
-      "criteria": [
-        2,
-        4
-      ],
-      "pages": [
-        12
-      ],
-      "modules": [
-        4,
-        6,
-        8
-      ],
-      "lessons": [
-        "L04",
-        "L07"
-      ],
-      "summary": "Kontrola wykonania budżetu",
-      "criteriaSummary": "Sprawdzenie rezultatów oraz zaproponowanie korekty.",
-      "subject": "Ekonomika handlu",
-      "relation": "bezpośrednie",
-      "limit": "Porównanie planu i wykonania musi być wykonane w lekcji; sama prognoza cash flow tego nie dowodzi.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-plan",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.3",
-      "effect": 6,
-      "criteria": [
-        3,
-        5
-      ],
-      "pages": [
-        12
-      ],
-      "modules": [
-        2,
-        4,
-        6
-      ],
-      "lessons": [
-        "L04",
-        "L08"
-      ],
-      "summary": "Planowanie działań na podstawie analizy",
-      "criteriaSummary": "Harmonogram i dobór działań do celu.",
-      "subject": "Pracownia handlowa",
-      "relation": "bezpośrednie",
-      "limit": "Plan szkolny jest wariantem ćwiczeniowym, nie obowiązkowym planem firmy.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-it",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.2",
-      "effect": 2,
-      "criteria": [
-        1
-      ],
-      "pages": [
-        10
-      ],
-      "modules": [
-        5
-      ],
-      "lessons": [
-        "L06"
-      ],
-      "summary": "Narzędzia informacyjne w handlu",
-      "criteriaSummary": "Użycie programu biurowego przy zadaniu zawodowym.",
-      "subject": "Pracownia handlowa",
-      "relation": "częściowe",
-      "limit": "Nie obejmuje całego doboru i obsługi systemu sprzedaży; AI jest opcjonalne.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-offer",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.4",
-      "effect": 1,
-      "criteria": [
-        3,
-        4
-      ],
-      "pages": [
-        12
-      ],
-      "modules": [
-        5,
-        6,
-        8
-      ],
-      "lessons": [
-        "L06",
-        "L10"
-      ],
-      "summary": "Oferta dla odbiorcy indywidualnego lub instytucji",
-      "criteriaSummary": "Rozpoznanie cech dobrej oferty i przygotowanie jej dla odbiorcy.",
-      "subject": "Pracownia handlowa",
-      "relation": "bezpośrednie",
-      "limit": "Zadanie szkolne dotyczy oferty handlowej, nie pozyskiwania inwestora.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-price",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.4",
-      "effect": 10,
-      "criteria": [
-        2,
-        3,
-        4
-      ],
-      "pages": [
-        13
-      ],
-      "modules": [
-        4,
-        8
-      ],
-      "lessons": [
-        "L05"
-      ],
-      "summary": "Kalkulowanie ceny i marży",
-      "criteriaSummary": "Cena sprzedaży, marża i wartość jednostkowa.",
-      "subject": "Kalkulacje handlowe",
-      "relation": "bezpośrednie",
-      "limit": "Stawka VAT w zadaniu jest założeniem dydaktycznym, a nie poradą dla danej grupy towarowej.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-cost",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.7",
-      "effect": 3,
-      "criteria": [
-        1,
-        3
-      ],
-      "pages": [
-        15
-      ],
-      "modules": [
-        4,
-        8
-      ],
-      "lessons": [
-        "L07"
-      ],
-      "summary": "Rozróżnianie kosztów i przychodów",
-      "criteriaSummary": "Charakterystyka oraz przyporządkowanie kategorii ekonomicznych.",
-      "subject": "Rachunkowość handlowa",
-      "relation": "częściowe",
-      "limit": "Cash flow nie jest ewidencją księgową ani rachunkiem wyników.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-liquid",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.7",
-      "effect": 7,
-      "criteria": [
-        1,
-        2,
-        5,
-        6,
-        7
-      ],
-      "pages": [
-        16
-      ],
-      "modules": [
-        4,
-        8
-      ],
-      "lessons": [
-        "L07"
-      ],
-      "summary": "Analiza kondycji ekonomicznej firmy",
-      "criteriaSummary": "Wskaźniki płynności i rentowności oraz ich interpretacja.",
-      "subject": "Ekonomika i rachunkowość handlowa",
-      "relation": "częściowe",
-      "limit": "Lekcja dodaje dane bilansowe i wskaźniki. Samo saldo w kalkulatorze cash flow nie realizuje tych kryteriów.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-develop",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.9",
-      "effect": 6,
-      "criteria": [
-        3,
-        4
-      ],
-      "pages": [
-        18
-      ],
-      "modules": [
-        1,
-        2
-      ],
-      "lessons": [
-        "L08"
-      ],
-      "summary": "Plan rozwoju zawodowego",
-      "criteriaSummary": "Cel doskonalenia i dobór metod.",
-      "subject": "Kompetencje personalne i społeczne",
-      "relation": "bezpośrednie",
-      "limit": "Wykorzystuje autorefleksję i plan, bez wymagania coachingu.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-team",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.10",
-      "effect": 1,
-      "criteria": [
-        1,
-        2
-      ],
-      "pages": [
-        19
-      ],
-      "modules": [
-        1,
-        2,
-        4
-      ],
-      "lessons": [
-        "L08"
-      ],
-      "summary": "Planowanie pracy małego zespołu",
-      "criteriaSummary": "Zakresy pracy oraz wspólny plan wykonania zadania.",
-      "subject": "Organizacja pracy zespołu",
-      "relation": "częściowe",
-      "limit": "Nie zastępuje pozostałych efektów kierowania i oceny pracy.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-env",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.1",
-      "effect": 3,
-      "criteria": [
-        6,
-        7
-      ],
-      "pages": [
-        9
-      ],
-      "modules": [
-        7
-      ],
-      "lessons": [
-        "L09"
-      ],
-      "summary": "Środowiskowe zasady pracy w handlu",
-      "criteriaSummary": "Gospodarka odpadami i recykling materiałów pomocniczych.",
-      "subject": "BHP i ochrona środowiska",
-      "relation": "częściowe",
-      "limit": "Lekcja skupia się na odpadach i opakowaniach; nie obejmuje całego efektu BHP ani obowiązków ESG.",
-      "source": "ore-handlowiec"
-    },
-    {
-      "id": "h02-comm",
-      "qualification": "HAN.02",
-      "unit": "HAN.02.9",
-      "effect": 9,
-      "criteria": [
-        3,
-        6,
-        7,
-        8
-      ],
-      "pages": [
-        18,
-        19
-      ],
-      "modules": [
-        1,
-        6,
-        8
-      ],
-      "lessons": [
-        "L10"
-      ],
-      "summary": "Porozumiewanie się w pracy zawodowej",
-      "criteriaSummary": "Formy przekazu, bariery i sposoby ich ograniczania.",
-      "subject": "Obsługa klienta",
-      "relation": "bezpośrednie",
-      "limit": "Ocena opiera się na obserwacji rozmowy i informacji zwrotnej.",
-      "source": "ore-handlowiec"
-    }
-  ],
-  "extensions": [
-    {
-      "modules": [
-        1,
-        2
-      ],
-      "title": "Coaching i GROW",
-      "note": "Metoda pracy z celem rozwojowym, nie obowiązkowa technika wskazana w podstawie."
-    },
-    {
-      "modules": [
-        4
-      ],
-      "title": "Lean Canvas i cash flow",
-      "note": "Narzędzia porządkujące model i gotówkę. Nie zastępują rachunkowości, ewidencji ani wskaźników wymaganych w HAN.02."
-    },
-    {
-      "modules": [
-        5
-      ],
-      "title": "Generatywna AI",
-      "note": "Opcjonalny wariant pracy z narzędziem cyfrowym; wszystkie zadania mają wariant bez konta AI."
-    },
-    {
-      "modules": [
-        7
-      ],
-      "title": "ESG, VSME, CSRD",
-      "note": "Rozszerzenie kontekstu środowiskowego i biznesowego; bez przypisywania podstawie obowiązku raportu VSME."
-    },
-    {
-      "modules": [
-        8
-      ],
-      "title": "Pitch dla inwestora i VC",
-      "note": "Rozszerzenie. W lekcji zawodowej wykorzystujemy ofertę handlową i prezentację dla klienta."
-    }
-  ]
+ "checkedAt": "2026-10-18",
+ "method": "Mapa wybranych efektów z tekstu podstawy MEN 2019 udostępnionego przez ORE i portal MEN. Strukturę kwalifikacji porównano z ZPE (etykieta 2025/2026). Opisy w tabeli są autorskimi skrótami; identyfikator efektu i numery kryteriów odsyłają do źródła. Dobór do konkretnego rocznika i szkolnego programu należy do nauczyciela.",
+ "qualifications": [
+  {
+   "id": "HAN.01",
+   "name": "Prowadzenie sprzedaży",
+   "occupations": [
+    "Sprzedawca 522301",
+    "Technik handlowiec 522305",
+    "Technik księgarstwa 522306"
+   ],
+   "units": [
+    "Bezpieczeństwo i higiena pracy",
+    "Podstawy handlu",
+    "Organizowanie sprzedaży",
+    "Sprzedaż towarów",
+    "Język obcy zawodowy",
+    "Kompetencje personalne i społeczne"
+   ]
+  },
+  {
+   "id": "HAN.02",
+   "name": "Prowadzenie działań handlowych",
+   "occupations": [
+    "Technik handlowiec 522305"
+   ],
+   "units": [
+    "Bezpieczeństwo i higiena pracy",
+    "Podstawy handlu",
+    "Planowanie działań sprzedażowych i monitorowanie realizacji budżetu",
+    "Zarządzanie działaniami handlowymi",
+    "Organizacja gospodarki magazynowej",
+    "Prowadzenie działań posprzedażowych",
+    "Sporządzanie dokumentacji ekonomiczno-finansowej",
+    "Język obcy zawodowy",
+    "Kompetencje personalne i społeczne",
+    "Organizacja pracy małych zespołów"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "ore-sprzedawca",
+   "title": "Podstawa — sprzedawca 522301 (HAN.01)",
+   "publisher": "MEN / ORE",
+   "url": "https://ore.edu.pl/wp-content/uploads/2020/03/sprzedawca.pdf",
+   "edition": "Wyciąg z Dz.U. 2019 poz. 991; 9 stron PDF",
+   "status": "Odczytano pełny tekst jednostek i wskazane kryteria."
+  },
+  {
+   "id": "ore-handlowiec",
+   "title": "Podstawa — technik handlowiec 522305 (HAN.01 i HAN.02)",
+   "publisher": "MEN / ORE",
+   "url": "https://ore.edu.pl/wp-content/uploads/2020/03/technik-handlowiec.pdf",
+   "edition": "Wyciąg z Dz.U. 2019 poz. 991; 21 stron PDF",
+   "status": "Odczytano pełny tekst wskazanych efektów i kryteriów."
+  },
+  {
+   "id": "men-profile",
+   "title": "Technik handlowiec — profil i podstawa",
+   "publisher": "MEN",
+   "url": "https://infozawodowe.men.gov.pl/zawody/technik-handlowiec-1",
+   "edition": "Portal zawodowy MEN",
+   "status": "Potwierdzono kwalifikacje i odnośnik do podstawy."
+  },
+  {
+   "id": "zpe-base",
+   "title": "Podstawa programowa — branża handlowa",
+   "publisher": "ZPE",
+   "url": "https://zpe.gov.pl/podstawa-programowa/ksztalcenie-zawodowe/branza-handlowa",
+   "edition": "Strona z etykietą roku 2025/2026",
+   "status": "Potwierdzono strukturę jednostek HAN.01/HAN.02."
+  },
+  {
+   "id": "eli",
+   "title": "Rozporządzenie MEN z 16 maja 2019 r. — podstawa i akty zmieniające",
+   "publisher": "Dziennik Ustaw / ELI",
+   "url": "https://eli.gov.pl/eli/DU/2019/991/ogl",
+   "edition": "Dz.U. 2019 poz. 991, akt z nowelizacjami",
+   "status": "Potwierdzono metrykę aktu i wykaz zmian; mapa nie zastępuje tekstu właściwego dla rocznika."
+  },
+  {
+   "id": "zpe-business",
+   "title": "Podejmowanie działalności handlowej — przewodnik nauczyciela",
+   "publisher": "ZPE",
+   "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/D8hcwhZIn",
+   "edition": "E-materiał HAN.02",
+   "status": "Odczytano cele i wskazówki; źródło uzupełniające, nie kopia w pakiecie."
+  },
+  {
+   "id": "zpe-sales",
+   "title": "Sprzedaż, asortyment — klient. Stanowisko kasowe",
+   "publisher": "ZPE",
+   "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/DCZQCRfEn",
+   "edition": "Przewodnik HAN.01",
+   "status": "Odczytano opis i powiązania kwalifikacyjne."
+  },
+  {
+   "id": "zpe-merch",
+   "title": "Magazyn i sala sprzedaży — merchandising",
+   "publisher": "ZPE",
+   "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/Duq4X2RQ4",
+   "edition": "Przewodnik dla nauczyciela",
+   "status": "Odczytano opis; materiał dodatkowy do organizowania sprzedaży."
+  },
+  {
+   "id": "cke",
+   "title": "Informator CKE — technik handlowiec",
+   "publisher": "CKE",
+   "url": "https://bip.cke.gov.pl/attachments/download/8552",
+   "edition": "Formuła 2019, aktualizacja indeksowana 25.08.2022",
+   "status": "Potwierdzono wpis w oficjalnym katalogu; pełny odczyt PDF niedostępny. Nie jest podstawą szczegółowej numeracji w mapie."
+  }
+ ],
+ "mappings": [
+  {
+   "id": "h01-need",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.4",
+   "effect": 2,
+   "criteria": [
+    3
+   ],
+   "pages": [
+    5
+   ],
+   "modules": [
+    3,
+    6
+   ],
+   "lessons": [
+    "08"
+   ],
+   "summary": "Rozpoznanie potrzeb i motywów klienta",
+   "criteriaSummary": "Opisanie, dlaczego klient szuka danego rozwiązania.",
+   "subject": "Obsługa klienta",
+   "relation": "bezpośrednie",
+   "limit": "Rozmowa i wnioski dotyczą wybranego kryterium; nie obejmują całej klasyfikacji klientów.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-present",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.4",
+   "effect": 3,
+   "criteria": [
+    4,
+    6
+   ],
+   "pages": [
+    5
+   ],
+   "modules": [
+    6,
+    8
+   ],
+   "lessons": [
+    "14"
+   ],
+   "summary": "Prezentowanie asortymentu i oferty",
+   "criteriaSummary": "Pokazanie korzyści użytkowych i warunków sprzedaży.",
+   "subject": "Pracownia sprzedaży",
+   "relation": "bezpośrednie",
+   "limit": "Prezentacja oferty towarowej, nie prezentacja inwestorska.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-talk",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.4",
+   "effect": 4,
+   "criteria": [
+    2,
+    3,
+    4
+   ],
+   "pages": [
+    5
+   ],
+   "modules": [
+    1,
+    6
+   ],
+   "lessons": [
+    "08",
+    "14"
+   ],
+   "summary": "Rozmowa z klientem w procesie sprzedaży",
+   "criteriaSummary": "Etapy rozmowy i dopasowanie sposobu jej prowadzenia.",
+   "subject": "Obsługa klienta",
+   "relation": "bezpośrednie",
+   "limit": "Informacja zwrotna wymaga obserwacji scenki, nie samego quizu.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-mix",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.3",
+   "effect": 6,
+   "criteria": [
+    1,
+    4
+   ],
+   "pages": [
+    4
+   ],
+   "modules": [
+    6
+   ],
+   "lessons": [
+    "17"
+   ],
+   "summary": "Marketing przy organizowaniu sprzedaży",
+   "criteriaSummary": "Zastosowanie 4P i zasad marketingu handlowego.",
+   "subject": "Marketing w handlu",
+   "relation": "częściowe",
+   "limit": "Karta 4P nie zastępuje praktycznej ekspozycji ani rozmieszczenia towarów.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-price",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.3",
+   "effect": 5,
+   "criteria": [
+    4
+   ],
+   "pages": [
+    4
+   ],
+   "modules": [
+    4,
+    8
+   ],
+   "lessons": [
+    "19"
+   ],
+   "summary": "Cena w przygotowaniu towaru do sprzedaży",
+   "criteriaSummary": "Obliczenia ceny z uwzględnieniem marży i rabatu.",
+   "subject": "Kalkulacje handlowe",
+   "relation": "bezpośrednie",
+   "limit": "Dotyczy obliczeń, a nie wszystkich czynności przygotowania towaru.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-it",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.2",
+   "effect": 2,
+   "criteria": [
+    1
+   ],
+   "pages": [
+    2
+   ],
+   "modules": [
+    5
+   ],
+   "lessons": [
+    "20"
+   ],
+   "summary": "Technologia informacyjna w zadaniach handlowych",
+   "criteriaSummary": "Użycie narzędzi biurowych do przygotowania materiału.",
+   "subject": "Pracownia handlowa",
+   "relation": "częściowe",
+   "limit": "Ćwiczenie nie uczy obsługi pełnego systemu sprzedażowego; AI jest opcjonalnym narzędziem.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-doc",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.2",
+   "effect": 1,
+   "criteria": [
+    1,
+    2
+   ],
+   "pages": [
+    2
+   ],
+   "modules": [
+    5,
+    6
+   ],
+   "lessons": [
+    "20"
+   ],
+   "summary": "Dobór dokumentów i sposobu ich przygotowania",
+   "criteriaSummary": "Rozróżnienie oferty, zamówienia i innych pism oraz wybór programu.",
+   "subject": "Dokumentacja handlowa",
+   "relation": "częściowe",
+   "limit": "Lekcja ćwiczy ofertę i dobór dokumentu, bez pełnego obiegu dokumentacji.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-sheet",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.4",
+   "effect": 8,
+   "criteria": [
+    1
+   ],
+   "pages": [
+    6
+   ],
+   "modules": [
+    4,
+    5
+   ],
+   "lessons": [
+    "19",
+    "29"
+   ],
+   "summary": "Narzędzia komputerowe wspierające sprzedaż",
+   "criteriaSummary": "Wykonanie obliczeń w arkuszu kalkulacyjnym.",
+   "subject": "Pracownia handlowa",
+   "relation": "bezpośrednie",
+   "limit": "Praca na kalkulatorze serwisu nie zastępuje arkusza — uczeń powinien użyć XLSX lub programu arkuszowego.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-pack",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.3",
+   "effect": 4,
+   "criteria": [
+    3,
+    4,
+    5
+   ],
+   "pages": [
+    4
+   ],
+   "modules": [
+    7
+   ],
+   "lessons": [
+    "07"
+   ],
+   "summary": "Zarządzanie opakowaniami w placówce handlowej",
+   "criteriaSummary": "Zasady obiegu, segregacji i ewidencji opakowań.",
+   "subject": "Organizacja sprzedaży",
+   "relation": "bezpośrednie",
+   "limit": "Ćwiczenie obejmuje opakowania; raport VSME pozostaje rozszerzeniem.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-plan",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.6",
+   "effect": 3,
+   "criteria": [
+    2,
+    3,
+    5,
+    8
+   ],
+   "pages": [
+    8
+   ],
+   "modules": [
+    1,
+    2
+   ],
+   "lessons": [
+    "33"
+   ],
+   "summary": "Organizowanie własnego zadania",
+   "criteriaSummary": "Cel, lista czynności, terminy i ocena wykonania.",
+   "subject": "Kompetencje personalne i społeczne",
+   "relation": "bezpośrednie",
+   "limit": "Plan oraz refleksja są dowodem pracy; samo obejrzenie modułu nie wystarczy.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-develop",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.6",
+   "effect": 5,
+   "criteria": [
+    3,
+    4
+   ],
+   "pages": [
+    8
+   ],
+   "modules": [
+    1,
+    2
+   ],
+   "lessons": [
+    "33"
+   ],
+   "summary": "Rozwój zawodowy",
+   "criteriaSummary": "Wybór celu rozwoju oraz sposobów uczenia się.",
+   "subject": "Kompetencje personalne i społeczne",
+   "relation": "bezpośrednie",
+   "limit": "Coaching służy pracy nad celem; nie jest osobnym obowiązkowym elementem podstawy.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h01-data",
+   "qualification": "HAN.01",
+   "unit": "HAN.01.6",
+   "effect": 6,
+   "criteria": [
+    2
+   ],
+   "pages": [
+    8
+   ],
+   "modules": [
+    5
+   ],
+   "lessons": [
+    "20"
+   ],
+   "summary": "Poufność i ochrona informacji zawodowych",
+   "criteriaSummary": "Bezpieczne przetwarzanie i przekazywanie danych.",
+   "subject": "Pracownia handlowa",
+   "relation": "częściowe",
+   "limit": "Ocena ryzyka ujawnienia danych w ćwiczeniu, bez audytu zgodności RODO.",
+   "source": "ore-sprzedawca"
+  },
+  {
+   "id": "h02-market",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 1,
+   "criteria": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "pages": [
+    11
+   ],
+   "modules": [
+    3,
+    6
+   ],
+   "lessons": [
+    "16"
+   ],
+   "summary": "Wykorzystanie danych o rynku",
+   "criteriaSummary": "Źródła, SWOT, segmentacja i potrzeby na podstawie analizy.",
+   "subject": "Marketing w handlu",
+   "relation": "bezpośrednie",
+   "limit": "Pakiet danych jest fikcyjny. Nie udaje reprezentatywnego badania rynku.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-need",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 2,
+   "criteria": [
+    1,
+    3
+   ],
+   "pages": [
+    11
+   ],
+   "modules": [
+    3,
+    6
+   ],
+   "lessons": [
+    "08"
+   ],
+   "summary": "Wstępna ocena potrzeb rynku",
+   "criteriaSummary": "Ustalenie oczekiwań odbiorców dla konkretnej działalności.",
+   "subject": "Badania rynku",
+   "relation": "bezpośrednie",
+   "limit": "Wnioski dotyczą analizowanego przypadku.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-decision",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 3,
+   "criteria": [
+    1,
+    3
+   ],
+   "pages": [
+    11
+   ],
+   "modules": [
+    3,
+    4
+   ],
+   "lessons": [
+    "16"
+   ],
+   "summary": "Decyzja handlowa wynikająca z analizy",
+   "criteriaSummary": "Uzasadnienie decyzji oraz przedstawienie wniosków o popycie.",
+   "subject": "Marketing w handlu",
+   "relation": "częściowe",
+   "limit": "Lekcja nie obejmuje pełnej prognozy i wyznaczania zamówień.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-promo",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 4,
+   "criteria": [
+    3,
+    4
+   ],
+   "pages": [
+    11,
+    12
+   ],
+   "modules": [
+    6
+   ],
+   "lessons": [
+    "17",
+    "18"
+   ],
+   "summary": "Promocja dopasowana do oferty",
+   "criteriaSummary": "Wybór narzędzia i opracowanie planu promocji na danych wejściowych.",
+   "subject": "Marketing w handlu",
+   "relation": "bezpośrednie",
+   "limit": "Uczeń przygotowuje plan, nie musi publikować reklamy.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-budget",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 5,
+   "criteria": [
+    2,
+    4
+   ],
+   "pages": [
+    12
+   ],
+   "modules": [
+    4,
+    6,
+    8
+   ],
+   "lessons": [
+    "18",
+    "29"
+   ],
+   "summary": "Kontrola wykonania budżetu",
+   "criteriaSummary": "Sprawdzenie rezultatów oraz zaproponowanie korekty.",
+   "subject": "Ekonomika handlu",
+   "relation": "bezpośrednie",
+   "limit": "Porównanie planu i wykonania musi być wykonane w lekcji; sama prognoza cash flow tego nie dowodzi.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-plan",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.3",
+   "effect": 6,
+   "criteria": [
+    3,
+    5
+   ],
+   "pages": [
+    12
+   ],
+   "modules": [
+    2,
+    4,
+    6
+   ],
+   "lessons": [
+    "18",
+    "33"
+   ],
+   "summary": "Planowanie działań na podstawie analizy",
+   "criteriaSummary": "Harmonogram i dobór działań do celu.",
+   "subject": "Pracownia handlowa",
+   "relation": "bezpośrednie",
+   "limit": "Plan szkolny jest wariantem ćwiczeniowym, nie obowiązkowym planem firmy.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-it",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.2",
+   "effect": 2,
+   "criteria": [
+    1
+   ],
+   "pages": [
+    10
+   ],
+   "modules": [
+    5
+   ],
+   "lessons": [
+    "20"
+   ],
+   "summary": "Narzędzia informacyjne w handlu",
+   "criteriaSummary": "Użycie programu biurowego przy zadaniu zawodowym.",
+   "subject": "Pracownia handlowa",
+   "relation": "częściowe",
+   "limit": "Nie obejmuje całego doboru i obsługi systemu sprzedaży; AI jest opcjonalne.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-offer",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.4",
+   "effect": 1,
+   "criteria": [
+    3,
+    4
+   ],
+   "pages": [
+    12
+   ],
+   "modules": [
+    5,
+    6,
+    8
+   ],
+   "lessons": [
+    "20",
+    "14"
+   ],
+   "summary": "Oferta dla odbiorcy indywidualnego lub instytucji",
+   "criteriaSummary": "Rozpoznanie cech dobrej oferty i przygotowanie jej dla odbiorcy.",
+   "subject": "Pracownia handlowa",
+   "relation": "bezpośrednie",
+   "limit": "Zadanie szkolne dotyczy oferty handlowej, nie pozyskiwania inwestora.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-price",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.4",
+   "effect": 10,
+   "criteria": [
+    2,
+    3,
+    4
+   ],
+   "pages": [
+    13
+   ],
+   "modules": [
+    4,
+    8
+   ],
+   "lessons": [
+    "19"
+   ],
+   "summary": "Kalkulowanie ceny i marży",
+   "criteriaSummary": "Cena sprzedaży, marża i wartość jednostkowa.",
+   "subject": "Kalkulacje handlowe",
+   "relation": "bezpośrednie",
+   "limit": "Stawka VAT w zadaniu jest założeniem dydaktycznym, a nie poradą dla danej grupy towarowej.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-cost",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.7",
+   "effect": 3,
+   "criteria": [
+    1,
+    3
+   ],
+   "pages": [
+    15
+   ],
+   "modules": [
+    4,
+    8
+   ],
+   "lessons": [
+    "29"
+   ],
+   "summary": "Rozróżnianie kosztów i przychodów",
+   "criteriaSummary": "Charakterystyka oraz przyporządkowanie kategorii ekonomicznych.",
+   "subject": "Rachunkowość handlowa",
+   "relation": "częściowe",
+   "limit": "Cash flow nie jest ewidencją księgową ani rachunkiem wyników.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-liquid",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.7",
+   "effect": 7,
+   "criteria": [
+    1,
+    2,
+    5,
+    6,
+    7
+   ],
+   "pages": [
+    16
+   ],
+   "modules": [
+    4,
+    8
+   ],
+   "lessons": [
+    "29"
+   ],
+   "summary": "Analiza kondycji ekonomicznej firmy",
+   "criteriaSummary": "Wskaźniki płynności i rentowności oraz ich interpretacja.",
+   "subject": "Ekonomika i rachunkowość handlowa",
+   "relation": "częściowe",
+   "limit": "Lekcja dodaje dane bilansowe i wskaźniki. Samo saldo w kalkulatorze cash flow nie realizuje tych kryteriów.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-develop",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.9",
+   "effect": 6,
+   "criteria": [
+    3,
+    4
+   ],
+   "pages": [
+    18
+   ],
+   "modules": [
+    1,
+    2
+   ],
+   "lessons": [
+    "33"
+   ],
+   "summary": "Plan rozwoju zawodowego",
+   "criteriaSummary": "Cel doskonalenia i dobór metod.",
+   "subject": "Kompetencje personalne i społeczne",
+   "relation": "bezpośrednie",
+   "limit": "Wykorzystuje autorefleksję i plan, bez wymagania coachingu.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-team",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.10",
+   "effect": 1,
+   "criteria": [
+    1,
+    2
+   ],
+   "pages": [
+    19
+   ],
+   "modules": [
+    1,
+    2,
+    4
+   ],
+   "lessons": [
+    "33"
+   ],
+   "summary": "Planowanie pracy małego zespołu",
+   "criteriaSummary": "Zakresy pracy oraz wspólny plan wykonania zadania.",
+   "subject": "Organizacja pracy zespołu",
+   "relation": "częściowe",
+   "limit": "Nie zastępuje pozostałych efektów kierowania i oceny pracy.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-env",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.1",
+   "effect": 3,
+   "criteria": [
+    6,
+    7
+   ],
+   "pages": [
+    9
+   ],
+   "modules": [
+    7
+   ],
+   "lessons": [
+    "07"
+   ],
+   "summary": "Środowiskowe zasady pracy w handlu",
+   "criteriaSummary": "Gospodarka odpadami i recykling materiałów pomocniczych.",
+   "subject": "BHP i ochrona środowiska",
+   "relation": "częściowe",
+   "limit": "Lekcja skupia się na odpadach i opakowaniach; nie obejmuje całego efektu BHP ani obowiązków ESG.",
+   "source": "ore-handlowiec"
+  },
+  {
+   "id": "h02-comm",
+   "qualification": "HAN.02",
+   "unit": "HAN.02.9",
+   "effect": 9,
+   "criteria": [
+    3,
+    6,
+    7,
+    8
+   ],
+   "pages": [
+    18,
+    19
+   ],
+   "modules": [
+    1,
+    6,
+    8
+   ],
+   "lessons": [
+    "14"
+   ],
+   "summary": "Porozumiewanie się w pracy zawodowej",
+   "criteriaSummary": "Formy przekazu, bariery i sposoby ich ograniczania.",
+   "subject": "Obsługa klienta",
+   "relation": "bezpośrednie",
+   "limit": "Ocena opiera się na obserwacji rozmowy i informacji zwrotnej.",
+   "source": "ore-handlowiec"
+  }
+ ],
+ "extensions": [
+  {
+   "modules": [
+    1,
+    2
+   ],
+   "title": "Coaching i GROW",
+   "note": "Metoda pracy z celem rozwojowym, nie obowiązkowa technika wskazana w podstawie."
+  },
+  {
+   "modules": [
+    4
+   ],
+   "title": "Lean Canvas i cash flow",
+   "note": "Narzędzia porządkujące model i gotówkę. Nie zastępują rachunkowości, ewidencji ani wskaźników wymaganych w HAN.02."
+  },
+  {
+   "modules": [
+    5
+   ],
+   "title": "Generatywna AI",
+   "note": "Opcjonalny wariant pracy z narzędziem cyfrowym; wszystkie zadania mają wariant bez konta AI."
+  },
+  {
+   "modules": [
+    7
+   ],
+   "title": "ESG, VSME, CSRD",
+   "note": "Rozszerzenie kontekstu środowiskowego i biznesowego; bez przypisywania podstawie obowiązku raportu VSME."
+  },
+  {
+   "modules": [
+    8
+   ],
+   "title": "Pitch dla inwestora i VC",
+   "note": "Rozszerzenie. W lekcji zawodowej wykorzystujemy ofertę handlową i prezentację dla klienta."
+  }
+ ]
 }

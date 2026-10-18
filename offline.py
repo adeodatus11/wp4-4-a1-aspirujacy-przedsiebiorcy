@@ -4,9 +4,9 @@ import json
 from portal import ROOT, write
 
 def build_offline():
-    manifest={"name":"Pracownia przedsiębiorczości — lekcje HAN","short_name":"Pracownia HAN","lang":"pl","start_url":"./szkola.html","scope":"./","display":"standalone","background_color":"#f7f7f0","theme_color":"#123d36","icons":[{"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
+    manifest={"name":"Pracownia przedsiębiorczości","short_name":"Pracownia","lang":"pl","start_url":"./index.html","scope":"./","display":"standalone","background_color":"#f7f7f0","theme_color":"#123d36","icons":[{"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
     write('manifest.webmanifest',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-    files=sorted([p for p in ROOT.glob('*.html')]+list((ROOT/'assets').glob('*'))+[p for p in (ROOT/'downloads').glob('*') if p.is_file() and p.suffix!='.zip']+[ROOT/'manifest.webmanifest'])
+    files=sorted([p for p in ROOT.glob('*.html')]+list((ROOT/'assets').glob('*'))+[p for p in (ROOT/'downloads').glob('*') if p.is_file() and p.suffix!='.zip']+[p for p in (ROOT/'lekcje').rglob('*') if p.is_file()]+[ROOT/'manifest.webmanifest'])
     files=[p for p in files if p.is_file()]
     digest=hashlib.sha256()
     for p in files:digest.update(str(p.relative_to(ROOT)).encode());digest.update(p.read_bytes())

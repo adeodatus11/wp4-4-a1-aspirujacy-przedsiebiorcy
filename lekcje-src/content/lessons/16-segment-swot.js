@@ -30,7 +30,7 @@ export default {
   subtitle: 'Dwadzieścia rozmów, dwie grupy klientów i jedna kwiaciarnia. Komu najpierw zaproponować stałe dostawy kwiatów?',
   duration: 90,
   sessions: [45, 45],
-  han: ['HAN.02.4'],
+  han: ['HAN.02.3', 'HAN.02.4'],
   tags: ['segmentacja', 'SWOT', 'badanie rynku', 'próba'],
   realia: [],
   audience: {

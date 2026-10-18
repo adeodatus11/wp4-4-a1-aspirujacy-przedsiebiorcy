@@ -20,7 +20,7 @@ function open(file,options={}) {
   TestURL.createObjectURL=blob=>{downloads.push(blob);return 'blob:test';};TestURL.revokeObjectURL=()=>{};
   Object.assign(window,{localStorage:storage,location:{hash:options.hash||'',search:options.search||'',protocol:'https:'},confirm:()=>true,print:()=>{},setTimeout:(fn)=>nativeTimeout(fn,0),clearTimeout,setInterval:fn=>{callbacks.push(fn);return callbacks.length;},clearInterval:()=>{},Date:TestDate,Blob,URL:TestURL,URLSearchParams,Intl,console});
   const context=vm.createContext(window);
-  for(const script of ['lesson-core.js','core.js','course-data.js','lesson-data.js','search-index.js','site.js','lesson.js'])vm.runInContext(fs.readFileSync(path.join(root,'assets',script),'utf8'),context,{filename:script});
+  for(const script of ['core.js','course-data.js','search-index.js','site.js'])vm.runInContext(fs.readFileSync(path.join(root,'assets',script),'utf8'),context,{filename:script});
   return {$:q=>document.querySelector(q),$$:q=>[...document.querySelectorAll(q)],window,document,context,downloads,advance(ms){now+=ms;callbacks.forEach(fn=>fn());}};
 }
 function event(view,el,type){el.dispatchEvent(new view.window.Event(type,{bubbles:true,cancelable:true}));}
@@ -49,9 +49,9 @@ async function run(){
   school.$('#mapping-qualification').value='HAN.02';school.$('#mapping-module').value='7';event(school,school.$('#mapping-qualification'),'input');
   assert.equal(school.$$('[data-mapping]').filter(x=>!x.hidden).length,1);
   school.$('#lesson-qualification').value='HAN.02';school.$('#lesson-minutes').value='90';event(school,school.$('#lesson-minutes'),'input');
-  assert.equal(school.$$('[data-lesson]').filter(x=>!x.hidden).length,3);
-  home.$('#site-search').value='HAN.02.7.7';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').some(a=>a.href.includes('lekcja-han-07')));
-  console.log('OK: filtry podstawy i lekcji HAN oraz wyszukiwanie po identyfikatorze efektu.');
+  assert.equal(school.$$('[data-lesson]').filter(x=>!x.hidden).length,7);
+  home.$('#site-search').value='HAN.02.7.7';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').some(a=>a.href.includes('lekcja/29')));
+  console.log('OK: filtry podstawy i katalogu lekcji handlu oraz wyszukiwanie po identyfikatorze efektu.');
   let cash=open('cash-flow.html');event(cash,cash.$('#cash-example'),'click');assert.match(cash.$('[data-cash-output="closing"][data-month="0"]').textContent,/1.*500/);assert.equal(Number(cash.$('#cash-opening-1').value),1500);
   cash.$('#cash-sales-0').value='0';event(cash,cash.$('#cash-sales-0'),'input');assert.match(cash.$('#cash-summary').textContent,/ujemne saldo/);assert.equal(Number(cash.$('#cash-opening-1').value),-4500);
   assert.equal(Number(open('cash-flow.html').$('#cash-opening-1').value),-4500);

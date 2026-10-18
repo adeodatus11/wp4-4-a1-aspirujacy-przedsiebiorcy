@@ -25,7 +25,7 @@ export default {
   subtitle: 'Sklep rowerowy ma zysk w każdym miesiącu, a w marcu brakuje mu pieniędzy na czynsz. Jak to możliwe i co pokażą wskaźniki?',
   duration: 90,
   sessions: [45, 45],
-  han: ['HAN.02.3'],
+  han: ['HAN.01.4', 'HAN.02.3', 'HAN.02.7'],
   tags: ['wynik finansowy', 'przepływy gotówki', 'płynność', 'rentowność'],
   realia: [],
   audience: {

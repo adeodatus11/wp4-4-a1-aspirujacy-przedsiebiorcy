@@ -13,9 +13,7 @@
   }
   state = read();
   function backupState() {
-    const copy=C.normalize(JSON.parse(JSON.stringify(state)));
-    for(const book of Object.values(copy.lessons))if(book.active)window.LessonCore.pause(book.active,Date.now());
-    return copy;
+    return C.normalize(JSON.parse(JSON.stringify(state)));
   }
   function update(change) {
     const next = storageOK ? read() : state;
@@ -170,16 +168,6 @@
       if (state.quizzes[m.n]) lines.push(`Ostatni wynik quizu: ${C.grade(m.quiz,state.quizzes[m.n]).score}/3`, '');
     });
     if (Object.keys(state.cash).length) { lines.push('CASH FLOW — SALDA KOŃCOWE (PLN)'); C.calculate(state.cash).forEach((r,i) => lines.push(`Miesiąc ${i+1}: ${r.closing.toFixed(2)}`)); }
-    for (const [id, book] of Object.entries(state.lessons)) {
-      lines.push('', `LEKCJA ${id}`);
-      if (book.active) lines.push('Sesja w toku: '+book.active.definition.title);
-      book.history.forEach(a => {
-        const r=window.LessonCore.result(a);
-        lines.push(`${a.definition.title} — ${a.participant || 'bez identyfikatora'} — ${new Date(a.endedAt).toLocaleString('pl-PL')}`,`Test: ${r.autoScore}/10; praca praktyczna: ${r.reviewed?r.practicalScore+'/6':'oczekuje oceny'}; łącznie: ${r.reviewed?r.total+'/16':'jeszcze nieustalone'}`);
-        [...a.definition.worksheet,a.definition.exit].forEach((title,i)=>lines.push(title,a.work[i]||'—'));
-        if(a.review.comment)lines.push('Informacja zwrotna: '+a.review.comment);
-      });
-    }
     return lines.join('\n');
   }
   if ($('#export-project')) {

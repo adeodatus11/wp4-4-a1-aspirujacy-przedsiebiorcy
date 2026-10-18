@@ -1,0 +1,574 @@
+[
+ {
+  "id": "01",
+  "part": "A",
+  "title": "Bezpieczna praca w sklepie",
+  "subtitle": "Zaplecze o 7:40, dostawa wody i nóż do kartonów. Co tu może skończyć się wypadkiem i co zrobić, zanim się stanie.",
+  "duration": 45,
+  "han": [
+   "HAN.01.1"
+  ],
+  "tags": [
+   "BHP",
+   "dźwiganie",
+   "pierwsza pomoc",
+   "pożar"
+  ]
+ },
+ {
+  "id": "02",
+  "part": "A",
+  "title": "Formy handlu i kanały sprzedaży",
+  "subtitle": "Ceramiczka z Bolesławca może sprzedawać kubki na targu, przez platformę, we własnym sklepie internetowym albo hurtowo. Każda droga kosztuje coś innego.",
+  "duration": 45,
+  "han": [
+   "HAN.01.2"
+  ],
+  "tags": [
+   "hurt",
+   "detal",
+   "e-commerce",
+   "franczyza",
+   "prowizja"
+  ]
+ },
+ {
+  "id": "03",
+  "part": "A",
+  "title": "Towar: grupy, etykiety i przechowywanie",
+  "subtitle": "Co znaczy „najlepiej spożyć przed”, czego brakuje na etykiecie pierogów i dlaczego wybielacz nie stoi obok masła.",
+  "duration": 45,
+  "han": [
+   "HAN.01.2"
+  ],
+  "tags": [
+   "etykieta",
+   "alergeny",
+   "daty trwałości",
+   "FEFO",
+   "znak CE"
+  ]
+ },
+ {
+  "id": "04",
+  "part": "A",
+  "title": "Przyjęcie dostawy i rozbieżności",
+  "subtitle": "Kierowca się spieszy, na WZ wszystko się zgadza, a w kartonach brakuje proszku i jest nie ten żel. Jak przyjąć dostawę, żeby sklep nie stracił.",
+  "duration": 90,
+  "han": [
+   "HAN.01.3"
+  ],
+  "tags": [
+   "dostawa",
+   "WZ",
+   "protokół rozbieżności",
+   "korekta faktury"
+  ]
+ },
+ {
+  "id": "05",
+  "part": "A",
+  "title": "Ekspozycja towaru i planogram",
+  "subtitle": "Dlaczego mleko stoi w głębi sklepu, guma do żucia przy kasie, a nowa kawa na wysokości oczu.",
+  "duration": 45,
+  "han": [
+   "HAN.01.3"
+  ],
+  "tags": [
+   "ekspozycja",
+   "planogram",
+   "facing",
+   "merchandising"
+  ]
+ },
+ {
+  "id": "06",
+  "part": "A",
+  "title": "Ceny na półce",
+  "subtitle": "Który proszek jest naprawdę tańszy, co musi być na etykiecie i od jakiej ceny liczyć promocję.",
+  "duration": 45,
+  "han": [
+   "HAN.01.3"
+  ],
+  "tags": [
+   "cena jednostkowa",
+   "etykieta cenowa",
+   "promocja",
+   "najniższa cena z 30 dni"
+  ]
+ },
+ {
+  "id": "07",
+  "part": "A",
+  "title": "Opakowania, kaucja i odpady",
+  "subtitle": "Klient oddaje butelki bez paragonu, piekarnia czeka na skrzynki, a na zapleczu rośnie góra kartonów.",
+  "duration": 45,
+  "han": [
+   "HAN.01.3",
+   "HAN.02.1"
+  ],
+  "tags": [
+   "system kaucyjny",
+   "opakowania zwrotne",
+   "segregacja",
+   "greenwashing"
+  ]
+ },
+ {
+  "id": "08",
+  "part": "A",
+  "title": "Od pytania do potrzeby klienta",
+  "subtitle": "Klient mówi „szukam plecaka”. Zanim cokolwiek pokażesz, dowiedz się, do czego mu jest potrzebny.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4",
+   "HAN.02.3"
+  ],
+  "tags": [
+   "rozmowa sprzedażowa",
+   "pytania otwarte",
+   "potrzeba klienta"
+  ]
+ },
+ {
+  "id": "09",
+  "part": "A",
+  "title": "Prezentacja towaru: cecha i korzyść",
+  "subtitle": "„8 kg wsadu” nic klientce nie mówi. „Pranie dla czterech osób w jednym cyklu” — już tak.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4"
+  ],
+  "tags": [
+   "cecha",
+   "korzyść",
+   "prezentacja",
+   "etykieta energetyczna"
+  ]
+ },
+ {
+  "id": "10",
+  "part": "A",
+  "title": "Kasa, paragon i płatności",
+  "subtitle": "Reszta z dwustu złotych, paragon z błędem, klient, który „dał więcej”, i raport na koniec zmiany, w którym brakuje 10 zł.",
+  "duration": 90,
+  "han": [
+   "HAN.01.4"
+  ],
+  "tags": [
+   "kasa fiskalna",
+   "paragon",
+   "płatności",
+   "raport kasowy"
+  ]
+ },
+ {
+  "id": "11",
+  "part": "A",
+  "title": "Zastrzeżenia i trudny klient",
+  "subtitle": "Odkurzacz z gazetki skończył się o dziesiątej, a klientka przyjechała po niego z drugiego końca miasta.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4",
+   "HAN.01.6"
+  ],
+  "tags": [
+   "obsługa klienta",
+   "zastrzeżenia",
+   "konflikt",
+   "emocje"
+  ]
+ },
+ {
+  "id": "12",
+  "part": "A",
+  "title": "Sprzedaż internetowa i prawa konsumenta",
+  "subtitle": "Klientka chce oddać talerze po 10 dniach, ktoś inny kubek z imieniem, a regulamin sklepu obiecuje zwrot tylko w bonie.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4"
+  ],
+  "tags": [
+   "e-sklep",
+   "odstąpienie od umowy",
+   "zwrot",
+   "regulamin"
+  ]
+ },
+ {
+  "id": "13",
+  "part": "A",
+  "title": "Telefon, e-mail i opinie w internecie",
+  "subtitle": "Klient dzwoni, gdy nie znasz odpowiedzi, pisze maila bez numeru zamówienia i zostawia jedną gwiazdkę w opiniach.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4",
+   "HAN.01.6"
+  ],
+  "tags": [
+   "rozmowa telefoniczna",
+   "notatka",
+   "opinie online",
+   "obsługa klienta"
+  ]
+ },
+ {
+  "id": "14",
+  "part": "A",
+  "title": "Oferta i rozmowa z klientem",
+  "subtitle": "Firma chce 30 koszyków śniadaniowych na wtorek. Przygotuj ofertę, przedstaw ją w dwie minuty i wyjaśnij, że „odbiór” to nie „dostawa”.",
+  "duration": 45,
+  "han": [
+   "HAN.01.4",
+   "HAN.02.4",
+   "HAN.02.9"
+  ],
+  "tags": [
+   "oferta handlowa",
+   "prezentacja",
+   "nieporozumienie",
+   "rabat"
+  ]
+ },
+ {
+  "id": "15",
+  "part": "A",
+  "title": "Granice, etyka i stres w pracy przy ladzie",
+  "subtitle": "Piwo „dla brata”, nowe daty na starych wędlinach i dziesiąta godzina przy kasie przed świętami.",
+  "duration": 45,
+  "han": [
+   "HAN.01.6"
+  ],
+  "tags": [
+   "etyka",
+   "sprzedaż alkoholu",
+   "stres",
+   "mobbing"
+  ]
+ },
+ {
+  "id": "16",
+  "part": "B",
+  "title": "Segment rynku i SWOT na danych",
+  "subtitle": "Dwadzieścia rozmów, dwie grupy klientów i jedna kwiaciarnia. Komu najpierw zaproponować stałe dostawy kwiatów?",
+  "duration": 90,
+  "han": [
+   "HAN.02.3",
+   "HAN.02.4"
+  ],
+  "tags": [
+   "segmentacja",
+   "SWOT",
+   "badanie rynku",
+   "próba"
+  ]
+ },
+ {
+  "id": "17",
+  "part": "B",
+  "title": "Marketing mix: produkt, cena, miejsce, promocja",
+  "subtitle": "Pudełko na lunch, bidon i torba. Jak z trzech zwykłych rzeczy zrobić ofertę dla osób, które codziennie zabierają jedzenie do pracy.",
+  "duration": 45,
+  "han": [
+   "HAN.01.3",
+   "HAN.02.3",
+   "HAN.02.4"
+  ],
+  "tags": [
+   "4P",
+   "zestaw",
+   "promocja",
+   "spójność oferty"
+  ]
+ },
+ {
+  "id": "18",
+  "part": "B",
+  "title": "Plan promocji i kontrola budżetu",
+  "subtitle": "Kampania kosztowała więcej i przyniosła mniej klientów, niż planowano. Ile naprawdę zarobił serwis i jak zaplanować następny test za 200 zł.",
+  "duration": 90,
+  "han": [
+   "HAN.02.3"
+  ],
+  "tags": [
+   "budżet",
+   "odchylenie",
+   "koszt pozyskania klienta",
+   "plan promocji"
+  ]
+ },
+ {
+  "id": "19",
+  "part": "B",
+  "title": "Cena, marża i rabat",
+  "subtitle": "Ile sklep naprawdę zarabia na kurtce za 246 zł i przy jakim rabacie zaczyna dokładać.",
+  "duration": 45,
+  "han": [
+   "HAN.01.3",
+   "HAN.01.4",
+   "HAN.02.4"
+  ],
+  "tags": [
+   "marża",
+   "narzut",
+   "VAT",
+   "rabat",
+   "Black Week"
+  ]
+ },
+ {
+  "id": "20",
+  "part": "B",
+  "title": "Oferta handlowa: popraw szkic i sprawdź AI",
+  "subtitle": "Narzędzie AI napisało ofertę w kilka sekund. Lampa „wodoodporna”, „dostawa gratis” i prośba o prywatne numery pracowników. Co z tym zrobić?",
+  "duration": 45,
+  "han": [
+   "HAN.01.2",
+   "HAN.01.6",
+   "HAN.02.2",
+   "HAN.02.4",
+   "HAN.02.7"
+  ],
+  "tags": [
+   "oferta",
+   "dokumenty handlowe",
+   "AI",
+   "dane osobowe"
+  ]
+ },
+ {
+  "id": "21",
+  "part": "B",
+  "title": "Korespondencja handlowa",
+  "subtitle": "Dostawa zeszytów do szkoły się spóźni. Napisz maila, po którym klient wie, co się stało, co dalej i do kogo dzwonić.",
+  "duration": 45,
+  "han": [
+   "HAN.02.7"
+  ],
+  "tags": [
+   "e-mail",
+   "pismo handlowe",
+   "UDW",
+   "formy grzecznościowe"
+  ]
+ },
+ {
+  "id": "22",
+  "part": "B",
+  "title": "Zamówienie i wybór oferty dostawcy",
+  "subtitle": "Najniższa cena na sztuce nie oznacza najtańszej dostawy. Porównaj trzy hurtownie tak, jak na egzaminie zawodowym.",
+  "duration": 45,
+  "han": [
+   "HAN.02.4"
+  ],
+  "tags": [
+   "oferta dostawcy",
+   "koszt całkowity",
+   "termin płatności",
+   "zamówienie"
+  ]
+ },
+ {
+  "id": "23",
+  "part": "B",
+  "title": "Faktura VAT i KSeF",
+  "subtitle": "Księgarnia sprzedaje szkole atlasy i zeszyty. Dwie stawki VAT na jednej fakturze i nowy obowiązek: faktura w Krajowym Systemie e-Faktur.",
+  "duration": 45,
+  "han": [
+   "HAN.02.7"
+  ],
+  "tags": [
+   "faktura",
+   "VAT",
+   "KSeF",
+   "dokumenty sprzedaży"
+  ]
+ },
+ {
+  "id": "24",
+  "part": "B",
+  "title": "Dokumenty magazynowe: PZ, WZ, PW, RW, MM",
+  "subtitle": "Każdy ruch towaru w magazynie zostawia ślad w dokumencie. Który dokument wystawić i jak go wypełnić.",
+  "duration": 45,
+  "han": [
+   "HAN.02.5",
+   "HAN.02.7"
+  ],
+  "tags": [
+   "PZ",
+   "WZ",
+   "RW",
+   "MM",
+   "magazyn"
+  ]
+ },
+ {
+  "id": "25",
+  "part": "B",
+  "title": "Przyjęcie i wydanie z magazynu: FIFO i FEFO",
+  "subtitle": "Taśma pakowa przyszła w trzech dostawach po trzech różnych cenach. Ile kosztowało to, co wydaliśmy klientom, i ile jest wart zapas?",
+  "duration": 45,
+  "han": [
+   "HAN.02.5"
+  ],
+  "tags": [
+   "FIFO",
+   "FEFO",
+   "kartoteka magazynowa",
+   "wycena rozchodu"
+  ]
+ },
+ {
+  "id": "26",
+  "part": "B",
+  "title": "Inwentaryzacja",
+  "subtitle": "W systemie jest 60 butelek oleju, na półce 55. Jak policzyć towar, wycenić różnice i dowiedzieć się, skąd się wzięły.",
+  "duration": 90,
+  "han": [
+   "HAN.02.5"
+  ],
+  "tags": [
+   "spis z natury",
+   "arkusz spisowy",
+   "niedobór",
+   "nadwyżka",
+   "ubytki naturalne"
+  ]
+ },
+ {
+  "id": "27",
+  "part": "B",
+  "title": "Zapas, punkt zamówienia i rotacja",
+  "subtitle": "Kiedy zamówić wodę, żeby nie zabrakło jej w upał, i dlaczego kawa za 2400 zł leży na półce cały miesiąc.",
+  "duration": 45,
+  "han": [
+   "HAN.02.5"
+  ],
+  "tags": [
+   "zapas",
+   "punkt zamówienia",
+   "rotacja",
+   "zamrożona gotówka"
+  ]
+ },
+ {
+  "id": "28",
+  "part": "B",
+  "title": "Prognoza sprzedaży i plan zakupów",
+  "subtitle": "Ile zeszytów zamówić na wrzesień? Za mało — klienci pójdą gdzie indziej. Za dużo — pieniądze utkną w kartonach do następnego roku.",
+  "duration": 90,
+  "han": [
+   "HAN.02.3"
+  ],
+  "tags": [
+   "prognoza",
+   "sezonowość",
+   "plan zakupów",
+   "budżet"
+  ]
+ },
+ {
+  "id": "29",
+  "part": "B",
+  "title": "Wynik, gotówka i wskaźniki",
+  "subtitle": "Sklep rowerowy ma zysk w każdym miesiącu, a w marcu brakuje mu pieniędzy na czynsz. Jak to możliwe i co pokażą wskaźniki?",
+  "duration": 90,
+  "han": [
+   "HAN.01.4",
+   "HAN.02.3",
+   "HAN.02.7"
+  ],
+  "tags": [
+   "wynik finansowy",
+   "przepływy gotówki",
+   "płynność",
+   "rentowność"
+  ]
+ },
+ {
+  "id": "30",
+  "part": "B",
+  "title": "Reklamacje: niezgodność z umową, gwarancja, rękojmia",
+  "subtitle": "Czajnik przestał grzać po pięciu miesiącach, buty odkleiły się po roku, a sklep znalazł w magazynie trzy niedziałające czajniki z hurtowni. Kto za co odpowiada?",
+  "duration": 90,
+  "han": [
+   "HAN.02.6"
+  ],
+  "tags": [
+   "reklamacja",
+   "niezgodność z umową",
+   "gwarancja",
+   "rękojmia",
+   "prawa konsumenta"
+  ]
+ },
+ {
+  "id": "31",
+  "part": "B",
+  "title": "Stali klienci i obsługa po sprzedaży",
+  "subtitle": "Karta lojalnościowa drogerii: ile kosztuje 5% zwrotu w punktach, jakie zgody wolno zebrać i co zrobić, żeby klientka wróciła po miesiącu.",
+  "duration": 45,
+  "han": [
+   "HAN.02.6"
+  ],
+  "tags": [
+   "program lojalnościowy",
+   "RODO",
+   "zgody marketingowe",
+   "obsługa posprzedażowa"
+  ]
+ },
+ {
+  "id": "32",
+  "part": "B",
+  "title": "Badanie satysfakcji klienta",
+  "subtitle": "Serwis rowerowy wysłał ankietę do 160 klientów, odpowiedziało 40. Jak zadać dobre pytania, policzyć wyniki i nie wyciągnąć zbyt daleko idących wniosków.",
+  "duration": 45,
+  "han": [
+   "HAN.02.6"
+  ],
+  "tags": [
+   "ankieta",
+   "NPS",
+   "średnia ocen",
+   "próba"
+  ]
+ },
+ {
+  "id": "33",
+  "part": "B",
+  "title": "Plan zadania i współpraca w zespole",
+  "subtitle": "Trzy osoby, 90 minut pracy razem, 30 zł na wydruk i stoisko na sobotę. Kto co robi i kiedy sprawdzacie, czy wszystko się zgadza?",
+  "duration": 45,
+  "han": [
+   "HAN.01.6",
+   "HAN.02.3",
+   "HAN.02.9",
+   "HAN.02.10"
+  ],
+  "tags": [
+   "praca zespołowa",
+   "plan",
+   "podział zadań",
+   "informacja zwrotna"
+  ]
+ },
+ {
+  "id": "34",
+  "part": "B",
+  "title": "Projekt końcowy: mój sklep",
+  "subtitle": "Wszystko w jednym: klient, oferta, cena, formalności, zakupy, gotówka na trzy miesiące i krótka prezentacja.",
+  "duration": 90,
+  "han": [
+   "HAN.02.3",
+   "HAN.02.4"
+  ],
+  "tags": [
+   "projekt",
+   "plan sprzedaży",
+   "formalności",
+   "cash flow",
+   "prezentacja"
+  ]
+ }
+]

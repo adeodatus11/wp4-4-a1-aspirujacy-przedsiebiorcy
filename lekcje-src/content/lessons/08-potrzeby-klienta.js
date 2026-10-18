@@ -8,7 +8,7 @@ export default {
   subtitle: 'Klient mówi „szukam plecaka”. Zanim cokolwiek pokażesz, dowiedz się, do czego mu jest potrzebny.',
   duration: 45,
   sessions: [45],
-  han: ['HAN.01.4'],
+  han: ['HAN.01.4', 'HAN.02.3'],
   tags: ['rozmowa sprzedażowa', 'pytania otwarte', 'potrzeba klienta'],
   realia: [],
   audience: {

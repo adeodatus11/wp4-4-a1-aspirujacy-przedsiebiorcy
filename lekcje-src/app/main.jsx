@@ -88,6 +88,7 @@ function Header({ mode, setMode }) {
       <nav aria-label="Główna">
         <a href="#/">Wszystkie lekcje</a>
         <a href="#/o-lekcjach">Jak korzystać</a>
+        <a href="../szkola.html">Mapa HAN.01 / HAN.02 ↗</a>
         <a href="../index.html">Program dla przedsiębiorców ↗</a>
       </nav>
       <div className="mode-switch" role="group" aria-label="Tryb pracy">

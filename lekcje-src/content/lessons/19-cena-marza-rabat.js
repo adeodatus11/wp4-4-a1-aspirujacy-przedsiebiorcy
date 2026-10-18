@@ -8,7 +8,7 @@ export default {
   subtitle: 'Ile sklep naprawdę zarabia na kurtce za 246 zł i przy jakim rabacie zaczyna dokładać.',
   duration: 45,
   sessions: [45],
-  han: ['HAN.02.3'],
+  han: ['HAN.01.3', 'HAN.01.4', 'HAN.02.4'],
   tags: ['marża', 'narzut', 'VAT', 'rabat', 'Black Week'],
   realia: ['vatStawki', 'omnibus', 'niezgodnosc'],
   audience: {
