@@ -45,7 +45,7 @@ export const realia = {
   },
   cenaJednostkowa: {
     label: 'Cena jednostkowa',
-    value: 'Przy towarach sprzedawanych na wagę lub objętość podaje się cenę za 1 kg, 1 l, 1 m (przy małych opakowaniach dopuszczalne 100 g lub 100 ml)',
+    value: 'Przy towarach w opakowaniach i sprzedawanych na wagę lub objętość podaje się obok ceny także cenę za jednostkę miary, zwykle 1 kg albo 1 l. Gdy cena na półce różni się od ceny w kasie, klient może żądać sprzedaży po cenie dla siebie korzystniejszej',
     source: 'Ustawa z 9.05.2014 o informowaniu o cenach towarów i usług; rozporządzenie MRiT',
     url: 'https://prawakonsumenta.uokik.gov.pl/',
     checked: '2026-10-18',

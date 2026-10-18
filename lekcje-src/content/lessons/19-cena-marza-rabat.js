@@ -151,7 +151,7 @@ export default {
           mistakes: [
             { value: 50.4, text: 'To jest narzut 40% od ceny zakupu (36 × 1,4). Marżę liczysz od ceny sprzedaży: 36 ÷ (1 − 0,4).' },
             { value: 73.8, text: 'To cena brutto. Pytanie dotyczy ceny netto, bez VAT.' },
-            { value: 90, text: 'Podzieliłeś przez 0,4. Zakup to nie 40%, tylko 60% ceny sprzedaży.' },
+            { value: 90, text: 'Tu dzielisz przez 0,4. Zakup to nie 40%, tylko 60% ceny sprzedaży.' },
           ],
         }),
         {
@@ -218,7 +218,7 @@ export default {
           tolerance: 0.02,
           mistakes: [
             { value: 32, text: 'To zarobek bez rabatu (96 − 64). Uwzględnij obniżkę 15%.' },
-            { value: 36.37, text: 'Od ceny brutto po rabacie odjąłeś cenę zakupu netto. Najpierw usuń VAT: 100,37 ÷ 1,23.' },
+            { value: 36.37, text: 'Od ceny brutto po rabacie odejmujesz cenę zakupu netto. Najpierw usuń VAT: 100,37 ÷ 1,23.' },
           ],
         }),
         choice(
@@ -277,7 +277,7 @@ export default {
             null,
             'To wynik dla narzutu 20% (176 × 1,2 × 1,23). Marżę liczysz od ceny sprzedaży: 176 ÷ 0,8.',
             'Tu sklep zachowuje te same 40 zł, a nie te same 20%. Marża spada wtedy do około 18,5%.',
-            'Dodałeś 16 zł do ceny brutto. Podwyżka netto też musi dostać VAT, a do tego trzeba zachować procent marży.',
+            'Tu do ceny brutto dodano 16 zł. Podwyżka netto też musi dostać VAT, a do tego trzeba zachować procent marży.',
           ],
         ),
         text(
@@ -291,7 +291,7 @@ export default {
           id: 'karta',
           badges: [
             { min: 0, name: 'Do powtórki', text: 'Wróć do etapu 2 i przejdź przykład z butami jeszcze raz. Potem rozwiąż tabelę w etapie 3.' },
-            { min: 0.6, name: 'Liczysz ceny', text: 'Większość obliczeń jest dobrze. Sprawdź pola, które poprawiałeś — zwykle chodzi o podstawę procentu albo VAT.' },
+            { min: 0.6, name: 'Liczysz ceny', text: 'Większość obliczeń jest dobrze. Sprawdź pola, które trzeba było poprawiać — zwykle chodzi o podstawę procentu albo VAT.' },
             { min: 0.85, name: 'Gotowe do metkowania', text: 'Możesz ustalać ceny po dostawie i sprawdzać promocje przed ich ogłoszeniem.' },
           ],
         },

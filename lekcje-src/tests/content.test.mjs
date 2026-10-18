@@ -21,8 +21,8 @@ const bannedPhrases = [
   'kluczowe znaczenie',
   'odgrywa kluczową rolę',
   'w erze cyfrowej',
-  'holistyczn',
-  'synergi',
+  'holistyczn*',
+  'synergi*',
   'ask',
 ];
 
@@ -95,9 +95,13 @@ for (const lesson of lessons) {
     assert.ok(reading <= (lesson.duration / 45) * 650, `za dużo tekstu do czytania: ${reading} słów`);
     const studentText = JSON.stringify({ s: lesson.sections.map(s => [s.intro, s.reading, s.activities]), t: lesson.subtitle }).toLowerCase();
     for (const phrase of bannedPhrases) {
-      const pattern = new RegExp(`(^|[^a-ząćęłńóśźż])${phrase}`, 'i');
+      const prefix = phrase.endsWith('*');
+      const word = prefix ? phrase.slice(0, -1) : phrase;
+      const pattern = new RegExp(`(^|[^a-ząćęłńóśźż])${word}${prefix ? '' : '(?![a-ząćęłńóśźż])'}`, 'i');
       assert.ok(!pattern.test(studentText), `zakazany zwrot „${phrase}”`);
     }
+    const gendered = studentText.match(/[a-ząćęłńóśźż]+(?:łeś|łaś|łbyś|łabyś)(?![a-ząćęłńóśźż])/g) || [];
+    assert.deepEqual(gendered, [], 'zwracaj się do ucznia neutralnie (czas teraźniejszy), bez form „-łeś/-łaś”');
     const fictional = (studentText.match(/fikcyjn/g) || []).length;
     assert.ok(fictional <= 1, `„fikcyjny” ${fictional} razy — wystarczy stopka serwisu`);
   });
