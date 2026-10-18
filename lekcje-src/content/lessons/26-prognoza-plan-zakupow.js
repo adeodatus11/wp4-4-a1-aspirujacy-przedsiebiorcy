@@ -53,18 +53,24 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Wrzesień jak sierpień?',
-      grouping: 'solo',
-      intro: 'Stażysta proponuje: „Na wrzesień zamówmy tyle zeszytów, ile sprzedaliśmy w sierpniu”.',
+      id: 'metody',
+      label: 'Wrzesień',
+      title: 'Na czym oprzeć prognozę?',
+      grouping: 'pair',
+      intro: 'Stażysta proponuje: „Na wrzesień zamówmy tyle zeszytów, ile sprzedaliśmy w sierpniu”. Do różnych towarów pasują różne metody prognozy.',
+      reading: {
+        title: 'Jak prognozować bez programu',
+        paragraphs: [
+          'Prognoza naiwna: „będzie tak jak ostatnio” — dla towarów bardzo stabilnych i na krótki okres. Średnia z kilku ostatnich miesięcy — dla towarów sprzedających się równo, wygładza przypadkowe wahania. Ten sam miesiąc rok wcześniej plus zmiana — dla towarów sezonowych.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy odpowiada sam. Pokaż wykres z tablicy: sierpień i wrzesień wyglądają zupełnie inaczej.',
-        'Dlaczego sierpień to zły punkt odniesienia dla września?',
-        'Bo zeszyty są sezonowe — szczyt jest we wrześniu. Lepiej porównać z wrześniem ubiegłego roku.',
-        'Prognozowanie sezonowego towaru na podstawie ostatniego miesiąca.',
-        'Wymień trzy inne towary sezonowe w handlu.',
+        17,
+        'Zacznij od propozycji stażysty: każdy sam decyduje, na czym oprzeć prognozę zeszytów. Potem Pary dopasowują metody. Zapytaj, dlaczego średnia z 3 miesięcy jest lepsza dla papieru niż sam ostatni miesiąc.',
+        'Po co średnia, skoro papier sprzedaje się równo?',
+        'Bo nawet przy równej sprzedaży są drobne wahania (190, 200, 205). Średnia je wygładza.',
+        'Używanie średniej rocznej dla towaru z wyraźnym sezonem.',
+        'Dobierz metodę dla zniczy przed 1 listopada.',
       ),
       activities: [
         history,
@@ -86,29 +92,6 @@ export default {
             'Październik jest już po szczycie sezonu.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'metody',
-      label: 'Metody',
-      title: 'Trzy proste metody',
-      grouping: 'pair',
-      intro: 'Do różnych towarów pasują różne metody prognozy.',
-      reading: {
-        title: 'Jak prognozować bez programu',
-        paragraphs: [
-          'Prognoza naiwna: „będzie tak jak ostatnio” — dla towarów bardzo stabilnych i na krótki okres. Średnia z kilku ostatnich miesięcy — dla towarów sprzedających się równo, wygładza przypadkowe wahania. Ten sam miesiąc rok wcześniej plus zmiana — dla towarów sezonowych.',
-        ],
-      },
-      ...note(
-        12,
-        'Pary dopasowują metody. Zapytaj, dlaczego średnia z 3 miesięcy jest lepsza dla papieru niż sam ostatni miesiąc.',
-        'Po co średnia, skoro papier sprzedaje się równo?',
-        'Bo nawet przy równej sprzedaży są drobne wahania (190, 200, 205). Średnia je wygładza.',
-        'Używanie średniej rocznej dla towaru z wyraźnym sezonem.',
-        'Dobierz metodę dla zniczy przed 1 listopada.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-metody',
@@ -129,7 +112,7 @@ export default {
       id: 'prognozy',
       label: 'Prognozy',
       title: 'Liczymy prognozy',
-      grouping: 'pair',
+      grouping: 'solo',
       intro: 'Policz prognozy sprzedaży na wrzesień 2026.',
       reading: {
         example: {
@@ -195,7 +178,6 @@ export default {
           [
             'Klienci kupią całą wyprawkę u konkurencji',
             'Sklep zarobi więcej, bo mniej wydał na towar',
-            'Hurtownia sama dowiezie zeszyty bez zamówienia',
             'Klienci poczekają do października na nową dostawę',
           ],
           0,
@@ -203,7 +185,6 @@ export default {
           [
             null,
             'Mniejszy zakup to też mniejsza sprzedaż, a do tego utrata klientów.',
-            'Hurtownia dowozi to, co zamówiono.',
             'Uczniowie potrzebują zeszytów na początku września.',
           ],
         ),
@@ -211,10 +192,10 @@ export default {
     },
     {
       id: 'plan',
-      label: 'Plan zakupów',
+      label: 'Plan i budżet',
       title: 'Ile kupić?',
       grouping: 'pair',
-      intro: 'Po przerwie — nowe pary. Ilość do zakupu zależy nie tylko od prognozy, ale też od tego, co już jest w magazynie, i ile chcesz mieć na koniec miesiąca.',
+      intro: 'Ilość do zakupu zależy nie tylko od prognozy, ale też od tego, co już jest w magazynie, i ile chcesz mieć na koniec miesiąca. Po przerwie zmieńcie pary.',
       reading: {
         title: 'Wzór na zakup',
         paragraphs: ['Zakup = prognoza sprzedaży + planowany zapas na koniec okresu − zapas na początek okresu.'],
@@ -225,8 +206,8 @@ export default {
         },
       },
       ...note(
-        15,
-        'Przykład razem, potem pary uzupełniają plan. Zapytaj, po co zapas na koniec miesiąca.',
+        30,
+        'Najpierw plan zakupów, potem zderzenie z budżetem: na koncie jest 4000 zł, a plan kosztuje 5616 zł. Przykład razem, potem pary uzupełniają plan. Zapytaj, po co zapas na koniec miesiąca.',
         'Po co planować zapas na koniec września?',
         'Żeby na początku października nie było pustej półki, zanim przyjdzie kolejna dostawa.',
         'Pomijanie zapasu początkowego i kupowanie całej prognozy.',
@@ -260,23 +241,6 @@ export default {
           },
           explanation: 'Zeszyty 1995 zł, papier 170 ryz za 3060 zł, długopisy 660 sztuk za 561 zł. Razem 5616 zł netto.',
         },
-      ],
-    },
-    {
-      id: 'budzet',
-      label: 'Budżet',
-      title: 'Za mało pieniędzy',
-      grouping: 'pair',
-      intro: 'Na koncie sklepu jest na zakupy 4000 zł. Plan kosztuje 5616 zł.',
-      ...note(
-        15,
-        'Pary liczą brak i wybierają rozwiązanie. Zapytaj, który towar można kupić później, a którego nie.',
-        'Który zakup można rozłożyć w czasie?',
-        'Papier — sprzedaje się równo, można go kupić w dwóch dostawach. Zeszyty i długopisy muszą być na początku września.',
-        'Obcinanie zakupów sezonowych, które przynoszą największą sprzedaż.',
-        'Policz, ile trzeba kupić papieru teraz, żeby zmieścić się w 4000 zł przy pełnych zeszytach i długopisach (1444 zł, czyli 80 ryz).',
-      ),
-      activities: [
         number('q-brak', 'O ile plan zakupów przekracza budżet?', 1616, '5616 − 4000 = 1616 zł.', { unit: 'zł' }),
         choice(
           'q-rozwiazanie',
@@ -300,10 +264,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Znicze',
       title: 'Nowy sezon',
       grouping: 'solo',
-      intro: 'Sprawdzenie na nowych danych i krótka rekomendacja.',
+      intro: 'Listopad i znicze: nowe dane i krótka rekomendacja dla właściciela.',
       ...note(
         15,
         'Samodzielnie. Przeczytaj 2–3 rekomendacje: czy mają liczby i priorytety?',
@@ -313,6 +277,12 @@ export default {
         'Przygotuj podobny plan na grudzień dla kalendarzy.',
       ),
       activities: [
+        text(
+          'q-rekomendacja',
+          'Napisz rekomendację zakupów na wrzesień dla właściciela sklepu (2–3 zdania z liczbami).',
+          'Rekomenduję zakup 1425 zeszytów (1995 zł) i 660 długopisów (561 zł) przed 1 września — to towary sezonowe. Papier kupujemy w dwóch dostawach: 80 ryz teraz, 90 ryz w połowie września, żeby zmieścić się w budżecie 4000 zł. Po pierwszym tygodniu września sprawdzimy sprzedaż zeszytów i ewentualnie domówimy.',
+          { minLength: 80, criteria: ['Są ilości i wartości zakupów.', 'Jest decyzja, jak zmieścić się w budżecie.', 'Jest termin sprawdzenia prognozy.'] },
+        ),
         number('q-znicze', 'Kwiaciarnia sprzedała w październiku 2025 roku 800 zniczy. W tym roku spodziewa się spadku o 10%. Ma 120 zniczy, a na koniec października chce mieć 30. Ile kupić?', 630, 'Prognoza: 800 × 0,9 = 720. Zakup: 720 + 30 − 120 = 630 zniczy.', {
           unit: 'szt.',
           mistakes: [
@@ -320,12 +290,6 @@ export default {
             { value: 790, text: 'Prognoza po spadku to 800 × 0,9, a nie 800 − 10.' },
           ],
         }),
-        text(
-          'q-rekomendacja',
-          'Napisz rekomendację zakupów na wrzesień dla właściciela sklepu (2–3 zdania z liczbami).',
-          'Rekomenduję zakup 1425 zeszytów (1995 zł) i 660 długopisów (561 zł) przed 1 września — to towary sezonowe. Papier kupujemy w dwóch dostawach: 80 ryz teraz, 90 ryz w połowie września, żeby zmieścić się w budżecie 4000 zł. Po pierwszym tygodniu września sprawdzimy sprzedaż zeszytów i ewentualnie domówimy.',
-          { minLength: 80, criteria: ['Są ilości i wartości zakupów.', 'Jest decyzja, jak zmieścić się w budżecie.', 'Jest termin sprawdzenia prognozy.'] },
-        ),
         {
           type: 'resultCard',
           id: 'karta',

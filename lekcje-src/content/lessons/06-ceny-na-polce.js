@@ -24,8 +24,7 @@ export default {
     methods: [methods.przyklady, methods.ksztaltujace],
   },
   objectives: [
-    'Liczę cenę za kilogram i za litr.',
-    'Porównuję opakowania według ceny jednostkowej.',
+    'Liczę cenę za kilogram i za litr i porównuję według niej opakowania.',
     'Ustalam najniższą cenę z 30 dni przed obniżką i liczę od niej procent obniżki.',
     'Wiem, co zrobić, gdy cena na półce różni się od ceny w kasie.',
   ],

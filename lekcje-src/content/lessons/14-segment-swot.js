@@ -35,7 +35,7 @@ export default {
   realia: [],
   audience: {
     adults:
-      'Dorośli z pomysłem na firmę mogą od razu przenieść tę lekcję na siebie: kto jest ich klientem, czego dowiedzieli się z rozmów i co z tego nie wynika. Zwróć szczególną uwagę na etap 3 — wnioski z kilku rozmów ze znajomymi to częsty błąd przy starcie.',
+      'Dorośli z pomysłem na firmę mogą od razu przenieść tę lekcję na siebie: kto jest ich klientem, czego dowiedzieli się z rozmów i co z tego nie wynika. Zwróć szczególną uwagę na dane z rozmów — wnioski z kilku rozmów ze znajomymi to częsty błąd przy starcie.',
   },
   format: {
     name: 'Przypadek z danymi i decyzja',
@@ -51,27 +51,35 @@ export default {
     'Wyciągam ostrożne wnioski z małej próby.',
     'Przygotowuję SWOT, oddzielając wnętrze firmy od otoczenia.',
     'Wybieram segment do testu i nazywam, czego jeszcze nie wiem.',
+    'Z SWOT wyprowadzam jedno działanie na pierwszy miesiąc.',
   ],
   materials: ['Kartka do narysowania SWOT (nie jest konieczna)'],
   teacherGuide: {
-    preparation: 'Narysuj na tablicy pustą tabelę SWOT: wiersze „wewnętrzne / zewnętrzne”, kolumny „korzystne / niekorzystne”. Wypełnicie ją w etapie 5.',
+    preparation: 'Narysuj na tablicy pustą tabelę SWOT: wiersze „wewnętrzne / zewnętrzne”, kolumny „korzystne / niekorzystne”. Wypełnicie ją po przerwie.',
     summary:
       'Segment to grupa klientów o podobnej potrzebie i podobnym sposobie kupowania, a nie „wszyscy” ani tylko grupa wiekowa. Z 20 rozmów z łatwo dostępnymi osobami nie wynika wielkość rynku — wynika sygnał do testu. SWOT oddziela to, na co firma ma wpływ (mocne i słabe strony), od otoczenia (szanse i zagrożenia). Decyzja łączy mocne strony z szansami i mówi, czego jeszcze nie wiemy.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Kto jest klientem?',
-      grouping: 'solo',
-      intro: 'Pani Renata mówi: „Moim klientem jest każdy, kto lubi kwiaty”.',
+      id: 'kryteria',
+      label: 'Kto kupuje',
+      title: 'Każdy, kto lubi kwiaty?',
+      grouping: 'pair',
+      intro: 'Pani Renata mówi: „Moim klientem jest każdy, kto lubi kwiaty”. Klientów można dzielić według różnych kryteriów. Najbardziej przydatne są te, które mówią o zachowaniu.',
+      reading: {
+        title: 'Kryteria segmentacji',
+        paragraphs: [
+          'Geograficzne: gdzie klient jest (dzielnica, odległość). Demograficzne: wiek, wielkość firmy, dochód. Behawioralne: jak i kiedy kupuje (okazja, częstotliwość, kanał). Psychograficzne: styl życia, wartości.',
+          'Dla małej firmy najwięcej mówią kryteria behawioralne: z jakiej okazji klient kupuje i jak często. Geografia mówi, do kogo w ogóle można dotrzeć.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Zapytaj, dlaczego „każdy” nie pomaga w planowaniu.',
-        'Co pani Renata zrobi inaczej dla recepcji biura, a co dla osoby kupującej bukiet na urodziny?',
-        'Inna częstotliwość, inny kontakt (faktura, umowa), inne godziny dostawy, inne bukiety.',
-        'Opisywanie segmentu tylko wiekiem albo płcią.',
-        'Zaproponuj trzeci segment dla kwiaciarni (np. organizatorzy wesel).',
+        17,
+        'Na początek każdy sam ocenia zdanie pani Renaty o „każdym, kto lubi kwiaty”. Potem Pary dopasowują. Zapytaj, które z kryteriów kwiaciarnia już zna z rozmów, a których nie.',
+        'Które kryterium jest najważniejsze dla stałych dostaw?',
+        'Częstotliwość zakupu (behawioralne) i odległość (geograficzne — dowóz rowerem do 2 km).',
+        'Uznawanie okazji zakupu za kryterium demograficzne.',
+        'Opisz segment „organizatorzy wesel” czterema kryteriami.',
       ),
       activities: [
         choice(
@@ -92,30 +100,6 @@ export default {
             'To zasięg reklamy, a nie grupa klientów o wspólnej potrzebie.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'kryteria',
-      label: 'Kryteria',
-      title: 'Jak dzielić klientów',
-      grouping: 'pair',
-      intro: 'Klientów można dzielić według różnych kryteriów. Najbardziej przydatne są te, które mówią o zachowaniu.',
-      reading: {
-        title: 'Kryteria segmentacji',
-        paragraphs: [
-          'Geograficzne: gdzie klient jest (dzielnica, odległość). Demograficzne: wiek, wielkość firmy, dochód. Behawioralne: jak i kiedy kupuje (okazja, częstotliwość, kanał). Psychograficzne: styl życia, wartości.',
-          'Dla małej firmy najwięcej mówią kryteria behawioralne: z jakiej okazji klient kupuje i jak często. Geografia mówi, do kogo w ogóle można dotrzeć.',
-        ],
-      },
-      ...note(
-        12,
-        'Pary dopasowują. Zapytaj, które z kryteriów kwiaciarnia już zna z rozmów, a których nie.',
-        'Które kryterium jest najważniejsze dla stałych dostaw?',
-        'Częstotliwość zakupu (behawioralne) i odległość (geograficzne — dowóz rowerem do 2 km).',
-        'Uznawanie okazji zakupu za kryterium demograficzne.',
-        'Opisz segment „organizatorzy wesel” czterema kryteriami.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-kryteria',
@@ -195,7 +179,6 @@ export default {
           [
             'Recepcje biur w promieniu 1 km',
             'Klienci prywatni kupujący bukiet co tydzień',
-            'Wszyscy jednocześnie, żeby nie stracić żadnej okazji',
             'Klienci kupujący na okazje, bo jest ich najwięcej',
           ],
           0,
@@ -203,7 +186,6 @@ export default {
           [
             null,
             'Tylko 2 z 12 osób było zainteresowanych. Sygnał słabszy.',
-            'Przy małych zasobach test na wszystkich daje rozmyte wyniki.',
             'Tych osób jest dużo, ale nie chcą stałej usługi — kupują od okazji.',
           ],
         ),
@@ -220,7 +202,7 @@ export default {
       label: 'SWOT',
       title: 'Mocne i słabe strony, szanse i zagrożenia',
       grouping: 'pair',
-      intro: 'Po przerwie — nowe pary. SWOT porządkuje to, co wiemy, w cztery pola.',
+      intro: 'SWOT porządkuje to, co wiemy, w cztery pola — ale ma prowadzić do decyzji: co zrobić w pierwszym miesiącu. Po przerwie pracujcie w nowych parach.',
       reading: {
         title: 'Jak wypełnić SWOT',
         paragraphs: [
@@ -229,8 +211,8 @@ export default {
         ],
       },
       ...note(
-        15,
-        'Pary dopasowują. Wypełnijcie wspólnie tabelę na tablicy. Przy „nowych biurowcach” zapytaj: fakt czy przypuszczenie?',
+        30,
+        'Najpierw SWOT, potem decyzja i sprawdzenie cudzych wniosków. Pary dopasowują. Wypełnijcie wspólnie tabelę na tablicy. Przy „nowych biurowcach” zapytaj: fakt czy przypuszczenie?',
         'Dlaczego brak samochodu to słaba strona, a nie zagrożenie?',
         'Bo dotyczy samej firmy — pani Renata może to zmienić (kupić, wynająć, dowozić rowerem).',
         'Wpisywanie konkurencji do słabych stron albo braku samochodu do zagrożeń.',
@@ -253,23 +235,6 @@ export default {
           ],
           explanation: 'Wnętrze firmy: mocne i słabe strony. Otoczenie: szanse i zagrożenia.',
         },
-      ],
-    },
-    {
-      id: 'decyzja',
-      label: 'Decyzja',
-      title: 'Co z tego wynika',
-      grouping: 'pair',
-      intro: 'SWOT nie jest celem. Ma pomóc w decyzji: co zrobić w pierwszym miesiącu.',
-      ...note(
-        15,
-        'Pary wybierają działanie i sprawdzają wnioski kolegi. Zapytaj, który wniosek byłby najbardziej kosztowny, gdyby był błędny.',
-        'Jak sprawdzić, czy recepcje naprawdę zapłacą?',
-        'Zaproponować 3 biurom miesiąc próbny w konkretnej cenie i policzyć, ile przedłuży.',
-        'Kupowanie samochodu przed sprawdzeniem popytu.',
-        'Ustal kryterium sukcesu testu (np. 2 z 3 biur przedłużają po miesiącu).',
-      ),
-      activities: [
         choice(
           'q-strategia',
           'Które działanie najlepiej łączy mocne strony z szansą?',
@@ -307,10 +272,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Miesiąc próbny',
       title: 'Twoja decyzja',
       grouping: 'solo',
-      intro: 'Nowe dane i Twoja rekomendacja.',
+      intro: 'Po miesiącu próbnym przychodzą nowe dane. Czas na Twoją rekomendację.',
       ...note(
         15,
         'Samodzielnie. Poproś 2–3 osoby o odczytanie rekomendacji w 30 sekund. Grupa ocenia: decyzja, uzasadnienie, ograniczenie.',
@@ -328,6 +293,7 @@ export default {
             'Uznać usługę za porażkę, bo jedno biuro zrezygnowało',
             'Od razu kupić samochód i rozszerzyć usługę na całe miasto',
             'Obniżyć cenę wszystkim trzem biurom, żeby nikt nie odszedł',
+            'Wycofać usługę ze wszystkich biur, bo wymaga roweru i czasu',
           ],
           0,
           'Wynik testu jest zachęcający. Rezygnacja z powodu ceny to informacja do sprawdzenia, a nie powód do zmiany cen dla wszystkich.',
@@ -336,6 +302,7 @@ export default {
             '2 z 3 to dobry wynik pierwszego testu.',
             'Z trzech biur do całego miasta to zbyt duży skok.',
             'Obniżka dla zadowolonych klientów zmniejsza przychód bez potrzeby.',
+            'Dwa z trzech biur chcą kontynuować — to dobry wynik testu, nie powód do rezygnacji.',
           ],
         ),
         text(

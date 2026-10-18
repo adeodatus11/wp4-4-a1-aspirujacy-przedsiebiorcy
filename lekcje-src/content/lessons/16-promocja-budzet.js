@@ -68,7 +68,7 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Kampania',
       title: '1200 zł z kampanii',
       grouping: 'solo',
       intro: 'Właściciel serwisu mówi: „Kampania przyniosła 1200 zł, czyli zarobiliśmy 1200 zł”.',
@@ -78,7 +78,7 @@ export default {
         'Jakie koszty trzeba odjąć od 1200 zł?',
         'Koszt wykonania przeglądów (czas mechanika, materiały) i koszt reklamy.',
         'Utożsamianie przychodu z zyskiem.',
-        'Zgadnij, ile serwis naprawdę zarobił. Sprawdzimy w etapie 4.',
+        'Zgadnij, ile serwis naprawdę zarobił. Sprawdzimy to przy liczeniu wyniku.',
       ),
       activities: [
         choice(
@@ -88,7 +88,6 @@ export default {
             'Nie: od przychodu trzeba odjąć koszt usług i reklamy',
             'Tak, bo przychód to pieniądze, które wpłynęły do serwisu',
             'Tak, bo koszty reklamy zapłacono już wcześniej, przed kampanią',
-            'Nie, bo zarobił dokładnie 1500 zł, tak jak było w planie',
           ],
           0,
           '1200 zł to przychód. Zarobek to przychód minus koszt wykonania przeglądów i reklamy.',
@@ -96,7 +95,6 @@ export default {
             null,
             'Wpłynęło 1200 zł, ale część tych pieniędzy pokrywa koszty.',
             'Termin zapłaty nie zmienia tego, że reklama jest kosztem kampanii.',
-            '1500 zł to plan przychodu, a nie zarobek.',
           ],
         ),
       ],
@@ -157,7 +155,7 @@ export default {
       id: 'koszt-klienta',
       label: 'Koszt klienta',
       title: 'Ile kosztował jeden klient?',
-      grouping: 'pair',
+      grouping: 'solo',
       intro: 'Koszt pozyskania klienta = wydatki na reklamę ÷ liczba klientów z kampanii.',
       ...note(
         12,
@@ -184,7 +182,6 @@ export default {
             'Że cały zarobek z przeglądu poszedł na reklamę',
             'Że kampania była bardzo udana, bo przegląd kosztuje 50 zł',
             'Że koszt jest niski, bo jest mniejszy niż cena przeglądu',
-            'Że trzeba podnieść cenę przeglądu do 65 zł od jutra',
           ],
           0,
           'Koszt klienta (15 zł) równa się zarobkowi na kliencie (15 zł). Kampania nic nie zarobiła.',
@@ -192,7 +189,6 @@ export default {
             null,
             'Cena 50 zł to przychód. Liczy się zarobek po kosztach, czyli 15 zł.',
             'Porównuje się z zarobkiem, a nie z ceną.',
-            'Podwyżka to jedna z opcji, ale najpierw trzeba zrozumieć, dlaczego reklama była droga.',
           ],
         ),
       ],
@@ -206,7 +202,7 @@ export default {
       breakAfter: true,
       ...note(
         13,
-        'Pary liczą wynik. Zapytaj, kto zgadywał w etapie 1, że serwis zarobił 1200 zł. Po przerwie planujecie następny test.',
+        'Pary liczą wynik. Zapytaj, kto na początku zgadywał, że serwis zarobił 1200 zł. Po przerwie planujecie następny test.',
         'Czy wynik zero oznacza, że kampania była zupełnie bezwartościowa?',
         'Nie zarobiła, ale przyniosła 24 klientów, z których część może wrócić. Trzeba jednak poprawić koszt pozyskania.',
         'Odejmowanie reklamy od przychodu bez odjęcia kosztu usług (1200 − 360 = 840 zł).',
@@ -246,7 +242,7 @@ export default {
       label: 'Kanał',
       title: 'Następny test za 200 zł',
       grouping: 'pair',
-      intro: 'Po przerwie: nowe pary. Serwis ma do 200 zł na tydzień testu w maju.',
+      intro: 'Serwis ma do 200 zł na tydzień testu w maju. Po przerwie zmieńcie pary.',
       ...note(
         15,
         'Pary wybierają kanał i układają kroki planu. Przy benefitach dla firmy zapytaj: czy rabat 5 zł to też koszt? (Tak — zmniejsza zarobek z 15 do 10 zł.)',
@@ -288,7 +284,7 @@ export default {
       id: 'harmonogram',
       label: 'Harmonogram',
       title: 'Tydzień testu',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Uzupełnij harmonogram testu: plakaty w poniedziałek, reklama od środy do niedzieli po 20 zł dziennie.',
       ...note(
         15,
@@ -328,7 +324,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Po tygodniu',
       title: 'Wyniki testu',
       grouping: 'solo',
       intro: 'Po tygodniu: kod PLAKAT — 8 przeglądów, link z reklamy — 4 przeglądy. Plakaty kosztowały 60 zł, reklama 100 zł.',

@@ -36,41 +36,11 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Przyjechała dostawa',
-      grouping: 'solo',
-      intro: 'Do magazynu hurtowni przyjechały segregatory, długopisy i zeszyty od producenta.',
-      ...note(
-        5,
-        'Każdy wybiera sam. Napisz na tablicy pięć skrótów i rozwinięcia.',
-        'Jak zapamiętać, który dokument jest który?',
-        'Pierwsza litera: P — przychód (przyjęcie), W/R — wydanie/rozchód. Druga: Z — zewnętrzne (z kimś spoza firmy), W — wewnętrzne.',
-        'Mylenie PZ (przyjęcie) z WZ (wydanie).',
-        'Ułóż zdanie z każdym skrótem.',
-      ),
-      activities: [
-        choice(
-          'q-pz',
-          'Jaki dokument wystawia magazyn przy przyjęciu dostawy od producenta?',
-          ['PZ', 'WZ', 'RW', 'MM'],
-          0,
-          'PZ — przyjęcie zewnętrzne: towar wchodzi do magazynu od kogoś spoza firmy.',
-          [
-            null,
-            'WZ to wydanie towaru na zewnątrz, np. klientowi.',
-            'RW to rozchód wewnętrzny, np. zużycie w firmie.',
-            'MM to przesunięcie między magazynami tej samej firmy.',
-          ],
-        ),
-      ],
-    },
-    {
       id: 'rodzaje',
-      label: 'Rodzaje',
-      title: 'Pięć dokumentów',
+      label: 'Pięć skrótów',
+      title: 'Który dokument?',
       grouping: 'pair',
-      intro: 'Dobierz dokument do każdej operacji w hurtowni.',
+      intro: 'Do magazynu hurtowni przyjechały segregatory, długopisy i zeszyty od producenta. To pierwsza z wielu operacji dnia — do każdej trzeba dobrać dokument.',
       reading: {
         title: 'Dokumenty magazynowe',
         paragraphs: [
@@ -78,14 +48,28 @@ export default {
         ],
       },
       ...note(
-        10,
-        'Pary dopasowują. Przy MM zapytaj: dlaczego to nie WZ, skoro towar wyjeżdża z magazynu?',
+        15,
+        'Najpierw każdy sam odpowiada o dostawie od producenta; napisz na tablicy pięć skrótów i rozwinięcia. Potem pary dopasowują. Przy MM zapytaj: dlaczego to nie WZ, skoro towar wyjeżdża z magazynu?',
         'Dlaczego przesunięcie do drugiego magazynu firmy to MM, a nie WZ?',
         'Bo towar zostaje w tej samej firmie. Zmienia się tylko miejsce, a nie właściciel.',
         'Wystawianie WZ przy zużyciu towaru w firmie (powinno być RW).',
         'Wymyśl jeszcze jedną operację dla PW.',
       ),
       activities: [
+        choice(
+          'q-pz',
+          'Jaki dokument wystawia magazyn przy przyjęciu dostawy od producenta?',
+          ['PZ', 'WZ', 'RW', 'MM', 'PW'],
+          0,
+          'PZ — przyjęcie zewnętrzne: towar wchodzi do magazynu od kogoś spoza firmy.',
+          [
+            null,
+            'WZ to wydanie towaru na zewnątrz, np. klientowi.',
+            'RW to rozchód wewnętrzny, np. zużycie w firmie.',
+            'MM to przesunięcie między magazynami tej samej firmy.',
+            'PW to przyjęcie wewnętrzne, np. zwrot towaru z działu firmy, a nie dostawa od producenta.',
+          ],
+        ),
         {
           type: 'matching',
           id: 'q-dokumenty',
@@ -153,13 +137,13 @@ export default {
     },
     {
       id: 'wz',
-      label: 'WZ',
-      title: 'WZ przed wydaniem',
+      label: 'Wydanie',
+      title: 'WZ przed wydaniem i dwie inne operacje',
       grouping: 'pair',
       intro: 'Szkoła zamówiła 200 zeszytów A5 i 30 segregatorów. Magazynier przygotował WZ. Sprawdź dokument, zanim towar wyjedzie.',
       ...note(
-        10,
-        'Pary sprawdzają WZ. Zapytaj, kto podpisuje WZ przy odbiorze (osoba odbierająca towar).',
+        15,
+        'Na koniec każdy sam rozwiązuje dwie nowe sytuacje (RW i MM) i wracacie do zasady: Z — zewnętrzne, W — wewnętrzne. Pary sprawdzają WZ. Zapytaj, kto podpisuje WZ przy odbiorze (osoba odbierająca towar).',
         'Po co odbiorca podpisuje WZ?',
         'Potwierdza, że odebrał towar w tej ilości. To dowód przy ewentualnym sporze.',
         'Wydawanie towaru bez sprawdzenia ilości z zamówieniem.',
@@ -181,33 +165,15 @@ export default {
           ],
           explanation: 'Trzy błędy: brak odbiorcy, zła ilość, zły rodzaj dokumentu. Po poprawkach odbiorca podpisuje WZ przy odbiorze towaru.',
         },
-      ],
-    },
-    {
-      id: 'sprawdzenie',
-      label: 'Sprawdzenie',
-      title: 'Jeszcze dwie operacje',
-      grouping: 'solo',
-      intro: 'Sprawdzenie na nowych sytuacjach.',
-      ...note(
-        5,
-        'Samodzielnie. Na koniec wróć do zasady: Z — zewnętrzne, W — wewnętrzne.',
-        'Jaki dokument, gdy klient zwraca towar do hurtowni?',
-        'To przyjęcie od kogoś spoza firmy — w praktyce dokument zwrotu od klienta (często jako korekta WZ lub osobny dokument zwrotu) — ważne, że towar wraca na stan.',
-        'Przekonanie, że każdy ruch towaru to PZ albo WZ.',
-        'Sprawdź w programie magazynowym, jak nazywa się dokument zwrotu od klienta.',
-      ),
-      activities: [
         choice(
           'q-rw',
           'Sprzątaczka bierze z magazynu 10 rolek worków na śmieci na potrzeby hurtowni. Jaki dokument?',
-          ['RW', 'WZ', 'PZ', 'MM'],
+          ['RW', 'WZ', 'MM'],
           0,
           'Towar zostaje zużyty w firmie — to rozchód wewnętrzny.',
           [
             null,
             'WZ dotyczy wydania na zewnątrz, np. klientowi.',
-            'PZ dotyczy przyjęcia do magazynu.',
             'MM dotyczy przesunięcia między magazynami.',
           ],
         ),

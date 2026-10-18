@@ -33,14 +33,14 @@ export default {
   materials: ['Kalkulator', 'Jeśli to możliwe: prawdziwy paragon (dane osobowe zakryte)'],
   teacherGuide: {
     preparation:
-      'Przynieś kilka paragonów z różnych sklepów. W etapie 2 uczniowie porównają je z paragonem z zadania. Przypomnij, że stawki VAT na paragonie bywają oznaczone literami (A, B, C), a ich znaczenie jest wydrukowane na dole.',
+      'Przynieś kilka paragonów z różnych sklepów. Przy paragonie uczniowie porównają je z paragonem z zadania. Przypomnij, że stawki VAT na paragonie bywają oznaczone literami (A, B, C), a ich znaczenie jest wydrukowane na dole.',
     summary:
       'Paragon zawiera dane sprzedawcy z NIP, numer i datę, towary z ilością, ceną i stawką VAT oraz sumę. Firma dostanie fakturę do paragonu tylko wtedy, gdy na paragonie jest jej NIP. Banknot klienta zostaje na wierzchu do wydania reszty. Na koniec zmiany gotówkę porównuje się ze stanem wynikającym z dokumentów, a różnicę wpisuje do raportu.',
   },
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Reszta',
       title: 'Reszta',
       grouping: 'solo',
       intro: 'Klient płaci za zakupy 47,35 zł banknotem 200 zł.',
@@ -111,7 +111,7 @@ export default {
       grouping: 'pair',
       intro: 'W ciągu godziny przy kasie zdarza się kilka różnych sytuacji.',
       ...note(
-        13,
+        8,
         'Dopasowanie w parach, potem płatność dzielona i faktura. Przy fakturze zapytaj, kto prosił w sklepie o „paragon z NIP-em”.',
         'Dlaczego kasjer pyta „paragon z NIP-em?”, zanim wydrukuje paragon?',
         'Bo jeśli firma chce fakturę, NIP musi być na paragonie. Po wydrukowaniu nie da się go dopisać.',
@@ -134,6 +134,23 @@ export default {
           explanation: 'Większość płatności przyjmujesz rutynowo. Uwaga przy podejrzanych banknotach i walutach.',
         },
         number('q-dzielona', 'Zakupy kosztują 86,40 zł. Klientka płaci 50 zł gotówką, a resztę kartą. Jaką kwotę wpisujesz na terminalu?', 36.4, '86,40 − 50,00 = 36,40 zł.', { unit: 'zł' }),
+      ],
+    },
+    {
+      id: 'faktura',
+      label: 'Faktura',
+      title: 'Faktura do paragonu',
+      grouping: 'solo',
+      intro: 'Tydzień po zakupach wraca klient z paragonem i prosi o fakturę na firmę.',
+      ...note(
+        5,
+        'Każdy odpowiada sam. Zapytaj, kto słyszał przy kasie pytanie „czy NIP na paragon?” — teraz wiadomo, po co ono jest.',
+        'Dlaczego kasjer pyta o NIP przed wydrukowaniem paragonu?',
+        'Bo potem do paragonu bez NIP nie da się wystawić faktury dla firmy.',
+        'Wystawianie faktury z NIP-em podanym po fakcie.',
+        'Sprawdź, do jakiej kwoty paragon z NIP jest fakturą uproszczoną (450 zł brutto).',
+      ),
+      activities: [
         choice(
           'q-faktura',
           'Pracownik firmy przychodzi po tygodniu z paragonem na 320 zł i prosi o fakturę na firmę. Na paragonie nie ma NIP. Co odpowiadasz?',
@@ -204,7 +221,6 @@ export default {
             'Banknot klienta zostaje na wierzchu do wydania reszty',
             'Szybkie chowanie banknotu do szuflady, żeby nikt go nie zabrał',
             'Wydawanie reszty bez mówienia kwoty, żeby nie przedłużać',
-            'Proszenie klientów, żeby zawsze płacili odliczoną kwotą',
           ],
           0,
           'Banknot widoczny do końca transakcji i kwota powiedziana na głos („ze dwustu”) rozwiązują większość sporów od razu.',
@@ -212,7 +228,6 @@ export default {
             null,
             'Banknot schowany przed wydaniem reszty to brak dowodu.',
             'Kwota powiedziana na głos pozwala klientowi zauważyć pomyłkę od razu.',
-            'Nie można tego wymagać, a problem i tak się pojawi przy innych płatnościach.',
           ],
         ),
       ],
@@ -222,7 +237,7 @@ export default {
       label: 'Raport zmiany',
       title: 'Zamknięcie zmiany',
       grouping: 'pair',
-      intro: 'Po przerwie: zamiana ról. Jest 22:00, koniec zmiany. Rozlicz gotówkę w kasie nr 2.',
+      intro: 'Zamiana ról. Jest 22:00, koniec zmiany. Rozlicz gotówkę w kasie nr 2.',
       reading: {
         title: 'Ile gotówki powinno być w szufladzie',
         paragraphs: [
@@ -275,10 +290,10 @@ export default {
       id: 'korekty',
       label: 'Zwroty',
       title: 'Zwroty i pomyłki',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Dwie sytuacje z popołudnia i kolejność zamknięcia zmiany.',
       ...note(
-        15,
+        20,
         'Pary odpowiadają. Przy zwrocie w sklepie stacjonarnym zapytaj, kto myślał, że 14 dni na zwrot przysługuje zawsze.',
         'Skąd bierze się przekonanie, że w każdym sklepie można zwrócić towar w 14 dni?',
         'Z zakupów przez internet, gdzie to prawo wynika z ustawy. W sklepie stacjonarnym to dobra wola sklepu.',
@@ -293,7 +308,6 @@ export default {
             'To zależy od zasad sklepu; prawo tego nie wymaga',
             'Sklep musi przyjąć zwrot, bo klient ma zawsze 14 dni',
             'Sklep musi przyjąć zwrot, jeśli klientka ma paragon',
-            'Sklep nie może przyjąć zwrotu, bo zakłóci to ewidencję kasy',
           ],
           0,
           'W sklepie stacjonarnym zwrot towaru bez wady to dobrowolna usługa sklepu, opisana w jego zasadach.',
@@ -301,7 +315,6 @@ export default {
             null,
             '14 dni na odstąpienie dotyczy zakupów przez internet i poza lokalem sklepu.',
             'Paragon jest potrzebny, ale nie tworzy prawa do zwrotu towaru bez wady.',
-            'Sklep może przyjąć zwrot — kasa ma na to procedurę i ewidencję zwrotów.',
           ],
         ),
         choice(
@@ -339,13 +352,13 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Nowa zmiana',
       title: 'Twoja zmiana',
       grouping: 'solo',
-      intro: 'Sprawdzenie na nowych danych i krótka notatka.',
+      intro: 'Inna kasa, inne kwoty. Policz różnicę samodzielnie.',
       ...note(
-        12,
-        'Samodzielnie. Zbierz kilka odpowiedzi z pytania otwartego i ułóż wspólną listę kontrolną dla kasy.',
+        7,
+        'Samodzielnie. Po sprawdzeniu ułóżcie razem listę kontrolną otwarcia zmiany: co sprawdzasz, zanim obsłużysz pierwszego klienta.',
         'Co sprawdzasz na początku zmiany, zanim obsłużysz pierwszego klienta?',
         'Pogotowie kasowe (czy zgadza się kwota), papier w drukarce, terminal, drobne do wydawania.',
         'Rozpoczynanie pracy bez przeliczenia pogotowia — potem nie wiadomo, skąd różnica.',
@@ -359,12 +372,6 @@ export default {
             { value: -20, text: 'Zwrot 25 zł też zmniejsza stan gotówki z dokumentów.' },
           ],
         }),
-        text(
-          'q-otwarcie',
-          'Wypisz trzy rzeczy, które sprawdzasz na początku zmiany przy kasie.',
-          'Przeliczam pogotowie kasowe i porównuję z kwotą przekazaną przez poprzednią zmianę. Sprawdzam papier w drukarce paragonów i działanie terminala płatniczego. Sprawdzam, czy mam drobne do wydawania reszty.',
-          { criteria: ['Jest przeliczenie gotówki na start.', 'Jest sprawdzenie sprzętu.', 'Jest przygotowanie drobnych.'] },
-        ),
         {
           type: 'resultCard',
           id: 'karta',

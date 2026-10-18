@@ -13,7 +13,7 @@ export default {
   realia: ['vatStawki', 'omnibus', 'niezgodnosc'],
   audience: {
     adults:
-      'Zacznij od tego samego pytania o kurtkę — dorośli też najczęściej odpowiadają 86 zł. Osoby, które planują sklep albo sprzedaż przez internet, niech po etapie 3 policzą jeden własny towar: cenę zakupu, narzut i cenę brutto. Pytanie o rabat warto połączyć z ich doświadczeniem z wyprzedaży.',
+      'Zacznij od tego samego pytania o kurtkę — dorośli też najczęściej odpowiadają 86 zł. Osoby, które planują sklep albo sprzedaż przez internet, niech po kalkulacji policzą jeden własny towar: cenę zakupu, narzut i cenę brutto. Pytanie o rabat warto połączyć z ich doświadczeniem z wyprzedaży.',
   },
   format: {
     name: 'Przykład rozwiązany i ćwiczenia z natychmiastową informacją zwrotną',
@@ -29,6 +29,7 @@ export default {
     'Przeliczam cenę netto na brutto i z powrotem.',
     'Sprawdzam, ile sklep zarobi po rabacie i przy jakim rabacie przestaje zarabiać.',
     'Znajduję błędy na wywieszce promocyjnej.',
+    'Wyjaśniam własnymi słowami, czym narzut różni się od marży.',
   ],
   materials: [
     'Kalkulator, może być w telefonie',
@@ -36,20 +37,20 @@ export default {
   ],
   teacherGuide: {
     preparation:
-      'Nic nie drukujesz. Wyświetl etap 1 i poproś o odpowiedź z głowy, bez kalkulatora. Zapisz na tablicy wszystkie wyniki, które padną — zwykle 86 zł, 46 zł i 40 zł. Wrócisz do nich w etapie 2. Przygotuj pary przed etapem 3.',
+      'Nic nie drukujesz. Wyświetl pierwsze zadanie i poproś o odpowiedź z głowy, bez kalkulatora. Zapisz na tablicy wszystkie wyniki, które padną — zwykle 86 zł, 46 zł i 40 zł. Wrócisz do nich przy wyjaśnieniu. Przygotuj pary przed kalkulacją.',
     summary:
       'Narzut liczy się od ceny zakupu, marżę od ceny sprzedaży. Sklep, który płaci VAT, liczy zysk na towarze w cenach netto. Rabat obniża cenę, ale nie koszt zakupu: przy marży 20% rabat 20% oznacza sprzedaż bez zysku. Przy każdej obniżce podaje się najniższą cenę z 30 dni przed obniżką.',
   },
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Kurtka',
       title: 'Ile sklep zarabia na kurtce?',
       grouping: 'class',
       intro:
         'Sklep sportowy w Lesznie kupił w hurtowni kurtki softshell po 160 zł netto. Na metce jest 246 zł. Policz w pamięci albo na kartce: ile zostaje sklepowi z jednej sprzedanej kurtki?',
       ...note(
-        5,
+        4,
         'Daj 60 sekund na odpowiedź bez kalkulatora. Zbierz na tablicy wszystkie wyniki i jeszcze ich nie oceniaj. Potem uczniowie wpisują swoją odpowiedź na platformie i czytają informację zwrotną.',
         'Skąd wzięło się 86 zł, a skąd 40 zł?',
         '86 zł to 246 minus 160, czyli pominięty VAT. 40 zł to 200 minus 160 — porównanie cen netto.',
@@ -70,7 +71,7 @@ export default {
     },
     {
       id: 'narzut-marza',
-      label: 'Wyjaśnienie',
+      label: 'Narzut i marża',
       title: 'Procent od czego?',
       grouping: 'class',
       intro: 'Te same 40 zł na kurtce to 25% albo 20%. Oba procenty są poprawne, bo są liczone od różnych kwot.',
@@ -101,7 +102,7 @@ export default {
         },
       },
       ...note(
-        10,
+        11,
         'Pokaż tabelę na projektorze. Przykład z butami przejdź krok po kroku: przed każdym kliknięciem „Następny krok” zapytaj grupę, co będzie dalej. Pytanie o plecak każdy rozwiązuje sam; dopiero potem omawiacie.',
         'Hurtownik mówi: „Na tych plecakach macie 50%”. O co dopytasz?',
         'Czy to procent od ceny zakupu (narzut), czy od ceny sprzedaży (marża), i czy chodzi o ceny netto.',
@@ -116,7 +117,6 @@ export default {
             'Narzut wynosi 50%, a marża około 33%.',
             'Marża wynosi 50%, a narzut około 33%.',
             'Narzut i marża wynoszą po 50%, bo różnica to 40 zł.',
-            'Marża wynosi 40%, bo sklep zarabia 40 zł.',
           ],
           0,
           'Narzut: 40 ÷ 80 = 50%. Marża: 40 ÷ 120 ≈ 33,3%. Ta sama kwota, inne podstawy.',
@@ -124,7 +124,6 @@ export default {
             null,
             'Podstawy są odwrócone. Narzut liczysz od zakupu (40 z 80), marżę od sprzedaży (40 ze 120).',
             'Kwota jest ta sama, ale dzielisz ją przez różne ceny, więc procenty są różne.',
-            '40 zł to marża w złotych. Procent otrzymasz, dzieląc 40 przez cenę sprzedaży, czyli 120.',
           ],
         ),
       ],
@@ -252,10 +251,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Podwyżka',
       title: 'Nowa cena z hurtowni',
       grouping: 'solo',
-      intro: 'Ostatnie zadanie jest na nowych danych. Rozwiąż je samodzielnie, bez pomocy pary.',
+      intro: 'Najpierw wyjaśnij koledze różnicę własnymi słowami. Ostatnie zadanie jest na nowych danych — rozwiąż je samodzielnie, bez podpowiedzi.',
       ...note(
         8,
         'Każdy pracuje sam. Po 4 minutach poproś o przejście do karty wyniku. Za zgodą przeczytaj na głos 2–3 odpowiedzi z pytania otwartego i porównaj z przykładową.',
@@ -265,30 +264,31 @@ export default {
         'Policz cenę brutto przy zachowaniu tej samej kwoty marży 40 zł i sprawdź, jaki to procent (216 zł netto, 265,68 zł brutto, marża około 18,5%).',
       ),
       activities: [
-        choice(
-          'q-podwyzka',
-          'Hurtownia podniosła cenę kurtki ze 160 zł do 176 zł netto. Sklep chce zachować marżę 20%. Jaka powinna być nowa cena brutto?',
-          ['270,60 zł', '259,78 zł', '265,68 zł', '262,00 zł'],
-          0,
-          '176 ÷ 0,80 = 220 zł netto; 220 × 1,23 = 270,60 zł brutto.',
-          [
-            null,
-            'To wynik dla narzutu 20% (176 × 1,2 × 1,23). Marżę liczysz od ceny sprzedaży: 176 ÷ 0,8.',
-            'Tu sklep zachowuje te same 40 zł, a nie te same 20%. Marża spada wtedy do około 18,5%.',
-            'Tu do ceny brutto dodano 16 zł. Podwyżka netto też musi dostać VAT, a do tego trzeba zachować procent marży.',
-          ],
-        ),
         text(
           'q-wyjasnij',
           'Wyjaśnij w dwóch zdaniach komuś z pracy, czym różni się narzut od marży. Użyj przykładu z tej lekcji.',
           'Narzut to procent liczony od ceny zakupu, a marża to procent liczony od ceny sprzedaży. Kurtka kupiona za 160 zł i sprzedana za 200 zł netto daje 40 zł, czyli 25% narzutu albo 20% marży.',
           { criteria: ['Obie podstawy procentu są nazwane.', 'Jest przykład z liczbami.', 'Liczby się zgadzają.'] },
         ),
+        number(
+          'q-podwyzka',
+          'Hurtownia podniosła cenę kurtki ze 160 zł do 176 zł netto. Sklep chce zachować marżę 20%. Jaka powinna być nowa cena brutto?',
+          270.6,
+          '176 ÷ 0,80 = 220 zł netto; 220 × 1,23 = 270,60 zł brutto.',
+          {
+            unit: 'zł',
+            mistakes: [
+              { value: 259.78, text: 'To wynik dla narzutu 20% (176 × 1,2 × 1,23). Marżę liczysz od ceny sprzedaży: 176 ÷ 0,8.' },
+              { value: 265.68, text: 'Tu sklep zachowuje te same 40 zł, a nie te same 20%. Marża spada wtedy do około 18,5%.' },
+              { value: 262, text: 'Tu do ceny brutto dodano 16 zł. Podwyżka netto też musi dostać VAT, a do tego trzeba zachować procent marży.' },
+            ],
+          },
+        ),
         {
           type: 'resultCard',
           id: 'karta',
           badges: [
-            { min: 0, name: 'Do powtórki', text: 'Wróć do etapu 2 i przejdź przykład z butami jeszcze raz. Potem rozwiąż tabelę w etapie 3.' },
+            { min: 0, name: 'Do powtórki', text: 'Wróć do wyjaśnienia narzutu i marży i przejdź przykład z butami jeszcze raz. Potem rozwiąż jeszcze raz tabelę kalkulacji.' },
             { min: 0.6, name: 'Liczysz ceny', text: 'Większość obliczeń jest dobrze. Sprawdź pola, które trzeba było poprawiać — zwykle chodzi o podstawę procentu albo VAT.' },
             { min: 0.85, name: 'Gotowe do metkowania', text: 'Możesz ustalać ceny po dostawie i sprawdzać promocje przed ich ogłoszeniem.' },
           ],

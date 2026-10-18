@@ -13,7 +13,7 @@ export default {
   realia: [],
   audience: {
     adults:
-      'Dorośli piszą maile codziennie, ale rzadko zwracają uwagę na temat, UDW czy podpis. Poproś, żeby na koniec poprawili jeden swój prawdziwy mail służbowy (bez danych osobowych) według listy z etapu 2.',
+      'Dorośli piszą maile codziennie, ale rzadko zwracają uwagę na temat, UDW czy podpis. Poproś, żeby na koniec poprawili jeden swój prawdziwy mail służbowy (bez danych osobowych) według kolejności części maila.',
   },
   format: {
     name: 'Budowa listu i korekta tekstu',
@@ -37,18 +37,24 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Temat wiadomości',
-      grouping: 'solo',
-      intro: 'Zamówienie 200 zeszytów A5 dla Szkoły Podstawowej nr 12 miało przyjechać w poniedziałek 13.10. Producent dostarczy je dopiero we wtorek, więc hurtownia zawiezie je do szkoły w środę 15.10 do 10:00.',
+      id: 'budowa',
+      label: 'Temat maila',
+      title: 'Temat i części maila',
+      grouping: 'pair',
+      intro: 'Zamówienie 200 zeszytów A5 dla Szkoły Podstawowej nr 12 miało przyjechać w poniedziałek 13.10. Producent dostarczy je dopiero we wtorek, więc hurtownia zawiezie je do szkoły w środę 15.10 do 10:00. Dobry mail handlowy ma stałe części — dzięki temu odbiorca szybko znajduje to, czego szuka.',
+      reading: {
+        title: 'Jak zbudować wiadomość',
+        paragraphs: [
+          'Zwrot grzecznościowy: „Szanowna Pani” do osoby, którą znasz z imienia i nazwiska, „Szanowni Państwo” do firmy, „Dzień dobry” w mniej formalnej, stałej współpracy. W pierwszym zdaniu cel. Potem fakty i rozwiązanie, następny krok, formuła pożegnalna („Z poważaniem” formalnie, „Pozdrawiam” mniej formalnie) i podpis: imię, nazwisko, stanowisko, firma, telefon.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Zapytaj, ile maili dziennie dostaje sekretariat szkoły i po czym wybiera, które przeczytać najpierw.',
-        'Po co w temacie data?',
-        'Odbiorca od razu widzi, czego dotyczy zmiana, i może znaleźć maila później.',
-        'Tematy typu „Ważne!!!” albo pusty temat.',
-        'Napisz temat maila z przypomnieniem o niezapłaconej fakturze.',
+        15,
+        'Najpierw każdy sam wybiera temat maila, potem pary układają części. Pary układają kolejność. Zapytaj, czego najczęściej brakuje w mailach, które dostają (podpisu z telefonem).',
+        'Dlaczego podpis z numerem telefonu jest ważny?',
+        'Odbiorca może od razu zadzwonić, zamiast szukać kontaktu albo odpisywać.',
+        'Zaczynanie od przeprosin i długich wyjaśnień zamiast od celu.',
+        'Ułóż kolejność części pisma papierowego (miejscowość i data, nadawca, adresat…).',
       ),
       activities: [
         choice(
@@ -69,29 +75,6 @@ export default {
             'Długie i nic nie mówi o nowym terminie.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'budowa',
-      label: 'Budowa',
-      title: 'Części maila',
-      grouping: 'pair',
-      intro: 'Dobry mail handlowy ma stałe części. Dzięki temu odbiorca szybko znajduje to, czego szuka.',
-      reading: {
-        title: 'Jak zbudować wiadomość',
-        paragraphs: [
-          'Zwrot grzecznościowy: „Szanowna Pani” do osoby, którą znasz z imienia i nazwiska, „Szanowni Państwo” do firmy, „Dzień dobry” w mniej formalnej, stałej współpracy. W pierwszym zdaniu cel. Potem fakty i rozwiązanie, następny krok, formuła pożegnalna („Z poważaniem” formalnie, „Pozdrawiam” mniej formalnie) i podpis: imię, nazwisko, stanowisko, firma, telefon.',
-        ],
-      },
-      ...note(
-        10,
-        'Pary układają kolejność. Zapytaj, czego najczęściej brakuje w mailach, które dostają (podpisu z telefonem).',
-        'Dlaczego podpis z numerem telefonu jest ważny?',
-        'Odbiorca może od razu zadzwonić, zamiast szukać kontaktu albo odpisywać.',
-        'Zaczynanie od przeprosin i długich wyjaśnień zamiast od celu.',
-        'Ułóż kolejność części pisma papierowego (miejscowość i data, nadawca, adresat…).',
-      ),
-      activities: [
         {
           type: 'sequence',
           id: 'q-czesci',
@@ -112,7 +95,7 @@ export default {
       id: 'ton',
       label: 'Ton',
       title: 'Szkic kolegi',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Kolega napisał wersję roboczą tego samego maila. Sprawdź ton i treść.',
       ...note(
         12,
@@ -139,6 +122,12 @@ export default {
           ],
           explanation: 'Pięć poprawek. Po nich mail jest krótki, uprzejmy i mówi wszystko, czego potrzebuje szkoła.',
         },
+        text(
+          'q-przepisz',
+          'Przepisz zdanie „Producent coś nawalił, to nie nasza wina.” tak, żeby było uprzejme i konkretne.',
+          'Producent dostarczy zeszyty z dwudniowym opóźnieniem, dlatego przywieziemy je w środę 15.10 do 10:00.',
+          { criteria: ['Brak zrzucania winy.', 'Jest nowy termin.'] },
+        ),
       ],
     },
     {
@@ -181,7 +170,6 @@ export default {
           [
             'Żeby nie ujawniać adresów szkół innym szkołom',
             'Żeby mail szybciej dotarł do wszystkich szkół w Toruniu',
-            'Bo w polu Do nie można wpisać więcej niż 10 adresów',
             'Żeby szkoły nie wiedziały, że opóźnienie dotyczy wielu z nich',
           ],
           0,
@@ -189,7 +177,6 @@ export default {
           [
             null,
             'Pole adresata nie wpływa na szybkość dostarczenia.',
-            'Programy pocztowe nie mają takiego limitu w polu Do.',
             'Celem nie jest ukrywanie problemu, tylko ochrona adresów.',
           ],
         ),
@@ -197,7 +184,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Mail do szkoły',
       title: 'Twój mail',
       grouping: 'solo',
       intro: 'Napisz maila do pani Iwony samodzielnie.',
@@ -213,7 +200,7 @@ export default {
         choice(
           'q-zwrot',
           'Piszesz do działu zakupów firmy, nie znasz nazwiska odbiorcy. Jaki zwrot wybierasz?',
-          ['Szanowni Państwo,', 'Szanowna Pani,', 'Cześć,', 'Witam serdecznie wszystkich,'],
+          ['Szanowni Państwo,', 'Szanowna Pani,', 'Cześć,', 'Witam serdecznie wszystkich,', 'Dzień dobry Panu,'],
           0,
           'Do firmy lub działu, gdy nie znasz osoby, piszesz „Szanowni Państwo”.',
           [
@@ -221,6 +208,7 @@ export default {
             'Nie wiesz, kto odczyta wiadomość.',
             'Zbyt potocznie w korespondencji z nowym klientem.',
             '„Witam” w otwarciu bywa odbierane jako zbyt poufałe — bezpieczniej „Szanowni Państwo” albo „Dzień dobry”.',
+            'Nie wiesz, czy odbiorcą jest mężczyzna — ani czy w dziale pracuje jedna osoba.',
           ],
         ),
         text(

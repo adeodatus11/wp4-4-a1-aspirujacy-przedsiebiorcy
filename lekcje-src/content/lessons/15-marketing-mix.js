@@ -31,24 +31,30 @@ export default {
   ],
   materials: ['Kalkulator'],
   teacherGuide: {
-    preparation: 'Przygotuj na tablicy cztery kolumny: Produkt, Cena, Miejsce, Promocja. W etapie 2 uczniowie dopisują do nich decyzje.',
+    preparation: 'Przygotuj na tablicy cztery kolumny: Produkt, Cena, Miejsce, Promocja. Przy czterech P uczniowie dopisują do nich decyzje.',
     summary:
       'Produkt: co dokładnie oferujemy (zestaw, wariant, opakowanie). Cena: ile i na jakich warunkach (zestaw, rabat). Miejsce: gdzie i jak klient kupuje i odbiera. Promocja: jak klient się dowie. Wszystkie cztery decyzje odpowiadają temu samemu segmentowi. Komunikat opiera się na potwierdzonych cechach.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Która to decyzja?',
-      grouping: 'solo',
-      intro: 'Sklep postanawia: „Zamówienia z internetu można odebrać w sklepie od 7:30, przed pracą”.',
+      id: '4p',
+      label: 'Cztery P',
+      title: 'Do którego P należy decyzja?',
+      grouping: 'pair',
+      intro: 'Sklep sprzedaje pudełko na lunch (35 zł), bidon (30 zł) i torbę termiczną (15 zł). Wybrany segment: osoby, które codziennie zabierają posiłek do pracy. Pierwsza decyzja sklepu: „Zamówienia z internetu można odebrać w sklepie od 7:30, przed pracą”.',
+      reading: {
+        title: 'Marketing mix',
+        paragraphs: [
+          'Produkt: co dokładnie sprzedajesz — wersja, zestaw, opakowanie, gwarancja. Cena: kwota, rabaty, zestawy, płatność. Miejsce: gdzie i jak klient kupuje i dostaje towar. Promocja: jak klient się o ofercie dowie i co usłyszy.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Wytłumacz, że „miejsce” to nie tylko adres sklepu, ale cały sposób, w jaki klient kupuje i odbiera.',
-        'Dlaczego godzina odbioru to decyzja o „miejscu”?',
-        'Bo dotyczy tego, jak i kiedy towar trafia do klienta — czyli dystrybucji.',
-        'Uznawanie każdej decyzji „dla wygody klienta” za promocję.',
-        'Wymyśl inną decyzję o miejscu dla tego zestawu (np. paczkomat).',
+        14,
+        'Najpierw każdy sam przypisuje decyzję o odbiorze od 7:30 — wytłumacz, że „miejsce” to nie tylko adres sklepu, ale cały sposób, w jaki klient kupuje i odbiera. Potem pary dopasowują, potem dopisujecie decyzje na tablicy w czterech kolumnach.',
+        'Która decyzja jest najsłabiej dopasowana do segmentu?',
+        'Każda, która nie pasuje do porannego trybu dnia osoby pracującej, np. odbiór tylko od 10:00.',
+        'Mieszanie promocji (komunikat) z ceną promocyjną (rabat).',
+        'Dopisz po jednej decyzji do każdego P dla segmentu „studenci”.',
       ),
       activities: [
         choice(
@@ -64,29 +70,6 @@ export default {
             'Cena to kwota i warunki płatności.',
           ],
         ),
-      ],
-    },
-    {
-      id: '4p',
-      label: '4P',
-      title: 'Cztery decyzje',
-      grouping: 'pair',
-      intro: 'Sklep sprzedaje pudełko na lunch (35 zł), bidon (30 zł) i torbę termiczną (15 zł). Wybrany segment: osoby, które codziennie zabierają posiłek do pracy.',
-      reading: {
-        title: 'Marketing mix',
-        paragraphs: [
-          'Produkt: co dokładnie sprzedajesz — wersja, zestaw, opakowanie, gwarancja. Cena: kwota, rabaty, zestawy, płatność. Miejsce: gdzie i jak klient kupuje i dostaje towar. Promocja: jak klient się o ofercie dowie i co usłyszy.',
-        ],
-      },
-      ...note(
-        10,
-        'Pary dopasowują, potem dopisujecie decyzje na tablicy w czterech kolumnach.',
-        'Która decyzja jest najsłabiej dopasowana do segmentu?',
-        'Każda, która nie pasuje do porannego trybu dnia osoby pracującej, np. odbiór tylko od 10:00.',
-        'Mieszanie promocji (komunikat) z ceną promocyjną (rabat).',
-        'Dopisz po jednej decyzji do każdego P dla segmentu „studenci”.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-decyzje',
@@ -106,13 +89,13 @@ export default {
     },
     {
       id: 'cena',
-      label: 'Cena',
-      title: 'Ile za zestaw?',
+      label: 'Zestaw',
+      title: 'Cena zestawu i plakat',
       grouping: 'pair',
-      intro: 'Kupione osobno: 35 + 30 + 15 zł. Sklep chce, żeby zestaw był tańszy niż suma, ale nie wie jeszcze, jaką ma marżę.',
+      intro: 'Kupione osobno: 35 + 30 + 15 zł. Sklep chce, żeby zestaw był tańszy niż suma, ale nie wie jeszcze, jaką ma marżę. Potem plakat: producent podaje, że pudełko jest wielokrotnego użytku i można je myć w zmywarce; danych o śladzie węglowym ani recyklingu nie ma.',
       ...note(
-        15,
-        'Pary liczą i decydują. Przy pytaniu o marżę wróć do lekcji 17: bez ceny zakupu nie wiadomo, czy zestaw jest opłacalny.',
+        24,
+        'Najpierw liczenie zestawu, potem hasła na plakat. Przy hasłach zapytaj, które najlepiej mówi o korzyści dla klienta, a nie o sklepie. Pary liczą i decydują. Przy pytaniu o marżę wróć do lekcji 17: bez ceny zakupu nie wiadomo, czy zestaw jest opłacalny.',
         'Czego brakuje, żeby wiedzieć, czy zestaw za 72 zł się opłaca?',
         'Cen zakupu (kosztu) towarów. Bez nich nie wiadomo, ile zostanie po rabacie.',
         'Ustalanie ceny zestawu „na oko”, bez sprawdzenia marży.',
@@ -134,7 +117,6 @@ export default {
             'Odbiór zamówień tylko w soboty od 12:00',
             'Odbiór zamówień w dni robocze od 7:30',
             'Zestaw z torbą termiczną zamiast samego pudełka',
-            'Post w grupie pracowników pobliskiego biurowca',
           ],
           0,
           'Osoba pracująca odbiera rano przed pracą albo po pracy. Sobota w południe to rzadka okazja.',
@@ -142,26 +124,8 @@ export default {
             null,
             'Ta decyzja pasuje — rano przed pracą.',
             'Torba termiczna odpowiada potrzebie: posiłek zabierany na cały dzień.',
-            'Dociera tam, gdzie są osoby z tego segmentu.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'komunikat',
-      label: 'Komunikat',
-      title: 'Co napisać na plakacie',
-      grouping: 'pair',
-      intro: 'Kierowniczka przygotowała hasła na plakat przy stoisku. Producent podaje, że pudełko jest wielokrotnego użytku i można je myć w zmywarce. Nie ma danych o śladzie węglowym ani recyklingu.',
-      ...note(
-        8,
-        'Pary sprawdzają hasła. Zapytaj, które hasło najlepiej mówi o korzyści dla klienta, a nie o sklepie.',
-        'Jak napisać hasło ekologiczne bez przesady?',
-        'Podać fakt, który można sprawdzić: „Wielokrotnego użytku — mniej jednorazowych opakowań”.',
-        'Hasła typu „najbardziej ekologiczny”, „zero śladu węglowego” bez danych.',
-        'Napisz hasło dla segmentu „studenci”.',
-      ),
-      activities: [
         {
           type: 'spotErrors',
           id: 'q-hasla',
@@ -180,7 +144,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Turyści',
       title: 'Inny segment',
       grouping: 'solo',
       intro: 'Latem sklep chce sprzedawać zestaw turystom, którzy jadą nad Zalew Zemborzycki.',
@@ -193,6 +157,12 @@ export default {
         'Zaproponuj wersję produktu dla turystów.',
       ),
       activities: [
+        text(
+          'q-karta',
+          'Wypełnij krótką kartę 4P dla osób zabierających lunch do pracy.',
+          'Produkt: zestaw pudełko + bidon + torba termiczna, dwa kolory. Cena: 72 zł za zestaw (10% taniej niż osobno) — do sprawdzenia marża. Miejsce: sklep i zamówienia internetowe z odbiorem od 7:30. Promocja: stoisko przy wejściu i post w grupie pracowników biurowca, hasło „Lunch do pracy w jednym zestawie”.',
+          { minLength: 60, rows: 5, criteria: ['Są wszystkie cztery P.', 'Decyzje pasują do jednego segmentu.', 'Jest zaznaczone, czego nie wiemy (marża).'] },
+        ),
         choice(
           'q-turysci',
           'Co zmienisz w pierwszej kolejności dla turystów?',
@@ -200,7 +170,6 @@ export default {
             'Miejsce i promocję: stoisko blisko plaży, informacja tam',
             'Tylko cenę: zestaw tańszy o 5 zł dla wszystkich klientów',
             'Nic, bo zestaw jest dobry dla każdego, kto je poza domem',
-            'Tylko kolor pudełka na bardziej wakacyjny, np. żółty',
           ],
           0,
           'Turysta nie przyjdzie do sklepu na osiedlu rano. Trzeba dotrzeć tam, gdzie jest, i powiedzieć mu o ofercie na miejscu.',
@@ -208,14 +177,7 @@ export default {
             null,
             'Cena nie sprawi, że turysta dowie się o ofercie i trafi do sklepu.',
             'Inny segment ma inne potrzeby i inne miejsca zakupu.',
-            'Kolor to drobna zmiana produktu. Największy problem to dotarcie do turysty.',
           ],
-        ),
-        text(
-          'q-karta',
-          'Wypełnij krótką kartę 4P dla osób zabierających lunch do pracy.',
-          'Produkt: zestaw pudełko + bidon + torba termiczna, dwa kolory. Cena: 72 zł za zestaw (10% taniej niż osobno) — do sprawdzenia marża. Miejsce: sklep i zamówienia internetowe z odbiorem od 7:30. Promocja: stoisko przy wejściu i post w grupie pracowników biurowca, hasło „Lunch do pracy w jednym zestawie”.',
-          { minLength: 60, rows: 5, criteria: ['Są wszystkie cztery P.', 'Decyzje pasują do jednego segmentu.', 'Jest zaznaczone, czego nie wiemy (marża).'] },
         ),
         {
           type: 'resultCard',

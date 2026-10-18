@@ -39,7 +39,7 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Czajnik',
       title: 'Czajnik po pięciu miesiącach',
       grouping: 'solo',
       intro: 'Klientka przynosi czajnik kupiony w maju. Od tygodnia nie grzeje wody. Nie upuściła go, używała zgodnie z instrukcją.',
@@ -114,7 +114,6 @@ export default {
           [
             'Wymienić suszarkę na nową zamiast naprawy',
             'Odmówić, bo naprawa jest droższa niż suszarka',
-            'Naprawić, ale obciążyć klienta różnicą 31 zł',
             'Oddać pieniądze bez pytania klienta o zdanie',
           ],
           0,
@@ -122,7 +121,6 @@ export default {
           [
             null,
             'Wysoki koszt naprawy nie zwalnia z odpowiedzialności. Sklep może zaproponować wymianę.',
-            'Doprowadzenie towaru do zgodności z umową jest dla konsumenta bezpłatne.',
             'Zwrot pieniędzy to inne uprawnienie — klient go nie żądał, a sklep może najpierw wymienić towar.',
           ],
         ),
@@ -175,7 +173,6 @@ export default {
             'Dowodem może być też potwierdzenie płatności kartą',
             'Ma rację, paragon jest jedynym dowodem zakupu',
             'Przyjmujemy, ale tylko jeśli klientka zapłaci za ekspertyzę',
-            'Przyjmujemy, ale termin odpowiedzi wydłuża się do 30 dni',
           ],
           0,
           'Prawo nie wymaga paragonu. Zakup można udowodnić np. wyciągiem z konta, potwierdzeniem płatności, zeznaniem świadka.',
@@ -183,14 +180,13 @@ export default {
             null,
             'Paragon jest najwygodniejszy, ale nie jedyny.',
             'Konsument nie płaci za rozpatrzenie reklamacji niezgodności.',
-            'Termin to 14 dni bez względu na rodzaj dowodu zakupu.',
           ],
         ),
       ],
     },
     {
       id: 'rozmowa',
-      label: 'Rozmowa',
+      label: 'Zgrzyt',
       title: '„Chcę zwrotu pieniędzy!”',
       grouping: 'pair',
       intro: 'Inny klient przynosi odkurzacz kupiony 3 miesiące temu. Po włączeniu słychać zgrzyt i odkurzacz się wyłącza. Klient jest zdenerwowany.',
@@ -245,7 +241,7 @@ export default {
       label: 'Między firmami',
       title: 'Sklep reklamuje w hurtowni',
       grouping: 'pair',
-      intro: 'Po przerwie — nowe pary. Sklep kupił w hurtowni 20 czajników. Dostawa przyszła we wrześniu, ale kartony otwarto dopiero w listopadzie przy wykładaniu. Trzy czajniki nie działają.',
+      intro: 'Sklep kupił w hurtowni 20 czajników. Dostawa przyszła we wrześniu, ale kartony otwarto dopiero w listopadzie przy wykładaniu. Trzy czajniki nie działają. Po przerwie pracujcie w nowych parach.',
       reading: {
         title: 'Rękojmia między firmami',
         paragraphs: [
@@ -286,7 +282,6 @@ export default {
             'Utratę uprawnień z rękojmi przez spóźnione zbadanie',
             'Nic, bo ma 2 lata jak każdy konsument',
             'Karę od urzędu skarbowego za nieotwarte kartony',
-            'Obowiązek zapłaty hurtowni podwójnej ceny czajników',
           ],
           0,
           'Kupujący firma musi zbadać towar w zwykłym czasie i niezwłocznie zgłosić wadę. Dwa miesiące zwłoki mogą odebrać prawo do reklamacji.',
@@ -294,8 +289,13 @@ export default {
             null,
             'Zasady konsumenckie nie dotyczą zakupów firmy od firmy.',
             'Urząd skarbowy nie zajmuje się otwieraniem kartonów.',
-            'Nie ma takiej sankcji.',
           ],
+        ),
+        text(
+          'q-zgloszenie',
+          'Napisz do hurtowni krótkie zgłoszenie reklamacji trzech czajników (2–3 zdania).',
+          'W dostawie z 15 września (WZ 214/09) trzy czajniki KT-200 nie działają — nie włączają się po podłączeniu. Wady wykryliśmy 4 listopada przy rozpakowaniu kartonów. Prosimy o wymianę na sprawne sztuki albo korektę faktury.',
+          { criteria: ['Jest numer dostawy lub dokumentu.', 'Jest opis wady i data wykrycia.', 'Jest konkretne żądanie.'] },
         ),
       ],
     },
@@ -303,7 +303,7 @@ export default {
       id: 'zasady',
       label: 'Zasady sklepu',
       title: 'Plakat przy kasie',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Kierownik sklepu przygotował plakat „Zasady reklamacji”. Sprawdź, czy jest zgodny z prawem konsumenta.',
       ...note(
         15,
@@ -326,6 +326,7 @@ export default {
             { text: 'Towary przecenione nie podlegają reklamacji.', error: 'Przecena nie wyłącza odpowiedzialności, chyba że klient wiedział o konkretnej wadzie.' },
             { text: 'Klient może wybrać: reklamację w sklepie albo gwarancję producenta.' },
             { text: 'Uszkodzenia z winy użytkownika nie są podstawą reklamacji.' },
+            { text: 'Na reklamację odpowiadamy na piśmie albo e-mailem.' },
           ],
           explanation: 'Trzy zapisy do poprawy. Pozostałe są zgodne z prawem i pomagają klientom.',
         },
@@ -333,7 +334,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Pęknięty ekran',
       title: 'Reklamacja niezasadna',
       grouping: 'solo',
       intro: 'Klient reklamuje telefon z pękniętym ekranem. W serwisie stwierdzono ślady uderzenia, a klient przyznał, że telefon spadł mu na beton.',

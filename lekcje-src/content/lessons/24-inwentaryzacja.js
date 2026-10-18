@@ -40,7 +40,7 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Niedziela',
       title: 'Po co liczyć towar?',
       grouping: 'solo',
       intro: 'Kierowniczka sklepu ogłasza inwentaryzację w niedzielę wieczorem, po zamknięciu.',
@@ -60,7 +60,6 @@ export default {
             'Porównanie stanu rzeczywistego z ewidencją',
             'Sprawdzenie, który pracownik kradnie towar',
             'Ustalenie cen sprzedaży na następny rok',
-            'Posprzątanie magazynu przed świętami',
           ],
           0,
           'Spis z natury pokazuje, ile towaru naprawdę jest. Porównanie z ewidencją ujawnia różnice, które trzeba wyjaśnić.',
@@ -68,7 +67,6 @@ export default {
             null,
             'Różnice mogą mieć wiele przyczyn. Inwentaryzacja ich nie przesądza.',
             'Ceny ustala się osobno. Inwentaryzacja dotyczy ilości i wartości zapasu.',
-            'Porządek przy okazji pomaga, ale nie jest celem.',
           ],
         ),
       ],
@@ -117,6 +115,7 @@ export default {
             'Kasjerka odpowiedzialna materialnie za dział spożywczy',
             'Dowolny klient, który zgodzi się pomóc w niedzielę',
             'Kierowca dostawcy, który zna towary z dostaw',
+            'Sama kierowniczka sklepu, bez innych osób',
           ],
           0,
           'Członek komisji nie odpowiada materialnie za liczony towar.',
@@ -125,6 +124,7 @@ export default {
             'Osoba materialnie odpowiedzialna jest obecna przy spisie, ale nie jest członkiem komisji.',
             'Komisję tworzą pracownicy wskazani w zarządzeniu, nie przypadkowe osoby.',
             'Kierowca to osoba spoza firmy. Nie może liczyć towaru w imieniu sklepu.',
+            'Komisja to co najmniej dwie osoby. Kierowniczka powołuje ją i nadzoruje spis.',
           ],
         ),
       ],
@@ -156,8 +156,9 @@ export default {
             { text: 'Kartony z wodą przeliczono, otwierając jeden do sprawdzenia zawartości.' },
             { text: 'Na końcu arkusza nr 7 zostało 10 pustych, niezakreślonych wierszy.', error: 'Puste wiersze trzeba zakreślić, żeby nie można było nic dopisać.' },
             { text: 'Osoba materialnie odpowiedzialna była obecna i podpisała arkusze.' },
+            { text: 'Arkusz nr 9 podpisała tylko jedna osoba z komisji.', error: 'Arkusz podpisują wszyscy członkowie komisji i osoba materialnie odpowiedzialna.' },
           ],
-          explanation: 'Trzy błędy: ołówek, korektor, niezakreślone wiersze. Każdy z nich podważa wiarygodność spisu.',
+          explanation: 'Cztery błędy: ołówek, korektor, niezakreślone wiersze i brak podpisów. Każdy z nich podważa wiarygodność spisu.',
         },
       ],
     },
@@ -218,7 +219,7 @@ export default {
       label: 'Ubytki',
       title: 'Ubytki naturalne',
       grouping: 'pair',
-      intro: 'Po przerwie — zamiana ról. Niektóre towary tracą masę same z siebie: warzywa wysychają, mięso traci wodę. Sklep ma ustaloną normę ubytków naturalnych.',
+      intro: 'Zamiana ról. Niektóre towary tracą masę same z siebie: warzywa wysychają, mięso traci wodę. Sklep ma ustaloną normę ubytków naturalnych.',
       reading: {
         title: 'Norma ubytków',
         paragraphs: [
@@ -252,7 +253,6 @@ export default {
           [
             'Nie, zamknięte butelki nie tracą masy',
             'Tak, każdy towar ma normę ubytku 2%',
-            'Tak, jeśli niedobór jest mniejszy niż 10 sztuk',
             'Tak, bo olej jest artykułem spożywczym',
           ],
           0,
@@ -260,7 +260,6 @@ export default {
           [
             null,
             'Normy ustala się dla konkretnych towarów, które naturalnie tracą masę.',
-            'Liczba sztuk nie decyduje — decyduje rodzaj towaru.',
             'Bycie żywnością nie wystarczy. Olej w zamkniętej butelce nie wysycha.',
           ],
         ),
@@ -270,10 +269,10 @@ export default {
       id: 'przyczyny',
       label: 'Przyczyny',
       title: 'Skąd różnice?',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Różnica to sygnał, a nie wyrok. Najpierw sprawdza się dokumenty.',
       ...note(
-        15,
+        8,
         'Pary dopasowują przyczyny. Przy oleju zapytaj, jakie dokumenty sprawdzić najpierw.',
         'Od czego zaczniesz wyjaśnianie niedoboru oleju?',
         'Od dokumentów z ostatnich dni: WZ i zwroty do dostawcy, przesunięcia MM, korekty, uszkodzone butelki spisane z półki.',
@@ -295,6 +294,23 @@ export default {
           ],
           explanation: 'Większość różnic to błędy w dokumentach i przy spisie. Kradzież stwierdza się na podstawie dowodów.',
         },
+      ],
+    },
+    {
+      id: 'olej',
+      label: 'Brak oleju',
+      title: 'Pięć butelek mniej',
+      grouping: 'solo',
+      intro: 'Przy oleju rzepakowym spis pokazał 5 butelek mniej niż w systemie.',
+      ...note(
+        7,
+        'Każdy decyduje sam. Zapytaj, co sprawdzić w dokumentach, zanim ktokolwiek padnie podejrzenie na pracownika.',
+        'Jakie dokumenty mogą wyjaśnić brak, zanim zaczniemy szukać winnego?',
+        'Zwroty do dostawcy, przesunięcia MM, protokoły uszkodzeń, korekty PZ, niezaksięgowana sprzedaż.',
+        'Szukanie winnego zanim sprawdzi się dokumenty; potrącenie z pensji bez postępowania.',
+        'Wymień trzy dokumenty, które przejrzysz w programie magazynowym.',
+      ),
+      activities: [
         choice(
           'q-olej',
           'Brakuje 5 butelek oleju. Co robisz najpierw?',
@@ -317,10 +333,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Kawa',
       title: 'Wyjaśnienie różnicy',
       grouping: 'solo',
-      intro: 'Sprawdzenie na nowych danych i notatka do kierowniczki.',
+      intro: 'Inny towar, inne liczby i notatka do kierowniczki.',
       ...note(
         15,
         'Samodzielnie. Przeczytaj 2–3 notatki: czy mówią o faktach, czy o domysłach?',
@@ -330,16 +346,16 @@ export default {
         'Napisz zalecenie, które zmniejszy podobne różnice w przyszłości.',
       ),
       activities: [
-        number('q-kawa', 'Kawa mielona 500 g: ewidencja 40 szt., spis 37 szt., cena ewidencyjna 21,90 zł. Jaka jest wartość różnicy (ze znakiem)?', -65.7, '(37 − 40) × 21,90 = −3 × 21,90 = −65,70 zł (niedobór).', {
-          unit: 'zł',
-          mistakes: [{ value: 65.7, text: 'Wartość jest dobra, ale to niedobór — wpisz ze znakiem minus.' }],
-        }),
         text(
           'q-notatka',
           'Okazało się, że 5 butelek oleju oddano dostawcy jako uszkodzone, ale nikt nie wystawił dokumentu. Napisz notatkę dla kierowniczki.',
           'Niedobór oleju rzepakowego 1 l: 5 szt. (44,95 zł). Sprawdzono dokumenty z ostatnich 7 dni. Ustalono, że 18.10 pięć butelek z pękniętymi nakrętkami oddano kierowcy dostawcy jako uszkodzone, bez dokumentu zwrotu. Wniosek: różnica wynika z braku dokumentu, nie z kradzieży. Proponuję wystawić dokument zwrotu i wprowadzić zasadę: każdy zwrot do dostawcy tylko z dokumentem podpisanym przez kierowcę.',
           { minLength: 80, rows: 6, criteria: ['Jest towar i wielkość różnicy.', 'Jest opis, co sprawdzono.', 'Jest wniosek oparty na faktach.', 'Jest propozycja na przyszłość.'] },
         ),
+        number('q-kawa', 'Kawa mielona 500 g: ewidencja 40 szt., spis 37 szt., cena ewidencyjna 21,90 zł. Jaka jest wartość różnicy (ze znakiem)?', -65.7, '(37 − 40) × 21,90 = −3 × 21,90 = −65,70 zł (niedobór).', {
+          unit: 'zł',
+          mistakes: [{ value: 65.7, text: 'Wartość jest dobra, ale to niedobór — wpisz ze znakiem minus.' }],
+        }),
         {
           type: 'resultCard',
           id: 'karta',

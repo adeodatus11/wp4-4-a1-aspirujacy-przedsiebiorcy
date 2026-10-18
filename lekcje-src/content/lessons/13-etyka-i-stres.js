@@ -176,7 +176,7 @@ export default {
         ],
       },
       ...note(
-        10,
+        12,
         'Pary zaznaczają zdrowe sposoby. Rozmowa o mobbingu — tylko na przypadkach z platformy, bez wywoływania osobistych historii.',
         'Co różni zły dzień od mobbingu?',
         'Mobbing trwa długo, powtarza się i ma na celu poniżenie albo wyeliminowanie pracownika. Zły dzień jest jednorazowy.',
@@ -223,11 +223,11 @@ export default {
     {
       id: 'sprawdzenie',
       label: 'Energetyk',
-      title: 'Twoje zdanie',
+      title: 'Napój dla trzynastolatka',
       grouping: 'solo',
-      intro: 'Jedno zdanie, które przyda się przy kasie, i ostatnia decyzja z tego wieczoru.',
+      intro: 'Ostatnia decyzja z tego wieczoru.',
       ...note(
-        6,
+        4,
         'Samodzielnie. Na koniec wskaż, gdzie w szkole lub w zakładzie praktyk można zgłosić problem.',
         'Do kogo zgłosisz nękanie w miejscu praktyk?',
         'Do opiekuna praktyk w zakładzie, do nauczyciela praktycznej nauki zawodu w szkole, do pedagoga.',
@@ -235,12 +235,6 @@ export default {
         'Zapisz numer i adres najbliższego oddziału PIP.',
       ),
       activities: [
-        text(
-          'q-zdanie',
-          'Napisz zdanie, którym odmówisz sprzedaży alkoholu osobie bez dokumentu.',
-          'Przepraszam, bez dokumentu potwierdzającego wiek nie mogę sprzedać alkoholu — takie są przepisy. Czy mogę skasować resztę zakupów?',
-          { criteria: ['Jest odmowa i powód (przepisy).', 'Ton jest uprzejmy.', 'Jest propozycja dalszej obsługi.'] },
-        ),
         choice(
           'q-energetyk',
           'Matka z 13-letnim synem kupuje dwa napoje energetyczne. Syn mówi: „Jeden dla mnie”. Co robisz?',

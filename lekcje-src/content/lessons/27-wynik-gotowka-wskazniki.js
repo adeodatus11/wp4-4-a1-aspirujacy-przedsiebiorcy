@@ -49,24 +49,31 @@ export default {
   ],
   materials: ['Kalkulator', 'Arkusz cash flow w serwisie programu (nie jest konieczny)'],
   teacherGuide: {
-    preparation: 'Przygotuj na tablicy tabelę z sześcioma kolumnami: miesiąc, przychody, koszty, wynik, wpływy, wydatki, saldo. Wypełniacie ją w etapie 3.',
+    preparation: 'Przygotuj na tablicy tabelę z sześcioma kolumnami: miesiąc, przychody, koszty, wynik, wpływy, wydatki, saldo. Wypełniacie ją przy tabeli.',
     summary:
       'Przychód i koszt opisują wynik (zysk lub strata), wpływy i wydatki — gotówkę. Gdy klienci płacą później, a firma płaci od razu, zysk może iść w parze z brakiem pieniędzy. Saldo na koniec miesiąca przechodzi na początek następnego. Płynność bieżąca = aktywa obrotowe ÷ zobowiązania krótkoterminowe; rentowność sprzedaży = wynik ÷ przychody × 100%.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Zysk, a nie ma na czynsz',
-      grouping: 'solo',
-      intro: 'Właścicielka sklepu mówi: „W marcu zarobiliśmy 2000 zł, a 10 kwietnia nie miałam z czego zapłacić czynszu”.',
+      id: 'pojecia',
+      label: 'Czynsz',
+      title: 'Zysk jest, pieniędzy nie ma',
+      grouping: 'pair',
+      intro: 'Właścicielka sklepu mówi: „W marcu zarobiliśmy 2000 zł, a 10 kwietnia nie miałam z czego zapłacić czynszu”. Te same zdarzenia można opisać na dwa sposoby: jako wynik albo jako ruch gotówki.',
+      reading: {
+        title: 'Dwie różne miary',
+        paragraphs: [
+          'Przychód powstaje, gdy sklep sprzedaje — także na fakturę z terminem płatności. Koszt powstaje, gdy sklep zużywa towar, pracę, lokal. Wynik = przychody − koszty.',
+          'Wpływ to pieniądze, które naprawdę przyszły na konto lub do kasy. Wydatek to pieniądze, które naprawdę wyszły. Saldo na koniec miesiąca = saldo na początek + wpływy − wydatki. Saldo końcowe jednego miesiąca jest saldem początkowym następnego.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy odpowiada sam. Nie tłumacz jeszcze — wrócicie do tego w etapie 3.',
-        'Jak to możliwe, że firma ma zysk, a nie ma pieniędzy?',
-        'Bo część przychodów to faktury, za które klienci jeszcze nie zapłacili, a wydatki trzeba było pokryć od razu.',
-        'Utożsamianie zysku z pieniędzmi na koncie.',
-        'Podaj przykład z życia: kiedy „masz” pieniądze, ale nie możesz ich wydać.',
+        17,
+        'Zacznij od zdania właścicielki — każdy sam wybiera wyjaśnienie, bez omawiania. Potem Pary dopasowują. Przy fakturze z terminem 30 dni zapytaj: kiedy przychód, a kiedy wpływ?',
+        'Sklep sprzedał rowery na fakturę z terminem 30 dni. Kiedy jest przychód, a kiedy wpływ?',
+        'Przychód w dniu sprzedaży (marzec). Wpływ po zapłacie (kwiecień).',
+        'Traktowanie każdej sprzedaży jako wpływu tego samego dnia.',
+        'Wymyśl sytuację, w której wydatek jest przed kosztem (np. zakup towaru na zapas).',
       ),
       activities: [
         choice(
@@ -87,30 +94,6 @@ export default {
             'Czynsz jest stały. Brakuje wpływu za sprzedaż z odroczoną płatnością.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'pojecia',
-      label: 'Pojęcia',
-      title: 'Wynik i gotówka',
-      grouping: 'pair',
-      intro: 'Te same zdarzenia można opisać na dwa sposoby: jako wynik albo jako ruch gotówki.',
-      reading: {
-        title: 'Dwie różne miary',
-        paragraphs: [
-          'Przychód powstaje, gdy sklep sprzedaje — także na fakturę z terminem płatności. Koszt powstaje, gdy sklep zużywa towar, pracę, lokal. Wynik = przychody − koszty.',
-          'Wpływ to pieniądze, które naprawdę przyszły na konto lub do kasy. Wydatek to pieniądze, które naprawdę wyszły. Saldo na koniec miesiąca = saldo na początek + wpływy − wydatki. Saldo końcowe jednego miesiąca jest saldem początkowym następnego.',
-        ],
-      },
-      ...note(
-        12,
-        'Pary dopasowują. Przy fakturze z terminem 30 dni zapytaj: kiedy przychód, a kiedy wpływ?',
-        'Sklep sprzedał rowery na fakturę z terminem 30 dni. Kiedy jest przychód, a kiedy wpływ?',
-        'Przychód w dniu sprzedaży (marzec). Wpływ po zapłacie (kwiecień).',
-        'Traktowanie każdej sprzedaży jako wpływu tego samego dnia.',
-        'Wymyśl sytuację, w której wydatek jest przed kosztem (np. zakup towaru na zapas).',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-pojecia',
@@ -182,7 +165,7 @@ export default {
       id: 'wniosek',
       label: 'Wniosek',
       title: 'Rentowna, a bez gotówki',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Zapisz wniosek z tabeli i sprawdź, co sklep mógł zrobić inaczej.',
       breakAfter: true,
       ...note(
@@ -201,7 +184,6 @@ export default {
             'Sklep jest rentowny, ale ma kłopot z płynnością na starcie',
             'Sklep jest nierentowny, bo w marcu ma ujemne saldo',
             'Sklep ma kłopot z rentownością, bo koszty rosną co miesiąc',
-            'Sklep nie ma żadnego problemu, bo zarabia co miesiąc',
           ],
           0,
           'Zysk w każdym miesiącu (rentowność), a ujemne saldo w marcu i kwietniu (płynność).',
@@ -209,7 +191,6 @@ export default {
             null,
             'Ujemne saldo to problem z gotówką, a nie z rentownością.',
             'Koszty rosną razem z przychodami, a wynik też rośnie.',
-            'Przez dwa miesiące brakuje gotówki — to realny problem, np. z czynszem.',
           ],
         ),
         {
@@ -234,7 +215,7 @@ export default {
       label: 'Plan',
       title: 'Plan i wykonanie',
       grouping: 'pair',
-      intro: 'Po przerwie — nowe pary. Na kwartał sklep planował przychody 30 000 zł.',
+      intro: 'Na kwartał sklep planował przychody 30 000 zł. Po przerwie zmieńcie pary.',
       ...note(
         15,
         'Pary liczą. Zapytaj, czy −3,33% to dużo — od czego to zależy?',
@@ -294,7 +275,6 @@ export default {
             'Bo w aktywach obrotowych są też towar i należności',
             'Bo wszystkie aktywa obrotowe to gotówka na rachunku',
             'Bo płynność liczy się tylko raz w roku, na koniec grudnia',
-            'Bo płynność dotyczy tylko firm, które mają kredyt w banku',
           ],
           0,
           'Towar trzeba sprzedać, a należności ściągnąć, zanim staną się gotówką.',
@@ -302,17 +282,16 @@ export default {
             null,
             'Gotówka to tylko część aktywów obrotowych.',
             'Wskaźnik można liczyć dla dowolnego dnia, np. na koniec miesiąca.',
-            'Płynność dotyczy każdej firmy, która ma bieżące zobowiązania.',
           ],
         ),
       ],
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Saldo czerwca',
       title: 'Wniosek dla właścicielki',
       grouping: 'solo',
-      intro: 'Sprawdzenie na nowych danych i krótki wniosek.',
+      intro: 'Nowy miesiąc, te same pojęcia: saldo i krótki wniosek.',
       ...note(
         15,
         'Samodzielnie. Przeczytaj 2–3 wnioski: czy łączą wynik, gotówkę i konkretne działanie?',
@@ -322,16 +301,16 @@ export default {
         'Przygotuj podobną tabelę dla czerwca–sierpnia, zakładając sezon szczytowy.',
       ),
       activities: [
-        number('q-saldo', 'Czerwiec: saldo na początek 2500 zł, wpływy 12 000 zł, wydatki 13 500 zł (zakup towaru na lato). Jakie jest saldo na koniec czerwca?', 1000, '2500 + 12000 − 13500 = 1000 zł.', {
-          unit: 'zł',
-          mistakes: [{ value: -1500, text: 'Uwzględnij saldo na początek miesiąca (2500 zł).' }],
-        }),
         text(
           'q-wniosek-tekst',
           'Napisz wniosek dla właścicielki sklepu (2–3 zdania, z liczbami).',
           'Sklep jest rentowny: za marzec–maj wynik wyniósł 7500 zł, czyli około 26% przychodów. Problemem jest gotówka na starcie sezonu — w marcu saldo spadło do −1000 zł, bo firma kurierska płaciła po 30 dniach. Na przyszły sezon warto mieć rezerwę co najmniej 1000 zł albo uzgodnić krótszy termin płatności lub zaliczkę.',
           { minLength: 80, criteria: ['Jest wynik lub rentowność.', 'Jest problem z gotówką i jego przyczyna.', 'Jest konkretne działanie.'] },
         ),
+        number('q-saldo', 'Czerwiec: saldo na początek 2500 zł, wpływy 12 000 zł, wydatki 13 500 zł (zakup towaru na lato). Jakie jest saldo na koniec czerwca?', 1000, '2500 + 12000 − 13500 = 1000 zł.', {
+          unit: 'zł',
+          mistakes: [{ value: -1500, text: 'Uwzględnij saldo na początek miesiąca (2500 zł).' }],
+        }),
         {
           type: 'resultCard',
           id: 'karta',

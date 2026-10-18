@@ -153,7 +153,7 @@ export default {
     },
     {
       id: 'rozmowa',
-      label: 'Rozmowa',
+      label: 'Odkurzacz',
       title: 'Odkurzacz z gazetki',
       grouping: 'pair',
       intro: 'Odkurzacz z gazetki (499 zł, promocja „do wyczerpania zapasów”) skończył się o 10:00. Sklep może zamówić go do innego sklepu sieci w Katowicach (odbiór za 2 dni w promocyjnej cenie) albo sprzedać podobny model za 549 zł. Nie możesz dać rabatu.',

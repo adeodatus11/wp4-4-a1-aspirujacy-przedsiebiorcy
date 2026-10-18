@@ -46,28 +46,36 @@ export default {
     'Wiem, co sprawdzić przy kierowcy, a co po rozpakowaniu.',
     'Wypełniam protokół rozbieżności i liczę wartość braków.',
     'Ustalam z dostawcą korektę, wymianę albo zwrot towaru.',
+    'Sprawdzam temperaturę dostawy towaru chłodzonego.',
   ],
   materials: ['Kalkulator', 'Jeśli to możliwe: prawdziwy wydruk WZ albo protokołu ze sklepu, z zakrytymi danymi'],
   teacherGuide: {
     preparation:
-      'Przed lekcją zapisz na tablicy łańcuch: zamówienie → WZ → przyjęcie → PZ → faktura (ew. korekta). W etapie 2 wracasz do niego. Zaplanuj zamianę ról w parach po przerwie.',
+      'Przed lekcją zapisz na tablicy łańcuch: zamówienie → WZ → przyjęcie → PZ → faktura (ew. korekta). Wrócisz do niego przy pięciu dokumentach. Zaplanuj zamianę ról w parach po przerwie.',
     summary:
       'Przy kierowcy liczysz opakowania zbiorcze i sprawdzasz ich stan, a widoczne braki i uszkodzenia wpisujesz na WZ przed podpisem. Po rozpakowaniu kontrolujesz ilość sztuk, asortyment i jakość, a rozbieżności spisujesz w protokole. Brak i uszkodzenia rozlicza korekta faktury od dostawcy, towar niezgodny z zamówieniem się zwraca albo wymienia, a nadwyżkę odsyła lub dopisuje do faktury.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Kierowca się spieszy',
-      grouping: 'solo',
-      intro: 'Jest 7:15. Kierowca hurtowni zostawia sześć kartonów i prosi: „Proszę tylko podpisać WZ, mam jeszcze dziesięć sklepów”.',
+      id: 'dokumenty',
+      label: 'Kierowca czeka',
+      title: 'Podpis na WZ i pięć dokumentów',
+      grouping: 'class',
+      intro: 'Jest 7:15. Kierowca hurtowni zostawia sześć kartonów i prosi: „Proszę tylko podpisać WZ, mam jeszcze dziesięć sklepów”. Przy jednej dostawie pojawia się pięć dokumentów. Każdy wystawia ktoś inny i każdy służy do czego innego.',
+      reading: {
+        title: 'Łańcuch dokumentów dostawy',
+        paragraphs: [
+          'Zamówienie wysyła sklep. WZ (wydanie zewnętrzne) wystawia hurtownia, gdy towar wyjeżdża z jej magazynu. Faktura od hurtowni jest podstawą zapłaty. PZ (przyjęcie zewnętrzne) wystawia sklep, gdy przyjmuje towar na swój stan.',
+          'Gdy coś się nie zgadza, sklep spisuje protokół rozbieżności. Na jego podstawie hurtownia wystawia fakturę korygującą albo wymienia towar.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy decyduje sam. Potem krótka rozmowa: co ryzykuje sklep, gdy podpisze dokument bez sprawdzenia.',
-        'Co sprawdzisz w dwie minuty, zanim kierowca odjedzie?',
-        'Liczbę kartonów zgodną z WZ, czy kartony nie są rozerwane, zgniecione, mokre, czy plomby lub taśmy są całe.',
-        'Przekonanie, że podpis kierowcy wystarczy, a rozliczy się „potem”.',
-        'Dopytaj, co zrobić, gdy karton jest mokry albo rozerwany (adnotacja na WZ i zdjęcie przy kierowcy).',
+        17,
+        'Zacznij od kierowcy, który się spieszy: każdy sam decyduje, co zrobić z WZ. Potem Wskaż na tablicy łańcuch dokumentów. Po dopasowaniu zapytaj, który dokument jest „lustrem” którego (WZ hurtowni i PZ sklepu).',
+        'Dlaczego sklep wystawia PZ, skoro ma już WZ od hurtowni?',
+        'WZ to dokument hurtowni o wydaniu. PZ to własny dokument sklepu o tym, co naprawdę przyjął na stan — może się różnić od WZ.',
+        'Mylenie PZ z WZ i przekonanie, że faktura zastępuje dokument magazynowy.',
+        'Ustal, jak nazywa się dokument przesunięcia towaru między dwoma sklepami tej samej firmy (MM).',
       ),
       activities: [
         choice(
@@ -88,30 +96,6 @@ export default {
             'Kierowca nie może potwierdzać przyjęcia w imieniu sklepu — to rola osoby przyjmującej.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'dokumenty',
-      label: 'Dokumenty',
-      title: 'Kto wystawia który dokument',
-      grouping: 'solo',
-      intro: 'Przy jednej dostawie pojawia się pięć dokumentów. Każdy wystawia ktoś inny i każdy służy do czego innego.',
-      reading: {
-        title: 'Łańcuch dokumentów dostawy',
-        paragraphs: [
-          'Zamówienie wysyła sklep. WZ (wydanie zewnętrzne) wystawia hurtownia, gdy towar wyjeżdża z jej magazynu. Faktura od hurtowni jest podstawą zapłaty. PZ (przyjęcie zewnętrzne) wystawia sklep, gdy przyjmuje towar na swój stan.',
-          'Gdy coś się nie zgadza, sklep spisuje protokół rozbieżności. Na jego podstawie hurtownia wystawia fakturę korygującą albo wymienia towar.',
-        ],
-      },
-      ...note(
-        12,
-        'Wskaż na tablicy łańcuch dokumentów. Po dopasowaniu zapytaj, który dokument jest „lustrem” którego (WZ hurtowni i PZ sklepu).',
-        'Dlaczego sklep wystawia PZ, skoro ma już WZ od hurtowni?',
-        'WZ to dokument hurtowni o wydaniu. PZ to własny dokument sklepu o tym, co naprawdę przyjął na stan — może się różnić od WZ.',
-        'Mylenie PZ z WZ i przekonanie, że faktura zastępuje dokument magazynowy.',
-        'Ustal, jak nazywa się dokument przesunięcia towaru między dwoma sklepami tej samej firmy (MM).',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-dokumenty',
@@ -232,8 +216,8 @@ export default {
       id: 'rozliczenie',
       label: 'Rozliczenie',
       title: 'Ile jest do odzyskania',
-      grouping: 'pair',
-      intro: 'Po przerwie: zamiana ról w parach. Faktura z hurtowni obejmuje pełne ilości z WZ. Policz, o ile hurtownia powinna ją skorygować.',
+      grouping: 'solo',
+      intro: 'Zamiana ról w parach. Faktura z hurtowni obejmuje pełne ilości z WZ. Policz, o ile hurtownia powinna ją skorygować.',
       ...note(
         15,
         'Zamiana ról. Obliczenia w parach, potem dwa pytania wyboru. Przy żelu zapytaj, czy ktoś przyjąłby go, gdyby hurtownia dała niższą cenę.',
@@ -255,14 +239,13 @@ export default {
         choice(
           'q-korekta',
           'Kto wystawia dokument, który zmniejszy kwotę faktury o brakujący proszek?',
-          ['Hurtownia — fakturę korygującą', 'Drogeria — fakturę korygującą', 'Drogeria — notę korygującą na kwotę', 'Kierowca — dopisek na fakturze'],
+          ['Hurtownia — fakturę korygującą', 'Drogeria — fakturę korygującą', 'Drogeria — notę korygującą na kwotę'],
           0,
           'Fakturę korygującą wystawia sprzedawca. Podstawą jest protokół rozbieżności przesłany przez sklep.',
           [
             null,
             'Kupujący nie może wystawić faktury korygującej do cudzej faktury.',
             'Nota korygująca kupującego służy do poprawienia pomyłek, np. w nazwie czy adresie, ale nie kwot.',
-            'Dopiski kierowcy nie zmieniają faktury. Ważny jest protokół i korekta od sprzedawcy.',
           ],
         ),
         choice(
@@ -272,7 +255,6 @@ export default {
             'Zgłosić hurtowni: odesłać albo dopisać do faktury',
             'Zostawić bez zgłaszania, bo pomyłka jest po stronie hurtowni',
             'Rozdać pracownikom, żeby nie zakłócały stanu w sklepie',
-            'Wyrzucić, bo nie ma ich na żadnym dokumencie dostawy',
           ],
           0,
           'Towar bez dokumentu to różnica przy inwentaryzacji i problem z dostawcą. Nadwyżkę się zgłasza.',
@@ -280,7 +262,6 @@ export default {
             null,
             'Hurtownia też wykryje brak u siebie. Zatrzymanie towaru bez dokumentu psuje relację i stany.',
             'To nie jest towar sklepu, dopóki nie zostanie kupiony.',
-            'Wyrzucenie cudzego towaru to strata dla hurtowni i problem dla sklepu.',
           ],
         ),
       ],
@@ -351,10 +332,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Jogurty 11°C',
       title: 'Nowa dostawa, nowy problem',
       grouping: 'solo',
-      intro: 'Sprawdzenie na nowym przypadku i krótka notatka. Pracuj samodzielnie.',
+      intro: 'Nowy przypadek przy rampie i krótki mail do hurtowni. Pracuj samodzielnie.',
       ...note(
         15,
         'Samodzielnie. Notatkę e-mailową przeczytaj 2–3 osobom na głos i oceń według kryteriów z platformy.',
@@ -364,6 +345,12 @@ export default {
         'Dopisz do e-maila termin, do którego oczekujesz korekty faktury.',
       ),
       activities: [
+        text(
+          'q-mail',
+          'Napisz krótki e-mail do pana Marka potwierdzający ustalenia z rozmowy.',
+          'Dzień dobry, potwierdzam ustalenia z dzisiejszej rozmowy dotyczące WZ 1184/10: 1) proszę o fakturę korygującą na 2 opakowania proszku 1,35 kg i 2 płyny do naczyń 1 l, razem 55,40 zł netto; 2) żel 250 ml (18 szt.) odbierzecie przy czwartkowej dostawie i dowieziecie 400 ml; 3) 2 opakowania worków 60 l dopisujecie do faktury. W załączniku protokół rozbieżności nr 3/10/2026. Pozdrawiam, drogeria przy Ozimskiej.',
+          { minLength: 60, rows: 6, criteria: ['Jest numer dokumentu WZ.', 'Są ilości i kwota korekty.', 'Każda rozbieżność ma ustalone rozwiązanie.', 'Jest załącznik: protokół.'] },
+        ),
         choice(
           'q-chlodnia',
           'Przyjeżdża dostawa jogurtów. Termometr w samochodzie pokazuje 11°C, a na etykiecie jest „przechowywać w 2–6°C”. Co robisz?',
@@ -381,12 +368,6 @@ export default {
             'Połowa dostawy jest w tej samej temperaturze co druga połowa.',
             'Zamrożenie jogurtu zmienia produkt i nie usuwa skutków przechowywania w złej temperaturze.',
           ],
-        ),
-        text(
-          'q-mail',
-          'Napisz krótki e-mail do pana Marka potwierdzający ustalenia z rozmowy.',
-          'Dzień dobry, potwierdzam ustalenia z dzisiejszej rozmowy dotyczące WZ 1184/10: 1) proszę o fakturę korygującą na 2 opakowania proszku 1,35 kg i 2 płyny do naczyń 1 l, razem 55,40 zł netto; 2) żel 250 ml (18 szt.) odbierzecie przy czwartkowej dostawie i dowieziecie 400 ml; 3) 2 opakowania worków 60 l dopisujecie do faktury. W załączniku protokół rozbieżności nr 3/10/2026. Pozdrawiam, drogeria przy Ozimskiej.',
-          { minLength: 60, rows: 6, criteria: ['Jest numer dokumentu WZ.', 'Są ilości i kwota korekty.', 'Każda rozbieżność ma ustalone rozwiązanie.', 'Jest załącznik: protokół.'] },
         ),
         {
           type: 'resultCard',

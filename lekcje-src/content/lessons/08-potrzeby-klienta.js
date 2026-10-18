@@ -97,7 +97,7 @@ export default {
     },
     {
       id: 'rozmowa',
-      label: 'Rozmowa',
+      label: 'Klient A',
       title: 'Klient z rowerem',
       grouping: 'trio',
       intro: 'Przeprowadź rozmowę z klientem. Wybieraj odpowiedzi tak, jak w prawdziwej rozmowie — najpierw rozpoznanie, potem propozycja.',

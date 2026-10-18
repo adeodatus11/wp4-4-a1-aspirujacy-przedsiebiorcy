@@ -86,3 +86,12 @@ test('cele lekcji: różna liczba', () => {
   const objectives = lessons.map(l => l.objectives.length);
   assert.ok(top(objectives) / lessons.length <= 0.6, show(objectives));
 });
+
+test('tekst nie odwołuje się do numerów etapów', () => {
+  // Numery etapów zmieniają się przy przebudowie lekcji; odwołania po nazwie zostają prawdziwe.
+  for (const lesson of lessons) {
+    const text = JSON.stringify(lesson);
+    const found = text.match(/etap(?:ie|u|em|y|ów)? \d/gi) || [];
+    assert.deepEqual(found, [], `lekcja ${lesson.id}`);
+  }
+});

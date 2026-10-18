@@ -13,7 +13,7 @@ export default {
   realia: ['ksef', 'vatStawki'],
   audience: {
     adults:
-      'Dla osób prowadzących firmę najważniejszy jest etap 4: od kiedy ich firma musi wystawiać faktury w KSeF i co to zmienia w codziennej pracy. Daty i progi sprawdźcie na ksef.podatki.gov.pl — podane w lekcji są stanem z października 2026 r.',
+      'Dla osób prowadzących firmę najważniejsza jest część o KSeF: od kiedy ich firma musi wystawiać faktury w KSeF i co to zmienia w codziennej pracy. Daty i progi sprawdźcie na ksef.podatki.gov.pl — podane w lekcji są stanem z października 2026 r.',
   },
   format: {
     name: 'Wypełnianie faktury i kontrola dokumentu',
@@ -24,9 +24,8 @@ export default {
     methods: [methods.przyklady, methods.jawne],
   },
   objectives: [
-    'Wymieniam obowiązkowe elementy faktury VAT.',
+    'Wymieniam obowiązkowe elementy faktury VAT i znajduję w niej błędy.',
     'Liczę wartość netto, VAT i brutto przy dwóch stawkach.',
-    'Znajduję błędy w fakturze.',
     'Wiem, czym jest KSeF i od kiedy obowiązuje.',
   ],
   materials: ['Kalkulator', 'Wydruk lub zdjęcie prawdziwej faktury (dane zakryte) — nie jest konieczny'],
@@ -37,18 +36,24 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Jaka stawka VAT?',
+      id: 'elementy',
+      label: 'Atlasy',
+      title: 'Stawka VAT i elementy faktury',
       grouping: 'solo',
-      intro: 'Szkoła Podstawowa nr 12 kupuje w księgarni 30 atlasów geograficznych i 30 zeszytów A4.',
+      intro: 'Szkoła Podstawowa nr 12 kupuje w księgarni 30 atlasów geograficznych i 30 zeszytów A4. Faktura jest dowodem sprzedaży dla obu firm. Brak jednego elementu może oznaczać korektę.',
+      reading: {
+        title: 'Obowiązkowe elementy faktury VAT',
+        paragraphs: [
+          'Numer faktury, data wystawienia, data sprzedaży (jeśli inna), nazwa i adres sprzedawcy oraz nabywcy z numerami NIP, nazwa towaru lub usługi, ilość i jednostka, cena jednostkowa netto, wartość netto, stawka VAT, kwota VAT, wartość brutto, sumy według stawek. Podpis i pieczątka nie są obowiązkowe.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy odpowiada sam. Krótko przypomnij, że różne towary mają różne stawki VAT, a na fakturze sumuje się je osobno.',
-        'Dlaczego książki mają niższy VAT niż zeszyty?',
-        'Ustawodawca uznał książki za towar, którego cenę warto obniżać — dla kultury i edukacji. Zeszyty to zwykły towar z 23% VAT.',
-        'Stosowanie jednej stawki do całej faktury.',
-        'Sprawdź, jaką stawkę mają e-booki (też 5%, jeśli mają ISBN).',
+        15,
+        'Najpierw każdy sam wybiera stawkę VAT dla atlasu — przypomnij, że różne towary mają różne stawki, a na fakturze sumuje się je osobno. Potem każdy zaznacza elementy. Zapytaj, kto widział fakturę z podpisem i pieczątką — dlaczego firmy je dodają, skoro nie muszą?',
+        'Po co nabywcy NIP na fakturze?',
+        'Żeby urząd skarbowy mógł połączyć zakup z firmą nabywcy, a nabywca mógł odliczyć VAT.',
+        'Uznawanie podpisu i pieczątki za obowiązkowe.',
+        'Znajdź na prawdziwej fakturze wszystkie obowiązkowe elementy.',
       ),
       activities: [
         choice(
@@ -64,29 +69,6 @@ export default {
             '0% stosuje się np. przy eksporcie, nie przy sprzedaży książki w kraju.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'elementy',
-      label: 'Elementy',
-      title: 'Co musi być na fakturze',
-      grouping: 'pair',
-      intro: 'Faktura jest dowodem sprzedaży dla obu firm. Brak jednego elementu może oznaczać korektę.',
-      reading: {
-        title: 'Obowiązkowe elementy faktury VAT',
-        paragraphs: [
-          'Numer faktury, data wystawienia, data sprzedaży (jeśli inna), nazwa i adres sprzedawcy oraz nabywcy z numerami NIP, nazwa towaru lub usługi, ilość i jednostka, cena jednostkowa netto, wartość netto, stawka VAT, kwota VAT, wartość brutto, sumy według stawek. Podpis i pieczątka nie są obowiązkowe.',
-        ],
-      },
-      ...note(
-        10,
-        'Pary zaznaczają elementy. Zapytaj, kto widział fakturę z podpisem i pieczątką — dlaczego firmy je dodają, skoro nie muszą?',
-        'Po co nabywcy NIP na fakturze?',
-        'Żeby urząd skarbowy mógł połączyć zakup z firmą nabywcy, a nabywca mógł odliczyć VAT.',
-        'Uznawanie podpisu i pieczątki za obowiązkowe.',
-        'Znajdź na prawdziwej fakturze wszystkie obowiązkowe elementy.',
-      ),
-      activities: [
         {
           type: 'multi',
           id: 'q-elementy',
@@ -208,6 +190,7 @@ export default {
             { text: 'Słownik ortograficzny — 10 szt. × 25,00 zł = 250,00 zł netto, VAT 23%', error: 'Książka drukowana ma stawkę 5%, nie 23%.' },
             { text: 'Kredki 12 kolorów — 20 szt. × 6,00 zł = 120,00 zł netto, VAT 23%' },
             { text: 'Razem netto: 370,00 zł' },
+            { text: 'Sposób zapłaty: przelew, termin 14 dni' },
             { text: 'Do zapłaty: 480,00 zł', error: 'Przy poprawnych stawkach: 250 × 1,05 + 120 × 1,23 = 262,50 + 147,60 = 410,10 zł.' },
           ],
           explanation: 'Trzy błędy: brak NIP nabywcy, zła stawka VAT przy książce, zła kwota do zapłaty. Taką fakturę trzeba skorygować.',
@@ -216,7 +199,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Bez NIP',
       title: 'Klient prywatny',
       grouping: 'solo',
       intro: 'Mama ucznia kupuje atlas i prosi o fakturę na swoje nazwisko, bez NIP.',
@@ -236,7 +219,6 @@ export default {
             'Wystawiam fakturę bez NIP i daję wydruk lub PDF',
             'Odmawiam, bo faktura jest tylko dla firm z NIP',
             'Mówię, że musi założyć konto w KSeF, żeby ją odebrać',
-            'Wystawiam fakturę na NIP księgarni, bo pole nie może być puste',
           ],
           0,
           'Osoba prywatna może dostać fakturę bez NIP. Nie musi korzystać z KSeF — dostaje fakturę w uzgodnionej formie.',
@@ -244,7 +226,6 @@ export default {
             null,
             'Faktura przysługuje też konsumentowi, jeśli o nią poprosi.',
             'Konsument nie musi korzystać z KSeF.',
-            'NIP sprzedawcy w polu nabywcy to błąd w dokumencie.',
           ],
         ),
         {

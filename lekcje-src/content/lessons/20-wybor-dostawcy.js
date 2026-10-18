@@ -55,7 +55,7 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Trzy oferty',
       title: 'Najtańsza na sztuce',
       grouping: 'solo',
       intro: 'Przeczytaj trzy oferty. Hurtownia C ma najniższą cenę za sztukę.',
@@ -76,7 +76,6 @@ export default {
             'Nie wiadomo, trzeba doliczyć rabat i transport',
             'Tak, bo ma najniższą cenę za sztukę',
             'Tak, bo przedpłata zawsze obniża koszt zakupu',
-            'Nie, bo najtańsza jest zawsze oferta z darmowym transportem',
           ],
           0,
           'Porównuje się koszt całkowity: wartość towaru po rabacie plus transport.',
@@ -84,7 +83,6 @@ export default {
             null,
             'Cena na sztuce to tylko część kosztu. Transport C kosztuje 150 zł.',
             'Przedpłata nie obniża ceny, a sklep traci pieniądze wcześniej.',
-            'Darmowy transport pomaga, ale trzeba policzyć całość.',
           ],
         ),
       ],
@@ -104,7 +102,7 @@ export default {
       },
       ...note(
         15,
-        'Przykład B razem, potem pary liczą A i C. Zapytaj, ile osób wybrałoby C w etapie 1.',
+        'Przykład B razem, potem pary liczą A i C. Zapytaj, ile osób na początku wybrałoby C.',
         'Dlaczego oferta z najniższą ceną za sztukę wyszła najdrożej?',
         'Bo transport 150 zł zjada 50 zł oszczędności na towarze (100 × 0,50 zł) i jeszcze więcej.',
         'Doliczanie rabatu do transportu albo pomijanie rabatu.',
@@ -144,7 +142,7 @@ export default {
       id: 'kryteria',
       label: 'Kryteria',
       title: 'Termin dostawy i płatności',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Koszt to nie wszystko. Sklep potrzebuje towaru w 6 dni i nie chce wydawać pieniędzy, zanim zacznie sprzedawać.',
       ...note(
         10,
@@ -180,7 +178,6 @@ export default {
             'Czas na sprzedaż części towaru przed zapłatą',
             'Niższą cenę za każdy segregator w zamówieniu',
             'Zwolnienie z obowiązku zapłaty, gdy towar się nie sprzeda',
-            'Możliwość zwrotu wszystkich segregatorów po 21 dniach',
           ],
           0,
           'Odroczona płatność oznacza, że pieniądze z części sprzedaży mogą pokryć zakup.',
@@ -188,7 +185,6 @@ export default {
             null,
             'Cena jest ta sama. Odroczenie dotyczy terminu zapłaty.',
             'Zapłacić trzeba zawsze, niezależnie od sprzedaży.',
-            'Termin płatności nie daje prawa zwrotu towaru.',
           ],
         ),
       ],
@@ -228,7 +224,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Uzasadnienie',
       title: 'Uzasadnienie',
       grouping: 'solo',
       intro: 'Na egzaminie wybór dostawcy trzeba uzasadnić. Napisz uzasadnienie dla oferty B.',

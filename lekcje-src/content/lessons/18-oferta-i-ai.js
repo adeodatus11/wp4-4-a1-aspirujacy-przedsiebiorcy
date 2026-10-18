@@ -43,19 +43,19 @@ export default {
   ],
   materials: ['Narzędzie AI nie jest potrzebne'],
   teacherGuide: {
-    preparation: 'Jeśli szkoła ma dostęp do narzędzia AI, możesz w etapie 4 pokazać na projektorze, jak działa polecenie z ograniczeniami. Nie wklejaj do niego żadnych prawdziwych danych.',
+    preparation: 'Jeśli szkoła ma dostęp do narzędzia AI, możesz przy pisaniu polecenia pokazać na projektorze, jak działa polecenie z ograniczeniami. Nie wklejaj do niego żadnych prawdziwych danych.',
     summary:
       'Zapytanie ofertowe wysyła klient, ofertę sprzedawca, zamówienie klient, potwierdzenie zamówienia i fakturę sprzedawca. Szkic z AI może brzmieć pewnie i zawierać nieprawdę: zmyślone cechy, ceny i warunki. Każdy fakt sprawdza się w danych firmy. Do narzędzia AI nie wkleja się danych osobowych ani poufnych.',
   },
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Obieg oferty',
       title: 'Kto wysyła który dokument?',
       grouping: 'solo',
       intro: 'Biuro rachunkowe pisze maila z prośbą o ofertę na lampy. To początek obiegu dokumentów.',
       ...note(
-        5,
+        4,
         'Każdy dopasowuje sam. Narysuj na tablicy strzałki klient ↔ sprzedawca z pięcioma dokumentami.',
         'W którym momencie dochodzi do umowy sprzedaży?',
         'Gdy sprzedawca przyjmie zamówienie (potwierdzenie) albo klient przyjmie ofertę w terminie jej ważności.',
@@ -86,7 +86,7 @@ export default {
       grouping: 'pair',
       intro: 'Pracownik wpisał do narzędzia AI: „Napisz ofertę na lampy biurkowe dla biura”. Oto wynik. Porównaj go z danymi sklepu.',
       ...note(
-        10,
+        11,
         'Pary porównują szkic z danymi. Zapytaj, które zdanie brzmiało najbardziej wiarygodnie, choć było nieprawdziwe.',
         'Dlaczego AI dopisało wodoodporność i dostawę gratis?',
         'Bo nie dostało danych sklepu — wygenerowało typowe zdania z ofert. Narzędzie nie wie, co jest prawdą w tej firmie.',
@@ -163,7 +163,7 @@ export default {
       id: 'ai',
       label: 'Polecenie',
       title: 'Jak pisać polecenie dla AI',
-      grouping: 'pair',
+      grouping: 'solo',
       intro: 'Narzędzie AI może przyspieszyć pisanie, jeśli dostanie dane i ograniczenia. Tekst zawsze sprawdza człowiek.',
       reading: {
         title: 'Dobre polecenie',
@@ -172,8 +172,8 @@ export default {
         ],
       },
       ...note(
-        10,
-        'Pary wybierają polecenie i zaznaczają dane, których nie wklejają. Jeśli masz narzędzie AI na projektorze, pokaż wynik dobrego polecenia.',
+        5,
+        'Każdy sam wybiera polecenie. Jeśli masz narzędzie AI na projektorze, pokaż wynik dobrego polecenia.',
         'Co zrobić, gdy AI i tak dopisze coś, czego nie było w danych?',
         'Usunąć to zdanie. Każdy fakt w ofercie sprawdza człowiek przed wysłaniem.',
         'Wklejanie całej korespondencji z klientem z imionami i telefonami.',
@@ -194,10 +194,27 @@ export default {
           [
             null,
             '„Atrakcyjna” i „na pewno kupi” zachęcają AI do przesady i wymyślania.',
-            'Brak danych sklepu — AI wymyśli typowe warunki, jak w szkicu z etapu 2.',
+            'Brak danych sklepu — AI wymyśli typowe warunki, jak w pierwszym szkicu AI.',
             'Wklejasz dane osobowe, które do oferty nie są potrzebne.',
           ],
         ),
+      ],
+    },
+    {
+      id: 'dane',
+      label: 'Dane dla AI',
+      title: 'Czego nie wklejać do narzędzia',
+      grouping: 'pair',
+      intro: 'Pracownik chce wkleić do narzędzia AI więcej informacji, „żeby oferta była lepsza”. Nie wszystko wolno tam wpisać.',
+      ...note(
+        5,
+        'Pary zaznaczają. Zapytaj, kto w firmie decyduje, jakie narzędzia wolno używać i z jakimi danymi.',
+        'Które dane klienta są potrzebne do oferty, a które tylko zwiększają ryzyko?',
+        'Potrzebne: nazwa firmy, liczba sztuk, termin. Zbędne: dane osobowe pracowników klienta, ich telefony, dane z innych umów.',
+        'Wklejanie całej korespondencji z klientem „dla kontekstu”.',
+        'Sprawdź, czy narzędzie AI, którego używasz, zapisuje wpisywane dane do dalszego uczenia.',
+      ),
+      activities: [
         {
           type: 'multi',
           id: 'q-dane',
@@ -217,7 +234,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Brakuje lamp',
       title: 'Klient chce więcej',
       grouping: 'solo',
       intro: 'Po otrzymaniu oferty biuro odpisuje: „Wzięlibyśmy jednak 40 lamp”.',
@@ -237,7 +254,6 @@ export default {
           [
             '30 od ręki, termin dla 10 sprawdzę u producenta i dam znać',
             '40 lamp będzie gotowe do odbioru jutro rano, zapraszamy',
-            'Nie mamy 40 lamp, więc proszę szukać w innym sklepie',
             '40 lamp, ale zamiast brakujących 10 dołożymy inny model',
           ],
           0,
@@ -245,7 +261,6 @@ export default {
           [
             null,
             'Nie masz 40 lamp. Obietnica się nie spełni.',
-            'Rezygnujesz z klienta, zamiast zaproponować rozwiązanie.',
             'Inny model to zmiana oferty — wymaga zgody klienta, a nie decyzji za niego.',
           ],
         ),

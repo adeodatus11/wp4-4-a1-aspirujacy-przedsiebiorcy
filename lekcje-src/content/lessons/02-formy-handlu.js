@@ -41,7 +41,7 @@ export default {
       label: 'Formy handlu',
       title: 'Komu i gdzie Agnieszka sprzedaje kubki',
       grouping: 'solo',
-      intro: 'Sklep z pamiątkami w Karpaczu zamawia u Agnieszki 150 kubków, żeby sprzedawać je turystom. Zanim zaczniesz czytać, odpowiedz z tego, co już wiesz.',
+      intro: 'Sklep z pamiątkami w Karpaczu zamawia u Agnieszki 150 kubków, żeby sprzedawać je turystom. Odpowiedz z tego, co już wiesz, a potem przeczytaj: formy handlu różnią się odbiorcą (firma czy konsument) i miejscem (sklep czy internet).',
       reading: {
         title: 'Formy handlu w skrócie',
         paragraphs: [

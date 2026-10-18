@@ -187,11 +187,17 @@ export default {
           ],
           explanation: 'Trzy obietnice bez pokrycia: dostawa, 60 koszyków, „bezglutenowe”. Każda wróciłaby jako problem we wtorek.',
         },
+        text(
+          'q-moje-zdanie',
+          'Zapisz jedno zdanie prezentacji, które mówi organizatorowi szkolenia o korzyści, a nie o piekarni.',
+          'Uczestnicy zjedzą śniadanie na miejscu przed rozpoczęciem, więc nie musi Pan nic kupować ani organizować rano.',
+          { criteria: ['Zdanie mówi, co zyskuje klient.', 'Brak obietnic bez pokrycia (dostawa, liczba koszyków, skład).'] },
+        ),
       ],
     },
     {
       id: 'rozmowa',
-      label: 'Rozmowa',
+      label: 'Telefon',
       title: 'Odbiór to nie dostawa',
       grouping: 'trio',
       intro: 'Klient przeczytał ofertę i dzwoni z pytaniami. Okaże się, że inaczej rozumie słowo „odbiór”.',

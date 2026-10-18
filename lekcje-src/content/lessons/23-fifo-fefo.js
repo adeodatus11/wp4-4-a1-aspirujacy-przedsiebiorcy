@@ -36,18 +36,30 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Co znaczy FIFO?',
-      grouping: 'solo',
-      intro: 'W ustawieniach programu magazynowego hurtowni zaznaczono metodę wyceny rozchodu: FIFO.',
+      id: 'przyklad',
+      label: 'Taśma pakowa',
+      title: 'FIFO na jednym wydaniu',
+      grouping: 'pair',
+      intro: 'W ustawieniach programu magazynowego hurtowni zaznaczono metodę wyceny rozchodu: FIFO. Taśma pakowa 48 mm: na 1 października w magazynie było 80 rolek po 5,00 zł, 5 października przyjęto 120 rolek po 5,40 zł, a 12 października wydano klientowi 150 rolek.',
+      reading: {
+        example: {
+          question: 'Jaka jest wartość wydania z 12 października metodą FIFO?',
+          steps: [
+            'Najpierw wydajesz całą najstarszą partię: 80 rolek po 5,00 zł = 400,00 zł.',
+            'Brakuje jeszcze 150 − 80 = 70 rolek. Bierzesz je z partii 5,40 zł: 70 × 5,40 = 378,00 zł.',
+            'Wartość wydania: 400,00 + 378,00 = 778,00 zł.',
+            'Zostaje 120 − 70 = 50 rolek po 5,40 zł, czyli 270,00 zł.',
+          ],
+          answer: 'Wydanie 778,00 zł, zapas 50 rolek za 270,00 zł.',
+        },
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Pokaż na tablicy warstwy towaru.',
-        'Dlaczego przy rosnących cenach metoda wyceny ma znaczenie?',
-        'Bo od niej zależy, jaki koszt sprzedanego towaru pokaże firma i ile jest wart zapas na koniec.',
-        'Mylenie FIFO z kolejnością fizycznego układania towaru na półce.',
-        'Sprawdź, co oznacza skrót LIFO (ostatnie przyszło — pierwsze wyszło) i dlaczego rzadko się go stosuje w Polsce.',
+        17,
+        'Na początek każdy sam: co oznacza FIFO w programie magazynowym. Potem Przykład przechodzicie razem, krok po kroku. Potem pary liczą wydanie na nowych danych (pytanie poniżej).',
+        'Dlaczego nie można po prostu pomnożyć 150 × 5,40?',
+        'Bo w magazynie były dwie partie w różnych cenach. Przy FIFO najpierw wydaje się tańszą, starszą partię.',
+        'Liczenie całego wydania po jednej cenie (najnowszej albo najstarszej).',
+        'Policz wartość wydania metodą średniej ważonej i porównaj (150 × 5,24 = 786 zł).',
       ),
       activities: [
         choice(
@@ -68,35 +80,6 @@ export default {
             'To FEFO, zasada dla towarów z datą ważności.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'przyklad',
-      label: 'Przykład',
-      title: 'Pierwsze wydanie',
-      grouping: 'pair',
-      intro: 'Taśma pakowa 48 mm. Na 1 października w magazynie było 80 rolek po 5,00 zł. 5 października przyjęto 120 rolek po 5,40 zł. 12 października wydano klientowi 150 rolek.',
-      reading: {
-        example: {
-          question: 'Jaka jest wartość wydania z 12 października metodą FIFO?',
-          steps: [
-            'Najpierw wydajesz całą najstarszą partię: 80 rolek po 5,00 zł = 400,00 zł.',
-            'Brakuje jeszcze 150 − 80 = 70 rolek. Bierzesz je z partii 5,40 zł: 70 × 5,40 = 378,00 zł.',
-            'Wartość wydania: 400,00 + 378,00 = 778,00 zł.',
-            'Zostaje 120 − 70 = 50 rolek po 5,40 zł, czyli 270,00 zł.',
-          ],
-          answer: 'Wydanie 778,00 zł, zapas 50 rolek za 270,00 zł.',
-        },
-      },
-      ...note(
-        12,
-        'Przykład przechodzicie razem, krok po kroku. Potem pary liczą wydanie na nowych danych (pytanie poniżej).',
-        'Dlaczego nie można po prostu pomnożyć 150 × 5,40?',
-        'Bo w magazynie były dwie partie w różnych cenach. Przy FIFO najpierw wydaje się tańszą, starszą partię.',
-        'Liczenie całego wydania po jednej cenie (najnowszej albo najstarszej).',
-        'Policz wartość wydania metodą średniej ważonej i porównaj (150 × 5,24 = 786 zł).',
-      ),
-      activities: [
         number('q-wydanie', 'Inny towar: stan 40 sztuk po 3,00 zł, dostawa 60 sztuk po 3,50 zł. Wydano 70 sztuk. Jaka jest wartość wydania metodą FIFO?', 225, '40 × 3,00 = 120,00 zł + 30 × 3,50 = 105,00 zł. Razem 225,00 zł.', {
           unit: 'zł',
           mistakes: [
@@ -174,14 +157,13 @@ export default {
         choice(
           'q-fefo',
           'Którą partię jogurtów wydajesz najpierw?',
-          ['Środową, z datą 27.10', 'Poniedziałkową, z datą 30.10', 'Obie po połowie', 'Tę, która stoi bliżej rampy'],
+          ['Środową, z datą 27.10', 'Poniedziałkową, z datą 30.10', 'Obie po połowie'],
           0,
           'Krótsza data ważności wychodzi pierwsza, choć partia przyszła później.',
           [
             null,
             'Tak byłoby przy FIFO według dat przyjęcia. Przy żywności decyduje data ważności.',
             'Mieszanie partii utrudnia kontrolę dat.',
-            'Wygoda nie decyduje o kolejności wydawania żywności.',
           ],
         ),
         {
@@ -202,10 +184,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Co zostało',
       title: 'Wartość zapasu',
       grouping: 'solo',
-      intro: 'Jedno pytanie na nowych danych.',
+      intro: 'Stan, dostawa i jedno wydanie. Policz, ile jest wart zapas.',
       ...note(
         5,
         'Samodzielnie. Na koniec przypomnij: zapas po FIFO ma ceny najnowszych dostaw.',
