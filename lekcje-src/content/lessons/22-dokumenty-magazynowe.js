@@ -1,8 +1,8 @@
 import { choice, methods, note } from '../schema.js';
 
 export default {
-  id: '24',
-  order: 24,
+  id: '22',
+  order: 22,
   part: 'B',
   title: 'Dokumenty magazynowe: PZ, WZ, PW, RW, MM',
   subtitle: 'Każdy ruch towaru w magazynie zostawia ślad w dokumencie. Który dokument wystawić i jak go wypełnić.',

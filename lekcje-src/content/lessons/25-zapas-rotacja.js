@@ -1,8 +1,8 @@
 import { choice, methods, note, number } from '../schema.js';
 
 export default {
-  id: '27',
-  order: 27,
+  id: '25',
+  order: 25,
   part: 'B',
   title: 'Zapas, punkt zamówienia i rotacja',
   subtitle: 'Kiedy zamówić wodę, żeby nie zabrakło jej w upał, i dlaczego kawa za 2400 zł leży na półce cały miesiąc.',

@@ -30,8 +30,8 @@ const channels = {
 };
 
 export default {
-  id: '18',
-  order: 18,
+  id: '16',
+  order: 16,
   part: 'B',
   title: 'Plan promocji i kontrola budżetu',
   subtitle: 'Kampania kosztowała więcej i przyniosła mniej klientów, niż planowano. Ile naprawdę zarobił serwis i jak zaplanować następny test za 200 zł.',

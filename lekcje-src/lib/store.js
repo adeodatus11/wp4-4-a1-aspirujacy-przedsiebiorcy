@@ -4,13 +4,13 @@
 export const storageKey = 'pracownia-lekcje-v1';
 
 function emptyState() {
-  return { version: 1, lessons: {}, settings: {} };
+  return { version: 1, lessons: {}, trainings: {}, settings: {} };
 }
 
 export function loadState(storage = globalThis.localStorage) {
   try {
     const parsed = JSON.parse(storage.getItem(storageKey));
-    if (parsed && parsed.version === 1 && typeof parsed.lessons === 'object') return parsed;
+    if (parsed && parsed.version === 1 && typeof parsed.lessons === 'object') return { trainings: {}, settings: {}, ...parsed };
   } catch {
     // brak zapisu albo uszkodzony wpis: zaczynamy od zera
   }
@@ -39,6 +39,14 @@ export function withoutLesson(state, id) {
   const lessons = { ...state.lessons };
   delete lessons[id];
   return { ...state, lessons };
+}
+
+export function trainingState(state, id) {
+  return state.trainings?.[id] || {};
+}
+
+export function withTraining(state, id, update) {
+  return { ...state, trainings: { ...state.trainings, [id]: update(trainingState(state, id)) } };
 }
 
 export function clearAll(storage = globalThis.localStorage) {

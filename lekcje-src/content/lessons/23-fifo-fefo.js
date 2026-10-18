@@ -1,8 +1,8 @@
 import { choice, methods, note, number } from '../schema.js';
 
 export default {
-  id: '25',
-  order: 25,
+  id: '23',
+  order: 23,
   part: 'B',
   title: 'Przyjęcie i wydanie z magazynu: FIFO i FEFO',
   subtitle: 'Taśma pakowa przyszła w trzech dostawach po trzech różnych cenach. Ile kosztowało to, co wydaliśmy klientom, i ile jest wart zapas?',

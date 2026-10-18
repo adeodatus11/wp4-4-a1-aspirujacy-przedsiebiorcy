@@ -1,8 +1,8 @@
 import { choice, methods, note, number, text } from '../schema.js';
 
 export default {
-  id: '17',
-  order: 17,
+  id: '15',
+  order: 15,
   part: 'B',
   title: 'Marketing mix: produkt, cena, miejsce, promocja',
   subtitle: 'Pudełko na lunch, bidon i torba. Jak z trzech zwykłych rzeczy zrobić ofertę dla osób, które codziennie zabierają jedzenie do pracy.',
@@ -113,7 +113,7 @@ export default {
       intro: 'Kupione osobno: 35 + 30 + 15 zł. Sklep chce, żeby zestaw był tańszy niż suma, ale nie wie jeszcze, jaką ma marżę.',
       ...note(
         15,
-        'Pary liczą i decydują. Przy pytaniu o marżę wróć do lekcji 19: bez ceny zakupu nie wiadomo, czy zestaw jest opłacalny.',
+        'Pary liczą i decydują. Przy pytaniu o marżę wróć do lekcji 17: bez ceny zakupu nie wiadomo, czy zestaw jest opłacalny.',
         'Czego brakuje, żeby wiedzieć, czy zestaw za 72 zł się opłaca?',
         'Cen zakupu (kosztu) towarów. Bez nich nie wiadomo, ile zostanie po rabacie.',
         'Ustalanie ceny zestawu „na oko”, bez sprawdzenia marży.',

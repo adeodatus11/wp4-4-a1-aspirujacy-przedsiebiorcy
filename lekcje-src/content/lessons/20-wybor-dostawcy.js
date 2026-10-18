@@ -18,8 +18,8 @@ const offers = {
 };
 
 export default {
-  id: '22',
-  order: 22,
+  id: '20',
+  order: 20,
   part: 'B',
   title: 'Zamówienie i wybór oferty dostawcy',
   subtitle: 'Najniższa cena na sztuce nie oznacza najtańszej dostawy. Porównaj trzy hurtownie tak, jak na egzaminie zawodowym.',

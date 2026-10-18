@@ -1,4 +1,5 @@
 import { Feedback } from './activities.jsx';
+import { shuffledOrder } from '../lib/shuffle.js';
 
 // Rozmowa z rozgałęzieniami. Węzeł: {speaker, text, choices:[{text, next, good, feedback}]} albo {end:true, text}.
 // Wynik: odsetek węzłów, w których pierwszy wybór był dobry.
@@ -60,9 +61,9 @@ export function Dialog({ activity, value = {}, onChange }) {
       {node && !node.end && (
         <div className="chat-choices" role="group" aria-label="Co odpowiadasz?">
           <p className="small muted">Co odpowiadasz?</p>
-          {node.choices.map((choice, i) => (
-            <button key={i} type="button" className={`chat-choice ${lastBad?.node === nodeId && lastBad.index === i ? 'is-wrong' : ''}`} onClick={() => pick(choice, i)}>
-              {choice.text}
+          {shuffledOrder(node.choices.length, `${activity.id}:${nodeId}`).map(i => (
+            <button key={i} type="button" className={`chat-choice ${lastBad?.node === nodeId && lastBad.index === i ? 'is-wrong' : ''}`} onClick={() => pick(node.choices[i], i)}>
+              {node.choices[i].text}
             </button>
           ))}
           {lastBad?.node === nodeId && (

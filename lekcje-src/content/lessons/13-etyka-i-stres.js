@@ -1,8 +1,8 @@
 import { choice, methods, note, text } from '../schema.js';
 
 export default {
-  id: '15',
-  order: 15,
+  id: '13',
+  order: 13,
   part: 'A',
   title: 'Granice, etyka i stres w pracy przy ladzie',
   subtitle: 'Piwo „dla brata”, nowe daty na starych wędlinach i dziesiąta godzina przy kasie przed świętami.',

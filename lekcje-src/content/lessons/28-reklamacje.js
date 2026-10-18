@@ -1,8 +1,8 @@
 import { choice, methods, note, text } from '../schema.js';
 
 export default {
-  id: '30',
-  order: 30,
+  id: '28',
+  order: 28,
   part: 'B',
   title: 'Reklamacje: niezgodność z umową, gwarancja, rękojmia',
   subtitle: 'Czajnik przestał grzać po pięciu miesiącach, buty odkleiły się po roku, a sklep znalazł w magazynie trzy niedziałające czajniki z hurtowni. Kto za co odpowiada?',

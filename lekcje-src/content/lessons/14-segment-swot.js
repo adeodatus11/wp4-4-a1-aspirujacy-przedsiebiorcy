@@ -23,8 +23,8 @@ const research = {
 };
 
 export default {
-  id: '16',
-  order: 16,
+  id: '14',
+  order: 14,
   part: 'B',
   title: 'Segment rynku i SWOT na danych',
   subtitle: 'Dwadzieścia rozmów, dwie grupy klientów i jedna kwiaciarnia. Komu najpierw zaproponować stałe dostawy kwiatów?',

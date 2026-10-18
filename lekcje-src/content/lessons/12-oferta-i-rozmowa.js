@@ -15,8 +15,8 @@ const offerData = {
 };
 
 export default {
-  id: '14',
-  order: 14,
+  id: '12',
+  order: 12,
   part: 'A',
   title: 'Oferta i rozmowa z klientem',
   subtitle: 'Firma chce 30 koszyków śniadaniowych na wtorek. Przygotuj ofertę, przedstaw ją w dwie minuty i wyjaśnij, że „odbiór” to nie „dostawa”.',

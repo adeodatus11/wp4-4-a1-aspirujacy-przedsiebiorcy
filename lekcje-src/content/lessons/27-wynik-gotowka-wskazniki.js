@@ -18,8 +18,8 @@ const data = {
 };
 
 export default {
-  id: '29',
-  order: 29,
+  id: '27',
+  order: 27,
   part: 'B',
   title: 'Wynik, gotówka i wskaźniki',
   subtitle: 'Sklep rowerowy ma zysk w każdym miesiącu, a w marcu brakuje mu pieniędzy na czynsz. Jak to możliwe i co pokażą wskaźniki?',

@@ -1,8 +1,8 @@
 import { choice, methods, note, text } from '../schema.js';
 
 export default {
-  id: '21',
-  order: 21,
+  id: '19',
+  order: 19,
   part: 'B',
   title: 'Korespondencja handlowa',
   subtitle: 'Dostawa zeszytów do szkoły się spóźni. Napisz maila, po którym klient wie, co się stało, co dalej i do kogo dzwonić.',

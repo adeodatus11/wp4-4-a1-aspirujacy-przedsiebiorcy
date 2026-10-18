@@ -1,8 +1,8 @@
 import { choice, methods, note, number, text } from '../schema.js';
 
 export default {
-  id: '26',
-  order: 26,
+  id: '24',
+  order: 24,
   part: 'B',
   title: 'Inwentaryzacja',
   subtitle: 'W systemie jest 60 butelek oleju, na półce 55. Jak policzyć towar, wycenić różnice i dowiedzieć się, skąd się wzięły.',

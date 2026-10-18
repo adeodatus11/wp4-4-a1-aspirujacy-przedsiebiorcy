@@ -16,8 +16,8 @@ const history = {
 };
 
 export default {
-  id: '28',
-  order: 28,
+  id: '26',
+  order: 26,
   part: 'B',
   title: 'Prognoza sprzedaży i plan zakupów',
   subtitle: 'Ile zeszytów zamówić na wrzesień? Za mało — klienci pójdą gdzie indziej. Za dużo — pieniądze utkną w kartonach do następnego roku.',

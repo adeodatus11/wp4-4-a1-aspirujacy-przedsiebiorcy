@@ -196,13 +196,13 @@ function checkActivity(a) {
 test('katalog: numery bez powtórzeń i właściwe części', () => {
   const ids = lessons.map(l => l.id);
   assert.equal(new Set(ids).size, ids.length);
-  for (const l of lessons) assert.equal(l.part, Number(l.id) <= 15 ? 'A' : 'B', `część lekcji ${l.id}`);
+  for (const l of lessons) assert.equal(l.part, Number(l.id) <= 13 ? 'A' : 'B', `część lekcji ${l.id}`);
 });
 
-test('katalog: komplet 34 lekcji', () => {
+test('katalog: komplet 29 lekcji', () => {
   assert.deepEqual(
     lessons.map(l => l.id),
-    Array.from({ length: 34 }, (_, i) => String(i + 1).padStart(2, '0')),
+    Array.from({ length: 29 }, (_, i) => String(i + 1).padStart(2, '0')),
   );
 });
 

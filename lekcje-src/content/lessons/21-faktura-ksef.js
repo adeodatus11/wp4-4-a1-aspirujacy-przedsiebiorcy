@@ -1,8 +1,8 @@
 import { choice, methods, note } from '../schema.js';
 
 export default {
-  id: '23',
-  order: 23,
+  id: '21',
+  order: 21,
   part: 'B',
   title: 'Faktura VAT i KSeF',
   subtitle: 'Księgarnia sprzedaje szkole atlasy i zeszyty. Dwie stawki VAT na jednej fakturze i nowy obowiązek: faktura w Krajowym Systemie e-Faktur.',

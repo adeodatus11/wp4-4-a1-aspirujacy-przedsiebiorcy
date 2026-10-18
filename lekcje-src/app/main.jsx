@@ -5,6 +5,8 @@ import { realia, realiaFor } from '../content/realia.js';
 import { Activity } from '../components/activities.jsx';
 import { Reading } from '../components/reading.jsx';
 import { TeacherDrawer, TeacherPlan, groupingLabel } from '../components/teacher.jsx';
+import { TrainingCatalog, TrainingView } from '../components/training.jsx';
+import { trainings } from '../content/trainings/index.js';
 import { sectionDone } from '../lib/scoring.js';
 import { clearAll, lessonState, loadState, saveState, withLesson, withoutLesson } from '../lib/store.js';
 import './style.css';
@@ -13,6 +15,8 @@ function readRoute() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if (parts[0] === 'lekcja' && parts[1]) return { page: 'lesson', id: parts[1], stage: Number(parts[2] || 1) - 1 };
   if (parts[0] === 'plan' && parts[1]) return { page: 'plan', id: parts[1] };
+  if (parts[0] === 'trening' && parts[1]) return { page: 'training', id: parts[1] };
+  if (parts[0] === 'trening') return { page: 'trainings' };
   if (parts[0] === 'o-lekcjach') return { page: 'about' };
   return { page: 'catalog' };
 }
@@ -45,16 +49,21 @@ function App() {
     update(s => ({ ...s, settings: { ...s.settings, mode: next } }));
   }
 
-  const lesson = route.id ? lessons.find(l => l.id === route.id) : null;
+  const lesson = route.id && route.page !== 'training' ? lessons.find(l => l.id === route.id) : null;
+  const training = route.page === 'training' ? trainings.find(t => t.id === route.id) : null;
+  const isTraining = route.page === 'training' || route.page === 'trainings';
 
   useEffect(() => {
-    const title = lesson ? `${lesson.title} · Lekcje handlu` : 'Lekcje handlu i sprzedaży';
+    const title = lesson ? `${lesson.title} · Lekcje handlu` : training ? `${training.title} · Trening` : isTraining ? 'Trening dla dorosłych' : 'Lekcje handlu i sprzedaży';
     document.title = route.page === 'plan' ? `Plan: ${title}` : title;
     window.scrollTo(0, 0);
-  }, [route.page, route.id, lesson]);
+  }, [route.page, route.id, lesson, training, isTraining]);
 
   let content;
   if ((route.page === 'lesson' || route.page === 'plan') && !lesson) content = <NotFound />;
+  else if (route.page === 'training' && !training) content = <NotFound />;
+  else if (route.page === 'training') content = <TrainingView key={training.id} training={training} state={state} update={update} />;
+  else if (route.page === 'trainings') content = <TrainingCatalog state={state} />;
   else if (route.page === 'lesson') content = <LessonView lesson={lesson} stage={route.stage} state={state} update={update} mode={mode} />;
   else if (route.page === 'plan') content = <TeacherPlan lesson={lesson} />;
   else if (route.page === 'about') content = <About />;
@@ -65,7 +74,7 @@ function App() {
       <a className="skip" href="#main">
         Przejdź do treści
       </a>
-      <Header mode={mode} setMode={setMode} />
+      <Header mode={mode} setMode={setMode} showMode={!isTraining} />
       {saveFailed && <p className="save-warning">Ta przeglądarka nie pozwala zapisać postępu. Lekcja działa, ale po zamknięciu strony odpowiedzi znikną.</p>}
       {content}
       <Footer />
@@ -73,7 +82,7 @@ function App() {
   );
 }
 
-function Header({ mode, setMode }) {
+function Header({ mode, setMode, showMode }) {
   return (
     <header className="site-header no-print">
       <a className="brand" href="#/">
@@ -81,16 +90,18 @@ function Header({ mode, setMode }) {
           p.
         </span>
         <span>
-          <b>Lekcje handlu</b>
+          <b>Handel w praktyce</b>
           <small>Pracownia przedsiębiorczości</small>
         </span>
       </a>
       <nav aria-label="Główna">
-        <a href="#/">Wszystkie lekcje</a>
+        <a href="#/">Lekcje HAN</a>
+        <a href="#/trening">Trening dla dorosłych</a>
         <a href="#/o-lekcjach">Jak korzystać</a>
         <a href="../szkola.html">Mapa HAN.01 / HAN.02 ↗</a>
         <a href="../index.html">Program dla przedsiębiorców ↗</a>
       </nav>
+      {showMode && (
       <div className="mode-switch" role="group" aria-label="Tryb pracy">
         <button type="button" aria-pressed={mode === 'learn'} className={mode === 'learn' ? 'is-on' : ''} onClick={() => setMode('learn')}>
           Uczę się
@@ -99,6 +110,7 @@ function Header({ mode, setMode }) {
           Prowadzę zajęcia
         </button>
       </div>
+      )}
     </header>
   );
 }
@@ -117,9 +129,9 @@ function Footer() {
 function NotFound() {
   return (
     <main id="main" className="page">
-      <h1>Nie ma takiej lekcji.</h1>
+      <h1>Nie ma takiej strony.</h1>
       <p>
-        <a href="#/">Wróć do listy lekcji</a>
+        <a href="#/">Lekcje HAN</a> · <a href="#/trening">Trening dla dorosłych</a>
       </p>
     </main>
   );
@@ -147,15 +159,15 @@ function Catalog({ state, update, mode, setMode }) {
   return (
     <main id="main" className="page">
       <section className="hero">
-        <p className="eyebrow">Handel i sprzedaż · HAN.01 i HAN.02</p>
+        <p className="eyebrow">Lekcje zawodowe · HAN.01 i HAN.02</p>
         <h1>{lessons.length} lekcji o sklepie, kliencie i liczbach w handlu.</h1>
         <p className="lead">
           Każda lekcja to 45 albo 90 minut pracy: krótkie wyjaśnienie, przykład rozwiązany krok po kroku, zadania z natychmiastową informacją zwrotną i karta wyniku. Razem {totalUnits} godzin lekcyjnych.
         </p>
         <div className="audience">
           <article className={mode === 'learn' ? 'is-on' : ''}>
-            <h2>Uczysz się sam albo sama?</h2>
-            <p>Lekcje są dla uczniów technikum i szkoły branżowej, ale też dla dorosłych, którzy chcą prowadzić sklep, pracować w handlu albo sprzedawać przez internet. Postęp zapisuje się w tej przeglądarce. Nie trzeba zakładać konta.</p>
+            <h2>Uczysz się samodzielnie?</h2>
+            <p>Lekcje są dla uczniów technikum i szkoły branżowej oraz słuchaczy kwalifikacyjnych kursów zawodowych. Każda odpowiada wybranym efektom HAN.01 albo HAN.02. Postęp zapisuje się w tej przeglądarce, bez konta. Prowadzisz albo zakładasz firmę? Zajrzyj do <a href="#/trening">treningu dla dorosłych</a>: krótkie serie zadań do powtarzania.</p>
             {mode !== 'learn' && (
               <button type="button" className="btn secondary" onClick={() => setMode('learn')}>
                 Przełącz na „Uczę się”
@@ -418,8 +430,12 @@ function About() {
       <p>
         Lekcje odpowiadają wybranym efektom kwalifikacji HAN.01 (Prowadzenie sprzedaży) i HAN.02 (Prowadzenie działań handlowych). Nie obejmują języka obcego zawodowego. Pełne pokrycie podstawy programowej ustala szkoła w swoim programie nauczania.
       </p>
-      <h2>Z dorosłymi</h2>
-      <p>Każda lekcja ma wskazówkę, jak ją poprowadzić z dorosłymi: na przykład osobami, które otwierają sklep, przekwalifikowują się albo sprzedają przez internet. Zadania i liczby są te same, zmienia się tempo i przykłady z ich doświadczenia.</p>
+      <h2>Z dorosłymi na kursie zawodowym</h2>
+      <p>Każda lekcja ma wskazówkę, jak ją poprowadzić z dorosłymi, np. na kwalifikacyjnym kursie zawodowym. Zadania i liczby są te same, zmienia się tempo i przykłady z ich doświadczenia.</p>
+      <h2>Trening dla dorosłych</h2>
+      <p>
+        Osobna część, bez odniesień do HAN: <a href="#/trening">krótkie serie zadań</a> do modułów programu dla aspirujących przedsiębiorców — zwroty w e-sklepie, opinie klientów, ankieta i program punktowy, liczby sklepu, formalności 2026. Seria trwa 10–12 minut. Kwoty i przypadki zmieniają się przy każdym podejściu, zadania z błędem wracają w następnej serii, a po serii widać, kiedy wrócić.
+      </p>
       <h2>Przepisy i kwoty</h2>
       <p>W zadaniach używamy polskich przepisów w stanie na dzień sprawdzenia. Przed decyzją we własnej firmie sprawdź aktualny stan w źródle.</p>
       <div className="table-wrap">

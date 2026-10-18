@@ -1,8 +1,8 @@
 import { choice, methods, note, number, text } from '../schema.js';
 
 export default {
-  id: '19',
-  order: 19,
+  id: '17',
+  order: 17,
   part: 'B',
   title: 'Cena, marża i rabat',
   subtitle: 'Ile sklep naprawdę zarabia na kurtce za 246 zł i przy jakim rabacie zaczyna dokładać.',

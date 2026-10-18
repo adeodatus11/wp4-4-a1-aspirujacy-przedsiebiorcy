@@ -1528,3 +1528,67 @@ th {
     color: inherit;
   }
 }
+
+/* trening */
+
+.module-links a {
+  color: inherit;
+}
+
+.training-progress {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+}
+
+.training-status,
+.training-summary,
+.training-history {
+  margin: 1rem 0;
+}
+
+.training-summary {
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.training-summary h2 {
+  margin-top: 0;
+}
+
+.training-wrong {
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 1.1rem;
+}
+
+.training-wrong li span {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.brief {
+  margin: 1rem 0;
+}
+
+.brief summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.brief ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.1rem;
+}
+
+.training-actions {
+  margin: 1rem 0 1.5rem;
+}
+
+.card-foot .due {
+  font-weight: 700;
+}

@@ -13,8 +13,8 @@ const task = {
 };
 
 export default {
-  id: '33',
-  order: 33,
+  id: '29',
+  order: 29,
   part: 'B',
   title: 'Plan zadania i współpraca w zespole',
   subtitle: 'Trzy osoby, 90 minut pracy razem, 30 zł na wydruk i stoisko na sobotę. Kto co robi i kiedy sprawdzacie, czy wszystko się zgadza?',

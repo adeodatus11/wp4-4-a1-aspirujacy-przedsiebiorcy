@@ -13,8 +13,8 @@ const facts = {
 };
 
 export default {
-  id: '20',
-  order: 20,
+  id: '18',
+  order: 18,
   part: 'B',
   title: 'Oferta handlowa: popraw szkic i sprawdź AI',
   subtitle: 'Narzędzie AI napisało ofertę w kilka sekund. Lampa „wodoodporna”, „dostawa gratis” i prośba o prywatne numery pracowników. Co z tym zrobić?',

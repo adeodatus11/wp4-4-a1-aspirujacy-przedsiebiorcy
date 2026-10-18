@@ -21,7 +21,7 @@ export const realia = {
   },
   ksef: {
     label: 'Krajowy System e-Faktur (KSeF)',
-    value: 'Obowiązkowe e-faktury: duże firmy od 1.02.2026, pozostałe od 1.04.2026, najmniejsze (sprzedaż do 10 000 zł miesięcznie) od 1.01.2027. Kary administracyjne od 2027 r.',
+    value: 'Obowiązkowe e-faktury: duże firmy od 1.02.2026, pozostałe od 1.04.2026. Do końca 2026 r. poza KSeF może fakturować firma, której faktury za sprzedaż nie przekraczają 10 000 zł brutto w miesiącu; jedno przekroczenie kończy to zwolnienie. Kary administracyjne od 2027 r.',
     source: 'Ustawa z 5.08.2025 o zmianie ustawy o VAT (Dz.U. 2025 poz. 1203)',
     url: 'https://ksef.podatki.gov.pl/',
     checked: '2026-10-18',
@@ -122,6 +122,38 @@ export const realia = {
     url: 'https://www.biznes.gov.pl/',
     checked: '2026-10-18',
     status: 'do potwierdzenia na biznes.gov.pl',
+  },
+  nierejestrowanaPrzekroczenie: {
+    label: 'Przekroczenie limitu działalności nierejestrowanej',
+    value: 'Od dnia przekroczenia limitu działalność staje się firmą; w ciągu 7 dni trzeba złożyć wniosek o wpis do CEIDG. Z działalności nierejestrowanej nie korzysta osoba, która w ostatnich 60 miesiącach prowadziła firmę',
+    source: 'Prawo przedsiębiorców, art. 5 ust. 2',
+    url: 'https://www.biznes.gov.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone w serwisach branżowych',
+  },
+  ulgaNaStart: {
+    label: 'Ulga na start',
+    value: 'Przez pierwsze 6 pełnych miesięcy nowej firmy bez składek społecznych ZUS (emerytalnej, rentowej, chorobowej, wypadkowej); składkę zdrowotną płaci się od początku. Dla osób, które nie prowadziły firmy w ostatnich 60 miesiącach i nie pracują dla byłego pracodawcy w tym samym zakresie',
+    source: 'Prawo przedsiębiorców, art. 18',
+    url: 'https://www.zus.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone w serwisach branżowych',
+  },
+  kosztPracodawcy: {
+    label: 'Składki pracodawcy od pensji',
+    value: 'Emerytalna 9,76%, rentowa 6,5%, wypadkowa zwykle 1,67% (małe firmy), Fundusz Pracy 2,45%, FGŚP 0,1%. Przy płacy minimalnej 4806 zł koszt pracodawcy to 5790,28 zł miesięcznie bez PPK',
+    source: 'Ustawa o systemie ubezpieczeń społecznych; ustawa o promocji zatrudnienia',
+    url: 'https://www.zus.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone w serwisach branżowych',
+  },
+  opinie: {
+    label: 'Opinie klientów w internecie',
+    value: 'Od 1.01.2023 nie wolno zamieszczać ani zlecać fałszywych opinii. Firma, która pokazuje opinie klientów, informuje, czy i jak sprawdza, że pochodzą od osób, które kupiły produkt lub skorzystały z usługi',
+    source: 'Ustawa o przeciwdziałaniu nieuczciwym praktykom rynkowym, art. 7 pkt 25–26 i art. 7a (dyrektywa Omnibus)',
+    url: 'https://uokik.gov.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone (decyzje UOKiK z 2022 i 2023 r.)',
   },
 };
 

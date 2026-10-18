@@ -1,7 +1,7 @@
 // Stała kolejność odpowiedzi dla danego pytania: inna niż w pliku treści,
 // ale ta sama po odświeżeniu i u wszystkich osób w klasie.
 
-function hash(text) {
+export function hash(text) {
   let h = 2166136261;
   for (let i = 0; i < text.length; i++) {
     h ^= text.charCodeAt(i);
@@ -10,7 +10,7 @@ function hash(text) {
   return h >>> 0;
 }
 
-function random(seed) {
+export function random(seed) {
   let t = seed;
   return () => {
     t = (t + 0x6d2b79f5) >>> 0;
