@@ -1,0 +1,61 @@
+[
+ {
+  "id": "zwroty",
+  "title": "Zwroty w sklepie internetowym",
+  "subtitle": "Terminy, kwota zwrotu, wyjątki i regulamin. Każda seria ma inne daty i kwoty.",
+  "who": "Dla osób, które sprzedają albo chcą sprzedawać przez własny sklep internetowy, platformę lub media społecznościowe.",
+  "minutes": 10,
+  "round": 7,
+  "modules": [
+   5
+  ]
+ },
+ {
+  "id": "opinie",
+  "title": "Opinie i wiadomości od klientów",
+  "subtitle": "Odpowiedź na jedną gwiazdkę, e-mail bez numeru zamówienia, telefon, na który nie znasz odpowiedzi.",
+  "who": "Dla osób prowadzących sklep, punkt usługowy albo profil firmy w mapach i mediach społecznościowych.",
+  "minutes": 10,
+  "round": 6,
+  "modules": [
+   6,
+   5
+  ]
+ },
+ {
+  "id": "klient-wraca",
+  "title": "Klient wraca: ankieta, NPS i program punktowy",
+  "subtitle": "Liczysz wskaźnik poleceń i koszt programu, poprawiasz ankietę i formularz zgód. Liczby za każdym razem inne.",
+  "who": "Dla osób, które chcą sprawdzić, co klienci myślą o ich sklepie lub usłudze, i zatrzymać tych, którzy już kupili.",
+  "minutes": 12,
+  "round": 7,
+  "modules": [
+   3,
+   6
+  ]
+ },
+ {
+  "id": "liczby-sklepu",
+  "title": "Liczby mojego sklepu",
+  "subtitle": "Cena z marżą, VAT, rabat, próg rentowności i gotówka na trzy miesiące. Nowe kwoty w każdej serii.",
+  "who": "Dla osób, które ustalają ceny i pilnują pieniędzy w małym sklepie, na stoisku albo w sprzedaży internetowej.",
+  "minutes": 12,
+  "round": 6,
+  "modules": [
+   4,
+   8
+  ]
+ },
+ {
+  "id": "formalnosci",
+  "title": "Formalności małego handlu 2026",
+  "subtitle": "Kiedy zarejestrować firmę, kiedy kasa, VAT i KSeF, ulga na start i koszt pracownika.",
+  "who": "Dla osób, które dorabiają sprzedażą, zakładają pierwszą firmę albo planują zatrudnić pierwszą osobę.",
+  "minutes": 12,
+  "round": 7,
+  "modules": [
+   2,
+   8
+  ]
+ }
+]

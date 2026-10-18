@@ -11,18 +11,19 @@ Samodzielna platforma programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowa
 - Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
 - Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
 
-## Lekcje handlu (HAN.01 / HAN.02)
+## Lekcje handlu (HAN.01 / HAN.02) i trening dla dorosłych
 
-Katalog lekcje/ to osobna aplikacja: **34 interaktywne lekcje po polsku** (25 × 45 min i 9 × 90 min, razem 1935 min = 43 jednostki po 45 min). Część A (01–15) dotyczy kwalifikacji HAN.01 — sprzedaż, obsługa klienta, kasa, dokumenty, reklamacje. Część B (16–34) dotyczy HAN.02 — marketing, ceny, zakupy, magazyn, wynik firmy, zespół. Lekcje są dla technikum i szkoły branżowej, ale też dla dorosłych, którzy otwierają sklep, przekwalifikowują się lub sprzedają w internecie.
+Katalog lekcje/ to osobna aplikacja z dwiema częściami.
 
-Każda lekcja ma etapy z czasem, krótkie wyjaśnienia, przykład rozwiązany krok po kroku i zadania z natychmiastową informacją zwrotną: wybór z uzasadnieniem błędnych odpowiedzi, obliczenia z polskim przecinkiem i podpowiedzią do typowego błędu, przyporządkowanie, kolejność, wypełnianie dokumentów (faktura, paragon, PZ/WZ, protokół reklamacji), wyszukiwanie błędów w dokumencie, rozmowy z klientem z rozgałęzieniami i odpowiedzi otwarte z wzorem oraz kryteriami. Na końcu jest karta wyniku do wydruku z samooceną celów.
+**Lekcje HAN** — 29 interaktywnych lekcji po polsku (20 × 45 min i 9 × 90 min, razem 1665 min = 37 jednostek po 45 min) dla technikum, szkoły branżowej i kwalifikacyjnych kursów zawodowych. Część A (01–13) dotyczy HAN.01, część B (14–29) — HAN.02. W lekcjach są tylko tematy z jednostek podstawy: BHP, towar, przyjęcie dostawy, ekspozycja, ceny, kasa, rozmowa z klientem, marketing, ceny i marża, oferta, korespondencja, dostawcy, faktura, dokumenty magazynowe, FIFO/FEFO, inwentaryzacja, zapas, prognoza, wynik i wskaźniki, reklamacje, zespół.
 
-- **Uczę się** — samodzielna nauka; postęp zapisuje się w przeglądarce (klucz pracownia-lekcje-v1).
-- **Prowadzę zajęcia** — przy każdym etapie notatki prowadzącego: co powiedzieć, o co zapytać, typowe błędy, klucz; plan lekcji do druku na A4; w lekcjach 90 min zaznaczona przerwa po 45 min.
+Lekcje różnią się budową: 3–8 etapów nazwanych od treści, różne zakończenia, pytania z 2–5 odpowiedziami. Poprawna odpowiedź jest losowana raz dla całego katalogu z wyrównaniem liter, bez trzech takich samych z rzędu w lekcji; odpowiedzi w rozmowach też są tasowane. Test lekcje-src/tests/patterns.test.mjs pilnuje, żeby lekcje nie wróciły do jednego szablonu. Tryb „Prowadzę zajęcia” dodaje notatki do każdego etapu i plan lekcji na A4; w lekcjach 90 min zaznaczona jest przerwa po 45 min.
 
-Fakty o polskich realiach (stawki VAT, zwolnienie 240 000 zł od 2026, KSeF, kasy fiskalne, Omnibus, niezgodność towaru z umową, system kaucyjny, normy dźwigania, sprzedaż alkoholu, płaca minimalna 2026, działalność nierejestrowana) są w jednym pliku lekcje-src/content/realia.js z datą sprawdzenia; test pilnuje, by nie były starsze niż rok.
+**Trening dla dorosłych** (#/trening) — pięć krótkich serii do modułów programu dla aspirujących przedsiębiorców, bez odniesień do HAN: zwroty w sklepie internetowym (moduł 5), opinie i wiadomości od klientów (6, 5), ankieta, NPS i program punktowy (3, 6), liczby mojego sklepu (4, 8), formalności małego handlu 2026 (2, 8). Seria to ściąga i 6–7 zadań na 10–12 minut. Kwoty, daty i przypadki są losowane przy każdym podejściu, zadania z błędem wracają w kolejnej serii, a po serii aplikacja proponuje termin powrotu (jutro, za 3 dni albo za tydzień). Strony modułów mają blok „Trening do tego modułu”.
 
-Strona szkola.html pokazuje katalog z filtrami, pokrycie jednostek HAN.01/HAN.02 i mapę 27 wybranych efektów: jednostka, numer efektu, osobno numery kryteriów, strona oficjalnego PDF MEN/ORE i zakres powiązania. Opisy efektów są skrótami autorskimi. Mapa bazuje na podstawie 2019; nauczyciel dobiera ją do rocznika i programu szkoły. Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. Lekcje nie zastępują pracy w programie magazynowo-sprzedażowym, na prawdziwej kasie, praktyk zawodowych ani języka obcego zawodowego. Wynik na karcie nie jest wynikiem egzaminu CKE.
+Fakty o polskich realiach (VAT i zwolnienie 240 000 zł, KSeF, kasa fiskalna, paragon z NIP, Omnibus, niezgodność towaru z umową, zwrot w 14 dni, kaucja, dźwiganie, alkohol i napoje energetyczne, płaca minimalna 2026, działalność nierejestrowana, ulga na start, składki pracodawcy, fałszywe opinie) są w jednym pliku lekcje-src/content/realia.js z datą sprawdzenia; test pilnuje, by nie były starsze niż rok.
+
+Strona szkola.html pokazuje katalog lekcji z filtrami, pokrycie jednostek HAN.01/HAN.02 i mapę 27 wybranych efektów: moduł → jednostka, numer efektu, osobno numery kryteriów, strona oficjalnego PDF MEN/ORE i zakres powiązania. Z modułami programu łączy się 10 lekcji (przez tę mapę); pozostałe są czysto zawodowe. Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. Lekcje nie zastępują programu magazynowo-sprzedażowego, prawdziwej kasy, praktyk zawodowych ani języka obcego zawodowego. Wynik na karcie nie jest wynikiem egzaminu CKE.
 
 ## Materiały offline
 
@@ -41,7 +42,7 @@ Wymagane Python 3.10+ i zależność z requirements.txt, a do zmian w lekcjach N
 ```sh
 python3 -m pip install -r requirements.txt
 npm --prefix lekcje-src ci
-npm --prefix lekcje-src run build   # buduje lekcje/ i src/lekcje.json
+npm --prefix lekcje-src run build   # buduje lekcje/, src/lekcje.json i src/trening.json
 python3 build.py                    # strony serwisu, mapa, XLSX, ZIP, cache offline
 python3 -m http.server 8000
 ```
@@ -51,11 +52,12 @@ Otwórz http://localhost:8000. Kolejność ma znaczenie: build.py czyta katalog 
 | Źródło | Zastosowanie |
 |---|---|
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
-| lekcje-src/content/lessons/NN-*.js | treść 34 lekcji: etapy, wyjaśnienia, zadania, klucze, notatki prowadzącego |
+| lekcje-src/content/lessons/NN-*.js | treść 29 lekcji: etapy, wyjaśnienia, zadania, klucze, notatki prowadzącego |
+| lekcje-src/content/trainings/*.js | pięć treningów: ściąga i pula zadań z generatorami danych |
 | lekcje-src/content/realia.js | polskie fakty prawne i liczbowe z datą sprawdzenia |
 | lekcje-src/app, components, lib | aplikacja lekcji (React + Vite), punktacja i zapis |
 | src/curriculum.json | formalna mapa odniesień; pole lessons wskazuje numery lekcji 01–34 |
-| src/lekcje.json | katalog lekcji generowany przez build w lekcje-src |
+| src/lekcje.json, src/trening.json | katalogi lekcji i treningów generowane przez build w lekcje-src |
 | offline.py | generowanie manifestu oraz cache materiałów (z lekcje/) |
 | school.py | strona szkola.html, mapa CSV i wpisy wyszukiwarki dla lekcji |
 | src/resources.json | źródła zewnętrzne i metadane weryfikacji |
@@ -75,7 +77,7 @@ Arkusz i pakiet offline są generowane deterministycznie. ZIP jest śledzony pom
 python3 tests/validate.py
 npm ci
 npm test
-npm --prefix lekcje-src test             # kontrakt treści 34 lekcji i punktacja
+npm --prefix lekcje-src test             # kontrakt treści, schematy, treningi i punktacja
 npm --prefix lekcje-src run test:e2e     # Playwright + axe w Chromium
 ```
 
@@ -83,7 +85,7 @@ Zależności npm w katalogu głównym służą wyłącznie testom. Opublikowana 
 
 ## Dane i prywatność
 
-localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora i wybrany widok. Lekcje handlu zapisują odpowiedzi i wyniki pod osobnym kluczem pracownia-lekcje-v1. Starsze kopie JSON z polem lessons (dawne sesje HAN) da się wczytać; to pole jest pomijane. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
+localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora i wybrany widok. Lekcje handlu i treningi zapisują odpowiedzi, wyniki i historię serii pod osobnym kluczem pracownia-lekcje-v1. Starsze kopie JSON z polem lessons (dawne sesje HAN) da się wczytać; to pole jest pomijane. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
 
 ## Zakres materiałów i aktualność
 

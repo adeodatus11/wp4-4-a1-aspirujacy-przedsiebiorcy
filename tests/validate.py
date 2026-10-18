@@ -57,8 +57,13 @@ for m in course:
 curriculum=json.loads((ROOT/'src/curriculum.json').read_text())
 lessons=json.loads((ROOT/'src/lekcje.json').read_text())
 assert len(curriculum['mappings'])==27
-assert len(lessons)==34 and sum(l['duration'] for l in lessons)==1935
-assert [l['id'] for l in lessons]==[f'{n:02d}' for n in range(1,35)]
+assert len(lessons)==29 and sum(l['duration'] for l in lessons)==1665
+assert [l['id'] for l in lessons]==[f'{n:02d}' for n in range(1,30)]
+trainings=json.loads((ROOT/'src/trening.json').read_text())
+assert len(trainings)==5 and all(t['modules'] and set(t['modules'])<=set(range(1,9)) for t in trainings)
+for t in trainings:
+    for n in t['modules']:
+        assert f'lekcje/index.html#/trening/{t["id"]}' in (ROOT/f'modul-{n}.html').read_text(), (t['id'],n)
 lesson_ids={l['id'] for l in lessons}
 source_ids={s['id'] for s in curriculum['sources']}
 for r in curriculum['mappings']:
@@ -75,7 +80,7 @@ app=(ROOT/'lekcje/index.html').read_text()
 assert 'type="module"' not in app and re.search(r'<script defer src="\./assets/index-[\w-]+\.js">',app)
 assert all((ROOT/'lekcje'/src).is_file() for src in re.findall(r'(?:src|href)="\./([^"]+)"',app))
 school=docs[ROOT/'szkola.html']
-assert len([x for x in school.links if x.startswith('lekcje/index.html#/lekcja/')])>=34
+assert len([x for x in school.links if x.startswith('lekcje/index.html#/lekcja/')])>=29
 for n in range(1,9):
     assert any(n in r['modules'] for r in curriculum['mappings'])
     assert 'school-bridge' in (ROOT/f'modul-{n}.html').read_text()
@@ -122,4 +127,4 @@ manifest=json.loads((ROOT/'manifest.webmanifest').read_text())
 assert manifest['scope']=='./' and manifest['display']=='standalone'
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'OK: {len(docs)} dokumentów HTML, linki, etykiety, 24 pytania modułowe, 34 lekcje handlu (1935 min), 27 odniesień HAN, XLSX, paczka offline i manifest cache.')
+print(f'OK: {len(docs)} dokumentów HTML, linki, etykiety, 24 pytania modułowe, 29 lekcji handlu (1665 min), 5 treningów, 27 odniesień HAN, XLSX, paczka offline i manifest cache.')

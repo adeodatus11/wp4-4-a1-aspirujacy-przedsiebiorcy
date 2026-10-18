@@ -24,21 +24,20 @@ Oryginalne MP4, DOCX, PPTX i PDF programu nie występują w repozytorium. Pakiet
 
 Zmiany przygotowano na gałęzi roboczej; publiczny GitHub Pages wymaga osobnego scalenia/publikacji. Nie ma podglądu wdrożenia potwierdzonego przez narzędzie publikacyjne.
 
-## Lekcje handlu HAN.01 / HAN.02
+## Lekcje handlu HAN.01 / HAN.02 i trening
 
-Dawne 10 tematów HAN (585 min, sesje z zegarem i ręczną kartą oceny) zastąpiono aplikacją lekcje/ z 34 lekcjami (1935 min). Mapa 27 efektów została; jej pole lessons wskazuje nowe numery lekcji, a walidator sprawdza, że jednostka efektu jest wpisana w każdej przypisanej lekcji.
+Dawne 10 tematów HAN zastąpiono aplikacją lekcje/: 29 lekcji (1665 min) i 5 treningów dla dorosłych. Tematy, które nie mają oparcia w jednostkach podstawy (sprzedaż internetowa i zwroty, opinie i wiadomości online, program lojalnościowy, ankieta satysfakcji, projekt „mój sklep”), przeszły do treningu. Mapa 27 efektów została; jej pole lessons wskazuje nowe numery, a walidator sprawdza, że jednostka efektu jest wpisana w każdej przypisanej lekcji i że strony modułów linkują do treningów.
 
 Sprawdzane automatycznie (npm --prefix lekcje-src test):
 
-- kontrakt każdej lekcji: pola, suma minut etapów równa 45/90, przerwa po 45 min w lekcjach 90 min, 2–5 celów, karta wyjścia;
-- każde pytanie wyboru ma 4 odpowiedzi i wyjaśnienie każdej błędnej; co najmniej 5 punktowanych zadań na 45 min; najwyżej 650 słów czytania na 45 min;
-- w całym katalogu poprawna odpowiedź jest najdłuższa najwyżej w 40% pytań i żadna pozycja (A–D) nie przeważa ponad 40%;
-- język: lista zakazanych zwrotów typowych dla tekstów generowanych, brak form rodzajowych („zrobiłeś/zrobiłaś”) w poleceniach, najwyżej jedno „fikcyjny” w lekcji;
-- realia: każdy fakt ma datę sprawdzenia nie starszą niż rok;
-- punktacja: pełne punkty za pierwszą próbę, połowa po poprawie, zadania wieloelementowe liczone proporcjonalnie.
+- kontrakt każdej lekcji: pola, suma minut etapów 45/90, przerwa po 45 min w lekcjach 90 min, 2–5 celów, karta wyjścia, wyjaśnienie każdej błędnej odpowiedzi, co najmniej 5 zadań z punktami na 45 min, najwyżej 650 słów czytania na 45 min;
+- schematy (patterns.test.mjs): liczba etapów nie jest stała (żadna wartość ponad 45% lekcji), nazwy pierwszego i ostatniego etapu się nie powtarzają, różne czasy i układy pracy, pytania z różną liczbą odpowiedzi, równy rozkład liter poprawnej odpowiedzi i brak trzech takich samych z rzędu, różne zakończenia, różne początki wstępów, różne kształty zadań „znajdź błędy”, brak odwołań do numerów etapów;
+- treningi: każde zadanie z puli buduje się poprawnie dla 40 ziaren losowania, bez NaN i powtórzonych odpowiedzi, z wyjaśnieniem każdej błędnej odpowiedzi; co najmniej 1/3 zadań ma zmienne dane; dobór serii (najpierw błędne, potem nowe), zapis historii i rytm powtórek;
+- język: zakazane zwroty typowe dla tekstów generowanych, brak form rodzajowych („-łeś/-łaś”);
+- realia: każdy fakt ma datę sprawdzenia nie starszą niż rok.
 
-Playwright w Chromium (npm --prefix lekcje-src run test:e2e): każda z 34 lekcji rozwiązana według klucza daje maksymalny wynik; wszystkie etapy na szerokości 390 px bez poziomego przewijania; zapis i reset postępu; szuflada i plan prowadzącego; filtry katalogu; axe bez naruszeń na katalogu, lekcji, planie i stronie „Jak korzystać”. Otwarcie lekcje/index.html z dysku (file://) sprawdzono ręcznie skryptem Playwright: bez błędów konsoli, ze stylami.
+Playwright w Chromium (npm --prefix lekcje-src run test:e2e, 50 testów): każda lekcja rozwiązana kluczem daje maksymalny wynik; każdy trening rozwiązany kluczem na wylosowanej serii daje komplet punktów, zapisuje wynik i termin; błędne zadanie wraca w powtórce; wszystkie etapy i zadania na 390 px bez poziomego przewijania; zapis i reset; tryb prowadzącego; axe bez naruszeń na katalogu, lekcji, planie, stronie „Jak korzystać” i treningu.
 
-Liczby w zadaniach przeliczono ręcznie podczas pisania lekcji. Faktów prawnych nie dało się sprawdzić bezpośrednio na gov.pl (polityka sieci środowiska blokowała odczyt); potwierdzono je w wyszukiwarce i zapisano z datą. Przed zajęciami warto sprawdzić bieżące kwoty (płaca minimalna, progi VAT, terminy KSeF).
+Nowe fakty w treningu (limit i 7 dni przy działalności nierejestrowanej, ulga na start, zwolnienie z KSeF do 10 000 zł miesięcznie, proporcjonalny limit VAT, składki pracodawcy 5790,28 zł przy płacy minimalnej, zakaz fałszywych opinii) potwierdzono w wyszukiwarce w portalach branżowych; serwisy gov.pl były niedostępne z sieci środowiska. Przed zajęciami warto sprawdzić bieżące kwoty.
 
-Ograniczenia: brak pilotażu z uczniami i dorosłymi; czas etapów jest szacunkiem autorskim. Lekcje nie zastępują programu magazynowo-sprzedażowego używanego na egzaminie ani obsługi prawdziwej kasy.
+Ograniczenia: brak pilotażu z uczniami i dorosłymi; czasy etapów i rytm powtórek są założeniem autorskim. Lekcje nie zastępują programu magazynowo-sprzedażowego używanego na egzaminie ani obsługi prawdziwej kasy.

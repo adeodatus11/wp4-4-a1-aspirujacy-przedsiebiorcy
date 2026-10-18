@@ -49,8 +49,8 @@ async function run(){
   school.$('#mapping-qualification').value='HAN.02';school.$('#mapping-module').value='7';event(school,school.$('#mapping-qualification'),'input');
   assert.equal(school.$$('[data-mapping]').filter(x=>!x.hidden).length,1);
   school.$('#lesson-qualification').value='HAN.02';school.$('#lesson-minutes').value='90';event(school,school.$('#lesson-minutes'),'input');
-  assert.equal(school.$$('[data-lesson]').filter(x=>!x.hidden).length,7);
-  home.$('#site-search').value='HAN.02.7.7';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').some(a=>a.href.includes('lekcja/29')));
+  assert.equal(school.$$('[data-lesson]').filter(x=>!x.hidden).length,6);
+  home.$('#site-search').value='HAN.02.7.7';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').some(a=>a.href.includes('lekcja/27')));
   console.log('OK: filtry podstawy i katalogu lekcji handlu oraz wyszukiwanie po identyfikatorze efektu.');
   let cash=open('cash-flow.html');event(cash,cash.$('#cash-example'),'click');assert.match(cash.$('[data-cash-output="closing"][data-month="0"]').textContent,/1.*500/);assert.equal(Number(cash.$('#cash-opening-1').value),1500);
   cash.$('#cash-sales-0').value='0';event(cash,cash.$('#cash-sales-0'),'input');assert.match(cash.$('#cash-summary').textContent,/ujemne saldo/);assert.equal(Number(cash.$('#cash-opening-1').value),-4500);
