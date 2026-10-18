@@ -31,7 +31,7 @@ manifest.webmanifest i sw.js pozwalają zapisać lokalne materiały przy pierwsz
 
 ## Dla prowadzącego
 
-Scenariusze 165 minut, instrukcje, przykładowe rozwiązania, klucze quizów i rubryki informacji zwrotnej. Cały moduł: 90 min przygotowania + 90 min małych grup + 165 min warsztatu + 45 min wdrożenia = **6,5 h**, pełny cykl **52 h**. Dodatkowy coaching organizowany poza serwisem.
+Scenariusze 165 minut, instrukcje, przykładowe rozwiązania, klucze quizów i rubryki informacji zwrotnej. Cały moduł w programie z grupą: 90 min przygotowania + 90 min małych grup + 165 min warsztatu + 45 min wdrożenia = **6,5 h**, pełny cykl **52 h**. Sama strona modułu to praca własna na około godzinę (wprowadzenie, przykład, ćwiczenie, notatki do projektu, quiz) plus opcjonalne opracowanie bazowe; strona pokazuje oba czasy osobno, a szacunek liczy portal.py (page_minutes, reading_minutes). Dodatkowy coaching organizowany poza serwisem.
 
 Widok zmienia prezentację, nie stanowi autoryzacji: oba widoki są publiczne. Prowadzący nie otrzymuje zdalnego dostępu do danych uczestników. Ocenę lekcji wpisuje na tym samym urządzeniu lub po świadomym przekazaniu kopii przez uczestnika. Brak funkcji administracyjnych, rekrutacyjnych i certyfikacji.
 
