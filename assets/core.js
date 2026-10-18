@@ -1,11 +1,11 @@
 /* Czyste funkcje: format projektu, quizy, wyszukiwanie i przepływy. */
 (function (root, factory) {
-  const core = factory();
+  const core = factory(typeof module === 'object' && module.exports ? require('./lesson-core.js') : root.LessonCore);
   if (typeof module === 'object' && module.exports) module.exports = core;
   else root.CourseCore = core;
-})(typeof window !== 'undefined' ? window : this, function () {
+})(typeof window !== 'undefined' ? window : this, function (LessonCore) {
   'use strict';
-  const blank = () => ({ version: 1, notes: {}, completed: [], visited: [], quizzes: {}, cash: {}, role: 'participant' });
+  const blank = () => ({ version: 1, notes: {}, completed: [], visited: [], quizzes: {}, cash: {}, lessons: {}, role: 'participant' });
   const money = x => Number.isFinite(Number(x)) && Math.abs(Number(x)) <= 1e12 ? Math.round(Number(x) * 100) / 100 : 0;
   const norm = x => String(x).toLocaleLowerCase('pl').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l');
   const noteKeys = ['project-name', 'project-description'];
@@ -22,6 +22,7 @@
       if (Array.isArray(q) && q.length === 3 && q.every(x => Number.isInteger(x) && x >= 0 && x <= 2)) out.quizzes[m] = q.slice();
     }
     for (const k of cashKeys) if (Array.isArray(input.cash?.[k])) out.cash[k] = Array.from({length: 6}, (_, i) => money(input.cash[k][i]));
+    out.lessons = LessonCore.normalizeBook(input.lessons);
     return out;
   }
   function calculate(cash) {

@@ -56,6 +56,7 @@ for m in course:
     assert {'sedno','przyklad','cwiczenie','projekt','quiz','dla-prowadzacego','zrodla'}<=d.ids
 curriculum=json.loads((ROOT/'src/curriculum.json').read_text())
 lessons=json.loads((ROOT/'src/lessons.json').read_text())
+assessments=json.loads((ROOT/'src/assessments.json').read_text())
 assert len(curriculum['mappings'])==27
 assert len(lessons)==10 and sum(l['minutes'] for l in lessons)==585
 lesson_ids={l['id'] for l in lessons}
@@ -72,6 +73,14 @@ for l in lessons:
     assert l['answer'] and l['support'] and l['extension'] and l['exit']
     assert not any('przerwa' in text.lower() for _,text in l['agenda'])
     assert any(l['id'] in r['lessons'] for r in curriculum['mappings'])
+    assert len(assessments[l['id']])==5
+    assert sum(q['points'] for q in assessments[l['id']])==10
+    for q in assessments[l['id']]:
+        assert q['type'] in ('choice','number') and q['feedback']
+        if q['type']=='choice':assert len(q['options'])==3 and q['correct'] in range(3)
+        else:assert isinstance(q['expected'],(int,float)) and 0<=q['tolerance']<=1
+    page=ROOT/f'lekcja-han-{int(l["id"][1:]):02d}.html'
+    assert {'sesja','lesson-inputs','lesson-work-form','lesson-timer','karta-oceny','lesson-history','lesson-review-form'}<=docs[page].ids
 for n in range(1,9):
     assert any(n in r['modules'] for r in curriculum['mappings'])
     assert 'school-bridge' in (ROOT/f'modul-{n}.html').read_text()
@@ -99,6 +108,7 @@ with zipfile.ZipFile(ROOT/'downloads/pakiet-offline.zip') as z:
     names=set(z.namelist())
     assert all(f'modul-{n}.html' in names for n in range(1,9))
     assert 'downloads/cash-flow.xlsx' in names and 'assets/core.js' in names
+    assert {'sw.js','manifest.webmanifest','assets/lesson-core.js','assets/lesson-data.js','assets/lesson.js','wyniki-lekcji.html'}<=names
     for name in names:
         if not name.endswith('.html'):continue
         d=Document(z.read(name).decode())
@@ -108,6 +118,13 @@ with zipfile.ZipFile(ROOT/'downloads/pakiet-offline.zip') as z:
             from posixpath import normpath,join,dirname
             target=normpath(join(dirname(name),unquote(url.path)))
             if target not in names:errors.append(f'offline {name}: brak {target}')
+worker=(ROOT/'sw.js').read_text()
+precache=json.loads(re.search(r'const FILES=(.*);',worker).group(1))
+assert all((ROOT/path.removeprefix('./')).is_file() for path in precache)
+assert all(not path.endswith('.zip') for path in precache)
+assert len(precache)>70
+manifest=json.loads((ROOT/'manifest.webmanifest').read_text())
+assert manifest['scope']=='./' and manifest['display']=='standalone'
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'OK: {len(docs)} dokumentów HTML, linki i kotwice, etykiety, 24 pytania, 8 scenariuszy, 27 odniesień HAN, 10 lekcji, obliczone formuły XLSX, wszystkie odnośniki offline.')
+print(f'OK: {len(docs)} dokumentów HTML, linki, etykiety, 24 pytania modułowe i 50 lekcyjnych, 27 odniesień HAN, 10 sesji, XLSX, paczka offline i manifest cache.')

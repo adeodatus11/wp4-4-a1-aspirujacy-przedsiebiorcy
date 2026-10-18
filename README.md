@@ -1,6 +1,6 @@
 # Pracownia przedsiębiorczości
 
-Serwis programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowadzącego**. Osiem modułów, polskie uzupełnienia, projekt uczestnika i komplet własnych materiałów warsztatowych. Statyczny HTML/CSS/JS, bez kont i backendu. Gotowe strony są wersjonowane i działają na GitHub Pages z katalogu głównego.
+Samodzielna platforma programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowadzącego**. Osiem modułów, polskie uzupełnienia, projekt uczestnika i komplet własnych materiałów warsztatowych. Statyczny HTML/CSS/JS, bez kont i backendu. Gotowe strony są wersjonowane i działają na GitHub Pages z katalogu głównego.
 
 ## Dla uczestnika
 
@@ -19,11 +19,28 @@ Pakiet zawiera 10 tematów (7 × 45 min oraz 3 × 90 min, razem 13 lekcji = 585 
 
 Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. AI, Lean Canvas, VSME i pitch inwestorski są narzędziami/rozszerzeniami, nie literalnymi obowiązkami podstawy. Pakiet nie zastępuje obsługi kasy, wszystkich czynności magazynowych, księgowości, BHP i języka zawodowego.
 
+## Samodzielne sesje z kartą oceny
+
+Każda z 10 lekcji HAN ma formularz pracy, 5 pytań końcowych i licznik 45/90 min. Odpowiedzi zapisują się na bieżąco. Można zrobić pauzę, wznowić po odświeżeniu lub zakończyć wcześniej. Upływ czasu kończy sesję i zachowuje kartę; po zamknięciu karty czas aktywnej sesji jest rozliczany przy powrocie. Przy przerwie między lekcjami użyj pauzy.
+
+- Test: 5 × 2 pkt = 10 pkt, liczony automatycznie. Pytania wyboru i obliczeniowe obsługują polski przecinek i tolerancję zaokrągleń. Brak odpowiedzi daje 0 pkt.
+- Praca praktyczna: 3 × 0–2 pkt = 6 pkt, wpis ręczny prowadzącego. Treść otwarta i obserwacja nie są oceniane przez pozorowany automat.
+- Wynik łączny do 16 pkt pojawia się dopiero po wpisaniu wszystkich ocen praktycznych. Wcześniej karta podaje konkretny wynik testu i status oczekiwania na ocenę pracy.
+- Karta zawiera identyfikator, daty, aktywny czas, dane zadania, całą pracę, odpowiedzi z wyjaśnieniami, kryteria i informację zwrotną. Można ją pobrać jako samodzielny HTML albo wydrukować do PDF.
+- Wyniki są dostępne na wyniki-lekcji.html. Zapis obejmuje 3 zakończone próby i jedną aktywną sesję każdej lekcji. Historia zachowuje własną wersję treści oraz klucza. Przy zmianie treści rozpoczętej lekcji zachowaj archiwalną kartę i rozpocznij nową próbę.
+- Kopia JSON obejmuje projekt, sesje i karty. W eksportowanej kopii bieżące sesje są wstrzymane; czas nie upływa podczas przenoszenia. Wczytanie kopii wymaga potwierdzenia zastąpienia lokalnych danych.
+
+Na innym urządzeniu prowadzący może wczytać kopię uczestnika, ocenić pracę i przekazać zaktualizowaną kopię. Nie ma automatycznego przesyłania, kont ani dziennika klasowego. Oba widoki są publiczne, zapis lokalny jest edytowalny, a karta ma charakter dydaktyczny — nie poświadcza tożsamości ani wyniku egzaminu CKE.
+
+## Materiały offline
+
+manifest.webmanifest i sw.js pozwalają zapisać lokalne materiały przy pierwszym otwarciu przez HTTPS lub localhost. Cache materiałów jest oddzielny od wyników w localStorage. Worker działa wyłącznie w katalogu tego serwisu, nie przechwytuje innych projektów i źródeł zewnętrznych. Nowy cache ma wersję wynikającą z treści plików. W sieci pliki są aktualizowane, a przy braku sieci odczytywane lokalnie. Pełny ZIP pobierz przy połączeniu z internetem; sam ZIP nie jest precachowany. Wersja z plików na dysku nadal działa bez workera.
+
 ## Dla prowadzącego
 
 Scenariusze 165 minut, instrukcje, przykładowe rozwiązania, klucze quizów i rubryki informacji zwrotnej. Cały moduł: 90 min przygotowania + 90 min małych grup + 165 min warsztatu + 45 min wdrożenia = **6,5 h**, pełny cykl **52 h**. Dodatkowy coaching organizowany poza serwisem.
 
-Widok zmienia prezentację, nie stanowi autoryzacji: oba widoki są publiczne. Prowadzący nie otrzymuje dostępu do notatek ani wyników uczestników. Brak funkcji administracyjnych, rekrutacyjnych i certyfikacji.
+Widok zmienia prezentację, nie stanowi autoryzacji: oba widoki są publiczne. Prowadzący nie otrzymuje zdalnego dostępu do danych uczestników. Ocenę lekcji wpisuje na tym samym urządzeniu lub po świadomym przekazaniu kopii przez uczestnika. Brak funkcji administracyjnych, rekrutacyjnych i certyfikacji.
 
 ## Uruchomienie i zmiany
 
@@ -41,6 +58,10 @@ Otwórz http://localhost:8000. Generator odtwarza wszystkie strony, dane wyszuki
 |---|---|
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
 | src/curriculum.json, src/lessons.json | formalna mapa odniesień i autorskie lekcje 45/90 min |
+| src/assessments.json | 50 pytań, klucze, jednostki i tolerancje punktacji lekcji |
+| lesson_sessions.py | generowanie samodzielnych sesji i danych testów |
+| assets/lesson-core.js, assets/lesson.js | zegar, historia, ocena, karty i zapis sesji |
+| offline.py | generowanie manifestu oraz cache materiałów |
 | school.py | generowanie mapy, lekcji i pakietów HAN.01/HAN.02 |
 | src/resources.json | źródła zewnętrzne i metadane weryfikacji |
 | src/01…08*.md | pełne opracowania bazowe modułów |
@@ -65,7 +86,7 @@ Zależność npm służy wyłącznie testom. Strona nie potrzebuje Node ani bibl
 
 ## Dane i prywatność
 
-localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora i wybrany widok. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
+localStorage pod kluczem pracownia-project-v1 przechowuje notatki, odpowiedzi, postęp, dane kalkulatora, wybrany widok oraz sesje lekcyjne: pracę, testy, historię wersji i ręczną ocenę. Schemat wersji 1 rozszerzono o pole lessons; wcześniejsze kopie bez tego pola pozostają obsługiwane. Brak wysyłania danych i analityki. Kopia JSON zawiera te same dane. Przy wspólnym profilu przeglądarki mogą być widoczne innym osobom. Gdy zapis jest zablokowany, interfejs ostrzega i utrzymuje stan sesji do eksportu. Nie wpisuj danych klientów i informacji poufnych. Przy plikach otwieranych z dysku zachowanie storage zależy od przeglądarki; zalecany HTTP(S).
 
 ## Zakres materiałów i aktualność
 

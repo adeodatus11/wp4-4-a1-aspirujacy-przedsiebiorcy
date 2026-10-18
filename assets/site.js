@@ -4,18 +4,26 @@
   const $ = q => document.querySelector(q), $$ = q => [...document.querySelectorAll(q)];
   const data = window.COURSE_DATA || [];
   let state = C.blank(), storageOK = true;
+  const subscribers = new Set();
+  const notify = () => subscribers.forEach(fn => fn());
   function warning() { storageOK = false; $('#storage-warning').hidden = false; }
   function read() {
     try { const raw = localStorage.getItem(key); return raw ? C.normalize(JSON.parse(raw)) : C.blank(); }
     catch (_) { warning(); return state; }
   }
   state = read();
+  function backupState() {
+    const copy=C.normalize(JSON.parse(JSON.stringify(state)));
+    for(const book of Object.values(copy.lessons))if(book.active)window.LessonCore.pause(book.active,Date.now());
+    return copy;
+  }
   function update(change) {
     const next = storageOK ? read() : state;
     change(next); state = next;
     try { localStorage.setItem(key, JSON.stringify(state)); }
     catch (_) { warning(); }
     $$('.save-state').forEach(el => el.textContent = storageOK ? 'Zapisano na tym urządzeniu' : 'Tylko w tej sesji — eksportuj kopię');
+    notify();
   }
   function progress() {
     $$('[data-completed-count]').forEach(el => el.textContent = state.completed.length);
@@ -60,7 +68,7 @@
   populateNotes();
   $$('[data-note]').forEach(el => el.addEventListener('input', () => update(s => s.notes[el.dataset.note] = el.value)));
   window.addEventListener('storage', ev => {
-    if (ev.key === key) { state = read(); populateNotes(); progress(); role(state.role); renderCash(); }
+    if (ev.key === key) { state = read(); populateNotes(); progress(); role(state.role); renderCash(); notify(); }
   });
 
   // Wyniki wyszukiwania powstają wyłącznie z węzłów tekstowych, również dla importowanych notatek.
@@ -126,7 +134,7 @@
     filterLessons();
   }
 
-  $$('.quiz').forEach(form => {
+  $$('form[data-quiz]').forEach(form => {
     const n = Number(form.dataset.quiz), questions = data.find(m => m.n === n).quiz;
     function result(answers) {
       const grade = C.grade(questions, answers);
@@ -162,19 +170,30 @@
       if (state.quizzes[m.n]) lines.push(`Ostatni wynik quizu: ${C.grade(m.quiz,state.quizzes[m.n]).score}/3`, '');
     });
     if (Object.keys(state.cash).length) { lines.push('CASH FLOW — SALDA KOŃCOWE (PLN)'); C.calculate(state.cash).forEach((r,i) => lines.push(`Miesiąc ${i+1}: ${r.closing.toFixed(2)}`)); }
+    for (const [id, book] of Object.entries(state.lessons)) {
+      lines.push('', `LEKCJA ${id}`);
+      if (book.active) lines.push('Sesja w toku: '+book.active.definition.title);
+      book.history.forEach(a => {
+        const r=window.LessonCore.result(a);
+        lines.push(`${a.definition.title} — ${a.participant || 'bez identyfikatora'} — ${new Date(a.endedAt).toLocaleString('pl-PL')}`,`Test: ${r.autoScore}/10; praca praktyczna: ${r.reviewed?r.practicalScore+'/6':'oczekuje oceny'}; łącznie: ${r.reviewed?r.total+'/16':'jeszcze nieustalone'}`);
+        [...a.definition.worksheet,a.definition.exit].forEach((title,i)=>lines.push(title,a.work[i]||'—'));
+        if(a.review.comment)lines.push('Informacja zwrotna: '+a.review.comment);
+      });
+    }
     return lines.join('\n');
   }
   if ($('#export-project')) {
-    $('#export-project').addEventListener('click', () => download('moj-projekt.json', JSON.stringify(C.normalize(state),null,2), 'application/json'));
+    $('#export-project').addEventListener('click', () => download('moj-projekt.json', JSON.stringify(backupState(),null,2), 'application/json'));
     $('#export-text').addEventListener('click', () => download('moj-projekt.txt', projectText(), 'text/plain;charset=utf-8'));
     $('#import-project').addEventListener('change', async ev => {
       const input = ev.target, file = input.files[0]; if (!file) return;
       try {
-        if (file.size > 8000000) throw new Error('Plik jest zbyt duży (limit 8 MB).');
+        if (file.size > 16000000) throw new Error('Plik jest zbyt duży (limit 16 MB).');
         const imported = C.normalize(JSON.parse(await file.text()));
         if (!confirm('Wczytanie kopii zastąpi obecny projekt, postępy i wyniki. Kontynuować?')) return;
         update(s => { for (const k of Object.keys(s)) delete s[k]; Object.assign(s, imported); });
         populateNotes(); progress(); role(state.role);
+        notify();
         $('#project-message').textContent = 'Kopia została wczytana.';
       } catch (err) { $('#project-message').textContent = 'Nie wczytano kopii. ' + (err instanceof SyntaxError ? 'Plik nie jest poprawnym JSON.' : err.message); }
       finally { input.value = ''; }
@@ -183,6 +202,7 @@
       if (!confirm('Usunąć wszystkie lokalne notatki, postępy i wyniki tego programu?')) return;
       try { localStorage.removeItem(key); } catch (_) { warning(); }
       state = C.blank(); populateNotes(); progress(); role(state.role);
+      notify();
       $('#project-message').textContent = 'Lokalny projekt został usunięty.';
     });
     $('#print-project').addEventListener('click', () => {
@@ -230,4 +250,13 @@
       download('cash-flow.csv','\uFEFF'+csv,'text/csv;charset=utf-8');
     });
   }
+  // Wspólny stan dla sesji lekcyjnych; kopia chroni przed zmianą poza transakcją zapisu.
+  window.CourseStore = {
+    read: () => C.normalize(JSON.parse(JSON.stringify(state))),
+    backup: backupState,
+    update,
+    available: () => storageOK,
+    subscribe: fn => { subscribers.add(fn); return () => subscribers.delete(fn); },
+    download
+  };
 })();

@@ -5,16 +5,23 @@ const assert=require('node:assert/strict');
 const {parseHTML}=require('linkedom');
 const root=path.resolve(__dirname,'..');
 const memory=new Map();
+const NativeDate=Date;
+const nativeTimeout=setTimeout,NativeURL=URL;
 function open(file,options={}) {
   const {window}=parseHTML(fs.readFileSync(path.join(root,file),'utf8'));
   const document=window.document;
   // LinkeDOM nie implementuje pełnego interfejsu formularzy, okien ani storage.
   for(const el of document.querySelectorAll('select'))Object.defineProperty(el,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value || this.querySelector('option')?.value || '';},set(v){for(const option of this.querySelectorAll('option'))option.toggleAttribute('selected',option.value===v);}});
   const storage={getItem(k){if(options.blocked)throw Error('blocked');return memory.get(k)||null;},setItem(k,v){if(options.blocked)throw Error('blocked');memory.set(k,v);},removeItem(k){memory.delete(k);}};
-  Object.assign(window,{localStorage:storage,location:{hash:options.hash||''},confirm:()=>true,print:()=>{},setTimeout,clearTimeout,Blob,URL,Intl,console});
+  let now=options.now??2000000000000;
+  const callbacks=[],downloads=[];
+  class TestDate extends NativeDate {constructor(...args){super(...(args.length?args:[now]));}static now(){return now;}}
+  class TestURL extends NativeURL {}
+  TestURL.createObjectURL=blob=>{downloads.push(blob);return 'blob:test';};TestURL.revokeObjectURL=()=>{};
+  Object.assign(window,{localStorage:storage,location:{hash:options.hash||'',search:options.search||'',protocol:'https:'},confirm:()=>true,print:()=>{},setTimeout:(fn)=>nativeTimeout(fn,0),clearTimeout,setInterval:fn=>{callbacks.push(fn);return callbacks.length;},clearInterval:()=>{},Date:TestDate,Blob,URL:TestURL,URLSearchParams,Intl,console});
   const context=vm.createContext(window);
-  for(const script of ['core.js','course-data.js','search-index.js','site.js'])vm.runInContext(fs.readFileSync(path.join(root,'assets',script),'utf8'),context,{filename:script});
-  return {$:q=>document.querySelector(q),$$:q=>[...document.querySelectorAll(q)],window,document,context};
+  for(const script of ['lesson-core.js','core.js','course-data.js','lesson-data.js','search-index.js','site.js','lesson.js'])vm.runInContext(fs.readFileSync(path.join(root,'assets',script),'utf8'),context,{filename:script});
+  return {$:q=>document.querySelector(q),$$:q=>[...document.querySelectorAll(q)],window,document,context,downloads,advance(ms){now+=ms;callbacks.forEach(fn=>fn());}};
 }
 function event(view,el,type){el.dispatchEvent(new view.window.Event(type,{bubbles:true,cancelable:true}));}
 async function run(){
@@ -59,4 +66,5 @@ async function run(){
   const blocked=open('modul-1.html',{blocked:true});assert.equal(blocked.$('#storage-warning').hidden,false);blocked.$('[data-note="m1-0"]').value='Tylko sesja';event(blocked,blocked.$('[data-note="m1-0"]'),'input');assert.match(blocked.$('.save-state').textContent,/Tylko w tej sesji/);
   console.log('OK: kasowanie lokalne i tryb z niedostępnym storage.');
 }
-run().catch(e=>{console.error(e);process.exitCode=1;});
+if(require.main===module)run().catch(e=>{console.error(e);process.exitCode=1;});
+module.exports={open,event,memory};
