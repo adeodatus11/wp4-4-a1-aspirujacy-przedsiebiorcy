@@ -1,0 +1,360 @@
+import { choice, methods, note, number, text } from '../schema.js';
+
+const research = {
+  type: 'info',
+  tone: 'case',
+  title: 'Kwiaciarnia przy przystanku na Bydgoskim Przedmieściu w Toruniu',
+  paragraphs: [
+    'Właścicielka, pani Renata, myśli o nowej usłudze: stałe dostawy kwiatów do recepcji firm albo co tydzień do domu. W październiku porozmawiała z ludźmi, do których łatwo jej było dotrzeć.',
+  ],
+  table: {
+    head: ['Kogo pytała', 'Ile osób', 'Co usłyszała'],
+    rows: [
+      ['Recepcje biur w promieniu 1 km', '8', '5 kupuje kwiaty „gdy ktoś pamięta”; 3 chcą porozmawiać o stałej dostawie co tydzień'],
+      ['Klienci w kwiaciarni', '12', '9 kupuje tylko na okazje (urodziny, imieniny); 2 chcieliby bukiet co tydzień'],
+    ],
+  },
+  list: [
+    'Kwiaciarnia ma doświadczoną florystkę i lokal przy przystanku tramwajowym.',
+    'Nie ma samochodu. Pani Renata może dowozić rowerem do 2 km.',
+    'W promieniu 1 km są trzy inne kwiaciarnie; jedna sieciowa sprzedaje przez internet z dostawą.',
+    'W okolicy powstają nowe biurowce (wiadomość z lokalnego portalu).',
+  ],
+};
+
+export default {
+  id: '16',
+  order: 16,
+  part: 'B',
+  title: 'Segment rynku i SWOT na danych',
+  subtitle: 'Dwadzieścia rozmów, dwie grupy klientów i jedna kwiaciarnia. Komu najpierw zaproponować stałe dostawy kwiatów?',
+  duration: 90,
+  sessions: [45, 45],
+  han: ['HAN.02.4'],
+  tags: ['segmentacja', 'SWOT', 'badanie rynku', 'próba'],
+  realia: [],
+  audience: {
+    adults:
+      'Dorośli z pomysłem na firmę mogą od razu przenieść tę lekcję na siebie: kto jest ich klientem, czego dowiedzieli się z rozmów i co z tego nie wynika. Zwróć szczególną uwagę na etap 3 — wnioski z kilku rozmów ze znajomymi to częsty błąd przy starcie.',
+  },
+  format: {
+    name: 'Przypadek z danymi i decyzja',
+    student:
+      'Pomagasz właścicielce kwiaciarni w Toruniu zdecydować, czy i dla kogo uruchomić stałe dostawy kwiatów. Podzielisz klientów na segmenty, ocenisz dane, przygotujesz SWOT i wybierzesz segment do małego testu.',
+    teacher:
+      'Pierwsza lekcja: segmentacja i ostrożne wnioski z małej próby. Druga: SWOT i decyzja. Pilnuj, żeby uczniowie oddzielali fakty (co powiedzieli ludzie) od hipotez (co z tego może wynikać). Dane są celowo skromne — to sytuacja typowa dla małej firmy.',
+    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach. Po przerwie zamiana par.',
+    methods: [methods.przypadek, methods.ksztaltujace, methods.metapoznanie],
+  },
+  objectives: [
+    'Opisuję segment przez potrzebę, sytuację i sposób zakupu.',
+    'Wyciągam ostrożne wnioski z małej próby.',
+    'Przygotowuję SWOT, oddzielając wnętrze firmy od otoczenia.',
+    'Wybieram segment do testu i nazywam, czego jeszcze nie wiem.',
+  ],
+  materials: ['Urządzenie z przeglądarką', 'Kartka do narysowania SWOT (nie jest konieczna)'],
+  teacherGuide: {
+    preparation: 'Narysuj na tablicy pustą tabelę SWOT: wiersze „wewnętrzne / zewnętrzne”, kolumny „korzystne / niekorzystne”. Wypełnicie ją w etapie 5.',
+    summary:
+      'Segment to grupa klientów o podobnej potrzebie i podobnym sposobie kupowania, a nie „wszyscy” ani tylko grupa wiekowa. Z 20 rozmów z łatwo dostępnymi osobami nie wynika wielkość rynku — wynika sygnał do testu. SWOT oddziela to, na co firma ma wpływ (mocne i słabe strony), od otoczenia (szanse i zagrożenia). Decyzja łączy mocne strony z szansami i mówi, czego jeszcze nie wiemy.',
+  },
+  sections: [
+    {
+      id: 'start',
+      label: 'Start',
+      title: 'Kto jest klientem?',
+      grouping: 'solo',
+      intro: 'Pani Renata mówi: „Moim klientem jest każdy, kto lubi kwiaty”.',
+      ...note(
+        5,
+        'Każdy wybiera sam. Zapytaj, dlaczego „każdy” nie pomaga w planowaniu.',
+        'Co pani Renata zrobi inaczej dla recepcji biura, a co dla osoby kupującej bukiet na urodziny?',
+        'Inna częstotliwość, inny kontakt (faktura, umowa), inne godziny dostawy, inne bukiety.',
+        'Opisywanie segmentu tylko wiekiem albo płcią.',
+        'Zaproponuj trzeci segment dla kwiaciarni (np. organizatorzy wesel).',
+      ),
+      activities: [
+        choice(
+          'q-segment',
+          'Który opis jest użytecznym segmentem dla nowej usługi?',
+          [
+            'Recepcje małych biur, które chcą stale świeżych kwiatów',
+            'Wszyscy mieszkańcy Torunia, którzy lubią kwiaty i czasem je kupują',
+            'Kobiety w wieku 25–45 lat mieszkające w Toruniu i okolicach',
+            'Każda osoba, która zobaczy naszą reklamę w mediach społecznościowych',
+          ],
+          0,
+          'Opis wskazuje potrzebę (świeże kwiaty), sytuację (recepcja) i sposób zakupu (stale, bez pamiętania).',
+          [
+            null,
+            '„Wszyscy” nie mówi, komu i jak sprzedawać.',
+            'Wiek i płeć nie mówią, czego ta osoba potrzebuje ani jak kupuje.',
+            'To zasięg reklamy, a nie grupa klientów o wspólnej potrzebie.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'kryteria',
+      label: 'Kryteria',
+      title: 'Jak dzielić klientów',
+      grouping: 'pair',
+      intro: 'Klientów można dzielić według różnych kryteriów. Najbardziej przydatne są te, które mówią o zachowaniu.',
+      reading: {
+        title: 'Kryteria segmentacji',
+        paragraphs: [
+          'Geograficzne: gdzie klient jest (dzielnica, odległość). Demograficzne: wiek, wielkość firmy, dochód. Behawioralne: jak i kiedy kupuje (okazja, częstotliwość, kanał). Psychograficzne: styl życia, wartości.',
+          'Dla małej firmy najwięcej mówią kryteria behawioralne: z jakiej okazji klient kupuje i jak często. Geografia mówi, do kogo w ogóle można dotrzeć.',
+        ],
+      },
+      ...note(
+        12,
+        'Pary dopasowują. Zapytaj, które z kryteriów kwiaciarnia już zna z rozmów, a których nie.',
+        'Które kryterium jest najważniejsze dla stałych dostaw?',
+        'Częstotliwość zakupu (behawioralne) i odległość (geograficzne — dowóz rowerem do 2 km).',
+        'Uznawanie okazji zakupu za kryterium demograficzne.',
+        'Opisz segment „organizatorzy wesel” czterema kryteriami.',
+      ),
+      activities: [
+        {
+          type: 'matching',
+          id: 'q-kryteria',
+          question: 'Jakie to kryterium?',
+          options: ['Geograficzne', 'Demograficzne', 'Behawioralne', 'Psychograficzne'],
+          rows: [
+            { label: 'Biura w promieniu 1 km od kwiaciarni', correct: 0 },
+            { label: 'Firmy zatrudniające 10–50 osób', correct: 1 },
+            { label: 'Klienci kupujący kwiaty tylko na urodziny', correct: 2 },
+            { label: 'Osoby, dla których ważne są lokalne, sezonowe kwiaty', correct: 3 },
+            { label: 'Klienci zamawiający co tydzień', correct: 2 },
+          ],
+          explanation: 'Okazja i częstotliwość zakupu to zachowanie (behawioralne). Wielkość firmy to cecha demograficzna.',
+        },
+      ],
+    },
+    {
+      id: 'dane',
+      label: 'Dane',
+      title: 'Co mówią rozmowy',
+      grouping: 'pair',
+      intro: 'Przeczytaj dane z rozmów. Uważaj: rozmówców nie losowano, tylko zapytano tych, do których było łatwo dotrzeć.',
+      ...note(
+        15,
+        'Pary liczą i odpowiadają. Przy pytaniu o wnioski zatrzymaj się dłużej: dlaczego 3 z 8 nie znaczy 37,5% wszystkich biur w Toruniu?',
+        'Czego nie wolno wywnioskować z tych 20 rozmów?',
+        'Że 37,5% wszystkich biur kupi usługę ani że jest wystarczająco dużo klientów. Można tylko powiedzieć, że jest sygnał wart sprawdzenia.',
+        'Przenoszenie procentów z małej próby na cały rynek. Traktowanie „chcę porozmawiać” jak zamówienia.',
+        'Zaproponuj, jak zebrać więcej danych w tydzień bez dużych kosztów.',
+      ),
+      activities: [
+        research,
+        number('q-razem', 'Z iloma osobami łącznie rozmawiała pani Renata?', 20, '8 recepcji + 12 klientów kwiaciarni = 20 rozmów.', { unit: 'osób' }),
+        number('q-procent', 'Jaki procent zapytanych recepcji chce rozmawiać o stałej dostawie?', 37.5, '3 ÷ 8 × 100% = 37,5%. To procent w tej małej grupie, a nie wśród wszystkich biur.', {
+          unit: '%',
+          mistakes: [{ value: 15, text: 'Podzielono przez wszystkie 20 rozmów. Pytanie dotyczy 8 recepcji.' }],
+        }),
+        choice(
+          'q-wniosek',
+          'Co wolno wywnioskować z tych danych?',
+          [
+            'Jest sygnał zainteresowania wart małego testu',
+            'Stałe dostawy kupi 37,5% biur w Toruniu',
+            'Trzy biura na pewno podpiszą umowę na dostawy',
+            'Klienci prywatni nie są zainteresowani żadną usługą',
+          ],
+          0,
+          'Mała próba wygodnie dobranych osób daje sygnał, a nie pewność. Następny krok to test.',
+          [
+            null,
+            'Próbę dobrano wygodnie, a nie losowo. Procent z 8 rozmów nie opisuje całego miasta.',
+            '„Chcę porozmawiać” to nie zamówienie.',
+            'Dwie osoby wyraziły zainteresowanie. To mało, ale nie zero.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'wybor',
+      label: 'Wybór',
+      title: 'Który segment najpierw?',
+      grouping: 'pair',
+      intro: 'Pani Renata ma czas i pieniądze na test tylko w jednym segmencie.',
+      breakAfter: true,
+      ...note(
+        13,
+        'Pary wybierają i zapisują opis segmentu. Po przerwie wrócicie do niego przy SWOT. Praca jest zapisana na urządzeniu.',
+        'Dlaczego recepcje biur, skoro klientów prywatnych było więcej?',
+        'Bo liczy się nie liczba rozmów, ale zainteresowanie usługą (3 z 8 wobec 2 z 12), regularność zamówień i możliwość dowozu rowerem w promieniu 1 km.',
+        'Wybieranie segmentu, bo „jest większy”, bez spojrzenia na zainteresowanie i możliwość obsługi.',
+        'Wypisz dwie rzeczy, których pani Renata nie wie o recepcjach biur.',
+      ),
+      activities: [
+        choice(
+          'q-wybor',
+          'Który segment wybrać do pierwszego testu?',
+          [
+            'Recepcje biur w promieniu 1 km',
+            'Klienci prywatni kupujący bukiet co tydzień',
+            'Wszyscy jednocześnie, żeby nie stracić żadnej okazji',
+            'Klienci kupujący na okazje, bo jest ich najwięcej',
+          ],
+          0,
+          'Wyższe zainteresowanie w próbie (3 z 8), regularne zamówienia i odległość, którą obsłuży rower.',
+          [
+            null,
+            'Tylko 2 z 12 osób było zainteresowanych. Sygnał słabszy.',
+            'Przy małych zasobach test na wszystkich daje rozmyte wyniki.',
+            'Tych osób jest dużo, ale nie chcą stałej usługi — kupują od okazji.',
+          ],
+        ),
+        text(
+          'q-opis',
+          'Opisz wybrany segment: potrzeba, sytuacja, sposób zakupu.',
+          'Recepcje biur w promieniu 1 km od kwiaciarni. Potrzeba: stale świeże kwiaty na recepcji bez pamiętania o zakupie. Sytuacja: kwiaty kupuje teraz „ktoś, kto pamięta”. Sposób zakupu: stała dostawa raz w tygodniu, faktura raz w miesiącu.',
+          { minLength: 40, criteria: ['Jest potrzeba.', 'Jest sytuacja klienta.', 'Jest sposób zakupu.'] },
+        ),
+      ],
+    },
+    {
+      id: 'swot',
+      label: 'SWOT',
+      title: 'Mocne i słabe strony, szanse i zagrożenia',
+      grouping: 'pair',
+      intro: 'Po przerwie — nowe pary. SWOT porządkuje to, co wiemy, w cztery pola.',
+      reading: {
+        title: 'Jak wypełnić SWOT',
+        paragraphs: [
+          'Mocne i słabe strony to rzeczy wewnątrz firmy, na które ma ona wpływ: ludzie, umiejętności, sprzęt, lokal. Szanse i zagrożenia to otoczenie: konkurencja, klienci, zmiany w okolicy, przepisy.',
+          'Przy każdym elemencie zaznacz, czy to fakt z danych, czy przypuszczenie do sprawdzenia.',
+        ],
+      },
+      ...note(
+        15,
+        'Pary dopasowują. Wypełnijcie wspólnie tabelę na tablicy. Przy „nowych biurowcach” zapytaj: fakt czy przypuszczenie?',
+        'Dlaczego brak samochodu to słaba strona, a nie zagrożenie?',
+        'Bo dotyczy samej firmy — pani Renata może to zmienić (kupić, wynająć, dowozić rowerem).',
+        'Wpisywanie konkurencji do słabych stron albo braku samochodu do zagrożeń.',
+        'Dopisz po jednym elemencie do każdego pola i zaznacz, czy to fakt.',
+      ),
+      activities: [
+        research,
+        {
+          type: 'matching',
+          id: 'q-swot',
+          question: 'Gdzie w SWOT?',
+          options: ['Mocna strona', 'Słaba strona', 'Szansa', 'Zagrożenie'],
+          rows: [
+            { label: 'Doświadczona florystka', correct: 0 },
+            { label: 'Brak samochodu dostawczego', correct: 1 },
+            { label: 'Nowe biurowce w okolicy', correct: 2 },
+            { label: 'Sieciowa kwiaciarnia z dostawą przez internet', correct: 3 },
+            { label: 'Lokal przy przystanku tramwajowym', correct: 0 },
+            { label: '5 z 8 recepcji kupuje kwiaty nieregularnie', correct: 2, explanation: 'To potrzeba, której nikt nie zaspokaja — szansa dla stałej usługi.' },
+          ],
+          explanation: 'Wnętrze firmy: mocne i słabe strony. Otoczenie: szanse i zagrożenia.',
+        },
+      ],
+    },
+    {
+      id: 'decyzja',
+      label: 'Decyzja',
+      title: 'Co z tego wynika',
+      grouping: 'pair',
+      intro: 'SWOT nie jest celem. Ma pomóc w decyzji: co zrobić w pierwszym miesiącu.',
+      ...note(
+        15,
+        'Pary wybierają działanie i sprawdzają wnioski kolegi. Zapytaj, który wniosek byłby najbardziej kosztowny, gdyby był błędny.',
+        'Jak sprawdzić, czy recepcje naprawdę zapłacą?',
+        'Zaproponować 3 biurom miesiąc próbny w konkretnej cenie i policzyć, ile przedłuży.',
+        'Kupowanie samochodu przed sprawdzeniem popytu.',
+        'Ustal kryterium sukcesu testu (np. 2 z 3 biur przedłużają po miesiącu).',
+      ),
+      activities: [
+        choice(
+          'q-strategia',
+          'Które działanie najlepiej łączy mocne strony z szansą?',
+          [
+            'Miesiąc próbny dla 3 biur, dostawa rowerem',
+            'Zakup samochodu i reklama w całym Toruniu',
+            'Obniżka cen bukietów, żeby wygrać z siecią',
+            'Rezygnacja, bo w okolicy są już trzy kwiaciarnie',
+          ],
+          0,
+          'Wykorzystuje florystkę i bliskość biur, nie wymaga dużych wydatków i daje odpowiedź, czy biura zapłacą.',
+          [
+            null,
+            'Duży wydatek przed sprawdzeniem popytu i dowóz poza zasięgiem testu.',
+            'Wojna cenowa z siecią jest trudna do wygrania dla małej firmy i nie dotyczy nowej usługi.',
+            'Konkurencja nie oferuje stałych dostaw do biur — tu jest szansa.',
+          ],
+        ),
+        {
+          type: 'spotErrors',
+          id: 'q-wnioski',
+          title: 'Wnioski kolegi do prezentacji',
+          context: 'Zaznacz wnioski, które nie wynikają z danych.',
+          lines: [
+            { text: 'Recepcje biur wykazały większe zainteresowanie niż klienci prywatni (3 z 8 wobec 2 z 12).' },
+            { text: 'Rynek stałych dostaw kwiatów w Toruniu to 37,5% wszystkich firm.', error: 'Procent z 8 wygodnie dobranych rozmów nie opisuje całego miasta.' },
+            { text: 'Trzy biura już są naszymi klientami.', error: 'Chęć rozmowy to nie zamówienie.' },
+            { text: 'Dostawa rowerem ogranicza zasięg do około 2 km.' },
+            { text: 'Klienci prywatni nie chcą kwiatów.', error: 'Kupują — tylko na okazje, a nie w abonamencie.' },
+            { text: 'Następny krok: miesiąc próbny dla 3 biur i sprawdzenie, ile przedłuży.' },
+          ],
+          explanation: 'Trzy wnioski idą dalej niż dane. Dobra prezentacja mówi, co wiemy, czego nie wiemy i jak to sprawdzić.',
+        },
+      ],
+    },
+    {
+      id: 'sprawdzenie',
+      label: 'Sprawdzenie',
+      title: 'Twoja decyzja',
+      grouping: 'solo',
+      intro: 'Nowe dane i Twoja rekomendacja.',
+      ...note(
+        15,
+        'Samodzielnie. Poproś 2–3 osoby o odczytanie rekomendacji w 30 sekund. Grupa ocenia: decyzja, uzasadnienie, ograniczenie.',
+        'Czego brakuje w rekomendacji, która brzmi pewnie i bez ograniczeń?',
+        'Informacji, czego nie wiemy i jak to sprawdzimy. Bez tego decyzja wygląda na pewniejszą, niż jest.',
+        'Rekomendacje bez liczb albo bez następnego kroku.',
+        'Napisz, co zmieniłoby Twoją decyzję (np. 0 z 3 biur przedłuża po miesiącu).',
+      ),
+      activities: [
+        choice(
+          'q-nowe',
+          'Po miesiącu próbnym 2 z 3 biur chcą kontynuować, a trzecie zrezygnowało z powodu ceny. Co dalej?',
+          [
+            'Kontynuować w 2 biurach i zapytać trzecie o akceptowalną cenę',
+            'Uznać usługę za porażkę, bo jedno biuro zrezygnowało',
+            'Od razu kupić samochód i rozszerzyć usługę na całe miasto',
+            'Obniżyć cenę wszystkim trzem biurom, żeby nikt nie odszedł',
+          ],
+          0,
+          'Wynik testu jest zachęcający. Rezygnacja z powodu ceny to informacja do sprawdzenia, a nie powód do zmiany cen dla wszystkich.',
+          [
+            null,
+            '2 z 3 to dobry wynik pierwszego testu.',
+            'Z trzech biur do całego miasta to zbyt duży skok.',
+            'Obniżka dla zadowolonych klientów zmniejsza przychód bez potrzeby.',
+          ],
+        ),
+        text(
+          'q-rekomendacja',
+          'Napisz rekomendację dla pani Renaty: decyzja, uzasadnienie z danych i jedno ograniczenie.',
+          'Rekomenduję miesiąc próbny stałych dostaw dla 3 recepcji biur w promieniu 1 km, dowóz rowerem. Uzasadnienie: 3 z 8 recepcji chce rozmawiać o takiej usłudze, a konkurencja jej nie oferuje. Ograniczenie: rozmowy były z wygodnie dobranymi osobami, więc nie znamy wielkości rynku — sprawdzi to dopiero test.',
+          { minLength: 60, criteria: ['Jest decyzja.', 'Uzasadnienie odwołuje się do danych.', 'Jest ograniczenie danych.'] },
+        ),
+        {
+          type: 'resultCard',
+          id: 'karta',
+          badges: [
+            { min: 0, name: 'Do powtórki', text: 'Wróć do danych z rozmów i do SWOT.' },
+            { min: 0.6, name: 'Czytasz dane', text: 'Powtórz, czego nie wolno wnioskować z małej próby.' },
+            { min: 0.85, name: 'Decyzja na danych', text: 'Wybierasz segment, robisz SWOT i nazywasz ograniczenia.' },
+          ],
+        },
+      ],
+    },
+  ],
+  exitTicket: 'Segment = potrzeba + sytuacja + sposób zakupu. Mała, wygodnie dobrana próba daje sygnał, nie wielkość rynku. SWOT: wnętrze firmy (S, W) i otoczenie (O, T). Decyzja: mocne strony + szansa + test.',
+};
