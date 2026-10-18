@@ -21,7 +21,6 @@ export default {
       'Pracujesz w księgarni w Toruniu. Wystawisz fakturę dla szkoły z dwiema stawkami VAT, znajdziesz błędy w cudzej fakturze i dowiesz się, jak działa KSeF.',
     teacher:
       'Lekcja jest przydatna także dla technika księgarstwa. Uczniowie liczą wartości netto, VAT i brutto osobno dla każdej stawki. Druga część to KSeF: od 2026 r. faktury między firmami wystawia się w państwowym systemie, a faktura dostaje numer KSeF.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przyklady, methods.jawne],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Znajduję błędy w fakturze.',
     'Wiem, czym jest KSeF i od kiedy obowiązuje.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Wydruk lub zdjęcie prawdziwej faktury (dane zakryte) — nie jest konieczny'],
+  materials: ['Kalkulator', 'Wydruk lub zdjęcie prawdziwej faktury (dane zakryte) — nie jest konieczny'],
   teacherGuide: {
     preparation: 'Jeśli możesz, pokaż wizualizację faktury z KSeF (wzór ze strony Ministerstwa Finansów). Uczniowie zobaczą numer KSeF i kod QR.',
     summary:

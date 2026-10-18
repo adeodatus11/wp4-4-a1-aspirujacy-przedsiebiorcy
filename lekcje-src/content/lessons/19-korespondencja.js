@@ -21,7 +21,6 @@ export default {
       'Pracujesz w hurtowni papierniczej w Toruniu. Dostawa zeszytów do szkoły spóźni się o dwa dni. Ułożysz części maila, poprawisz szkic kolegi, wybierzesz adresatów i napiszesz własną wiadomość.',
     teacher:
       'Lekcja ćwiczy pisanie krótkich, rzeczowych wiadomości handlowych: temat mówiący o sprawie, jasny układ, ton bez wymówek, podpis z kontaktem. Ważny wątek RODO: wysyłając tę samą wiadomość do wielu klientów, używa się pola UDW.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.jawne, methods.feedback],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Poprawiam ton: bez wymówek, krzyku i potocznych zwrotów.',
     'Wybieram pola Do, DW i UDW zgodnie z ochroną danych.',
   ],
-  materials: ['Urządzenie z przeglądarką'],
+  materials: [],
   teacherGuide: {
     preparation: 'Możesz pokazać na projektorze puste okno nowej wiadomości w programie pocztowym z polami Do, DW, UDW, Temat, Załącznik.',
     summary:

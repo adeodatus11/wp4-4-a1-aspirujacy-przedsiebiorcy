@@ -21,7 +21,7 @@ export default {
       'Pracujesz w sklepie RTV-AGD w Gliwicach. Rozpoznasz podstawę reklamacji, przyjmiesz zgłoszenie, przeprowadzisz rozmowę z klientem, a potem jako sklep zareklamujesz towar w hurtowni.',
     teacher:
       'Pierwsza lekcja: reklamacja konsumencka — niezgodność z umową, gwarancja, terminy, dowód zakupu, rozmowa. Druga: reklamacja między firmami (rękojmia z kodeksu cywilnego) i odpowiedź na reklamację niezasadną. Pilnuj, żeby uczniowie nie mieszali odstąpienia (towar dobry) z reklamacją (towar wadliwy).',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach; po przerwie zamiana par.',
+    grouping: 'Po przerwie zamiana par.',
     methods: [methods.przypadek, methods.jawne, methods.dialogowe],
   },
   objectives: [
@@ -30,7 +30,7 @@ export default {
     'Wiem, czego konsument może żądać i w jakiej kolejności.',
     'Reklamuję wadliwy towar u dostawcy jako firma.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalendarz'],
+  materials: ['Kalendarz'],
   teacherGuide: {
     preparation: 'Możesz pokazać stronę UOKiK o reklamacjach (prawakonsumenta.uokik.gov.pl). Przygotuj kalendarz na listopad 2026 do liczenia terminów.',
     summary:

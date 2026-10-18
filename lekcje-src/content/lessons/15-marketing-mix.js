@@ -21,7 +21,6 @@ export default {
       'Sklep z artykułami domowymi w Lublinie chce sprzedawać zestaw „lunch do pracy”. Przyporządkujesz decyzje do 4P, ustalisz cenę zestawu i sprawdzisz, czy komunikat nie obiecuje za dużo.',
     teacher:
       'Lekcja ćwiczy spójność: każda decyzja 4P ma odpowiadać temu samemu segmentowi. Uważaj na komunikaty ekologiczne — „wielokrotnego użytku” to fakt, „w 100% ekologiczny” to przesada bez dowodów.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przypadek, methods.jawne],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Sprawdzam, czy wszystkie decyzje pasują do jednego segmentu.',
     'Piszę komunikat oparty na faktach o produkcie.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Przygotuj na tablicy cztery kolumny: Produkt, Cena, Miejsce, Promocja. W etapie 2 uczniowie dopisują do nich decyzje.',
     summary:

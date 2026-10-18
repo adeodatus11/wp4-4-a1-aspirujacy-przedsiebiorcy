@@ -21,7 +21,6 @@ export default {
       'Pracujesz w sklepie osiedlowym w Rzeszowie. Ustalisz, kiedy zamawiać wodę, policzysz, jak szybko sprzedają się nabiał i kawa, i zdecydujesz, co zrobić z zapasami.',
     teacher:
       'Dwa narzędzia: punkt ponownego zamówienia (kiedy zamawiać) i wskaźnik rotacji w dniach (jak długo towar leży). Oba da się policzyć bez programu. Najważniejszy wniosek: zapas to pieniądze, które czekają na sprzedaż.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przyklady, methods.przypadek],
   },
   objectives: [
@@ -29,7 +28,7 @@ export default {
     'Liczę przeciętny zapas i rotację w dniach.',
     'Oceniam, który towar zamraża gotówkę, i proponuję działanie.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Zapisz na tablicy dwa wzory: punkt zamówienia = sprzedaż dzienna × czas dostawy + zapas bezpieczeństwa; rotacja w dniach = przeciętny zapas ÷ sprzedaż w okresie × liczba dni.',
     summary:

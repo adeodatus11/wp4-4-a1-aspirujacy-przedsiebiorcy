@@ -21,7 +21,6 @@ export default {
       'Pracujesz w markecie w Kielcach. Zdecydujesz, komu sprzedać alkohol i napój energetyczny, co zrobić, gdy przełożony prosi o coś nieuczciwego, i jak dbać o siebie w stresującej pracy.',
     teacher:
       'Lekcja łączy przepisy (wiek, nietrzeźwość) z etyką (fałszowanie dat) i dbaniem o siebie (stres, mobbing). Nie oceniaj osobistych historii uczniów; pracuj na przypadkach z platformy. Wskaż, gdzie szukać pomocy: przełożony, dział kadr, Państwowa Inspekcja Pracy.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.dialogowe, methods.przypadek],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Rozpoznaję polecenie nieuczciwe lub niezgodne z prawem i wiem, gdzie je zgłosić.',
     'Znam sposoby radzenia sobie ze stresem w pracy z klientami.',
   ],
-  materials: ['Urządzenie z przeglądarką'],
+  materials: [],
   teacherGuide: {
     preparation: 'Sprawdź, jakie zasady sprzedaży alkoholu obowiązują w zakładzie praktyk uczniów (np. „pytamy o dowód każdego, kto wygląda na mniej niż 25 lat”).',
     summary:
@@ -38,18 +37,25 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Ile on ma lat?',
-      grouping: 'solo',
-      intro: 'Do kasy podchodzi chłopak z czteropakiem piwa. Wygląda na 17–19 lat.',
+      id: 'przepisy',
+      label: 'Wieczór',
+      title: 'Komu nie sprzedajemy',
+      grouping: 'pair',
+      intro: 'Do kasy podchodzi chłopak z czteropakiem piwa. Wygląda na 17–19 lat. To pierwsza z kilku sytuacji z jednego wieczoru przy kasie.',
+      reading: {
+        title: 'Zakazy sprzedaży',
+        paragraphs: [
+          'Alkoholu nie sprzedaje się osobom poniżej 18 lat i osobom nietrzeźwym. Wyrobów tytoniowych i papierosów elektronicznych — osobom poniżej 18 lat. Od 1 stycznia 2024 r. także napojów energetycznych (z kofeiną lub tauryną) osobom poniżej 18 lat.',
+          'Sprzedawca może żądać dokumentu ze zdjęciem i datą urodzenia. Jeśli widzi, że dorosły kupuje alkohol dla nieletniego, też powinien odmówić.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy decyduje sam. Zapytaj, czy ktoś był proszony w sklepie o dowód i jak się wtedy czuł.',
-        'Dlaczego lepiej zapytać o dowód dziesięć razy niepotrzebnie niż raz za mało?',
-        'Bo sprzedaż alkoholu niepełnoletniemu to przestępstwo lub wykroczenie, a sklep może stracić koncesję. Pytanie o dowód nikomu nie szkodzi.',
-        'Ocenianie wieku „na oko” albo wstyd przed zapytaniem.',
-        'Ułóż zdanie, którym grzecznie poprosisz o dowód.',
+        17,
+        'Najpierw każdy sam decyduje o chłopaku z piwem, potem pary czytają o zakazach i dopasowują sytuacje. Pary dopasowują. Przy napoju energetycznym zapytaj, kto wiedział o tym zakazie — wiele osób nie wie.',
+        'Co jest trudniejsze: odmówić nastolatkowi czy dorosłemu, który kupuje dla nastolatka?',
+        'Zwykle dorosłemu, bo „przecież jest pełnoletni”. Ale sprzedawca nie powinien sprzedawać, gdy widzi, dla kogo jest alkohol.',
+        'Przekonanie, że zakaz dotyczy tylko mocnego alkoholu. Nieznajomość zakazu dla napojów energetycznych.',
+        'Napiszcie krótką instrukcję dla nowego pracownika: kiedy prosić o dowód.',
       ),
       activities: [
         choice(
@@ -70,30 +76,6 @@ export default {
             'Masz prawo odmówić, ale warto powiedzieć dlaczego i zaproponować pokazanie dowodu.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'przepisy',
-      label: 'Przepisy',
-      title: 'Komu nie sprzedajemy',
-      grouping: 'pair',
-      intro: 'Kilka sytuacji z jednego wieczoru przy kasie.',
-      reading: {
-        title: 'Zakazy sprzedaży',
-        paragraphs: [
-          'Alkoholu nie sprzedaje się osobom poniżej 18 lat i osobom nietrzeźwym. Wyrobów tytoniowych i papierosów elektronicznych — osobom poniżej 18 lat. Od 1 stycznia 2024 r. także napojów energetycznych (z kofeiną lub tauryną) osobom poniżej 18 lat.',
-          'Sprzedawca może żądać dokumentu ze zdjęciem i datą urodzenia. Jeśli widzi, że dorosły kupuje alkohol dla nieletniego, też powinien odmówić.',
-        ],
-      },
-      ...note(
-        12,
-        'Pary dopasowują. Przy napoju energetycznym zapytaj, kto wiedział o tym zakazie — wiele osób nie wie.',
-        'Co jest trudniejsze: odmówić nastolatkowi czy dorosłemu, który kupuje dla nastolatka?',
-        'Zwykle dorosłemu, bo „przecież jest pełnoletni”. Ale sprzedawca nie powinien sprzedawać, gdy widzi, dla kogo jest alkohol.',
-        'Przekonanie, że zakaz dotyczy tylko mocnego alkoholu. Nieznajomość zakazu dla napojów energetycznych.',
-        'Napiszcie krótką instrukcję dla nowego pracownika: kiedy prosić o dowód.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-sytuacje',
@@ -162,7 +144,7 @@ export default {
         },
         choice(
           'q-daty',
-          'Kierownik prosi, żebyś przykleił(a) nowe etykiety z późniejszą datą na wędliny, którym jutro mija termin. Co robisz?',
+          'Kierownik prosi o przyklejenie nowych etykiet z późniejszą datą na wędliny, którym jutro mija termin. Co robisz?',
           [
             'Odmawiam i zgłaszam to wyżej lub do inspekcji',
             'Robię to, bo to polecenie przełożonego',
@@ -184,7 +166,7 @@ export default {
       id: 'stres',
       label: 'Stres',
       title: 'Dziesiąta godzina przed świętami',
-      grouping: 'pair',
+      grouping: 'class',
       intro: '23 grudnia. Długie kolejki, zdenerwowani klienci, brak przerwy od czterech godzin.',
       reading: {
         title: 'Stres i granice',
@@ -240,10 +222,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Energetyk',
       title: 'Twoje zdanie',
       grouping: 'solo',
-      intro: 'Ostatnia decyzja i jedno zdanie, które przyda się przy kasie.',
+      intro: 'Jedno zdanie, które przyda się przy kasie, i ostatnia decyzja z tego wieczoru.',
       ...note(
         6,
         'Samodzielnie. Na koniec wskaż, gdzie w szkole lub w zakładzie praktyk można zgłosić problem.',
@@ -253,13 +235,18 @@ export default {
         'Zapisz numer i adres najbliższego oddziału PIP.',
       ),
       activities: [
+        text(
+          'q-zdanie',
+          'Napisz zdanie, którym odmówisz sprzedaży alkoholu osobie bez dokumentu.',
+          'Przepraszam, bez dokumentu potwierdzającego wiek nie mogę sprzedać alkoholu — takie są przepisy. Czy mogę skasować resztę zakupów?',
+          { criteria: ['Jest odmowa i powód (przepisy).', 'Ton jest uprzejmy.', 'Jest propozycja dalszej obsługi.'] },
+        ),
         choice(
           'q-energetyk',
           'Matka z 13-letnim synem kupuje dwa napoje energetyczne. Syn mówi: „Jeden dla mnie”. Co robisz?',
           [
             'Sprzedaję jeden napój matce, drugiego nie',
             'Sprzedaję oba, bo płaci dorosła osoba',
-            'Sprzedaję oba, bo zakaz dotyczy tylko alkoholu',
             'Proszę matkę o dowód i sprzedaję oba po jego sprawdzeniu',
           ],
           0,
@@ -267,15 +254,8 @@ export default {
           [
             null,
             'Liczy się, dla kogo jest napój. Sam klient mówi, że jeden napój jest dla dziecka.',
-            'Od 2024 r. zakaz obejmuje też napoje energetyczne.',
             'Dowód matki nie zmienia faktu, że napój jest dla syna.',
           ],
-        ),
-        text(
-          'q-zdanie',
-          'Napisz zdanie, którym odmówisz sprzedaży alkoholu osobie bez dokumentu.',
-          'Przepraszam, bez dokumentu potwierdzającego wiek nie mogę sprzedać alkoholu — takie są przepisy. Czy mogę skasować resztę zakupów?',
-          { criteria: ['Jest odmowa i powód (przepisy).', 'Ton jest uprzejmy.', 'Jest propozycja dalszej obsługi.'] },
         ),
         {
           type: 'resultCard',

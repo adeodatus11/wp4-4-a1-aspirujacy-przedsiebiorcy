@@ -33,7 +33,7 @@ export default {
       'Wasz zespół przygotowuje stoisko sklepu sportowego na festyn. Ułożysz kolejność zadań, podzielisz je między osoby, policzysz czas i budżet, a na koniec sprawdzisz plan innego zespołu.',
     teacher:
       'Uczniowie planują realistyczne zadanie z ograniczonym czasem i pieniędzmi. Pilnuj trzech rzeczy: zależności między zadaniami (najpierw dane, potem ceny), kontroli krzyżowej (nie sprawdzam sam siebie) i rezerwy. Na końcu każdy ustala własny cel rozwojowy.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w trójkach. Przy dwóch osobach jedna przejmuje dwie role, przy czterech — jedna osoba robi tylko kontrolę.',
+    grouping: 'Przy dwóch osobach jedna przejmuje dwie role, przy czterech — jedna osoba robi tylko kontrolę.',
     methods: [methods.przypadek, methods.feedback, methods.metapoznanie],
   },
   objectives: [
@@ -42,7 +42,7 @@ export default {
     'Dzielę pracę według mocnych stron i planuję kontrolę krzyżową.',
     'Mieszczę plan w czasie i budżecie, z rezerwą.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kartka do rozpisania planu'],
+  materials: ['Kartka do rozpisania planu'],
   teacherGuide: {
     preparation: 'Podziel klasę na trójki. Jeśli liczba się nie zgadza, ustal role zastępcze (opis w organizacji pracy).',
     summary:

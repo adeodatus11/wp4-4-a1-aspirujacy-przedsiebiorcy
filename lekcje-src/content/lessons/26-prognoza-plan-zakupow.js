@@ -36,7 +36,7 @@ export default {
       'Planujesz zakupy sklepu papierniczego w Kaliszu na wrzesień. Wybierzesz metodę prognozy dla każdego towaru, policzysz prognozy, przygotujesz plan zakupów i zmieścisz go w budżecie.',
     teacher:
       'Prognozowanie zapotrzebowania pojawia się w zadaniach egzaminacyjnych HAN.02. Uczniowie poznają trzy proste metody i uczą się wybierać je do rodzaju towaru. Druga lekcja: plan zakupów (prognoza + zapas końcowy − zapas początkowy) i ograniczenie budżetu.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach; po przerwie zamiana par.',
+    grouping: 'Po przerwie zamiana par.',
     methods: [methods.przyklady, methods.przypadek, methods.metapoznanie],
   },
   objectives: [
@@ -45,7 +45,7 @@ export default {
     'Liczę ilość do zakupu z uwzględnieniem zapasów.',
     'Dopasowuję plan zakupów do dostępnego budżetu.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Narysuj na tablicy wykres słupkowy sprzedaży zeszytów z tabeli (lipiec–październik) — skok we wrześniu będzie widoczny od razu.',
     summary:

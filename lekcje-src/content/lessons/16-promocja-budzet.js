@@ -50,7 +50,7 @@ export default {
       'Pomagasz serwisowi rowerowemu w Poznaniu ocenić wiosenną kampanię i zaplanować następną. Policzysz odchylenia od planu, koszt pozyskania klienta i wynik kampanii, a potem przygotujesz tygodniowy plan za 200 zł.',
     teacher:
       'Pierwsza lekcja to liczby: odchylenia, koszt pozyskania i wynik. Najważniejsze odkrycie: kampania przyniosła 1200 zł przychodu, ale serwis wyszedł na zero. Druga lekcja to plan: jeden kanał, jeden miernik, budżet i harmonogram.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach; po przerwie zamiana par.',
+    grouping: 'Po przerwie zamiana par.',
     methods: [methods.przypadek, methods.przyklady, methods.metapoznanie],
   },
   objectives: [
@@ -59,7 +59,7 @@ export default {
     'Odróżniam przychód z kampanii od jej wyniku.',
     'Planuję test promocji: kanał, budżet, harmonogram i miernik.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Zapisz na tablicy dwa wzory: odchylenie % = (wykonanie − plan) ÷ plan × 100%; koszt pozyskania = wydatki ÷ liczba klientów.',
     summary:

@@ -38,7 +38,7 @@ export default {
       'Przyjmujesz dostawę do drogerii. Sprawdzisz dokumenty, wypełnisz protokół rozbieżności, policzysz wartość braków i zadzwonisz do hurtowni, żeby ustalić, co dalej.',
     teacher:
       'Pierwsza część dotyczy dokumentów i kontroli przy kierowcy, druga — rozliczenia rozbieżności z dostawcą. Uczniowie pracują na jednym spójnym przypadku przez obie lekcje. Protokół na platformie jest uproszczonym wzorem, ale ma pola, które występują w protokołach używanych w sklepach.',
-    grouping: 'Etapy 1, 2 i 7 samodzielnie. Etapy 3–6 w parach: „przyjmujący” i „kontrolujący”; w drugiej części zamiana ról.',
+    grouping: 'W parach role „przyjmujący” i „kontrolujący”; w drugiej części zamiana ról.',
     methods: [methods.przypadek, methods.jawne, methods.feedback],
   },
   objectives: [
@@ -47,7 +47,7 @@ export default {
     'Wypełniam protokół rozbieżności i liczę wartość braków.',
     'Ustalam z dostawcą korektę, wymianę albo zwrot towaru.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Jeśli to możliwe: prawdziwy wydruk WZ albo protokołu ze sklepu, z zakrytymi danymi'],
+  materials: ['Kalkulator', 'Jeśli to możliwe: prawdziwy wydruk WZ albo protokołu ze sklepu, z zakrytymi danymi'],
   teacherGuide: {
     preparation:
       'Przed lekcją zapisz na tablicy łańcuch: zamówienie → WZ → przyjęcie → PZ → faktura (ew. korekta). W etapie 2 wracasz do niego. Zaplanuj zamianę ról w parach po przerwie.',

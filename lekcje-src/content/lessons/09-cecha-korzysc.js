@@ -40,7 +40,7 @@ export default {
       'Doradzasz w sklepie RTV-AGD. Zamienisz cechy pralek na korzyści dla konkretnej klientki, policzysz oszczędność na prądzie i sprawdzisz, co w prezentacji kolegi jest przesadą.',
     teacher:
       'Lekcja uczy przekładu danych technicznych na korzyści i uczciwości w argumentach. Ważny moment: oszczędność na prądzie jest prawdziwa, ale „zwrot w rok” nie — zwrot różnicy w cenie trwa ponad 11 lat. To dobra okazja, żeby porozmawiać o przesadzie w sprzedaży.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach: jedna osoba gra klientkę, druga doradza.',
+    grouping: 'W parach jedna osoba gra klientkę, druga doradza.',
     methods: [methods.przypadek, methods.przyklady, methods.feedback],
   },
   objectives: [
@@ -49,7 +49,7 @@ export default {
     'Liczę oszczędność energii i uczciwie mówię o czasie zwrotu.',
     'Rozpoznaję przesadzone i nieprawdziwe argumenty.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Jeśli możesz, pokaż zdjęcie prawdziwej etykiety energetycznej pralki — uczniowie odszukają na niej zużycie na 100 cykli.',
     summary:
@@ -58,12 +58,12 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Pani Ewa',
       title: 'Cecha czy korzyść?',
       grouping: 'solo',
       intro: 'Pani Ewa ma czteroosobową rodzinę, mieszka w bloku i ma w łazience wnękę o głębokości 60 cm. Prąd w nocy ma tańszy (taryfa dwustrefowa).',
       ...note(
-        5,
+        6,
         'Każdy wybiera sam. Zapytaj, które zdanie łatwiej zapamiętać klientce.',
         'Dlaczego klientki nie interesuje liczba kilogramów?',
         'Bo nie wie, co z niej wynika. Interesuje ją, ile razy w tygodniu będzie prać.',
@@ -104,7 +104,7 @@ export default {
         ],
       },
       ...note(
-        10,
+        9,
         'Pary dopasowują korzyści. Potem jedna osoba w parze mówi klientce jedną korzyść w jednym zdaniu, druga ocenia: czy to korzyść, czy znowu cecha?',
         'Która cecha pralki X jest dla pani Ewy obojętna?',
         'Np. głośność — jeśli pierze w nocy i śpi w innym pokoju, może być ważna; a jeśli w dzień, to mniej. Zależy od rozmowy.',
@@ -170,7 +170,6 @@ export default {
           [
             'To nieprawda: przy tych danych zwrot trwa około 12 lat',
             'To prawda, bo klasa A jest najlepsza i dużo oszczędza',
-            'To prawda, jeśli klientka pierze codziennie przez cały rok',
             'Nie da się tego policzyć, więc kolega może tak powiedzieć',
           ],
           0,
@@ -178,7 +177,6 @@ export default {
           [
             null,
             'Klasa A oszczędza, ale 56 zł rocznie, nie 650 zł.',
-            'Przy 365 praniach oszczędność to około 92 zł rocznie — nadal ponad 7 lat.',
             'Da się policzyć — zrobiliśmy to przed chwilą. Jeśli nie wiesz, nie obiecuj.',
           ],
         ),
@@ -188,7 +186,7 @@ export default {
       id: 'prezentacja',
       label: 'Prezentacja',
       title: 'Prezentacja kolegi',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Nowy sprzedawca przygotował, co powie klientom o pralce X. Sprawdź, co jest prawdą, a co przesadą.',
       ...note(
         10,
@@ -220,7 +218,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Kawalerka',
       title: 'Drugi klient',
       grouping: 'solo',
       intro: 'Student wynajmuje kawalerkę. Wnęka na pralkę ma 47 cm głębokości. Pierze dwa razy w tygodniu, budżet ma ograniczony.',

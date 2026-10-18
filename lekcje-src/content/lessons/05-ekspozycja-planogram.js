@@ -21,7 +21,6 @@ export default {
       'Pracujesz w sklepie osiedlowym w Rzeszowie. Ustalisz, gdzie stawiać towary, policzysz miejsce na półce i sprawdzisz półkę po zmianie popołudniowej.',
     teacher:
       'Uczniowie najpierw poznają strefy sklepu i wysokości półek, potem liczą facingi według sprzedaży, a na końcu wyszukują błędy na półce. Dobrze działa krótka obserwacja: uczniowie przypominają sobie układ sklepu, w którym robią zakupy.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.jawne, methods.przypadek],
   },
   objectives: [
@@ -29,54 +28,19 @@ export default {
     'Liczę facingi i dzielę półkę według sprzedaży.',
     'Znajduję błędy na półce: ceny, daty, luki, uszkodzone opakowania.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kartka do szkicu półki (nie jest konieczna)'],
+  materials: ['Kartka do szkicu półki (nie jest konieczna)'],
   teacherGuide: {
-    preparation: 'Jeśli możesz, zrób zdjęcie jednej półki w pobliskim sklepie (bez ludzi) i pokaż je w etapie 3. Wystarczy też opis z platformy.',
+    preparation: 'Jeśli możesz, zrób zdjęcie jednej półki w pobliskim sklepie (bez ludzi) i pokaż je przy planogramie. Wystarczy też opis z platformy.',
     summary:
       'Towary codziennej potrzeby stoją w głębi sklepu, żeby klient przeszedł obok innych. Przy kasie — drobne zakupy impulsowe. Na wysokości oczu — towary, które sklep chce sprzedać najbardziej, na dole — ciężkie i duże. Liczba facingów powinna odpowiadać sprzedaży. Półkę sprawdza się codziennie: ceny, daty, luki, uszkodzenia.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Gdzie stoi mleko?',
-      grouping: 'solo',
-      intro: 'Pomyśl o sklepie, w którym najczęściej robisz zakupy. Gdzie stoją mleko i pieczywo?',
-      ...note(
-        5,
-        'Każdy odpowiada sam. Zapytaj 2–3 osoby o układ ich sklepu.',
-        'Ile mijacie regałów, zanim dojdziecie do mleka?',
-        'Zwykle kilka — tak sklep zaplanował drogę klienta.',
-        'Przekonanie, że układ sklepu jest przypadkowy albo wynika tylko z wygody dostaw.',
-        'Zastanówcie się, czy w sklepie internetowym też jest „droga klienta” (polecane produkty, kolejność na liście).',
-      ),
-      activities: [
-        choice(
-          'q-mleko',
-          'Dlaczego w wielu sklepach mleko i pieczywo stoją w głębi sali?',
-          [
-            'Klient idzie po nie obok innych towarów',
-            'Tam jest najchłodniej w całym sklepie, więc nie trzeba lodówek',
-            'Przepisy zabraniają stawiania nabiału przy wejściu do sklepu',
-            'Dostawcy nabiału płacą za miejsce jak najdalej od kasy w sklepie',
-          ],
-          0,
-          'To towary, po które przychodzi prawie każdy. Gdy stoją w głębi, klient po drodze widzi inne produkty.',
-          [
-            null,
-            'Nabiał i tak stoi w lodówkach. Miejsce wynika z drogi klienta.',
-            'Nie ma takiego zakazu. To decyzja sklepu.',
-            'Dostawcy płacą raczej za lepsze miejsca, np. na wysokości oczu, a nie za gorsze.',
-          ],
-        ),
-      ],
-    },
-    {
       id: 'strefy',
       label: 'Strefy',
-      title: 'Strefy sklepu i wysokości półek',
-      grouping: 'pair',
-      intro: 'Każde miejsce w sklepie sprzedaje inaczej. Tak samo każda półka w regale.',
+      title: 'Gdzie stoi mleko, a gdzie gumy do żucia',
+      grouping: 'class',
+      intro: 'Pomyśl o sklepie, w którym najczęściej robisz zakupy. Gdzie stoją mleko i pieczywo? Każde miejsce w sklepie sprzedaje inaczej — tak samo każda półka w regale.',
       reading: {
         title: 'Gdzie co stawiać',
         paragraphs: [
@@ -85,14 +49,30 @@ export default {
         ],
       },
       ...note(
-        10,
-        'Lektura, potem dopasowanie w parach. Przy omówieniu zapytaj o wodę: dlaczego dół, skoro to towar popularny?',
+        15,
+        'Zacznij od rozmowy z całą grupą: ile regałów mijacie, zanim dojdziecie do mleka? Potem pytanie o mleko, lektura i dopasowanie. Przy omówieniu zapytaj o wodę: dlaczego dół, skoro to towar popularny?',
         'Dlaczego dzieci widzą słodycze, a dorośli kawę?',
         'Bo sklep stawia towary na wysokości oczu osoby, która ma je kupić — półki z produktami dla dzieci bywają niżej.',
         'Stawianie ciężkich towarów wysoko, bo „tam było wolne miejsce”.',
         'Zaproponuj miejsce dla parasoli w deszczowy dzień (przy wejściu).',
       ),
       activities: [
+        choice(
+          'q-mleko',
+          'Dlaczego w wielu sklepach mleko i pieczywo stoją w głębi sali?',
+          [
+            'Klient idzie po nie obok innych towarów',
+            'Tam jest najchłodniej w całym sklepie, więc nie trzeba lodówek',
+            'Dostawcy nabiału płacą za miejsce jak najdalej od kasy w sklepie',
+          ],
+          0,
+          'To towary, po które przychodzi prawie każdy. Gdy stoją w głębi, klient po drodze widzi inne produkty.',
+          [
+            null,
+            'Nabiał i tak stoi w lodówkach. Miejsce wynika z drogi klienta.',
+            'Dostawcy płacą raczej za lepsze miejsca, np. na wysokości oczu, a nie za gorsze.',
+          ],
+        ),
         {
           type: 'matching',
           id: 'q-miejsce',
@@ -145,10 +125,10 @@ export default {
         choice(
           'q-obok',
           'Co postawisz obok makaronu spaghetti?',
-          ['Sos pomidorowy w słoiku', 'Proszek do pieczenia', 'Płyn do naczyń w promocji', 'Karmę dla kota'],
+          ['Sos pomidorowy w słoiku', 'Proszek do pieczenia', 'Płyn do naczyń w promocji', 'Karmę dla kota', 'Pieluchy, bo mają wysoką marżę'],
           0,
           'Towary powiązane obok siebie podpowiadają klientowi drugi zakup.',
-          ['', 'Proszek do pieczenia pasuje do mąki i dodatków do ciast.', 'Chemia stoi osobno od żywności.', 'Karma dla zwierząt ma swój dział i nie łączy się z makaronem.'],
+          ['', 'Proszek do pieczenia pasuje do mąki i dodatków do ciast.', 'Chemia stoi osobno od żywności.', 'Karma dla zwierząt ma swój dział i nie łączy się z makaronem.', 'Sama marża nie wystarczy. Obok siebie stoją towary, które kupuje się razem.'],
         ),
       ],
     },
@@ -187,10 +167,10 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Drogeria',
       title: 'Drogeria zamiast sklepu spożywczego',
       grouping: 'solo',
-      intro: 'Te same zasady działają w każdym sklepie. Sprawdź je w drogerii.',
+      intro: 'Te same zasady działają w drogerii, aptece i sklepie z narzędziami. Najpierw krem, potem sklep, który znasz.',
       ...note(
         8,
         'Samodzielnie. Odpowiedzi otwarte omów krótko: czy zmiana jest wykonalna w jeden dzień?',
@@ -218,7 +198,7 @@ export default {
           type: 'resultCard',
           id: 'karta',
           badges: [
-            { min: 0, name: 'Do powtórki', text: 'Wróć do stref sklepu i do przykładu z facingami.' },
+            { min: 0, name: 'Do powtórki', text: 'Wróć do stref sklepu i do przykładu z herbatą.' },
             { min: 0.6, name: 'Układasz półki', text: 'Powtórz jeszcze kontrolę półki.' },
             { min: 0.85, name: 'Planogram w małym palcu', text: 'Wiesz, gdzie co postawić i jak to sprawdzić.' },
           ],

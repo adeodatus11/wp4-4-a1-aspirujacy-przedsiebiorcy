@@ -21,7 +21,6 @@ export default {
       'Pracujesz w magazynie hurtowni papierniczej w Toruniu. Dobierzesz dokument do każdej operacji, wypełnisz PZ i sprawdzisz WZ przed wydaniem towaru.',
     teacher:
       'Na egzaminie HAN.02 uczniowie wystawiają dokumenty magazynowe w programie magazynowo-sprzedażowym. Ta lekcja uczy logiki: który dokument do jakiej operacji i co musi w nim być. Program tylko przyspiesza pracę — decyzja należy do człowieka.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.jawne, methods.przyklady],
   },
   objectives: [
@@ -29,7 +28,7 @@ export default {
     'Wypełniam przyjęcie zewnętrzne (PZ) i liczę wartości.',
     'Sprawdzam wydanie zewnętrzne (WZ) przed wydaniem towaru.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Jeśli szkoła ma program magazynowo-sprzedażowy, pokaż w nim listę dokumentów magazynowych. Wystarczy też tablica z pięcioma skrótami.',
     summary:

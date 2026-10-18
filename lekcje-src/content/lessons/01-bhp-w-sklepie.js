@@ -21,8 +21,7 @@ export default {
       'Pierwszy dzień praktyki w markecie spożywczym. Zrobisz obchód zaplecza, policzysz, ile możesz bezpiecznie podnieść, i zdecydujesz, co robić przy skaleczeniu i przy pożarze.',
     teacher:
       'Lekcja jest zbudowana na konkretnych sytuacjach z zaplecza sklepu, a nie na liście przepisów. Uczniowie najpierw szukają zagrożeń w opisie obchodu, potem liczą masę zgrzewek wobec norm, a na końcu podejmują decyzje w nagłych sytuacjach. Przy każdej błędnej odpowiedzi platforma tłumaczy, co by się stało.',
-    grouping:
-      'Etap 1 i 5 samodzielnie. Etapy 2–4 w parach: jedna osoba czyta sytuację na głos, druga decyduje, potem zamiana. Osoba bez pary czyta i decyduje sama.',
+    grouping: 'W parach jedna osoba czyta sytuację na głos, druga decyduje, potem zamiana. Osoba bez pary czyta i decyduje sama.',
     methods: [methods.przypadek, methods.retrieval, methods.ksztaltujace],
   },
   objectives: [
@@ -31,23 +30,23 @@ export default {
     'Wiem, co robić po kolei przy skaleczeniu i przy pożarze.',
     'Wiem, kiedy mam prawo odmówić wykonania pracy.',
   ],
-  materials: ['Urządzenie z przeglądarką (jedno na parę)', 'Jeśli to możliwe: apteczka i gaśnica szkolna do pokazania'],
+  materials: ['Jeśli to możliwe: apteczka i gaśnica szkolna do pokazania'],
   teacherGuide: {
     preparation:
-      'Sprawdź, gdzie w szkole wisi najbliższa gaśnica i plan ewakuacji — w etapie 4 zapytasz o to uczniów. Jeśli masz apteczkę, przynieś ją. Przypomnij, że limity dźwigania dla młodocianych są niższe niż dla dorosłych; szczegóły ustala szkoła i pracodawca praktyk.',
+      'Sprawdź, gdzie w szkole wisi najbliższa gaśnica i plan ewakuacji — zapytasz o to uczniów przy nagłych sytuacjach. Jeśli masz apteczkę, przynieś ją. Przypomnij, że limity dźwigania dla młodocianych są niższe niż dla dorosłych; szczegóły ustala szkoła i pracodawca praktyk.',
     summary:
       'Najczęstsze zagrożenia w sklepie to śliska podłoga, przeszkody w przejściach, ostre narzędzia, dźwiganie i zastawione drogi ewakuacyjne. Dorosły pracownik przy pracy stałej może ręcznie przenosić do 12 kg (kobieta) i 30 kg (mężczyzna). Przy bezpośrednim zagrożeniu pracownik ma prawo powstrzymać się od pracy i zawiadomić przełożonego.',
   },
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Dostawa',
       title: 'Co może skończyć się wypadkiem?',
-      grouping: 'solo',
+      grouping: 'class',
       intro: 'Rano przyjechała dostawa: zgrzewki wody, kartony z mrożonkami, paleta napojów. Ty i jeszcze jedna osoba macie wyłożyć towar przed otwarciem o 8:00.',
       ...note(
-        5,
-        'Każdy zaznacza samodzielnie. Nie omawiaj odpowiedzi, dopóki wszyscy nie sprawdzą. Zapytaj, kto zaznaczył folię stretch — wiele osób jej nie docenia.',
+        4,
+        'Wszyscy razem: każdy zaznacza na swoim urządzeniu, a Ty pytasz o głosowanie ręką przy każdym punkcie, zanim ktokolwiek kliknie „Sprawdź”. Najwięcej sporu jest zwykle o folię stretch.',
         'Które z tych zagrożeń widzieliście w prawdziwym sklepie?',
         'Mokra podłoga przy chłodni, kartony w przejściu, folia na podłodze, ktoś stojący na skrzynce zamiast na drabinie.',
         'Uznawanie za groźne tylko „dużych” rzeczy (wózek, regał), a pomijanie folii i noża.',
@@ -78,7 +77,7 @@ export default {
       label: 'Obchód',
       title: 'Obchód zaplecza o 7:40',
       grouping: 'pair',
-      intro: 'Kierowniczka zmiany prosi, żebyś przeszedł lub przeszła z nią zaplecze i powiedział(a), co trzeba poprawić przed otwarciem.',
+      intro: 'Kierowniczka zmiany prosi, żeby obejść z nią zaplecze i wskazać, co trzeba poprawić przed otwarciem.',
       reading: {
         title: 'Cztery najczęstsze zagrożenia w sklepie',
         paragraphs: [
@@ -87,7 +86,7 @@ export default {
         ],
       },
       ...note(
-        10,
+        11,
         'Pary czytają wiersze na głos i decydują razem. Po sprawdzeniu poproś o jeden wiersz, przy którym para się pomyliła, i o wyjaśnienie, dlaczego.',
         'Który z tych błędów najtrudniej zauważyć, bo „zawsze tak było”?',
         'Zastawione drzwi ewakuacyjne i stanie na krześle — ludzie robią to codziennie, dopóki nic się nie stanie.',
@@ -160,7 +159,6 @@ export default {
           [
             'Z ugiętych kolan, karton blisko ciała, bez skrętu tułowia',
             'Pochyl się z prostymi nogami, bo tak jest szybciej i mniej męczy kolana',
-            'Podnieś jednym szarpnięciem, żeby jak najkrócej trzymać ciężar w rękach',
             'Chwyć karton z boku, obróć się z nim i połóż od razu na półce obok',
           ],
           0,
@@ -168,7 +166,6 @@ export default {
           [
             null,
             'Przy prostych nogach cały ciężar przenosi się na odcinek lędźwiowy kręgosłupa. To najczęstsza przyczyna bólu pleców w handlu.',
-            'Szarpnięcie gwałtownie obciąża mięśnie i kręgosłup. Podnoś płynnie.',
             'Skręt tułowia z ciężarem to jeden z najgroźniejszych ruchów dla kręgosłupa. Obróć się całym ciałem, krokami.',
           ],
         ),
@@ -178,7 +175,7 @@ export default {
       id: 'nagle',
       label: 'Nagłe sytuacje',
       title: 'Skaleczenie i ogień',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Dwie sytuacje, które zdarzają się w sklepach. Na decyzję masz kilka sekund, dlatego kolejność warto znać wcześniej.',
       ...note(
         12,
@@ -240,19 +237,25 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Koniec zmiany',
       title: 'Twoja decyzja',
       grouping: 'solo',
-      intro: 'Ostatnia sytuacja i krótkie zadanie o miejscu, które znasz.',
+      intro: 'Najpierw miejsce, które znasz z zakupów albo z pracy. Potem sytuacja z ostatnich minut przed zamknięciem.',
       ...note(
         8,
-        'Każdy pracuje sam. Przeczytaj 2–3 odpowiedzi z pytania otwartego i zapytaj grupę, czy proponowane rozwiązanie jest wykonalne od jutra.',
+        'Każdy pracuje sam. Przeczytaj 2–3 opisy zagrożeń i zapytaj grupę, czy rozwiązanie da się wprowadzić od jutra. Pytanie o 18:50 zostaw na sam koniec — dobrze zamyka temat dźwigania.',
         'Co zrobisz, jeśli kierownik powie: „Zawsze tak robimy i nic się nie stało”?',
         'Grzecznie wskażę zagrożenie i zaproponuję rozwiązanie (drabina, wózek). Jeśli to bezpośrednie zagrożenie — mogę odmówić i zgłosić wyżej.',
         'Przekonanie, że uczeń na praktyce nie może niczego zgłosić.',
         'Napisz, kto w twojej szkole lub firmie odpowiada za BHP i jak się z nim skontaktować.',
       ),
       activities: [
+        text(
+          'q-moje',
+          'Opisz jedno zagrożenie, które widzisz w sklepie, w którym robisz zakupy albo pracujesz, i jak je usunąć.',
+          'Przykład: przy wejściu do sklepu zimą leży mokre błoto i nie ma maty ani tablicy ostrzegawczej. Rozwiązanie: mata przy drzwiach, tablica „uwaga, śliska podłoga” i wycieranie co godzinę.',
+          { criteria: ['Zagrożenie jest konkretne (gdzie, co).', 'Rozwiązanie da się wprowadzić od razu.'] },
+        ),
         choice(
           'q-transfer',
           'Jest 18:50, sklep zamykają o 19:00. Kierownik prosi, żeby szybko przenieść 4 zgrzewki wody (36 kg) naraz, „bo nie ma czasu na wózek”. Jesteś dorosłym mężczyzną. Co robisz?',
@@ -270,12 +273,6 @@ export default {
             'Wykładanie dostawy to praca stała, a nie dorywcza.',
             'Masz prawo odmówić niebezpiecznej pracy, ale tu jest bezpieczny sposób wykonania zadania.',
           ],
-        ),
-        text(
-          'q-moje',
-          'Opisz jedno zagrożenie, które widzisz w sklepie, w którym robisz zakupy albo pracujesz, i jak je usunąć.',
-          'Przykład: przy wejściu do sklepu zimą leży mokre błoto i nie ma maty ani tablicy ostrzegawczej. Rozwiązanie: mata przy drzwiach, tablica „uwaga, śliska podłoga” i wycieranie co godzinę.',
-          { criteria: ['Zagrożenie jest konkretne (gdzie, co).', 'Rozwiązanie da się wprowadzić od razu.'] },
         ),
         {
           type: 'resultCard',

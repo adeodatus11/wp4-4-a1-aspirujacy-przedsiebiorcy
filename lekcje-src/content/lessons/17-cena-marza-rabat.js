@@ -21,8 +21,7 @@ export default {
       'Ustalasz ceny w sklepie sportowym po dostawie z hurtowni. Policzysz ceny trzech towarów, sprawdzisz wywieszkę na Black Week i zobaczysz, przy jakim rabacie sklep sprzedaje bez zysku.',
     teacher:
       'Lekcja zaczyna się od pytania, na które większość grupy odpowiada błędnie (86 zł zamiast 40 zł). Ten błąd jest punktem wyjścia do wyjaśnienia netto/brutto i podstawy procentu. Potem jeden przykład rozwiązany wspólnie, ćwiczenie w parach z dokumentem kalkulacji, rabat i wywieszka promocyjna, a na końcu samodzielne zadanie na nowych danych.',
-    grouping:
-      'Etapy 1, 2 i 5: cała grupa albo samodzielnie. Etapy 3 i 4: w parach — jedna osoba liczy, druga sprawdza wzór; przy kolejnym towarze zamiana. Osoba bez pary pracuje sama, platforma sprawdza każde pole.',
+    grouping: 'Przy liczeniu jedna osoba liczy, druga sprawdza wzór; przy kolejnym towarze zamiana. Osoba bez pary pracuje sama, platforma sprawdza każde pole.',
     methods: [methods.przyklady, methods.retrieval, methods.ksztaltujace],
   },
   objectives: [
@@ -32,7 +31,6 @@ export default {
     'Znajduję błędy na wywieszce promocyjnej.',
   ],
   materials: [
-    'Telefon, tablet albo komputer z przeglądarką (jedno urządzenie na parę wystarczy)',
     'Kalkulator, może być w telefonie',
     'Projektor do wspólnego przykładu (nie jest konieczny)',
   ],

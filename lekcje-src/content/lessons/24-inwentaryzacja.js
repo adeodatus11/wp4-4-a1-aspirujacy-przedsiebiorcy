@@ -21,7 +21,7 @@ export default {
       'Pracujesz w sklepie spożywczo-przemysłowym w Gnieźnie podczas inwentaryzacji. Poznasz przebieg spisu, wypełnisz arkusz spisowy, policzysz niedobory i nadwyżki, a potem wyjaśnisz, skąd się wzięły.',
     teacher:
       'Pierwsza lekcja: przebieg inwentaryzacji i arkusz spisowy z wyceną różnic. Druga: ubytki naturalne i wyjaśnianie przyczyn. Pilnuj języka: różnica to nie od razu kradzież — najpierw sprawdza się dokumenty.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach („liczący” i „zapisujący”, po przerwie zamiana).',
+    grouping: 'Pary: „liczący” i „zapisujący”, po przerwie zamiana.',
     methods: [methods.przypadek, methods.jawne, methods.przyklady],
   },
   objectives: [
@@ -30,7 +30,7 @@ export default {
     'Odróżniam ubytek naturalny w normie od niedoboru ponad normę.',
     'Wskazuję możliwe przyczyny różnic i sposób ich sprawdzenia.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Długopis (nie ołówek!) do ćwiczenia na papierze — nie jest konieczny'],
+  materials: ['Kalkulator', 'Długopis (nie ołówek!) do ćwiczenia na papierze — nie jest konieczny'],
   teacherGuide: {
     preparation:
       'Możesz przygotować na ławce kilka przedmiotów (np. 12 długopisów, 7 zeszytów) i listę „z systemu” z innymi liczbami — pary policzą je jak w spisie z natury.',

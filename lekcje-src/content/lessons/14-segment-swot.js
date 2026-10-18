@@ -43,7 +43,7 @@ export default {
       'Pomagasz właścicielce kwiaciarni w Toruniu zdecydować, czy i dla kogo uruchomić stałe dostawy kwiatów. Podzielisz klientów na segmenty, ocenisz dane, przygotujesz SWOT i wybierzesz segment do małego testu.',
     teacher:
       'Pierwsza lekcja: segmentacja i ostrożne wnioski z małej próby. Druga: SWOT i decyzja. Pilnuj, żeby uczniowie oddzielali fakty (co powiedzieli ludzie) od hipotez (co z tego może wynikać). Dane są celowo skromne — to sytuacja typowa dla małej firmy.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach. Po przerwie zamiana par.',
+    grouping: 'Po przerwie zamiana par.',
     methods: [methods.przypadek, methods.ksztaltujace, methods.metapoznanie],
   },
   objectives: [
@@ -52,7 +52,7 @@ export default {
     'Przygotowuję SWOT, oddzielając wnętrze firmy od otoczenia.',
     'Wybieram segment do testu i nazywam, czego jeszcze nie wiem.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kartka do narysowania SWOT (nie jest konieczna)'],
+  materials: ['Kartka do narysowania SWOT (nie jest konieczna)'],
   teacherGuide: {
     preparation: 'Narysuj na tablicy pustą tabelę SWOT: wiersze „wewnętrzne / zewnętrzne”, kolumny „korzystne / niekorzystne”. Wypełnicie ją w etapie 5.',
     summary:

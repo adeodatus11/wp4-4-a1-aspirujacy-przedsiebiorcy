@@ -34,7 +34,7 @@ function nextValue(value, ok) {
 }
 
 function Choice({ activity, value = {}, onChange }) {
-  const order = useMemo(() => shuffledOrder(activity.options.length, activity.id), [activity]);
+  const order = useMemo(() => activity.order || shuffledOrder(activity.options.length, activity.id), [activity]);
   const [picked, setPicked] = useState(value.selected ?? null);
   const locked = value.done;
   const wrong = !value.done && value.lastWrong !== undefined && value.lastWrong !== null;

@@ -35,7 +35,7 @@ export default {
       'Pracujesz w piekarni w Oławie, która sprzedaje firmom koszyki śniadaniowe. Przygotujesz ofertę na 30 koszyków, przedstawisz ją i wyjaśnisz nieporozumienie z klientem.',
     teacher:
       'Lekcja łączy dokument (oferta), wystąpienie (2 minuty) i rozmowę (wyjaśnienie nieporozumienia). Kluczowe: oferta zawiera tylko to, co firma naprawdę może zrobić, a rozmowa kończy się potwierdzeniem, że klient rozumie warunki.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w trójkach: sprzedawca, klient, obserwator; zamiana ról.',
+    grouping: 'Trójki: sprzedawca, klient, obserwator; zamiana ról.',
     methods: [methods.przypadek, methods.feedback, methods.dialogowe],
   },
   objectives: [
@@ -43,7 +43,7 @@ export default {
     'Przedstawiam ofertę językiem korzyści, bez obietnic bez pokrycia.',
     'Rozpoznaję i wyjaśniam nieporozumienie w rozmowie.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Stoper w telefonie do 2-minutowych prezentacji'],
+  materials: ['Kalkulator', 'Stoper w telefonie do 2-minutowych prezentacji'],
   teacherGuide: {
     preparation: 'Przygotuj kartki z dwiema rolami klienta: jeden rozumie „odbiór” poprawnie, drugi myśli, że piekarnia przywiezie koszyki do biura.',
     summary:
@@ -52,12 +52,12 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Koszyki',
       title: 'Co to jest oferta?',
       grouping: 'solo',
       intro: 'Firma logistyczna pyta piekarnię o koszyki śniadaniowe na szkolenie. Piekarnia odpowiada ofertą.',
       ...note(
-        5,
+        3,
         'Każdy odpowiada sam. Krótko: zapytanie ofertowe wysyła klient, ofertę sprzedawca, zamówienie znowu klient.',
         'Kto pisze zapytanie ofertowe, kto ofertę, a kto zamówienie?',
         'Zapytanie — klient, oferta — sprzedawca, zamówienie — klient (przyjmuje ofertę).',
@@ -73,6 +73,7 @@ export default {
             'Reklamą firmy wysyłaną do wszystkich klientów naraz',
             'Prezentacją dla inwestora, który ma dać firmie pieniądze',
             'Zamówieniem, które klient wysyła po przyjęciu warunków',
+            'Umową sprzedaży podpisaną przez obie strony',
           ],
           0,
           'Oferta mówi klientowi: co, za ile, na jakich warunkach i do kiedy.',
@@ -81,6 +82,7 @@ export default {
             'Reklama jest do wielu osób i nie zawiera warunków dla konkretnego klienta.',
             'Pitch inwestorski przekonuje do zainwestowania w firmę, a nie do zakupu.',
             'Zamówienie wysyła klient. Oferta jest wcześniej i pochodzi od sprzedawcy.',
+            'Umowa powstaje dopiero wtedy, gdy klient przyjmie ofertę.',
           ],
         ),
       ],
@@ -96,7 +98,7 @@ export default {
         paragraphs: ['Odbiorca, przedmiot i ilość, cena jednostkowa i łączna, rabat, sposób odbioru lub dostawy, termin i forma płatności, termin ważności oferty, kontakt. Jeśli czegoś firma nie robi (np. dostawy), lepiej to napisać wprost.'],
       },
       ...note(
-        12,
+        14,
         'Trójki liczą i uzupełniają ofertę. Zapytaj, czy ktoś dopisałby „dostawa gratis”, żeby oferta była atrakcyjniejsza — i co by się stało we wtorek rano.',
         'Po co w ofercie napis „odbiór w piekarni”, skoro klient i tak przyjedzie?',
         'Bo klient może zakładać dostawę. Jasny zapis zapobiega nieporozumieniu.',
@@ -241,7 +243,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: '50 koszyków',
       title: 'Klient chce więcej',
       grouping: 'solo',
       intro: 'Inna firma pyta o 50 koszyków na ten sam dzień.',
@@ -261,7 +263,6 @@ export default {
             'Że zrobimy 40 i proponuję inny termin lub podział',
             'Że zrobimy 50, bo to duże i ważne zamówienie dla piekarni',
             'Że nie robimy zamówień powyżej 40 koszyków i kończę rozmowę',
-            'Że zrobimy 50, jeśli klient zapłaci teraz całą kwotę z góry',
           ],
           0,
           'Uczciwie mówisz o limicie i proponujesz rozwiązanie w jego granicach.',
@@ -269,7 +270,6 @@ export default {
             null,
             'Piekarnia nie przygotuje więcej niż 40 dziennie. Obietnica się nie spełni.',
             'Odmowa bez propozycji traci klienta, który mógł przyjąć inny wariant.',
-            'Przedpłata nie zwiększy mocy produkcyjnej piekarni.',
           ],
         ),
         text(

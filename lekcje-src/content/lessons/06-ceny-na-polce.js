@@ -21,7 +21,6 @@ export default {
       'Pracujesz w markecie. Policzysz ceny jednostkowe, przygotujesz etykiety i ustalisz, jak poprawnie ogłosić obniżkę kawy.',
     teacher:
       'Najpierw szybkie liczenie ceny za kilogram, potem porównanie trzech opakowań — tu wiele osób myli się, wybierając największe. Potem etykiety i obniżka: kluczowa jest najniższa cena z 30 dni przed obniżką.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przyklady, methods.ksztaltujace],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Ustalam najniższą cenę z 30 dni przed obniżką i liczę od niej procent obniżki.',
     'Wiem, co zrobić, gdy cena na półce różni się od ceny w kasie.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Zdjęcia etykiet cenowych z pobliskiego sklepu (nie są konieczne)'],
+  materials: ['Kalkulator', 'Zdjęcia etykiet cenowych z pobliskiego sklepu (nie są konieczne)'],
   teacherGuide: {
     preparation: 'Możesz poprosić uczniów, żeby na lekcję przynieśli zdjęcie jednej etykiety cenowej z ceną jednostkową.',
     summary:
@@ -38,25 +37,25 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Ile kosztuje kilogram?',
+      id: 'porownanie',
+      label: 'Za kilogram',
+      title: 'Który proszek jest naprawdę tańszy?',
       grouping: 'solo',
-      intro: 'Proszek do prania 1,35 kg kosztuje 32,99 zł.',
+      intro: 'Na półce stoją trzy opakowania tego samego proszku: 1,35 kg za 32,99 zł, 2,6 kg za 59,99 zł i 4,05 kg za 94,99 zł. Najpierw rozgrzewka na maśle.',
       reading: {
         example: {
-          question: 'Ile kosztuje 1 kg proszku?',
+          question: 'Ile kosztuje 1 kg proszku w opakowaniu 1,35 kg za 32,99 zł?',
           steps: ['Cenę dzielisz przez masę w kilogramach: 32,99 ÷ 1,35.', 'Wynik: 24,437… zł, czyli po zaokrągleniu 24,44 zł za kilogram.'],
           answer: '24,44 zł/kg.',
         },
       },
       ...note(
-        5,
-        'Przejdźcie przykład razem, potem każdy liczy sam zadanie z masłem.',
-        'Kiedy dzielimy, a kiedy mnożymy przy cenie jednostkowej?',
-        'Gdy opakowanie jest mniejsze niż jednostka (200 g), dzielimy przez 0,2 — wynik jest większy niż cena opakowania.',
-        'Mnożenie ceny przez masę zamiast dzielenia.',
-        'Policz cenę za kilogram przyprawy 20 g za 2,49 zł (124,50 zł/kg).',
+        14,
+        'Przejdźcie przykład razem, potem każdy liczy sam: masło, proszek, wybór opakowania. Zanim ktoś kliknie ostatnie pytanie, zapytaj, ile osób postawiłoby na największe opakowanie.',
+        'Dlaczego największe opakowanie nie jest najtańsze?',
+        'Sklep i producent ustalają ceny osobno dla każdego opakowania. Duże bywa droższe w przeliczeniu, zwłaszcza gdy średnie jest w promocji.',
+        'Porównywanie cen opakowań zamiast cen za kilogram.',
+        'Sprawdź w domu albo w sklepie internetowym dwa opakowania tego samego produktu i porównaj ceny za kilogram.',
       ),
       activities: [
         number('q-maslo', 'Masło 200 g kosztuje 7,99 zł. Ile kosztuje 1 kg?', 39.95, '7,99 ÷ 0,2 = 39,95 zł za kilogram.', {
@@ -65,23 +64,6 @@ export default {
             { value: 1.6, text: 'Tu cena jest pomnożona przez 0,2. Cenę dzielisz przez masę w kilogramach.' },
           ],
         }),
-      ],
-    },
-    {
-      id: 'porownanie',
-      label: 'Porównanie',
-      title: 'Który proszek jest tańszy?',
-      grouping: 'pair',
-      intro: 'Na półce stoją trzy opakowania tego samego proszku: 1,35 kg za 32,99 zł, 2,6 kg za 59,99 zł i 4,05 kg za 94,99 zł.',
-      ...note(
-        10,
-        'Pary liczą wszystkie trzy ceny za kilogram. Zapytaj, ile osób przed liczeniem postawiłoby na największe opakowanie.',
-        'Dlaczego największe opakowanie nie jest najtańsze?',
-        'Sklep i producent ustalają ceny osobno dla każdego opakowania. Duże bywa droższe w przeliczeniu, zwłaszcza gdy średnie jest w promocji.',
-        'Porównywanie cen opakowań zamiast cen za kilogram.',
-        'Sprawdź w domu albo w sklepie internetowym dwa opakowania tego samego produktu i porównaj ceny za kilogram.',
-      ),
-      activities: [
         number('q-sredni', 'Ile kosztuje 1 kg proszku w opakowaniu 2,6 kg?', 23.07, '59,99 ÷ 2,6 = 23,07 zł/kg.', {
           unit: 'zł/kg',
           tolerance: 0.01,
@@ -109,7 +91,7 @@ export default {
       grouping: 'pair',
       intro: 'Dostawa nowych towarów. Uzupełnij ceny jednostkowe na etykietach, a potem sprawdź etykiety przygotowane przez kogoś innego.',
       ...note(
-        12,
+        13,
         'Najpierw dokument, potem szukanie błędów. Przy przyprawie zwróć uwagę, jak wysoka jest cena za kilogram małego opakowania.',
         'Po co klientowi cena za kilogram przyprawy, której nikt nie kupuje na kilogramy?',
         'Żeby porównać opakowania 20 g, 50 g i 100 g. Małe opakowania są zwykle dużo droższe w przeliczeniu.',
@@ -161,8 +143,8 @@ export default {
     },
     {
       id: 'obnizka',
-      label: 'Obniżka',
-      title: 'Kawa w promocji',
+      label: 'Promocja',
+      title: 'Kawa w promocji i płatki przy kasie',
       grouping: 'pair',
       intro: 'Kawa ziarnista 1 kg. Od 5 listopada sklep obniża cenę do 54,99 zł. Sprawdź historię cen.',
       reading: {
@@ -181,8 +163,8 @@ export default {
         },
       },
       ...note(
-        10,
-        'Pary czytają tabelę. Zapytaj, ile wynosi „przekreślona” cena, którą sklep chciałby pokazać (69,99 zł), a jaką musi pokazać (59,99 zł).',
+        18,
+        'Pary czytają tabelę i liczą obniżkę. Pytanie o płatki przy kasie każdy rozwiązuje sam — na koniec zapytaj, jak to powiedzieć klientce i co potem zrobić z etykietą. Przy tabeli: Zapytaj, ile wynosi „przekreślona” cena, którą sklep chciałby pokazać (69,99 zł), a jaką musi pokazać (59,99 zł).',
         'Dlaczego obniżka „−21%” byłaby wprowadzeniem klienta w błąd?',
         'Bo 21% liczono by od 69,99 zł, a w ostatnich 30 dniach kawa kosztowała już 59,99 zł. Prawdziwa obniżka względem najniższej ceny to około 8%.',
         'Wybieranie ceny regularnej zamiast najniższej z 30 dni.',
@@ -210,31 +192,13 @@ export default {
             { value: 9.09, text: 'Tu dzielisz przez nową cenę 54,99 zł. Procent obniżki liczysz od ceny przed obniżką.' },
           ],
         }),
-      ],
-    },
-    {
-      id: 'sprawdzenie',
-      label: 'Sprawdzenie',
-      title: 'Przy kasie',
-      grouping: 'solo',
-      intro: 'Klientka podchodzi do kasy z płatkami. Na półce było 4,49 zł, kasa nabiła 4,99 zł.',
-      ...note(
-        8,
-        'Samodzielnie. Po karcie wyniku zapytaj, jak to powiedzieć klientce, i co potem zrobić z etykietą.',
-        'Co robisz po obsłużeniu klientki?',
-        'Zgłaszam kierownikowi i poprawiam etykietę albo cenę w systemie, żeby błąd się nie powtórzył.',
-        'Tłumaczenie klientce, że „cena na półce jest nieaktualna”.',
-        'Ułóż jedno zdanie, którym przeprosisz i wyjaśnisz klientce sytuację.',
-      ),
-      activities: [
         choice(
           'q-kasa',
-          'Co robisz?',
+          'Klientka podchodzi do kasy z płatkami. Na półce było 4,49 zł, kasa nabiła 4,99 zł. Co robisz?',
           [
             'Sprzedaję po 4,49 zł i zgłaszam błąd etykiety',
             'Sprzedaję po 4,99 zł, bo cena w kasie jest zawsze ważniejsza od etykiety',
             'Proszę klientkę, żeby odłożyła płatki, dopóki kierownik nie sprawdzi cen',
-            'Sprzedaję po 4,99 zł i daję klientce gumę do żucia w ramach przeprosin',
           ],
           0,
           'Gdy ceny się różnią, klient może żądać sprzedaży po cenie dla siebie korzystniejszej. Potem trzeba poprawić etykietę albo system.',
@@ -242,7 +206,6 @@ export default {
             null,
             'To klient decyduje: może kupić po cenie niższej. Sklep odpowiada za zgodność cen.',
             'Klientka ma prawo kupić płatki po cenie z półki teraz.',
-            'Prezent nie zmienia prawa klientki do ceny korzystniejszej.',
           ],
         ),
         {

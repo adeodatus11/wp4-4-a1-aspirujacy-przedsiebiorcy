@@ -21,7 +21,7 @@ export default {
       'Pracujesz w sklepie spożywczo-przemysłowym. Podzielisz towar na grupy, przeczytasz etykietę jak kontroler i zdecydujesz, gdzie i w jakiej kolejności stawiać nową dostawę.',
     teacher:
       'Lekcja łączy klasyfikację towarów z oznakowaniem i przechowywaniem. Kluczowe rozróżnienie: „należy spożyć do” (bezpieczeństwo) i „najlepiej spożyć przed” (jakość). Jeśli możesz, przynieś 3–4 prawdziwe opakowania; uczniowie porównają je z etykietą z zadania.',
-    grouping: 'Etapy 1 i 5 samodzielnie. Etapy 2–4 w parach. Jeśli masz prawdziwe opakowania, jedna para dostaje jedno opakowanie.',
+    grouping: 'Jeśli masz prawdziwe opakowania, każda para dostaje jedno.',
     methods: [methods.jawne, methods.przypadek],
   },
   objectives: [
@@ -30,7 +30,7 @@ export default {
     'Sprawdzam, czy etykieta ma wymagane informacje, w tym wyróżnione alergeny.',
     'Wiem, gdzie i w jakiej kolejności ustawić nową dostawę (FEFO).',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kilka prawdziwych opakowań: jogurt, makaron, mrożonka, środek czystości (nie jest konieczne)'],
+  materials: ['Kilka prawdziwych opakowań: jogurt, makaron, mrożonka, środek czystości (nie jest konieczne)'],
   teacherGuide: {
     preparation: 'Jeśli przynosisz opakowania, wybierz takie, na których widać datę, skład i warunki przechowywania. Środki czystości tylko zamknięte.',
     summary:
@@ -39,13 +39,13 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Dwie daty',
       title: 'Dwie daty na opakowaniach',
       grouping: 'solo',
       intro: 'Na paczce makaronu jest napis „Najlepiej spożyć przed: 12.11.2026”, a na jogurcie „Należy spożyć do: 22.10.2026”.',
       ...note(
-        5,
-        'Każdy odpowiada sam. Potem zapytaj: kto wyrzuca makaron dzień po dacie? Kto je jogurt tydzień po dacie?',
+        4,
+        'Każdy odpowiada sam. Potem dwa szybkie pytania do sali: kto wyrzuca makaron dzień po dacie? Kto je jogurt tydzień po dacie?',
         'Dlaczego na makaronie i na jogurcie są różne napisy?',
         'Jogurt szybko się psuje i po dacie może szkodzić. Makaron jest trwały — po dacie może tracić smak, ale zwykle nie szkodzi.',
         'Traktowanie obu dat tak samo — wyrzucanie trwałej żywności albo jedzenie jogurtu po terminie.',
@@ -160,10 +160,10 @@ export default {
     },
     {
       id: 'przechowywanie',
-      label: 'Półka',
-      title: 'Gdzie i w jakiej kolejności',
-      grouping: 'pair',
-      intro: 'Przyszła dostawa: masło, lody, mąka, wybielacz, ser żółty, frytki mrożone, płyn do naczyń. Jogurty z nowej dostawy mają datę 30.10, a te na półce — 24.10.',
+      label: 'Gdzie odłożyć',
+      title: 'Chłodnia, mroźnia, regał',
+      grouping: 'solo',
+      intro: 'Przyszła dostawa: masło, lody, mąka, wybielacz, ser żółty, frytki mrożone, płyn do naczyń.',
       reading: {
         title: 'Przechowywanie w sklepie',
         paragraphs: [
@@ -171,12 +171,12 @@ export default {
         ],
       },
       ...note(
-        12,
-        'Dopasowanie i kolejność w parach. Na koniec pytanie o FEFO: zapytaj, czy ktoś widział w sklepie świeże jogurty z przodu i stare z tyłu.',
-        'Co się stanie, jeśli nową dostawę postawisz z przodu?',
-        'Klienci wezmą świeże, a starsze przekroczą datę i trzeba je będzie wyrzucić albo przecenić — strata sklepu.',
-        'Mylenie FIFO (kolejność dostaw) i FEFO (kolejność dat). Przy żywności liczy się data.',
-        'Zaproponujcie, jak oznaczyć półkę z towarem, który ma krótką datę (przecena, naklejka).',
+        6,
+        'Każdy dopasowuje sam, szybko. Omów tylko wybielacz i płyn do naczyń: dlaczego chemia nie może stać obok żywności, nawet w zamkniętych opakowaniach.',
+        'Co może się stać, gdy płyn do naczyń stoi na jednej półce z mąką?',
+        'Wyciek albo zapach przejdzie na żywność. Klient może też pomylić opakowania.',
+        'Odkładanie sera żółtego na regał suchy, bo „długo się trzyma”.',
+        'Wymień trzy towary, które w Twoim domowym sklepie stoją w chłodni, choć można by się spodziewać ich na regale.',
       ),
       activities: [
         {
@@ -195,6 +195,23 @@ export default {
           ],
           explanation: 'Temperatura z etykiety, a chemia zawsze osobno od żywności.',
         },
+      ],
+    },
+    {
+      id: 'fefo',
+      label: 'Kolejność dat',
+      title: 'Nowe jogurty idą do tyłu',
+      grouping: 'pair',
+      intro: 'Jogurty z nowej dostawy mają datę 30.10, a te, które już stoją na półce — 24.10.',
+      ...note(
+        7,
+        'Pary układają kolejność, potem każdy sam odpowiada o mleku. Zapytaj, czy ktoś widział w sklepie świeże jogurty z przodu i starsze z tyłu.',
+        'Co się stanie, jeśli nową dostawę postawisz z przodu?',
+        'Klienci wezmą świeże, a starsze przekroczą datę i trzeba je będzie wyrzucić albo przecenić — strata sklepu.',
+        'Mylenie FIFO (kolejność dostaw) i FEFO (kolejność dat). Przy żywności liczy się data.',
+        'Zaproponujcie, jak oznaczyć półkę z towarem, który ma krótką datę (przecena, naklejka).',
+      ),
+      activities: [
         {
           type: 'sequence',
           id: 'q-fefo',
@@ -210,21 +227,20 @@ export default {
         choice(
           'q-fefo-choice',
           'Na magazynie są dwie partie mleka: przyjęta w poniedziałek z datą 28.10 i przyjęta w środę z datą 26.10. Którą wystawiasz najpierw?',
-          ['Środową z datą 26.10', 'Poniedziałkową z datą 28.10', 'Obie naraz, wymieszane', 'Tę, która stoi bliżej drzwi'],
+          ['Środową z datą 26.10', 'Poniedziałkową z datą 28.10', 'Obie naraz, wymieszane'],
           0,
           'Przy żywności liczy się data trwałości (FEFO), a nie kolejność przyjęcia (FIFO). Środowa partia ma krótszą datę.',
           [
             null,
             'Tak byłoby przy FIFO (pierwsze przyszło — pierwsze wychodzi). Przy żywności ważniejsza jest data.',
             'Wymieszanie partii utrudnia kontrolę dat i zwiększa straty.',
-            'Wygoda przenoszenia nie decyduje o kolejności sprzedaży.',
           ],
         ),
       ],
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Znak CE',
       title: 'Klient pyta przy półce',
       grouping: 'solo',
       intro: 'Klientka z córką ogląda plastikowy zestaw do zabawy w kuchnię. Pyta, czy znak CE oznacza, że zabawka jest dobrej jakości i wyprodukowana w Unii.',
@@ -245,6 +261,7 @@ export default {
             'Tak, znak CE oznacza wysoką jakość, sprawdzoną przez polski urząd',
             'Tak, CE oznacza, że zabawkę wyprodukowano w kraju Unii Europejskiej',
             'Znak CE dotyczy tylko sprzętu elektrycznego, na zabawce nie ma znaczenia',
+            'Znak CE nakleja sklep po sprawdzeniu dostawy',
           ],
           0,
           'CE to deklaracja zgodności z wymaganiami UE, obowiązkowa m.in. na zabawkach. Nie jest znakiem jakości ani pochodzenia.',
@@ -253,6 +270,7 @@ export default {
             'CE nie jest certyfikatem jakości wydanym przez urząd. To deklaracja producenta.',
             'Wyrób ze znakiem CE może być wyprodukowany poza UE.',
             'Zabawki muszą mieć znak CE — to jedna z grup towarów, gdzie jest obowiązkowy.',
+            'Znak umieszcza producent albo importer, nie sklep.',
           ],
         ),
         {

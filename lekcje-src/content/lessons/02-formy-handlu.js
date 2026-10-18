@@ -21,7 +21,7 @@ export default {
       'Agnieszka robi kubki ceramiczne w Bolesławcu i szuka, gdzie je sprzedawać. Rozpoznasz formy handlu, policzysz koszt platformy i własnego sklepu, a na koniec porównasz sprzedaż hurtową z detaliczną.',
     teacher:
       'Najpierw porządkujemy pojęcia (hurt, detal, stacjonarnie, internet, franczyza), potem liczymy. Najważniejszy moment to próg 1320 zł: uczniowie widzą, że „lepszy kanał” zależy od skali sprzedaży.',
-    grouping: 'Etapy 1, 2 i 5 samodzielnie. Etapy 3 i 4 w parach: jedna osoba liczy, druga sprawdza wzór.',
+    grouping: 'Przy liczeniu jedna osoba liczy, druga sprawdza wzór.',
     methods: [methods.przypadek, methods.przyklady],
   },
   objectives: [
@@ -29,26 +29,33 @@ export default {
     'Liczę koszt sprzedaży przez platformę i przez własny sklep internetowy.',
     'Wskazuję, przy jakiej sprzedaży opłaca się zmienić kanał.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
-    preparation: 'Nie trzeba nic drukować. Jeśli ktoś z grupy sprzedaje przez internet, poproś go wcześniej o krótką relację w etapie 3.',
+    preparation: 'Nie trzeba nic drukować. Jeśli ktoś z grupy sprzedaje przez internet, poproś go wcześniej o krótką relację przy porównaniu platformy i własnego sklepu.',
     summary:
       'Hurt to sprzedaż firmom do dalszej odsprzedaży, detal — konsumentom. Platforma pobiera prowizję od każdej sprzedaży, własny sklep kosztuje głównie stały abonament. Przy małej sprzedaży tańsza jest platforma, przy dużej własny sklep. Sprzedaż hurtowa daje mniej na sztuce, ale dużo naraz i bez wysyłek.',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Hurt czy detal?',
+      id: 'formy',
+      label: 'Formy handlu',
+      title: 'Komu i gdzie Agnieszka sprzedaje kubki',
       grouping: 'solo',
-      intro: 'Sklep z pamiątkami w Karpaczu zamawia u Agnieszki 150 kubków, żeby sprzedawać je turystom.',
+      intro: 'Sklep z pamiątkami w Karpaczu zamawia u Agnieszki 150 kubków, żeby sprzedawać je turystom. Zanim zaczniesz czytać, odpowiedz z tego, co już wiesz.',
+      reading: {
+        title: 'Formy handlu w skrócie',
+        paragraphs: [
+          'Handel hurtowy: sprzedaż firmom do dalszej odsprzedaży — hurtownie, także internetowe dla firm. Handel detaliczny: sprzedaż konsumentom — w sklepie, na targu, przez internet. W internecie sklep może działać na własnej stronie albo na platformie, gdzie wielu sprzedawców wystawia towar obok siebie.',
+          'Franczyza to umowa, w której przedsiębiorca prowadzi własny sklep pod marką sieci. Sieć dostarcza towar, szyld, system i szkolenia, a franczyzobiorca płaci opłaty i trzyma się jej zasad. Wiele małych sklepów spożywczych w Polsce działa w ten sposób.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy odpowiada sam. Po sprawdzeniu zapytaj, kto ostatnio kupił coś w hurtowni jako osoba prywatna.',
-        'Czy hurtownia może sprzedać coś osobie prywatnej?',
-        'Może. O formie decyduje cel zakupu i odbiorca: hurt to sprzedaż do dalszej odsprzedaży albo na potrzeby firmy.',
-        'Mylenie hurtu z „dużą ilością”. Klient detaliczny też może kupić dużo.',
-        'Zapytaj, czy cash and carry to hurt, czy detal.',
+        15,
+        'Najpierw pytanie o 150 kubków, bez czytania — od razu widać, kto myli hurt z „dużą ilością”. Potem 3 minuty czytania i dopasowanie. Przy omówieniu zatrzymaj się na sklepie pod szyldem sieci: dlaczego to nie jest sklep sieci, tylko osobna firma?',
+        'Czym różni się sklep sieci od sklepu franczyzowego pod tym samym szyldem?',
+        'Sklep franczyzowy to osobna firma z własnym właścicielem, który ponosi ryzyko. Sieć ustala zasady i pobiera opłaty.',
+        'Uznawanie każdej sprzedaży przez internet za hurt albo każdej dużej sprzedaży za hurt.',
+        'Wymieńcie trzy sieci franczyzowe działające w waszej okolicy i jedną zaletę dla franczyzobiorcy.',
       ),
       activities: [
         choice(
@@ -64,30 +71,6 @@ export default {
             'Franczyza to umowa o prowadzenie firmy pod cudzą marką i według jej zasad. Tu jest zwykła sprzedaż.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'formy',
-      label: 'Formy',
-      title: 'Gdzie i komu sprzedajemy',
-      grouping: 'solo',
-      intro: 'Formy handlu różnią się odbiorcą (firma czy konsument) i miejscem (sklep czy internet).',
-      reading: {
-        title: 'Formy handlu w skrócie',
-        paragraphs: [
-          'Handel hurtowy: sprzedaż firmom do dalszej odsprzedaży — hurtownie, także internetowe dla firm. Handel detaliczny: sprzedaż konsumentom — w sklepie, na targu, przez internet. W internecie sklep może działać na własnej stronie albo na platformie, gdzie wielu sprzedawców wystawia towar obok siebie.',
-          'Franczyza to umowa, w której przedsiębiorca prowadzi własny sklep pod marką sieci. Sieć dostarcza towar, szyld, system i szkolenia, a franczyzobiorca płaci opłaty i trzyma się jej zasad. Wiele małych sklepów spożywczych w Polsce działa w ten sposób.',
-        ],
-      },
-      ...note(
-        10,
-        'Czytanie 3 minuty, potem dopasowanie. Przy omówieniu zatrzymaj się na sklepie pod szyldem sieci: dlaczego to nie jest sklep sieci, tylko osobna firma?',
-        'Czym różni się sklep sieci od sklepu franczyzowego pod tym samym szyldem?',
-        'Sklep franczyzowy to osobna firma z własnym właścicielem, który ponosi ryzyko. Sieć ustala zasady i pobiera opłaty.',
-        'Uznawanie każdej sprzedaży przez internet za hurt albo każdej dużej sprzedaży za hurt.',
-        'Wymieńcie trzy sieci franczyzowe działające w waszej okolicy i jedną zaletę dla franczyzobiorcy.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-formy',
@@ -142,13 +125,12 @@ export default {
         choice(
           'q-800',
           'W listopadzie Agnieszka planuje sprzedaż za 800 zł. Który kanał będzie tańszy?',
-          ['Platforma: 72 zł wobec 111 zł', 'Własny sklep: 111 zł wobec 72 zł', 'Oba kosztują 118,80 zł', 'Własny sklep: 12 zł wobec 72 zł'],
+          ['Platforma: 72 zł wobec 111 zł', 'Własny sklep: 111 zł wobec 72 zł', 'Własny sklep: 12 zł wobec 72 zł'],
           0,
           'Platforma: 800 × 0,09 = 72 zł. Własny sklep: 99 + 800 × 0,015 = 111 zł. Poniżej progu 1320 zł platforma jest tańsza.',
           [
             null,
             'Kwoty się zgadzają, ale niższa jest prowizja platformy (72 zł).',
-            '118,80 zł to koszt przy sprzedaży 1320 zł, a nie 800 zł.',
             '12 zł to tylko opłata za płatności. Do własnego sklepu trzeba doliczyć abonament 99 zł.',
           ],
         ),
@@ -202,8 +184,8 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
-      title: 'Nowa sytuacja',
+      label: 'Franczyza',
+      title: 'Sklep pod cudzym szyldem',
       grouping: 'solo',
       intro: 'Pan Tomasz z Nowego Tomyśla ma 60 tys. zł oszczędności i chce otworzyć sklep spożywczy. Nie pracował wcześniej w handlu.',
       ...note(
@@ -243,8 +225,8 @@ export default {
           type: 'resultCard',
           id: 'karta',
           badges: [
-            { min: 0, name: 'Do powtórki', text: 'Wróć do etapu 2 i do przykładu z progiem 1320 zł.' },
-            { min: 0.6, name: 'Rozróżniasz kanały', text: 'Popraw jeszcze obliczenia w etapie 4.' },
+            { min: 0, name: 'Do powtórki', text: 'Wróć do opisu form handlu i do przykładu z progiem 1320 zł.' },
+            { min: 0.6, name: 'Rozróżniasz kanały', text: 'Popraw jeszcze rachunek: 150 kubków do sklepu czy pojedynczo w internecie.' },
             { min: 0.85, name: 'Doradca sprzedaży', text: 'Umiesz dobrać kanał do skali sprzedaży i policzyć jego koszt.' },
           ],
         },

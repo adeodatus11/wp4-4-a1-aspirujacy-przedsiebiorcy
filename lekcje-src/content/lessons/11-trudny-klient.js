@@ -21,7 +21,7 @@ export default {
       'Pracujesz w sklepie RTV-AGD w Gliwicach. Poznasz pięć kroków rozmowy z niezadowolonym klientem, rozpoznasz typowe zastrzeżenia i przeprowadzisz trudną rozmowę o towarze z gazetki.',
     teacher:
       'Lekcja oddziela emocje klienta od jego problemu. Uczniowie ćwiczą kolejność: wysłuchać, pokazać zrozumienie, dopytać, zaproponować, sprawdzić. Ważne jest też bezpieczeństwo: z agresywnym klientem nie zostaje się samemu.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach. Rozmowę z etapu 4 warto odegrać na żywo.',
+    grouping: 'Rozmowę z klientem warto odegrać na żywo.',
     methods: [methods.dialogowe, methods.przypadek, methods.feedback],
   },
   objectives: [
@@ -30,26 +30,33 @@ export default {
     'Proponuję rozwiązanie, które mogę naprawdę zrealizować.',
     'Wiem, kiedy wezwać kierownika albo ochronę.',
   ],
-  materials: ['Urządzenie z przeglądarką'],
+  materials: [],
   teacherGuide: {
-    preparation: 'Przygotuj na tablicy pięć kroków: wysłuchaj, pokaż zrozumienie, dopytaj, zaproponuj, sprawdź. W etapie 4 wybierz parę, która odegra rozmowę przed klasą.',
+    preparation: 'Przygotuj na tablicy pięć kroków: wysłuchaj, pokaż zrozumienie, dopytaj, zaproponuj, sprawdź. Przy rozmowie o odkurzaczu wybierz parę, która odegra ją przed klasą.',
     summary:
       'Zdenerwowany klient zwykle ma prawdziwy problem. Najpierw pozwalasz mu go opowiedzieć, nie przerywasz i nie bierzesz złości do siebie. Potem dopytujesz i proponujesz rozwiązanie w granicach swoich uprawnień. Obietnice bez pokrycia pogarszają sytuację. Gdy klient grozi albo jest agresywny — wzywasz kierownika lub ochronę i nie zostajesz sam(a).',
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Pierwsze sekundy',
-      grouping: 'solo',
-      intro: 'Klientka podchodzi szybkim krokiem, z gazetką w ręku: „Gdzie jest ten odkurzacz? Jechałam pół godziny!”.',
+      id: 'kroki',
+      label: 'Gazetka',
+      title: 'Pierwsze sekundy i kolejność rozmowy',
+      grouping: 'pair',
+      intro: 'Klientka podchodzi szybkim krokiem, z gazetką w ręku: „Gdzie jest ten odkurzacz? Jechałam pół godziny!”. Rozmowa z niezadowolonym klientem ma stałą kolejność — pominięcie kroku zwykle wraca jako kolejna pretensja.',
+      reading: {
+        title: 'Pięć kroków',
+        paragraphs: [
+          'Wysłuchaj bez przerywania. Pokaż zrozumienie: „Rozumiem, że to strata czasu”. Dopytaj o szczegóły: czego klient potrzebuje, na kiedy. Zaproponuj to, co naprawdę możesz zrobić. Sprawdź, czy propozycja odpowiada klientowi.',
+          'Zrozumienie to nie przyznanie się do winy. Możesz rozumieć złość klientki, a jednocześnie wiedzieć, że promocja była do wyczerpania zapasów.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Zapytaj, jak się czuje sprzedawca, gdy ktoś na niego krzyczy — i dlaczego mimo to warto zacząć od słuchania.',
-        'Dlaczego nie zaczynamy od wyjaśnienia, że „to nie nasza wina”?',
-        'Bo klientka jeszcze nie skończyła mówić. Tłumaczenie się na starcie brzmi jak zbywanie.',
-        'Odpowiadanie złością na złość albo natychmiastowe tłumaczenie się.',
-        'Wymyśl zdanie, którym pokażesz zrozumienie, nie przyznając się do winy.',
+        15,
+        'Na początek każdy sam wybiera pierwszą reakcję na klientkę z gazetką. Pary układają kroki. Potem każda para wymyśla jedno zdanie do każdego kroku dla sytuacji z odkurzaczem.',
+        'Czym różni się „Rozumiem, że jest Pani zła” od „Przepraszam, to nasza wina”?',
+        'Pierwsze pokazuje, że słyszysz emocje. Drugie przyznaje winę, której może nie być.',
+        'Przeskakiwanie od razu do propozycji, zanim klient poczuje się wysłuchany.',
+        'Ułóż zdania do pięciu kroków dla klienta, któremu zepsuł się telefon po tygodniu.',
       ),
       activities: [
         choice(
@@ -70,30 +77,6 @@ export default {
             'Kierownik jest potrzebny przy agresji albo decyzji ponad Twoje uprawnienia. Tu możesz zacząć sam(a).',
           ],
         ),
-      ],
-    },
-    {
-      id: 'kroki',
-      label: 'Pięć kroków',
-      title: 'Kolejność rozmowy',
-      grouping: 'pair',
-      intro: 'Rozmowa z niezadowolonym klientem ma stałą kolejność. Pominięcie kroku zwykle wraca jako kolejna pretensja.',
-      reading: {
-        title: 'Pięć kroków',
-        paragraphs: [
-          'Wysłuchaj bez przerywania. Pokaż zrozumienie: „Rozumiem, że to strata czasu”. Dopytaj o szczegóły: czego klient potrzebuje, na kiedy. Zaproponuj to, co naprawdę możesz zrobić. Sprawdź, czy propozycja odpowiada klientowi.',
-          'Zrozumienie to nie przyznanie się do winy. Możesz rozumieć złość klientki, a jednocześnie wiedzieć, że promocja była do wyczerpania zapasów.',
-        ],
-      },
-      ...note(
-        10,
-        'Pary układają kroki. Potem każda para wymyśla jedno zdanie do każdego kroku dla sytuacji z odkurzaczem.',
-        'Czym różni się „Rozumiem, że jest Pani zła” od „Przepraszam, to nasza wina”?',
-        'Pierwsze pokazuje, że słyszysz emocje. Drugie przyznaje winę, której może nie być.',
-        'Przeskakiwanie od razu do propozycji, zanim klient poczuje się wysłuchany.',
-        'Ułóż zdania do pięciu kroków dla klienta, któremu zepsuł się telefon po tygodniu.',
-      ),
-      activities: [
         {
           type: 'sequence',
           id: 'q-kroki',
@@ -157,7 +140,6 @@ export default {
             'Pytam o sklep i warunki, porównuję z naszymi',
             'Od razu daję 80 zł rabatu, żeby klient nie wyszedł',
             'Mówię, że sklepy internetowe sprzedają podróbki',
-            'Mówię, że w takim razie lepiej, żeby kupił w internecie',
           ],
           0,
           'Porównujesz całe warunki: koszt dostawy, termin, odbiór od ręki, pomoc przy reklamacji. Czasem różnica znika, czasem nie — wtedy uczciwie o tym mówisz.',
@@ -165,7 +147,6 @@ export default {
             null,
             'Rabatu nie dajesz bez uprawnień. To też uczy klientów, że wystarczy narzekać.',
             'Oczernianie konkurencji bez dowodów jest nieuczciwe i podważa Twoją wiarygodność.',
-            'Rezygnujesz z rozmowy, zanim wiesz, czy różnica jest prawdziwa.',
           ],
         ),
       ],
@@ -177,8 +158,8 @@ export default {
       grouping: 'pair',
       intro: 'Odkurzacz z gazetki (499 zł, promocja „do wyczerpania zapasów”) skończył się o 10:00. Sklep może zamówić go do innego sklepu sieci w Katowicach (odbiór za 2 dni w promocyjnej cenie) albo sprzedać podobny model za 549 zł. Nie możesz dać rabatu.',
       ...note(
-        12,
-        'Najpierw rozmowa na platformie, potem jedna para odgrywa ją przed klasą. Klasa ocenia, czy pojawiło się pięć kroków.',
+        15,
+        'Po rozmowie każdy zapisuje trzy własne zdania dla klientki z odkurzaczem. Najpierw rozmowa na platformie, potem jedna para odgrywa ją przed klasą. Klasa ocenia, czy pojawiło się pięć kroków.',
         'Który moment rozmowy był najtrudniejszy i dlaczego?',
         'Zwykle moment, gdy klientka żąda rabatu — trzeba odmówić i jednocześnie zaproponować coś realnego.',
         'Obiecywanie rzeczy, które nie zależą od sprzedawcy („na pewno jutro przyjdzie dostawa”).',
@@ -228,16 +209,22 @@ export default {
             end: { end: true, text: 'Klientka wychodzi z zamówieniem i terminem odbioru. Nie dostała tego, czego chciała na początku, ale dostała realne rozwiązanie.' },
           },
         },
+        text(
+          'q-zdania',
+          'Napisz trzy zdania dla klientki z odkurzaczem: zrozumienie, propozycja, sprawdzenie.',
+          'Rozumiem, że to zła wiadomość, zwłaszcza przed sobotą. Mogę zamówić ten odkurzacz w cenie z gazetki do odbioru w Katowicach za dwa dni albo pokazać podobny model dostępny od ręki. Który wariant będzie dla Pani lepszy?',
+          { criteria: ['Jest zrozumienie bez przyznania winy.', 'Propozycja jest realna.', 'Na końcu jest pytanie sprawdzające.'] },
+        ),
       ],
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Agresja',
       title: 'Granica',
       grouping: 'solo',
       intro: 'Klient przy kasie zaczyna wyzywać kasjerkę i uderza pięścią w ladę.',
       ...note(
-        8,
+        5,
         'Samodzielnie. Na koniec przypomnij, gdzie w waszej szkole lub zakładzie praktyk jest przycisk alarmowy albo numer do ochrony.',
         'Kiedy rozmowa przestaje być obsługą klienta, a staje się sprawą bezpieczeństwa?',
         'Gdy pojawiają się wyzwiska, groźby, przemoc albo uszkadzanie mienia.',
@@ -249,7 +236,7 @@ export default {
           'q-agresja',
           'Co robisz?',
           [
-            'Wzywam kierownika lub ochronę i nie zostaję sam(a)',
+            'Wzywam kierownika lub ochronę i nie zostaję z nim sam na sam',
             'Odpowiadam tym samym tonem, żeby klient wiedział, że się nie boję',
             'Obsługuję go dalej najszybciej, jak umiem, żeby jak najszybciej wyszedł',
             'Wychodzę z kasy bez słowa i zostawiam otwartą szufladę z pieniędzmi',
@@ -262,12 +249,6 @@ export default {
             'Obsługa agresywnego klienta w pojedynkę naraża Ciebie i innych. Najpierw pomoc.',
             'Odejście bez słowa i zostawienie gotówki tworzy nowe zagrożenie.',
           ],
-        ),
-        text(
-          'q-zdania',
-          'Napisz trzy zdania dla klientki z odkurzaczem: zrozumienie, propozycja, sprawdzenie.',
-          'Rozumiem, że to zła wiadomość, zwłaszcza przed sobotą. Mogę zamówić ten odkurzacz w cenie z gazetki do odbioru w Katowicach za dwa dni albo pokazać podobny model dostępny od ręki. Który wariant będzie dla Pani lepszy?',
-          { criteria: ['Jest zrozumienie bez przyznania winy.', 'Propozycja jest realna.', 'Na końcu jest pytanie sprawdzające.'] },
         ),
         {
           type: 'resultCard',

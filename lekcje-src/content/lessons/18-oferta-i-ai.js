@@ -33,7 +33,6 @@ export default {
       'Pracujesz w sklepie z oświetleniem w Łodzi. Poprawisz ofertę wygenerowaną przez AI, uzupełnisz dokument i napiszesz polecenie, które nie pozwoli narzędziu wymyślać faktów.',
     teacher:
       'Lekcja nie wymaga konta w żadnym narzędziu AI — szkic jest gotowy na platformie. Uczniowie uczą się sprawdzać fakty, ceny i dane osobowe w tekście, który brzmi przekonująco. Druga część: obieg dokumentów handlowych (zapytanie, oferta, zamówienie, potwierdzenie, faktura).',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przypadek, methods.feedback],
   },
   objectives: [
@@ -42,7 +41,7 @@ export default {
     'Przygotowuję poprawną ofertę na podstawie potwierdzonych danych.',
     'Piszę polecenie dla AI, które ogranicza wymyślanie faktów.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Narzędzie AI nie jest potrzebne'],
+  materials: ['Narzędzie AI nie jest potrzebne'],
   teacherGuide: {
     preparation: 'Jeśli szkoła ma dostęp do narzędzia AI, możesz w etapie 4 pokazać na projektorze, jak działa polecenie z ograniczeniami. Nie wklejaj do niego żadnych prawdziwych danych.',
     summary:

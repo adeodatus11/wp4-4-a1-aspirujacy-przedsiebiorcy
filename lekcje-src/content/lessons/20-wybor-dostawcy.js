@@ -38,7 +38,6 @@ export default {
       'Zaopatrujesz sklep papierniczy w Kaliszu przed rokiem szkolnym. Policzysz koszt trzech ofert, uwzględnisz termin dostawy i płatności, wybierzesz dostawcę i sprawdzisz zamówienie.',
     teacher:
       'Wybór oferty dostawcy z uzasadnieniem to typowe zadanie egzaminu praktycznego HAN.02. Uczniowie liczą koszt całkowity (cena, rabat, transport), sprawdzają termin dostawy i doceniają termin płatności. Uzasadnienie ma odwoływać się do liczb.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przyklady, methods.przypadek],
   },
   objectives: [
@@ -47,7 +46,7 @@ export default {
     'Wybieram dostawcę i uzasadniam wybór liczbami.',
     'Sprawdzam zamówienie przed wysłaniem.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Jeśli masz arkusz egzaminacyjny HAN.02 z zadaniem o wyborze dostawcy, pokaż na koniec, jak wygląda tam uzasadnienie.',
     summary:

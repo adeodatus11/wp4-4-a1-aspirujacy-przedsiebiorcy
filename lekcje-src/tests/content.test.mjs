@@ -4,7 +4,6 @@ import assert from 'node:assert/strict';
 import { loadLessons } from './load.mjs';
 import { realia } from '../content/realia.js';
 import { isScored, lessonActivities } from '../lib/scoring.js';
-import { shuffledOrder } from '../lib/shuffle.js';
 
 const lessons = await loadLessons();
 const knownTypes = new Set(['choice', 'multi', 'number', 'matching', 'sequence', 'text', 'checklist', 'info', 'docForm', 'spotErrors', 'dialog', 'resultCard']);
@@ -37,10 +36,10 @@ for (const lesson of lessons) {
     assert.ok(lesson.han.length > 0 && lesson.han.every(u => /^HAN\.0[12]\.\d+$/.test(u)), 'jednostki HAN');
     assert.ok(lesson.tags.length >= 2 && lesson.tags.length <= 5, 'tagi 2–5');
     assert.ok(filled(lesson.audience?.adults), 'wskazówka dla dorosłych');
-    for (const key of ['name', 'student', 'teacher', 'grouping']) assert.ok(filled(lesson.format?.[key]), `format.${key}`);
+    for (const key of ['name', 'student', 'teacher']) assert.ok(filled(lesson.format?.[key]), `format.${key}`);
     assert.ok(lesson.format.methods.length >= 1);
     assert.ok(lesson.objectives.length >= 2 && lesson.objectives.length <= 5);
-    assert.ok(lesson.materials.length >= 1);
+    assert.ok(Array.isArray(lesson.materials));
     assert.ok(filled(lesson.teacherGuide?.preparation) && filled(lesson.teacherGuide?.summary));
     for (const key of lesson.realia || []) assert.ok(realia[key], `nieznany wpis realiów ${key}`);
   });
@@ -110,9 +109,10 @@ for (const lesson of lessons) {
 function checkActivity(a) {
   switch (a.type) {
     case 'choice': {
-      assert.equal(a.options.length, 4, `${a.id}: 4 odpowiedzi`);
-      assert.ok(a.correct >= 0 && a.correct < 4, `${a.id}: indeks poprawnej`);
-      assert.equal(new Set(a.options).size, 4, `${a.id}: odpowiedzi się powtarzają`);
+      assert.ok(a.options.length >= 2 && a.options.length <= 5, `${a.id}: 2–5 odpowiedzi`);
+      assert.ok(a.correct >= 0 && a.correct < a.options.length, `${a.id}: indeks poprawnej`);
+      assert.equal(new Set(a.options).size, a.options.length, `${a.id}: odpowiedzi się powtarzają`);
+      assert.deepEqual([...a.order].sort(), [...a.options.keys()], `${a.id}: kolejność wyświetlania`);
       assert.ok(filled(a.explanation), `${a.id}: wyjaśnienie`);
       a.options.forEach((_, i) => {
         if (i !== a.correct) assert.ok(filled(a.why?.[i]), `${a.id}: brak komentarza do błędnej odpowiedzi ${i}`);
@@ -214,9 +214,7 @@ test('pytania wyboru: poprawna odpowiedź nie wyróżnia się długością ani m
     return lengths[a.correct] === Math.max(...lengths) && lengths.filter(l => l === Math.max(...lengths)).length === 1;
   }).length;
   assert.ok(longest / choices.length <= 0.4, `najdłuższa jest poprawna w ${longest} z ${choices.length}`);
-  const positions = [0, 0, 0, 0];
-  for (const a of choices) positions[shuffledOrder(4, a.id).indexOf(a.correct)]++;
-  for (const count of positions) assert.ok(count / choices.length <= 0.4, `rozkład liter: ${positions.join('/')}`);
+  // Rozkład miejsc poprawnej odpowiedzi sprawdza tests/patterns.test.mjs.
 });
 
 test('realia: data sprawdzenia nie starsza niż rok', () => {

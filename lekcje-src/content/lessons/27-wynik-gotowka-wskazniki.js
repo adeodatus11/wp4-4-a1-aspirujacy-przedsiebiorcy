@@ -38,7 +38,7 @@ export default {
       'Analizujesz pierwszy kwartał sezonu w sklepie rowerowym w Gdańsku. Rozdzielisz wynik od gotówki, policzysz salda, porównasz wykonanie z planem i obliczysz dwa wskaźniki.',
     teacher:
       'Pierwsza lekcja: wynik a gotówka (przychód ≠ wpływ). Najważniejszy moment: marzec ma zysk 2000 zł i ujemne saldo −1000 zł. Druga lekcja: plan, płynność bieżąca i rentowność sprzedaży, z naciskiem na ograniczenia interpretacji.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach; po przerwie zamiana par.',
+    grouping: 'Po przerwie zamiana par.',
     methods: [methods.przyklady, methods.przypadek, methods.ksztaltujace],
   },
   objectives: [
@@ -47,7 +47,7 @@ export default {
     'Liczę odchylenie od planu, płynność bieżącą i rentowność sprzedaży.',
     'Wyjaśniam, dlaczego firma z zyskiem może nie mieć gotówki.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Arkusz cash flow w serwisie programu (nie jest konieczny)'],
+  materials: ['Kalkulator', 'Arkusz cash flow w serwisie programu (nie jest konieczny)'],
   teacherGuide: {
     preparation: 'Przygotuj na tablicy tabelę z sześcioma kolumnami: miesiąc, przychody, koszty, wynik, wpływy, wydatki, saldo. Wypełniacie ją w etapie 3.',
     summary:

@@ -21,7 +21,6 @@ export default {
       'Pracujesz w magazynie hurtowni papierniczej. Wycenisz wydania taśmy pakowej metodą FIFO, uzupełnisz kartotekę magazynową i zdecydujesz, którą partię jogurtów wydać najpierw.',
     teacher:
       'Wycena rozchodu metodą FIFO to element egzaminu praktycznego HAN.02 (program magazynowo-sprzedażowy z ustawieniem FIFO). Uczniowie liczą najpierw jedno wydanie razem z przykładem, potem całą kartotekę. FEFO pokazujemy jako zasadę przy towarach z datą ważności.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przyklady, methods.ksztaltujace],
   },
   objectives: [
@@ -29,7 +28,7 @@ export default {
     'Prowadzę kartotekę magazynową: przychód, rozchód, stan.',
     'Stosuję FEFO przy towarach z datą ważności.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Narysuj na tablicy trzy „warstwy” towaru jedna na drugiej z cenami 5,00, 5,40 i 5,60 zł. Przy wydaniu zdejmujesz najpierw najniższą (najstarszą) warstwę.',
     summary:

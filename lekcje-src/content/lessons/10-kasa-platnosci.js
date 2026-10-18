@@ -21,7 +21,7 @@ export default {
       'Pracujesz na kasie w sklepie spożywczym w Lublinie. Wydasz resztę, sprawdzisz paragon, obsłużysz różne płatności, spokojnie rozwiążesz spór o resztę, a na koniec zmiany rozliczysz kasę.',
     teacher:
       'Pierwsza lekcja: paragon, płatności i trudna sytuacja. Druga: raport zmiany, zwroty i korekty. Kluczowe nawyki: banknot klienta leży na wierzchu, dopóki nie wydasz reszty; gotówkę liczy się w obecności drugiej osoby; pomyłki się dokumentuje, a nie „naprawia po cichu”.',
-    grouping: 'Etapy 1 i 7 samodzielnie, pozostałe w parach: kasjer i kontroler, po przerwie zamiana.',
+    grouping: 'W parach kasjer i kontroler, po przerwie zamiana.',
     methods: [methods.przypadek, methods.jawne, methods.ksztaltujace],
   },
   objectives: [
@@ -30,7 +30,7 @@ export default {
     'Rozwiązuję spór o resztę według procedury.',
     'Rozliczam gotówkę na koniec zmiany i wpisuję różnicę.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator', 'Jeśli to możliwe: prawdziwy paragon (dane osobowe zakryte)'],
+  materials: ['Kalkulator', 'Jeśli to możliwe: prawdziwy paragon (dane osobowe zakryte)'],
   teacherGuide: {
     preparation:
       'Przynieś kilka paragonów z różnych sklepów. W etapie 2 uczniowie porównają je z paragonem z zadania. Przypomnij, że stawki VAT na paragonie bywają oznaczone literami (A, B, C), a ich znaczenie jest wydrukowane na dole.',

@@ -9,6 +9,26 @@ export function groupingLabel(grouping) {
   return groupingNames[grouping] || '';
 }
 
+// Opis organizacji pracy z etapów lekcji, np. „samodzielnie: etapy 1, 4; w parach: etapy 2–3”.
+export function organisation(lesson) {
+  const byKind = new Map();
+  lesson.sections.forEach((s, i) => {
+    if (!s.grouping) return;
+    byKind.set(s.grouping, [...(byKind.get(s.grouping) || []), i + 1]);
+  });
+  const ranges = numbers =>
+    numbers
+      .reduce((acc, n) => {
+        const last = acc.at(-1);
+        if (last && last[1] === n - 1) last[1] = n;
+        else acc.push([n, n]);
+        return acc;
+      }, [])
+      .map(([a, b]) => (a === b ? `${a}` : `${a}–${b}`))
+      .join(', ');
+  return [...byKind].map(([kind, numbers]) => `${groupingLabel(kind)}: ${numbers.length > 1 ? 'etapy' : 'etap'} ${ranges(numbers)}`).join('; ');
+}
+
 export function TeacherDrawer({ open, onClose, lesson, stage, onStage }) {
   const ref = useRef(null);
   const section = lesson.sections[stage];
@@ -153,6 +173,7 @@ export function TeacherPlan({ lesson }) {
         </div>
         <div>
           <h2>Materiały</h2>
+          <p className="small muted">Urządzenie z przeglądarką: jedno na osobę albo na parę.</p>
           <ul>
             {lesson.materials.map(m => (
               <li key={m}>{m}</li>
@@ -163,7 +184,7 @@ export function TeacherPlan({ lesson }) {
       <h2>Jak prowadzić</h2>
       <p>{lesson.format.teacher}</p>
       <p>
-        <b>Organizacja:</b> {lesson.format.grouping}
+        <b>Organizacja:</b> {organisation(lesson)}.{lesson.format.grouping ? ` ${lesson.format.grouping}` : ''}
       </p>
       <p>
         <b>Metody:</b>{' '}

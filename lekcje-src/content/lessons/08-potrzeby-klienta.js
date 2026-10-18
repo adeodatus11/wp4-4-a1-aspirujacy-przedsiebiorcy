@@ -21,7 +21,7 @@ export default {
       'Jesteś sprzedawcą lub sprzedawczynią w sklepie turystycznym. Ułożysz pytania, przeprowadzisz rozmowę z klientem i dobierzesz plecak do jego potrzeby — z argumentem opartym na tym, co powiedział.',
     teacher:
       'Na platformie uczniowie najpierw ćwiczą rodzaje pytań i przechodzą symulowaną rozmowę. Potem, jeśli jest czas, odgrywają ją w trójkach: klient, sprzedawca, obserwator. Najważniejsze: propozycja ma wynikać z wypowiedzi klienta, a nie z ceny czy wyglądu.',
-    grouping: 'Etapy 1, 2 i 5 samodzielnie. Etapy 3–4 w trójkach (klient, sprzedawca, obserwator) albo samodzielnie na platformie.',
+    grouping: 'Trójki: klient, sprzedawca, obserwator. Bez trójki — samodzielnie na platformie.',
     methods: [methods.przypadek, methods.feedback, methods.dialogowe],
   },
   objectives: [
@@ -29,7 +29,7 @@ export default {
     'Prowadzę rozmowę od sytuacji klienta do jego potrzeby.',
     'Dobieram towar i argument do tego, co powiedział klient.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kartki z rolami do odgrywania (klient A, B, C) — można zapisać na tablicy'],
+  materials: ['Kartki z rolami do odgrywania (klient A, B, C) — można zapisać na tablicy'],
   teacherGuide: {
     preparation:
       'Przygotuj trzy karteczki z potrzebami klientów: A — dojeżdża rowerem z laptopem, B — szuka lekkiego plecaka na krótkie spacery, C — planuje całodniowe wycieczki w góry, budżet do 150 zł. Osoba grająca klienta zdradza potrzebę dopiero, gdy padną dobre pytania.',
@@ -38,18 +38,24 @@ export default {
   },
   sections: [
     {
-      id: 'start',
-      label: 'Start',
-      title: 'Pierwsze pytanie',
+      id: 'pytania',
+      label: 'Trzy plecaki',
+      title: 'Pierwsze pytanie i lejek pytań',
       grouping: 'solo',
-      intro: 'Sklep turystyczny w Krakowie ma trzy plecaki: Miejski (99 zł, lekki, bez osłony przeciwdeszczowej), Dojazd (149 zł, przegroda na laptop, pokrowiec przeciwdeszczowy) i Trek (219 zł, duży, z pasem biodrowym). Wchodzi klientka i mówi: „Szukam plecaka”.',
+      intro: 'Sklep turystyczny w Krakowie ma trzy plecaki: Miejski (99 zł, lekki, bez osłony przeciwdeszczowej), Dojazd (149 zł, przegroda na laptop, pokrowiec przeciwdeszczowy) i Trek (219 zł, duży, z pasem biodrowym). Wchodzi klientka i mówi: „Szukam plecaka”. Pytanie otwarte zaczyna się zwykle od „jak”, „do czego”, „co”, „kiedy”; zamknięte daje odpowiedź „tak” albo „nie”; sugerujące podpowiada odpowiedź.',
+      reading: {
+        title: 'Lejek pytań',
+        paragraphs: [
+          'Zaczynasz od pytań otwartych o sytuację („Jak zwykle Pani podróżuje?”). Potem pytasz o wcześniejsze doświadczenia („Co przeszkadzało w poprzednim plecaku?”) i ograniczenia („Co jest ważniejsze: waga czy pojemność?”). Pytania zamknięte przydają się na końcu, do potwierdzenia: „Czyli najważniejsza jest ochrona laptopa przed deszczem?”.',
+        ],
+      },
       ...note(
-        5,
-        'Każdy wybiera sam. Potem zapytaj, jakie pierwsze pytanie słyszeli ostatnio od sprzedawcy.',
-        'Po co pytać, skoro klient sam powie, czego chce?',
-        'Klient zwykle mówi o produkcie („plecak”), a nie o potrzebie („dojeżdżam rowerem z laptopem”). Bez pytań sprzedawca zgaduje.',
-        'Zaczynanie od ceny albo od najdroższego produktu.',
-        'Ułóż drugie pytanie, które zadasz po odpowiedzi klientki.',
+        15,
+        'Najpierw każdy sam wybiera pierwsze pytanie do klientki, potem lektura o lejku pytań. Lektura i dopasowanie. Przy pytaniu „Ten będzie najlepszy, prawda?” poproś o przerobienie go na otwarte.',
+        'Jak zamienić pytanie „Lubi Pani chodzić po górach?” na otwarte?',
+        '„Gdzie najczęściej Pani chodzi albo jeździ?”, „Jak wygląda Pani typowa wycieczka?”',
+        'Uznawanie każdego pytania z „czy” za złe. Zamknięte są dobre do potwierdzenia.',
+        'Ułóż trzy pytania otwarte dla klienta, który kupuje buty do biegania.',
       ),
       activities: [
         choice(
@@ -60,6 +66,7 @@ export default {
             'Szuka Pani czegoś raczej taniego czy markowego na dłużej?',
             'Podoba się Pani ten czerwony model z wystawy przy wejściu?',
             'Ile może Pani dziś wydać na nowy plecak w naszym sklepie?',
+            'Czy mogę w czymś pomóc?',
           ],
           0,
           'Pytanie otwarte o sytuację pozwala klientce opowiedzieć o potrzebie. Budżet i model przyjdą później.',
@@ -68,31 +75,9 @@ export default {
             'To pytanie zamknięte z sugestią — klientka wybiera z dwóch opcji, które podsunął sprzedawca.',
             'Pokazujesz produkt, zanim wiesz, do czego ma służyć.',
             'Budżet jest ważny, ale na start zawęża rozmowę do ceny.',
+            'Na takie pytanie zwykle pada „nie, dziękuję, tylko się rozglądam” i rozmowa się kończy.',
           ],
         ),
-      ],
-    },
-    {
-      id: 'pytania',
-      label: 'Pytania',
-      title: 'Otwarte, zamknięte, sugerujące',
-      grouping: 'solo',
-      intro: 'Pytanie otwarte zaczyna się zwykle od „jak”, „do czego”, „co”, „kiedy”. Zamknięte daje odpowiedź „tak” albo „nie”. Sugerujące podpowiada odpowiedź, której oczekuje sprzedawca.',
-      reading: {
-        title: 'Lejek pytań',
-        paragraphs: [
-          'Zaczynasz od pytań otwartych o sytuację („Jak zwykle Pani podróżuje?”). Potem pytasz o wcześniejsze doświadczenia („Co przeszkadzało w poprzednim plecaku?”) i ograniczenia („Co jest ważniejsze: waga czy pojemność?”). Pytania zamknięte przydają się na końcu, do potwierdzenia: „Czyli najważniejsza jest ochrona laptopa przed deszczem?”.',
-        ],
-      },
-      ...note(
-        10,
-        'Lektura i dopasowanie. Przy pytaniu „Ten będzie najlepszy, prawda?” poproś o przerobienie go na otwarte.',
-        'Jak zamienić pytanie „Lubi Pani chodzić po górach?” na otwarte?',
-        '„Gdzie najczęściej Pani chodzi albo jeździ?”, „Jak wygląda Pani typowa wycieczka?”',
-        'Uznawanie każdego pytania z „czy” za złe. Zamknięte są dobre do potwierdzenia.',
-        'Ułóż trzy pytania otwarte dla klienta, który kupuje buty do biegania.',
-      ),
-      activities: [
         {
           type: 'matching',
           id: 'q-rodzaje',
@@ -179,14 +164,13 @@ export default {
         choice(
           'q-klient-b',
           'Klientka B mówi: „Chodzę na krótkie spacery z psem, plecak ma być jak najlżejszy”. Co proponujesz?',
-          ['Miejski', 'Dojazd', 'Trek', 'Żaden, bo do spacerów plecak nie jest potrzebny'],
+          ['Miejski', 'Dojazd', 'Trek'],
           0,
           'Miejski jest najlżejszy. Klientka nie wspomniała o deszczu ani o laptopie.',
           [
             null,
             'Dojazd ma przegrodę na laptop i pokrowiec — tego klientka nie potrzebuje, a płaci więcej i nosi większą wagę.',
             'Trek jest duży i cięższy. Klientka mówi, że waga jest najważniejsza.',
-            'Klientka przyszła po plecak. Twoja rola to dobrać najlepszy z dostępnych.',
           ],
         ),
       ],
@@ -234,7 +218,7 @@ export default {
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Klient C',
       title: 'Klient C',
       grouping: 'solo',
       intro: 'Klient C planuje całodniowe wycieczki w góry. Ma budżet do 150 zł.',

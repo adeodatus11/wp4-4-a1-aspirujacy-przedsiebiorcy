@@ -21,7 +21,6 @@ export default {
       'Pracujesz w markecie w Tarnowie (260 m²). Przyjmiesz opakowania w systemie kaucyjnym, rozliczysz skrzynki z piekarnią, posegregujesz odpady z zaplecza i napiszesz uczciwy komunikat o ekologii.',
     teacher:
       'System kaucyjny działa od 1 października 2025 r., więc uczniowie mogą go znać z zakupów. Lekcja łączy obsługę klienta (zwrot opakowań), ewidencję opakowań zwrotnych między firmami i komunikat bez przesadnych deklaracji.',
-    grouping: 'Etapy 1 i 5 samodzielnie, etapy 2–4 w parach.',
     methods: [methods.przypadek, methods.ksztaltujace],
   },
   objectives: [
@@ -30,7 +29,7 @@ export default {
     'Segreguję odpady z zaplecza sklepu.',
     'Piszę komunikat ekologiczny oparty na danych.',
   ],
-  materials: ['Urządzenie z przeglądarką', 'Kalkulator'],
+  materials: ['Kalkulator'],
   teacherGuide: {
     preparation: 'Możesz przynieść pustą butelkę ze znakiem kaucji i bez znaku — uczniowie porównają oznaczenia.',
     summary:
@@ -39,12 +38,12 @@ export default {
   sections: [
     {
       id: 'start',
-      label: 'Start',
+      label: 'Butelki',
       title: 'Butelki bez paragonu',
       grouping: 'solo',
       intro: 'Klient przynosi 10 pustych butelek po wodzie ze znakiem kaucji. Kupił je w innym sklepie i nie ma paragonu.',
       ...note(
-        5,
+        6,
         'Każdy decyduje sam. Zapytaj, kto oddawał butelki w automacie i czy automat pytał o paragon.',
         'Dlaczego system nie wymaga paragonu?',
         'Kaucja jest „w butelce”, a nie w paragonie. Każdy sklep w systemie rozlicza się z operatorem.',
@@ -58,7 +57,6 @@ export default {
           [
             'Przyjmuję butelki i oddaję 5 zł kaucji',
             'Odmawiam, bo klient nie ma paragonu z naszego sklepu',
-            'Przyjmuję tylko butelki marek, które mamy w ofercie',
             'Odsyłam klienta do sklepu, w którym kupił wodę',
           ],
           0,
@@ -66,7 +64,6 @@ export default {
           [
             null,
             'Paragon nie jest potrzebny. Liczy się znak kaucji na opakowaniu.',
-            'Obowiązek dotyczy wszystkich opakowań systemu, nie tylko marek ze sklepu.',
             'Sklep tej wielkości musi przyjąć opakowania kupione w innym sklepie.',
           ],
         ),
@@ -86,7 +83,7 @@ export default {
         ],
       },
       ...note(
-        12,
+        11,
         'Najpierw obliczenie, potem dopasowanie. Przy zgniecionej puszce zapytaj, dlaczego automat jej nie przyjmie (nie odczyta kształtu i kodu).',
         'Dlaczego opakowanie musi być niezgniecione?',
         'Automat i kasjer muszą odczytać kod i rozpoznać opakowanie. Zgniecione mogłoby być oddane dwa razy albo nie być w systemie.',
@@ -122,11 +119,11 @@ export default {
       id: 'skrzynki',
       label: 'Skrzynki',
       title: 'Skrzynki z piekarni',
-      grouping: 'pair',
+      grouping: 'solo',
       intro: 'Piekarnia dowozi pieczywo w plastikowych skrzynkach. Za każdą skrzynkę sklep ma u piekarni 15 zł kaucji. Skrzynki pęknięte rozlicza się jako utracone.',
       ...note(
         10,
-        'Pary uzupełniają ewidencję. Zwróć uwagę na wartość kaucji w skrzynkach: to pieniądze sklepu „zamrożone” na zapleczu.',
+        'Każdy uzupełnia ewidencję sam, potem porównanie wyników z sąsiadem. Zwróć uwagę na wartość kaucji w skrzynkach: to pieniądze sklepu „zamrożone” na zapleczu.',
         'Dlaczego sklepowi opłaca się szybko oddawać puste skrzynki?',
         'Bo w każdej leży 15 zł kaucji. Dużo skrzynek na zapleczu to zamrożone pieniądze i zajęte miejsce.',
         'Mieszanie skrzynek z kaucją w systemie butelek. To dwie osobne ewidencje.',
@@ -168,11 +165,11 @@ export default {
       id: 'odpady',
       label: 'Odpady',
       title: 'Zaplecze i komunikat',
-      grouping: 'pair',
+      grouping: 'trio',
       intro: 'Na zapleczu: kartony po dostawie, folia z palet, słoiki bez kaucji, paragony, zatłuszczony papier spod pieczywa. Kierownik chce też powiesić informację o „ekologicznym sklepie”.',
       ...note(
-        10,
-        'Najpierw segregacja, potem komunikat. Przy paragonach zapytaj, dlaczego nie trafiają do papieru (papier termiczny z dodatkami chemicznymi).',
+        12,
+        'Trójki: najpierw segregacja, potem poprawki plakatu i własny komunikat. Przy paragonach zapytaj, dlaczego nie trafiają do papieru (papier termiczny z dodatkami chemicznymi).',
         'Czym różni się komunikat „jesteśmy eko” od komunikatu „w październiku oddaliśmy do recyklingu 180 kg kartonów”?',
         'Pierwszy jest ogólnikiem, którego nie da się sprawdzić. Drugi podaje fakt, liczbę i okres.',
         'Wrzucanie paragonów i zatłuszczonego papieru do pojemnika na papier.',
@@ -207,17 +204,23 @@ export default {
           ],
           explanation: 'Dobry komunikat ekologiczny podaje konkretne działanie, liczbę i okres. Hasła bez dowodów to greenwashing.',
         },
+        text(
+          'q-moj-komunikat',
+          'Napisz uczciwy komunikat ekologiczny dla sklepu w Tarnowie (2 zdania).',
+          'W październiku oddaliśmy do recyklingu 180 kg kartonów i 25 kg folii z dostaw. Butelki i puszki ze znakiem kaucji przyjmujemy przy każdej kasie — także bez paragonu.',
+          { criteria: ['Jest konkretne działanie.', 'Jest liczba i okres.', 'Brak ogólników typu „eko”, „zero waste”.'] },
+        ),
       ],
     },
     {
       id: 'sprawdzenie',
-      label: 'Sprawdzenie',
+      label: 'Sklep cioci',
       title: 'Mniejszy sklep',
       grouping: 'solo',
       intro: 'Twoja ciocia prowadzi sklep 150 m² w małej miejscowości i pyta, czy musi przyjmować butelki w systemie kaucyjnym.',
       ...note(
-        8,
-        'Samodzielnie. Komunikaty z pytania otwartego porównaj z kryteriami.',
+        6,
+        'Samodzielnie, krótko. Po sprawdzeniu zapytaj, czy ciocia na tym zyska — pytanie poniżej.',
         'Jakie plusy może mieć dobrowolne przystąpienie małego sklepu do systemu?',
         'Klienci przychodzą oddać butelki i przy okazji robią zakupy. Ale trzeba mieć miejsce i obsługę.',
         'Twierdzenie, że każdy sklep musi przyjmować butelki.',
@@ -241,12 +244,6 @@ export default {
             'Nie ma takiego podziału według materiału dla małych sklepów.',
             'Małe sklepy mogą przystąpić do systemu dobrowolnie.',
           ],
-        ),
-        text(
-          'q-moj-komunikat',
-          'Napisz uczciwy komunikat ekologiczny dla sklepu w Tarnowie (2 zdania).',
-          'W październiku oddaliśmy do recyklingu 180 kg kartonów i 25 kg folii z dostaw. Butelki i puszki ze znakiem kaucji przyjmujemy przy każdej kasie — także bez paragonu.',
-          { criteria: ['Jest konkretne działanie.', 'Jest liczba i okres.', 'Brak ogólników typu „eko”, „zero waste”.'] },
         ),
         {
           type: 'resultCard',
