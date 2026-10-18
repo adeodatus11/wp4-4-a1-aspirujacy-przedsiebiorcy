@@ -15,6 +15,7 @@ export default {
     'Zapisuję cel na 14 dni, który zależy ode mnie i da się sprawdzić.',
     'Daję informację zwrotną, opisując zachowanie, a nie osobę.',
   ],
+  outcome: 'Kontrakt rozwojowy i plan działania na 14 dni.',
   forGroup:
     'Na spotkaniu w grupie przydadzą się trzy rzeczy z tej ścieżki: dwuminutowe przedstawienie siebie i swojego pomysłu, jedna przeszkoda, o której chcesz porozmawiać (tylko jeśli chcesz), i jedno zdanie o zmianie, którą wprowadzisz w ciągu 14 dni.',
   solo:
@@ -396,15 +397,6 @@ export default {
         { type: 'projectField', id: 'm1-pole-krok', field: 'm1-3', label: 'Wybrany pierwszy krok i termin', example: 'Od poniedziałku telefony tylko 8–9 i 16–17. Informacja na drzwiach i na stronie do niedzieli.' },
         { type: 'projectField', id: 'm1-pole-wsparcie', field: 'm1-4', label: 'Potrzebne wsparcie i zasady poufności', example: 'Partner odbiera telefony w sobotę. W grupie mówię o godzinach pracy, nie o zarobkach.' },
         { type: 'projectField', id: 'm1-pole-sprawdzenie', field: 'm1-5', label: 'Data sprawdzenia efektu i pytanie do coacha', example: 'Sprawdzam 15 listopada: o której kończyłam pracę? Pytanie: co zrobić, gdy klient dzwoni poza godzinami?' },
-        {
-          type: 'resultCard',
-          id: 'karta',
-          badges: [
-            { min: 0, name: 'Pierwszy krok', text: 'Wróć do pytań i do GROW — to rdzeń modułu.' },
-            { min: 0.6, name: 'Dobre pytania', text: 'Rozróżniasz pytanie od rady. Przećwicz jeszcze cele, które zależą od Ciebie.' },
-            { min: 0.85, name: 'Plan z miarą', text: 'Masz cel, który da się sprawdzić, i wiesz, jak o nim rozmawiać.' },
-          ],
-        },
       ],
     },
   ],

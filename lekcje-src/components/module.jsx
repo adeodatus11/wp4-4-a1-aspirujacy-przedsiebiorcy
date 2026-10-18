@@ -4,6 +4,8 @@ import { sectionDone } from '../lib/scoring.js';
 import { lessonState, withLesson, withoutLesson } from '../lib/store.js';
 import { Activity } from './activities.jsx';
 import { Reading } from './reading.jsx';
+import { readNote } from '../lib/project.js';
+import { modules } from '../content/modules/index.js';
 
 // Ścieżka pracy własnej do modułu programu: etapy, wyjaśnienia, ćwiczenia, pola projektu.
 // Bez trybu prowadzącego — warsztat opisuje scenariusz na stronie modułu.
@@ -86,16 +88,7 @@ export function ModuleView({ unit, stage: routeStage, state, update }) {
         {section.activities.map(activity => (
           <Activity key={`${activity.id}-${resetKey}`} activity={activity} value={saved.answers?.[activity.id]} onChange={value => setAnswer(activity.id, value)} lesson={unit} answers={saved.answers || {}} />
         ))}
-        {last && (
-          <aside className="break">
-            <h3>Co dalej</h3>
-            <p>{unit.forGroup}</p>
-            <p>{unit.solo}</p>
-            <p>
-              <a href={`../modul-${unit.n}.html#projekt`}>Wróć do strony modułu</a> · <a href="../moj-projekt.html">Mój projekt: wydruk i eksport</a>
-            </p>
-          </aside>
-        )}
+        {last && <ModuleSummary unit={unit} />}
         <div className="stage-nav no-print">
           {stage > 0 ? (
             <button type="button" className="btn secondary" onClick={() => goTo(stage - 1)}>
@@ -131,5 +124,36 @@ export function ModuleView({ unit, stage: routeStage, state, update }) {
         </div>
       </footer>
     </main>
+  );
+}
+
+// Zamiast karty oceny: co uczestnik wynosi z modułu i co robi dalej.
+function ModuleSummary({ unit }) {
+  const fields = unit.sections.flatMap(s => s.activities).filter(a => a.type === 'projectField');
+  const filled = fields.filter(f => readNote(f.field).trim().length >= 10);
+  const next = modules.find(m => m.n > unit.n);
+  return (
+    <aside className="module-summary">
+      <h3>Co masz po tym module</h3>
+      <p>
+        <b>{unit.outcome}</b> Pola projektu: {filled.length} z {fields.length} uzupełnionych.
+      </p>
+      <ul className="summary-fields">
+        {fields.map(f => (
+          <li key={f.field} className={filled.includes(f) ? 'is-done' : ''}>
+            <span aria-hidden="true">{filled.includes(f) ? '✓' : '○'}</span> {f.label}
+          </li>
+        ))}
+      </ul>
+      <h3>Na spotkanie w grupie</h3>
+      <p>{unit.forGroup}</p>
+      <h3>Jeśli pracujesz sam albo sama</h3>
+      <p>{unit.solo}</p>
+      <p className="inline-actions">
+        <a href="../moj-projekt.html">Mój projekt: wydruk i eksport</a>
+        <a href={`../modul-${unit.n}.html`}>Strona modułu {unit.n}</a>
+        {next ? <a href={`#/modul/${next.n}`}>Następny moduł: {next.title} →</a> : <a href={`../modul-${unit.n + 1}.html`}>Następny moduł →</a>}
+      </p>
+    </aside>
   );
 }

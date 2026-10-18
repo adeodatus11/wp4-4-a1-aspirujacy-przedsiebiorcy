@@ -1,7 +1,6 @@
 // Ścieżka modułu: rozwiązanie kluczem, karta wyniku i zapis pól do „Mojego projektu” serwisu.
 import { test, expect } from '@playwright/test';
 import { modules } from '../content/modules/index.js';
-import { formatNumber, lessonScore } from '../lib/scoring.js';
 import { solve } from './solve.js';
 
 for (const unit of modules) {
@@ -14,9 +13,8 @@ for (const unit of modules) {
       await expect(page.locator('.stage > h2')).toHaveText(unit.sections[i].title);
       for (const activity of unit.sections[i].activities) await solve(page, activity);
     }
-    const { max } = lessonScore(unit, {});
-    await expect(page.locator('.result-score strong')).toHaveText(formatNumber(max, 1));
-    await expect(page.getByText('W szkole: proponowana ocena')).toHaveCount(0);
+    await expect(page.locator('.result-card')).toHaveCount(0);
+    await expect(page.locator('.module-summary')).toContainText(`Pola projektu: ${unit.sections.flatMap(s => s.activities).filter(a => a.type === 'projectField').length} z`);
     const field = unit.sections.flatMap(s => s.activities).find(a => a.type === 'projectField');
     await page.goto('../moj-projekt.html');
     await expect(page.locator(`[data-note="${field.field}"]`)).toHaveValue(field.example);

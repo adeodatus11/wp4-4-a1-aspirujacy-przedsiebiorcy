@@ -45,7 +45,8 @@ for (const unit of units) {
       'wszystkie pola projektu modułu, każde raz',
     );
     for (const f of fields) assert.equal(f.label, source.fields[Number(f.field.split('-')[1])], `${f.field}: nazwa pola jak w projekcie`);
-    assert.equal(all.filter(a => a.type === 'resultCard').length, 1);
+    assert.equal(all.filter(a => a.type === 'resultCard').length, 0, 'bez karty oceny — moduł kończy podsumowanie');
+    assert.ok(unit.outcome, 'rezultat modułu do podsumowania');
   });
 
   test(`moduł ${unit.n}: objętość i język`, () => {

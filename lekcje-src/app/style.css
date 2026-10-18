@@ -1592,3 +1592,38 @@ th {
 .card-foot .due {
   font-weight: 700;
 }
+
+/* podsumowanie modułu */
+
+.module-summary {
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius);
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.module-summary h3 {
+  margin: 1rem 0 0.3rem;
+}
+
+.module-summary h3:first-child {
+  margin-top: 0;
+}
+
+.summary-fields {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.summary-fields .is-done {
+  color: var(--ok);
+}
+
+.module-summary .inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+}
