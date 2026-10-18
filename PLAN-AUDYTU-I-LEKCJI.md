@@ -61,6 +61,8 @@ Każda usterka trafia do jednej tabeli z priorytetem: **P0** (blokuje użycie na
 
 ### B. Poprawność merytoryczna
 
+Wyniki audytu treści (kompletność, polskie realia, styl, testy): `AUDYT-TRESCI.md`.
+
 | # | Zakres | Metoda |
 |---|---|---|
 | B1 | 50 pytań lekcyjnych | Niezależny skrypt przelicza każdy klucz liczbowy z danych lekcji. Ręczna ocena: jednoznaczność, wiarygodność błędnych odpowiedzi, poziom |
@@ -152,7 +154,7 @@ Obecne lekcje L01–L10 zostają **przebudowane** do nowej formy. Nowe lekcje (N
 | HAN.02.3 Planowanie i budżet | **L04** Promocja i budżet · **L05** Cena i marża · **L07** Wynik i gotówka · N13 Prognoza sprzedaży i plan zakupów (90) |
 | HAN.02.4 Zarządzanie działaniami | **L02** Segment i SWOT · **L03** 4P · N14 Zamówienie i warunki dostawcy (45) · N15 Badanie satysfakcji klienta (45) |
 | HAN.02.5 Magazyn | N16 Przyjęcie i wydanie, FIFO/FEFO (45) · N17 Inwentaryzacja (90) · N18 Zapas i rotacja (45) |
-| HAN.02.6 Posprzedaż | N19 Reklamacja: rękojmia a gwarancja (90) · N20 Lojalność i obsługa po sprzedaży (45) |
+| HAN.02.6 Posprzedaż | N19 Reklamacja: niezgodność towaru z umową (konsument), rękojmia (firmy), gwarancja (90) · N20 Lojalność i obsługa po sprzedaży (45) |
 | HAN.02.7 Dokumentacja | N21 Faktura i KSeF (45) · N22 Dokumenty magazynowe (45) · **L06** Oferta cyfrowa |
 | HAN.02.8 Język obcy | N23 Korespondencja handlowa po angielsku (45) |
 | HAN.02.10 Zespół | **L08** Plan zadania w zespole |
