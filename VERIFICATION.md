@@ -36,7 +36,7 @@ Sprawdzane automatycznie (npm --prefix lekcje-src test):
 - język: zakazane zwroty typowe dla tekstów generowanych, brak form rodzajowych („-łeś/-łaś”);
 - realia: każdy fakt ma datę sprawdzenia nie starszą niż rok.
 
-Playwright w Chromium (npm --prefix lekcje-src run test:e2e, 50 testów): każda lekcja rozwiązana kluczem daje maksymalny wynik; każdy trening rozwiązany kluczem na wylosowanej serii daje komplet punktów, zapisuje wynik i termin; błędne zadanie wraca w powtórce; wszystkie etapy i zadania na 390 px bez poziomego przewijania; zapis i reset; tryb prowadzącego; axe bez naruszeń na katalogu, lekcji, planie, stronie „Jak korzystać” i treningu.
+Playwright w Chromium (npm --prefix lekcje-src run test:e2e, 42 testy): każda lekcja rozwiązana kluczem daje maksymalny wynik; każdy trening rozwiązany kluczem na wylosowanej serii daje komplet punktów, zapisuje wynik i termin; błędne zadanie wraca w powtórce; wszystkie etapy i zadania na 390 px bez poziomego przewijania; zapis i reset; tryb prowadzącego; axe bez naruszeń na katalogu, lekcji, planie, stronie „Jak korzystać” i treningu.
 
 Nowe fakty w treningu (limit i 7 dni przy działalności nierejestrowanej, ulga na start, zwolnienie z KSeF do 10 000 zł miesięcznie, proporcjonalny limit VAT, składki pracodawcy 5790,28 zł przy płacy minimalnej, zakaz fałszywych opinii) potwierdzono w wyszukiwarce w portalach branżowych; serwisy gov.pl były niedostępne z sieci środowiska. Przed zajęciami warto sprawdzić bieżące kwoty.
 
