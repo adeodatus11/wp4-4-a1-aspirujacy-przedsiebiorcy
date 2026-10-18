@@ -210,7 +210,7 @@ export default {
           'q-dowod',
           'Które zdanie opiera się na tym, co powiedział klient A?',
           [
-            'Pokrowiec osłoni laptop przed deszczem, jak ten ostatni',
+            'Pokrowiec osłoni laptop przed deszczem',
             'Ten plecak jest bestsellerem, kupuje go wielu klientów',
             'Wygląda Pan na kogoś, kto lubi solidne i drogie rzeczy',
             'To najlepszy plecak na rynku w tej cenie',
