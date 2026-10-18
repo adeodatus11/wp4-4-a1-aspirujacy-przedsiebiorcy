@@ -99,6 +99,14 @@ export const realia = {
     checked: '2026-10-18',
     status: 'potwierdzone dla dorosłych; limity młodocianych sprawdzić w rozporządzeniu',
   },
+  alkohol: {
+    label: 'Sprzedaż ograniczona wiekiem',
+    value: 'Alkoholu i wyrobów tytoniowych nie sprzedaje się osobom poniżej 18 lat, a alkoholu także osobom nietrzeźwym. Od 1.01.2024 obowiązuje zakaz sprzedaży napojów energetycznych osobom poniżej 18 lat. Sprzedawca może żądać dokumentu potwierdzającego wiek',
+    source: 'Ustawa o wychowaniu w trzeźwości, art. 15; ustawa o ochronie zdrowia przed następstwami używania tytoniu; ustawa o zdrowiu publicznym',
+    url: 'https://isap.sejm.gov.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone',
+  },
   placaMinimalna: {
     label: 'Płaca minimalna 2026',
     value: '4806 zł brutto miesięcznie',
