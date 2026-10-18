@@ -54,6 +54,27 @@ for m in course:
     d=docs[ROOT/f'modul-{m["n"]}.html']
     assert len(d.headings)==1
     assert {'sedno','przyklad','cwiczenie','projekt','quiz','dla-prowadzacego','zrodla'}<=d.ids
+curriculum=json.loads((ROOT/'src/curriculum.json').read_text())
+lessons=json.loads((ROOT/'src/lessons.json').read_text())
+assert len(curriculum['mappings'])==27
+assert len(lessons)==10 and sum(l['minutes'] for l in lessons)==585
+lesson_ids={l['id'] for l in lessons}
+source_ids={s['id'] for s in curriculum['sources']}
+for r in curriculum['mappings']:
+    assert r['qualification'] in ('HAN.01','HAN.02')
+    assert r['effect']>0 and all(c>0 for c in r['criteria'])
+    assert r['source'] in source_ids and set(r['lessons'])<=lesson_ids
+    assert all(1<=page<=(9 if r['qualification']=='HAN.01' else 21) for page in r['pages'])
+    assert r['limit'] and r['criteriaSummary'] and r['relation'] in ('bezpośrednie','częściowe')
+for l in lessons:
+    assert l['minutes'] in (45,90) and sum(t for t,_ in l['agenda'])==l['minutes']
+    assert len(l['worksheet'])==4 and len(l['rubric'])==3
+    assert l['answer'] and l['support'] and l['extension'] and l['exit']
+    assert not any('przerwa' in text.lower() for _,text in l['agenda'])
+    assert any(l['id'] in r['lessons'] for r in curriculum['mappings'])
+for n in range(1,9):
+    assert any(n in r['modules'] for r in curriculum['mappings'])
+    assert 'school-bridge' in (ROOT/f'modul-{n}.html').read_text()
 ns={'x':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 with zipfile.ZipFile(ROOT/'downloads/cash-flow.xlsx') as z:
     for name in z.namelist():ET.fromstring(z.read(name))
@@ -89,4 +110,4 @@ with zipfile.ZipFile(ROOT/'downloads/pakiet-offline.zip') as z:
             if target not in names:errors.append(f'offline {name}: brak {target}')
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'OK: {len(docs)} dokumentów HTML, linki i kotwice, etykiety, 24 pytania, 8 scenariuszy, obliczone formuły XLSX, wszystkie odnośniki pakietu offline.')
+print(f'OK: {len(docs)} dokumentów HTML, linki i kotwice, etykiety, 24 pytania, 8 scenariuszy, 27 odniesień HAN, 10 lekcji, obliczone formuły XLSX, wszystkie odnośniki offline.')

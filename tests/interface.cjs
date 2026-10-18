@@ -38,6 +38,13 @@ async function run(){
   home=open('index.html');home.$('#site-search').value='plynnosc';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').length>=1);
   home.$('#site-search').value='<img src=x onerror=alert(1)>';event(home,home.$('#site-search'),'input');assert.equal(home.$$('#search-items img').length,0);
   console.log('OK: filtrowanie biblioteki i wyszukiwanie bez polskich znaków.');
+  const school=open('szkola.html');
+  school.$('#mapping-qualification').value='HAN.02';school.$('#mapping-module').value='7';event(school,school.$('#mapping-qualification'),'input');
+  assert.equal(school.$$('[data-mapping]').filter(x=>!x.hidden).length,1);
+  school.$('#lesson-qualification').value='HAN.02';school.$('#lesson-minutes').value='90';event(school,school.$('#lesson-minutes'),'input');
+  assert.equal(school.$$('[data-lesson]').filter(x=>!x.hidden).length,3);
+  home.$('#site-search').value='HAN.02.7.7';event(home,home.$('#site-search'),'input');assert.ok(home.$$('#search-items a').some(a=>a.href.includes('lekcja-han-07')));
+  console.log('OK: filtry podstawy i lekcji HAN oraz wyszukiwanie po identyfikatorze efektu.');
   let cash=open('cash-flow.html');event(cash,cash.$('#cash-example'),'click');assert.match(cash.$('[data-cash-output="closing"][data-month="0"]').textContent,/1.*500/);assert.equal(Number(cash.$('#cash-opening-1').value),1500);
   cash.$('#cash-sales-0').value='0';event(cash,cash.$('#cash-sales-0'),'input');assert.match(cash.$('#cash-summary').textContent,/ujemne saldo/);assert.equal(Number(cash.$('#cash-opening-1').value),-4500);
   assert.equal(Number(open('cash-flow.html').$('#cash-opening-1').value),-4500);

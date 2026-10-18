@@ -11,6 +11,14 @@ Serwis programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowadzącego**. Osi
 - Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
 - Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
 
+## HAN.01 / HAN.02 w zwykłym cyklu szkolnym
+
+Strona szkola.html łączy program z 27 wybranymi efektami kwalifikacji HAN.01 i HAN.02. Każde odniesienie podaje jednostkę, numer efektu, osobno numery kryteriów, stronę oficjalnego PDF MEN/ORE i zakres powiązania. Opisy efektów są skrótami autorskimi. Zapis kwalifikacji i strukturę potwierdzono również w portalu MEN i ZPE. Mapa bazuje na wskazanym tekście podstawy 2019; nauczyciel dobiera ją do rocznika i programu szkoły.
+
+Pakiet zawiera 10 tematów (7 × 45 min oraz 3 × 90 min, razem 13 lekcji = 585 min): potrzeby klienta, segmentacja i SWOT, 4P, promocja i budżet, ceny i marże, oferta cyfrowa, wynik/gotówka/wskaźniki, plan zespołu, opakowania i rozmowa ofertowa. Każdy ma gotowe dane fikcyjne, kartę ucznia, scenariusz nauczyciela, klucz, rubrykę, wariant wsparcia i rozszerzenia. Przerwa między lekcjami nie jest wliczona w 90 minut pracy. Karty drukują się do PDF; mapa jest też w CSV. Wszystko trafia do paczki offline.
+
+Nazwy przedmiotów są propozycjami. Powiązanie nie oznacza pełnego pokrycia efektu lub kwalifikacji. AI, Lean Canvas, VSME i pitch inwestorski są narzędziami/rozszerzeniami, nie literalnymi obowiązkami podstawy. Pakiet nie zastępuje obsługi kasy, wszystkich czynności magazynowych, księgowości, BHP i języka zawodowego.
+
 ## Dla prowadzącego
 
 Scenariusze 165 minut, instrukcje, przykładowe rozwiązania, klucze quizów i rubryki informacji zwrotnej. Cały moduł: 90 min przygotowania + 90 min małych grup + 165 min warsztatu + 45 min wdrożenia = **6,5 h**, pełny cykl **52 h**. Dodatkowy coaching organizowany poza serwisem.
@@ -32,6 +40,8 @@ Otwórz http://localhost:8000. Generator odtwarza wszystkie strony, dane wyszuki
 | Źródło | Zastosowanie |
 |---|---|
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
+| src/curriculum.json, src/lessons.json | formalna mapa odniesień i autorskie lekcje 45/90 min |
+| school.py | generowanie mapy, lekcji i pakietów HAN.01/HAN.02 |
 | src/resources.json | źródła zewnętrzne i metadane weryfikacji |
 | src/01…08*.md | pełne opracowania bazowe modułów |
 | src/00*, 09*, 10* | dokumentacja wcześniejszego przeglądu, zachowana jako archiwum |

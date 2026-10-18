@@ -5,7 +5,7 @@ Wszystkie zmiany dotyczą wyłącznie repozytorium wp4-4-a1-aspirujacy-przedsieb
 ## Sprawdzone
 
 - Generator kończy się poprawnie: 8 modułów, 17 źródeł, materiały do druku, XLSX, ZIP.
-- 36 dokumentów HTML: lokalne linki, kotwice, brak powtórzonych identyfikatorów, etykiety formularzy i jeden H1 na stronę modułu.
+- 70 dokumentów HTML: lokalne linki, kotwice, brak powtórzonych identyfikatorów, etykiety formularzy i jeden H1 na stronę modułu.
 - Każdy moduł ma 6 pól projektu, 3 pytania z wyjaśnieniami, co najmniej 4 kroki ćwiczenia i 3 kryteria informacji zwrotnej.
 - Scenariusze serwisu sumują się do 165 minut. Moduł ma 390 min, program 52 h. Dłuższe scenariusze wcześniejszego opracowania są oznaczone własnym rzeczywistym czasem.
 - Odczyt XML arkusza XLSX i obliczenie wszystkich formuł na danych przykładowych: salda końcowe 1500, 0, 500, 3500, 7000, 11000 PLN.
@@ -23,3 +23,9 @@ Publiczne źródła sprawdzono w zakresie opisanym w src/resources.json. Trzy st
 Oryginalne MP4, DOCX, PPTX i PDF programu nie występują w repozytorium. Pakiet obejmuje dostępne opracowania i nowe własne materiały, bez kopii tych oryginałów oraz bez kopii zewnętrznych kursów. Nie potwierdza realizacji ani wyników pilotażu.
 
 Zmiany przygotowano na gałęzi roboczej; publiczny GitHub Pages wymaga osobnego scalenia/publikacji. Nie ma podglądu wdrożenia potwierdzonego przez narzędzie publikacyjne.
+
+## Uzupełnienie HAN.01 / HAN.02
+
+Mapa ma 27 odniesień do wybranych efektów i kryteriów, z 9 źródłami formalnymi i pomocniczymi. Źródłem dokładnej numeracji są odczytane PDF MEN/ORE. Aktualny portal MEN odsyła do tej podstawy; ZPE potwierdza strukturę w widoku oznaczonym 2025/2026. CKE potwierdzono w oficjalnym katalogu, ale pełny odczyt informatora nie był dostępny, więc nie wykorzystano go do ustalenia numerów kryteriów.
+
+Sprawdzono sumy czasu i powiązania wszystkich 10 lekcji oraz pliki ucznia/nauczyciela. 7 × 45 + 3 × 90 = 585 minut (13 jednostek po 45 min); przerwy między lekcjami nie są wliczone. Karty mają komplet fikcyjnych danych, zadania, wzorcowe omówienia i własne rubryki. To adaptacja wybranych efektów, bez deklaracji kompletnego programu lub oficjalnej akceptacji CKE.

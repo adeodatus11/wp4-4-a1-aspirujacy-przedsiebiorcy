@@ -100,6 +100,32 @@
     filterLibrary();
   }
 
+  if ($('#mapping-search')) {
+    function filterMapping() {
+      const words=C.norm($('#mapping-search').value).trim().split(/\s+/).filter(Boolean);
+      const qualification=$('#mapping-qualification').value, module=$('#mapping-module').value;
+      let count=0;
+      $$('[data-mapping]').forEach(row=>{
+        row.hidden=!(words.every(word=>C.norm(row.textContent).includes(word)) && (!qualification || row.dataset.qualification===qualification) && (!module || row.dataset.modules.split(' ').includes(module)));
+        if(!row.hidden)count++;
+      });
+      $('#mapping-count').textContent=count ? `Wybrane odniesienia: ${count}.` : 'Brak odniesień dla tych filtrów.';
+    }
+    ['#mapping-search','#mapping-qualification','#mapping-module'].forEach(q=>$(q).addEventListener('input',filterMapping));
+    filterMapping();
+    function filterLessons() {
+      const qualification=$('#lesson-qualification').value, minutes=$('#lesson-minutes').value;
+      let count=0;
+      $$('[data-lesson]').forEach(card=>{
+        card.hidden=!((!qualification || card.dataset.qualifications.split(' ').includes(qualification)) && (!minutes || card.dataset.minutes===minutes));
+        if(!card.hidden)count++;
+      });
+      $('#lesson-count').textContent=count ? `Tematy do wyboru: ${count}.` : 'Brak lekcji dla tych filtrów.';
+    }
+    ['#lesson-qualification','#lesson-minutes'].forEach(q=>$(q).addEventListener('input',filterLessons));
+    filterLessons();
+  }
+
   $$('.quiz').forEach(form => {
     const n = Number(form.dataset.quiz), questions = data.find(m => m.n === n).quiz;
     function result(answers) {
