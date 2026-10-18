@@ -20,7 +20,7 @@ export function ResultCard({ activity, value = {}, onChange, lesson, answers }) 
     <div className="activity result-card" id="karta-wyniku">
       <header className="result-top">
         <div>
-          <p className="eyebrow">Karta wyniku · lekcja {lesson.id}</p>
+          <p className="eyebrow">Karta wyniku · {lesson.kind === 'module' ? `moduł ${lesson.n}` : `lekcja ${lesson.id}`}</p>
           <h3>{lesson.title}</h3>
         </div>
         <div className="result-score" aria-label={`Wynik ${formatNumber(result.score, 1)} na ${result.max} punktów`}>
@@ -72,9 +72,11 @@ export function ResultCard({ activity, value = {}, onChange, lesson, answers }) 
         <input maxLength={40} autoComplete="off" value={value.name || ''} onChange={e => onChange({ ...value, name: e.target.value })} />
       </label>
       <footer className="result-foot">
-        <span>
-          W szkole: proponowana ocena <b>{result.grade}</b>
-        </span>
+        {lesson.kind !== 'module' && (
+          <span>
+            W szkole: proponowana ocena <b>{result.grade}</b>
+          </span>
+        )}
         <span>
           {value.name && <b>{value.name} · </b>}
           {new Date().toLocaleDateString('pl-PL')}
@@ -85,7 +87,11 @@ export function ResultCard({ activity, value = {}, onChange, lesson, answers }) 
           Drukuj kartę / zapisz PDF
         </button>
       </div>
-      <p className="small muted">Wynik zostaje tylko w tej przeglądarce. Nie jest nigdzie wysyłany. Ocenę szkolną wystawia nauczyciel; zadania otwarte ocenia osobno.</p>
+      <p className="small muted">
+        {lesson.kind === 'module'
+          ? 'Wynik zostaje tylko w tej przeglądarce i służy Tobie. Odpowiedzi otwarte i pola projektu nie są oceniane.'
+          : 'Wynik zostaje tylko w tej przeglądarce. Nie jest nigdzie wysyłany. Ocenę szkolną wystawia nauczyciel; zadania otwarte ocenia osobno.'}
+      </p>
     </div>
   );
 }

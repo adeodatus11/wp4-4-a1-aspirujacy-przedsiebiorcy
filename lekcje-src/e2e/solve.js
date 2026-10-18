@@ -72,6 +72,9 @@ export async function solve(page, activity) {
       await expect(box.locator('.feedback-ok')).toBeVisible();
       break;
     }
+    case 'projectField':
+      await box.locator('textarea').fill(activity.example || 'Mój zapis do projektu, wystarczająco długi.');
+      break;
     case 'text':
       await box.locator('textarea').fill(activity.model);
       break;

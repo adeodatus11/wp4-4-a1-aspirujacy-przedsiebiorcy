@@ -147,6 +147,22 @@ export const realia = {
     checked: '2026-10-18',
     status: 'potwierdzone w serwisach branżowych',
   },
+  przezywalnosc: {
+    label: 'Ile nowych firm przetrwa pierwszy rok',
+    value: 'Z firm, które rozpoczęły działalność w 2024 r., pierwszy rok przetrwało 68,4% (192 714 z 281 846)',
+    source: 'PARP, Raport o stanie sektora MŚP w Polsce, 2026',
+    url: 'https://www.parp.gov.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone w omówieniu raportu (bank.pl); w wydaniu 2025 dla firm z 2023 r. było 59%',
+  },
+  bur: {
+    label: 'Baza Usług Rozwojowych (BUR)',
+    value: 'Publiczny rejestr szkoleń i usług doradczych, w tym coachingu i mentoringu, prowadzony przez PARP. Dostęp jest bezpłatny. Dofinansowanie usług (zwykle do 50–80%) zależy od naboru w danym województwie i wielkości firmy',
+    source: 'PARP, uslugirozwojowe.parp.gov.pl',
+    url: 'https://uslugirozwojowe.parp.gov.pl/',
+    checked: '2026-10-18',
+    status: 'potwierdzone; warunki naboru sprawdzić w regionie',
+  },
   opinie: {
     label: 'Opinie klientów w internecie',
     value: 'Od 1.01.2023 nie wolno zamieszczać ani zlecać fałszywych opinii. Firma, która pokazuje opinie klientów, informuje, czy i jak sprawdza, że pochodzą od osób, które kupiły produkt lub skorzystały z usługi',

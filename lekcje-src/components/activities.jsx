@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { checkMulti, checkNumber, checkSequence, formatNumber } from '../lib/scoring.js';
 import { scrambledOrder, shuffledOrder } from '../lib/shuffle.js';
 import { DocForm, SpotErrors } from './documents.jsx';
+import { readNote, writeNote } from '../lib/project.js';
 import { Dialog } from './dialog.jsx';
 import { ResultCard } from './result.jsx';
 
@@ -401,7 +402,43 @@ export function SimpleTable({ table }) {
   );
 }
 
+// Pole „Mojego projektu”: tekst zapisuje się w notatkach projektu w serwisie programu.
+function ProjectField({ activity, value = {}, onChange }) {
+  const [text, setText] = useState(() => readNote(activity.field) || value.text || '');
+  const [saved, setSaved] = useState(null);
+  const [showExample, setShowExample] = useState(false);
+
+  function change(next) {
+    setText(next);
+    setSaved(writeNote(activity.field, next));
+    onChange({ text: next, done: next.trim().length >= 10 });
+  }
+
+  return (
+    <div className="activity">
+      <Prompt activity={{ ...activity, question: activity.label }} kind="Mój projekt" />
+      {activity.prompt && <p className="activity-context">{activity.prompt}</p>}
+      <label className="text-field">
+        <span className="sr-only">{activity.label}</span>
+        <textarea rows={activity.rows || 4} value={text} maxLength={20000} placeholder={activity.placeholder || ''} onChange={e => change(e.target.value)} />
+      </label>
+      <p className="small muted" role="status">
+        {saved === false ? 'Nie udało się zapisać w przeglądarce. Skopiuj tekst, zanim zamkniesz stronę.' : 'Zapisuje się w „Moim projekcie” w tej przeglądarce.'}
+      </p>
+      {activity.example && (
+        <>
+          <button type="button" className="text-button" onClick={() => setShowExample(v => !v)} aria-expanded={showExample}>
+            {showExample ? 'Ukryj przykład' : 'Pokaż przykład'}
+          </button>
+          {showExample && <Feedback tone="info">{activity.example}</Feedback>}
+        </>
+      )}
+    </div>
+  );
+}
+
 const components = {
+  projectField: ProjectField,
   choice: Choice,
   multi: Multi,
   number: NumberQuestion,

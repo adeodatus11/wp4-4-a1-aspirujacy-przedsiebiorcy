@@ -1,0 +1,49 @@
+[
+ {
+  "n": 1,
+  "title": "Od celu do działania",
+  "duration": 90,
+  "stages": [
+   {
+    "label": "Pierwszy rok",
+    "title": "Dlaczego pierwsze lata są trudne",
+    "duration": 8
+   },
+   {
+    "label": "Kto pomoże",
+    "title": "Coach, mentor, doradca czy szkolenie?",
+    "duration": 12
+   },
+   {
+    "label": "Dobre pytania",
+    "title": "Pytanie, które pomaga myśleć",
+    "duration": 12
+   },
+   {
+    "label": "GROW",
+    "title": "Rozmowa w czterech krokach",
+    "duration": 15
+   },
+   {
+    "label": "Cel",
+    "title": "Cel, na który masz wpływ",
+    "duration": 11
+   },
+   {
+    "label": "Feedback",
+    "title": "Informacja zwrotna, która pomaga",
+    "duration": 10
+   },
+   {
+    "label": "Coach Corner",
+    "title": "Pięć pytań do siebie",
+    "duration": 12
+   },
+   {
+    "label": "Plan",
+    "title": "Twój plan na 14 dni",
+    "duration": 10
+   }
+  ]
+ }
+]
