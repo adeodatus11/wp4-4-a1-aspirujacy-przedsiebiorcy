@@ -117,6 +117,21 @@ export function ModuleView({ unit, stage: routeStage, state, update }) {
             </ul>
           </details>
         )}
+        {unit.source && (
+          <details>
+            <summary>Na podstawie opracowania modułu {unit.n}: co jest w którym etapie</summary>
+            <ul className="realia">
+              {unit.source.covers.map(([heading, stageId]) => {
+                const index = unit.sections.findIndex(s => s.id === stageId);
+                return (
+                  <li key={`${heading}-${stageId}`}>
+                    {heading} → <a href={`#/modul/${unit.n}/${index + 1}`}>{unit.sections[index].label}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        )}
         <div className="inline-actions">
           <button type="button" className="text-button" onClick={reset}>
             Wyczyść moje odpowiedzi w tym module

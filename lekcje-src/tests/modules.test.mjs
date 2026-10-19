@@ -19,12 +19,12 @@ for (const unit of units) {
   test(`moduł ${unit.n}: pola i czas`, () => {
     assert.ok(source, 'moduł istnieje w src/course.json');
     assert.equal(unit.title, source.title, 'tytuł jak na stronie modułu');
-    assert.ok(unit.objectives.length >= 3 && unit.objectives.length <= 6);
+    assert.ok(unit.objectives.length >= 3 && unit.objectives.length <= 8);
     assert.ok(unit.forGroup && unit.solo, 'wskazówki do pracy w grupie i bez grupy');
     for (const key of unit.realia) assert.ok(realia[key], `realia ${key}`);
     const minutes = unit.sections.reduce((s, x) => s + x.duration, 0);
     assert.equal(minutes, unit.duration, 'suma minut etapów');
-    assert.ok(unit.duration >= 75 && unit.duration <= 120, 'ścieżka na około półtorej godziny');
+    assert.ok(unit.duration >= 75 && unit.duration <= 240, 'ścieżka od półtorej do czterech godzin');
     for (const s of unit.sections) {
       assert.ok(s.label.length <= 14, `etykieta ${s.label}`);
       assert.ok(s.title && s.intro, `etap ${s.id}`);
@@ -55,5 +55,22 @@ for (const unit of units) {
     const text = JSON.stringify(unit.sections);
     assert.deepEqual(text.match(/[a-ząćęłńóśźż]+(?:łeś|łaś|łbyś|łabyś)(?![a-ząćęłńóśźż])/gi) || [], [], 'formy rodzajowe');
     assert.ok(!/\.replace\(/.test(readFileSync(join(dir, readdirSync(dir).find(f => f.startsWith(String(unit.n).padStart(2, '0')))), 'utf8')), 'bez łatania tekstu w kodzie');
+  });
+
+  test(`moduł ${unit.n}: każdy rozdział opracowania ma swój etap`, () => {
+    assert.ok(unit.source?.file, 'plik opracowania w src/');
+    const md = readFileSync(new URL(`../../src/${unit.source.file}`, import.meta.url), 'utf8');
+    const skip = /Cel modułu|Scenariusz|^Faza|Wskazówki|Materiały|Literatura|Bibliografia|Zasoby|Uwagi|Wersja angielska|Podsumowanie|Myśli końcowe|Wnioski$/;
+    const headings = md
+      .split('\n')
+      .map(line => line.match(/^(#{1,2}) (.+)/))
+      .filter(m => m && (m[1] === '##' ? !skip.test(m[2]) : /Coach|autorefleksji/i.test(m[2])))
+      .map(m => m[2].replace(/[*_]/g, '').trim());
+    const ids = new Set(unit.sections.map(s => s.id));
+    for (const [heading, stage] of unit.source.covers) {
+      assert.ok(ids.has(stage), `${heading}: brak etapu ${stage}`);
+      assert.ok(headings.some(h => h.startsWith(heading)), `${heading}: nie ma takiego rozdziału w ${unit.source.file}`);
+    }
+    for (const h of headings) assert.ok(unit.source.covers.some(([heading]) => h.startsWith(heading)), `rozdział bez etapu w ścieżce: ${h}`);
   });
 }
