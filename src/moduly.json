@@ -2,7 +2,7 @@
  {
   "n": 1,
   "title": "Od celu do działania",
-  "duration": 90,
+  "duration": 110,
   "stages": [
    {
     "label": "Pierwszy rok",
@@ -13,6 +13,11 @@
     "label": "Kto pomoże",
     "title": "Coach, mentor, doradca czy szkolenie?",
     "duration": 12
+   },
+   {
+    "label": "Mapa programu",
+    "title": "Czego możesz się spodziewać w tym programie",
+    "duration": 10
    },
    {
     "label": "Dobre pytania",
@@ -35,6 +40,11 @@
     "duration": 10
    },
    {
+    "label": "Przypadek",
+    "title": "Narzędzie z zewnątrz — użyte z głową",
+    "duration": 10
+   },
+   {
     "label": "Coach Corner",
     "title": "Pięć pytań do siebie",
     "duration": 12
@@ -49,7 +59,7 @@
  {
   "n": 2,
   "title": "Przedsiębiorczość na własnych zasadach",
-  "duration": 95,
+  "duration": 202,
   "stages": [
    {
     "label": "Po co",
@@ -64,12 +74,52 @@
    {
     "label": "Trzy role",
     "title": "Specjalista, menedżer, przedsiębiorca",
+    "duration": 12
+   },
+   {
+    "label": "Poziom 5",
+    "title": "Przywództwo poziomu 5: firma, która poradzi sobie bez Ciebie",
     "duration": 14
    },
    {
-    "label": "Nawyk",
-    "title": "Jeden nawyk i jedna rzecz mniej",
-    "duration": 10
+    "label": "Ludzie",
+    "title": "Najpierw ludzie, potem stanowiska",
+    "duration": 12
+   },
+   {
+    "label": "Dyscyplina",
+    "title": "Kultura dyscypliny to nie tyrania",
+    "duration": 12
+   },
+   {
+    "label": "Brutalne fakty",
+    "title": "Schody, nie winda — i odwaga, by patrzeć na fakty",
+    "duration": 15
+   },
+   {
+    "label": "Trzy kręgi",
+    "title": "Koncepcja jeża: trzy kręgi i jedno zdanie",
+    "duration": 18
+   },
+   {
+    "label": "Wybór drogi",
+    "title": "Doskonałość to wybór: mniej rzeczy, lepiej",
+    "duration": 14
+   },
+   {
+    "label": "Technologia",
+    "title": "Technologia wzmacnia rozpęd, ale go nie tworzy",
+    "duration": 8
+   },
+   {
+    "label": "Coach Corner",
+    "title": "Pięć pytań do siebie",
+    "duration": 12
+   },
+   {
+    "label": "Mniej rzeczy",
+    "title": "Lista „do zaprzestania” i jeden nawyk",
+    "duration": 14
    },
    {
     "label": "Forma firmy",
@@ -91,8 +141,13 @@
  {
   "n": 3,
   "title": "Sprawdź pomysł u klientów",
-  "duration": 90,
+  "duration": 148,
   "stages": [
+   {
+    "label": "Dlaczego firma",
+    "title": "Po co zakładać firmę — i dlaczego to nie wystarczy",
+    "duration": 12
+   },
    {
     "label": "Uprzejmość",
     "title": "„Świetny pomysł!” to jeszcze nie popyt",
@@ -100,8 +155,8 @@
    },
    {
     "label": "Problem",
-    "title": "Problem, klient, rozwiązanie",
-    "duration": 10
+    "title": "Krok 1: problem, rozwiązanie, dla kogo",
+    "duration": 14
    },
    {
     "label": "Hipoteza",
@@ -114,6 +169,11 @@
     "duration": 12
    },
    {
+    "label": "Cztery pytania",
+    "title": "Krok 2: cztery pytania do klienta",
+    "duration": 14
+   },
+   {
     "label": "Pytania",
     "title": "Pytaj o to, co się wydarzyło",
     "duration": 14
@@ -122,6 +182,11 @@
     "label": "Rozmowa",
     "title": "Gdy rozmówca chwali",
     "duration": 10
+   },
+   {
+    "label": "Odpowiedzi",
+    "title": "Krok 3: uprzejmość, sygnał czy dowód?",
+    "duration": 12
    },
    {
     "label": "Test",
@@ -136,53 +201,128 @@
    {
     "label": "Decyzja",
     "title": "Fakty, wnioski, decyzja",
-    "duration": 8
+    "duration": 10
+   },
+   {
+    "label": "Coach Corner",
+    "title": "Coach Corner: cztery pytania przed dalszą drogą",
+    "duration": 14
    }
   ]
  },
  {
   "n": 4,
   "title": "Zbuduj model, który się spina",
-  "duration": 100,
+  "duration": 240,
   "stages": [
    {
-    "label": "Lean Canvas",
-    "title": "Dziewięć pól na jednej kartce",
-    "duration": 12
-   },
-   {
-    "label": "Wartość",
-    "title": "Klient, alternatywa, najmniejsze rozwiązanie",
-    "duration": 12
-   },
-   {
-    "label": "Twoja godzina",
-    "title": "Ile kosztuje Twoja godzina",
-    "duration": 16
-   },
-   {
-    "label": "Próg",
-    "title": "Ile trzeba sprzedać, żeby zarabiać",
+    "label": "A. Model",
+    "title": "Cztery wymiary modelu biznesowego",
     "duration": 10
    },
    {
-    "label": "Gotówka",
-    "title": "Zysk na papierze, pusto na koncie",
-    "duration": 16
+    "label": "A. Innowacja",
+    "title": "Zmiana modelu: piekarnia, dostawa i pakiety",
+    "duration": 14
    },
    {
-    "label": "Gorszy wariant",
-    "title": "Co, jeśli sprzedaż będzie niższa?",
+    "label": "A. Canvas",
+    "title": "Lean Canvas: model na jednej kartce",
+    "duration": 14
+   },
+   {
+    "label": "A. Wartość",
+    "title": "Klient, alternatywa, najmniejsze rozwiązanie",
+    "duration": 10
+   },
+   {
+    "label": "B. Mit E",
+    "title": "Dobry fachowiec to jeszcze nie przedsiębiorca",
+    "duration": 12
+   },
+   {
+    "label": "B. Trzy role",
+    "title": "Przedsiębiorca, Menedżer, Specjalista",
+    "duration": 12
+   },
+   {
+    "label": "B. Fazy",
+    "title": "Dzieciństwo, dojrzewanie, dojrzałość firmy",
+    "duration": 12
+   },
+   {
+    "label": "B. Franczyza",
+    "title": "Buduj tak, jakby miało powstać 50 takich firm",
+    "duration": 10
+   },
+   {
+    "label": "C. Cel",
+    "title": "Cel nadrzędny i cel strategiczny",
+    "duration": 10
+   },
+   {
+    "label": "C. 10 pytań",
+    "title": "Dziesięć pytań przed startem",
     "duration": 8
    },
    {
-    "label": "Proces",
+    "label": "C. System",
     "title": "Jeden proces, który ktoś inny wykona",
     "duration": 14
    },
    {
-    "label": "Miernik",
-    "title": "Jedna liczba na tydzień i uczciwa przewaga",
+    "label": "C. Ludzie",
+    "title": "Ludzie, którzy pracują z przekonania",
+    "duration": 10
+   },
+   {
+    "label": "C. Klient",
+    "title": "Kim są klienci i dlaczego kupują",
+    "duration": 10
+   },
+   {
+    "label": "C. Stawka",
+    "title": "Ile kosztuje Twoja godzina",
+    "duration": 14
+   },
+   {
+    "label": "C. Próg",
+    "title": "Ile trzeba sprzedać, żeby zarabiać",
+    "duration": 8
+   },
+   {
+    "label": "C. Gotówka",
+    "title": "Zysk na papierze, pusto na koncie",
+    "duration": 14
+   },
+   {
+    "label": "C. Wariant",
+    "title": "Co, jeśli sprzedaż będzie niższa?",
+    "duration": 6
+   },
+   {
+    "label": "C. Jakość",
+    "title": "Stała jakość i małe usprawnienia",
+    "duration": 10
+   },
+   {
+    "label": "D. Zasady Lean",
+    "title": "Wartość dla klienta i pięć zasad Lean",
+    "duration": 12
+   },
+   {
+    "label": "D. Pręty",
+    "title": "Proces przed maszyną",
+    "duration": 12
+   },
+   {
+    "label": "D. Cyfryzacja",
+    "title": "Najpierw porządek, potem program",
+    "duration": 6
+   },
+   {
+    "label": "Coach Corner",
+    "title": "Gdzie dziś stoi Twoja firma",
     "duration": 12
    }
   ]
@@ -190,17 +330,57 @@
  {
   "n": 5,
   "title": "Narzędzia, które wykonują pracę",
-  "duration": 85,
+  "duration": 178,
   "stages": [
    {
+    "label": "Najpierw cel",
+    "title": "Najpierw potrzeba, potem narzędzie",
+    "duration": 8
+   },
+   {
+    "label": "Obecność",
+    "title": "Dlaczego firma powinna być w internecie",
+    "duration": 12
+   },
+   {
+    "label": "Nazwa i domena",
+    "title": "Nazwa i domena, którą da się podyktować",
+    "duration": 14
+   },
+   {
     "label": "Strona oferty",
-    "title": "Strona, która odpowiada na pytania klienta",
-    "duration": 15
+    "title": "Trzy podstrony, które odpowiadają na pytania klienta",
+    "duration": 18
+   },
+   {
+    "label": "Historia firmy",
+    "title": "Historia, która sprzedaje lepiej niż cennik",
+    "duration": 12
+   },
+   {
+    "label": "Strona żyje",
+    "title": "Strona, która nie umiera po miesiącu",
+    "duration": 8
+   },
+   {
+    "label": "Przykład",
+    "title": "Przykład kompletny: piekarnia w Oławie",
+    "duration": 8
    },
    {
     "label": "Zanim ruszy",
     "title": "Co musi być na stronie, zanim przyjmiesz zamówienie",
     "duration": 8
+   },
+   {
+    "label": "AI na co dzień",
+    "title": "Do czego mała firma używa AI na co dzień",
+    "duration": 14
+   },
+   {
+    "label": "Wartość i trud",
+    "title": "Które zastosowanie AI ma sens w Twojej firmie",
+    "duration": 14
    },
    {
     "label": "Zadanie dla AI",
@@ -232,12 +412,32 @@
  {
   "n": 6,
   "title": "Dotrzyj do właściwych ludzi",
-  "duration": 93,
+  "duration": 177,
   "stages": [
    {
+    "label": "Pojęcia",
+    "title": "Marketing zaczyna się od potrzeby, nie od reklamy",
+    "duration": 14
+   },
+   {
+    "label": "Od masy do STP",
+    "title": "Właściwy komunikat do właściwej grupy we właściwy sposób",
+    "duration": 10
+   },
+   {
     "label": "Segmenty",
-    "title": "Kto ma problem, który rozwiązujesz",
+    "title": "Cztery sposoby dzielenia rynku",
+    "duration": 14
+   },
+   {
+    "label": "Pięć warunków",
+    "title": "Czy Twój segment przejdzie pięć testów",
     "duration": 12
+   },
+   {
+    "label": "Strategie",
+    "title": "Wszyscy, kilka grup czy jedna nisza",
+    "duration": 10
    },
    {
     "label": "Wybór grupy",
@@ -250,14 +450,29 @@
     "duration": 12
    },
    {
+    "label": "Wyróżniki",
+    "title": "Pięć wymiarów, pięć wyróżników i typowe błędy",
+    "duration": 12
+   },
+   {
     "label": "Obietnica",
     "title": "Obietnica, za którą stoi dowód",
+    "duration": 12
+   },
+   {
+    "label": "Komunikacja",
+    "title": "Komunikacja to rozmowa, nie ogłoszenie",
     "duration": 12
    },
    {
     "label": "Kanał",
     "title": "Kanał, który dociera do tej jednej osoby",
     "duration": 14
+   },
+   {
+    "label": "Kanały cyfrowe",
+    "title": "Komunikacja cyfrowa: dialog, dane i opinie",
+    "duration": 12
    },
    {
     "label": "Test 14 dni",
@@ -274,12 +489,22 @@
  {
   "n": 7,
   "title": "Mniej strat, więcej wartości",
-  "duration": 88,
+  "duration": 210,
   "stages": [
+   {
+    "label": "Dlaczego teraz",
+    "title": "Dlaczego ESG dotyczy także małych firm",
+    "duration": 14
+   },
    {
     "label": "E, S, G",
     "title": "Trzy obszary — wybierz jeden, na który masz wpływ",
-    "duration": 12
+    "duration": 16
+   },
+   {
+    "label": "ESRS a VSME",
+    "title": "Pełny raport a uproszczony standard dla MŚP",
+    "duration": 14
    },
    {
     "label": "Kontrahent",
@@ -287,24 +512,54 @@
     "duration": 10
    },
    {
+    "label": "Twoja firma",
+    "title": "Jak ustalić sytuację własnej firmy w Polsce",
+    "duration": 12
+   },
+   {
+    "label": "Wskaźniki",
+    "title": "Co konkretnie się mierzy i skąd wziąć dane",
+    "duration": 16
+   },
+   {
+    "label": "Trzy przypadki",
+    "title": "Trzy przypadki: korzyść dla środowiska i dla firmy",
+    "duration": 18
+   },
+   {
+    "label": "Sześć kroków",
+    "title": "Sześć kroków na własnym poziomie",
+    "duration": 10
+   },
+   {
+    "label": "Screening",
+    "title": "Ocena sytuacji: mocne i słabe strony",
+    "duration": 16
+   },
+   {
     "label": "Pomiar bazowy",
     "title": "Tydzień pomiaru, zanim cokolwiek zmienisz",
     "duration": 14
    },
    {
-    "label": "Działanie",
-    "title": "Jedno działanie i jedna osoba odpowiedzialna",
-    "duration": 12
-   },
-   {
     "label": "Cel i koszt",
     "title": "Cel na 30 dni i ile to kosztuje",
-    "duration": 10
+    "duration": 13
+   },
+   {
+    "label": "Działanie",
+    "title": "Jedno działanie i jedna osoba odpowiedzialna",
+    "duration": 15
    },
    {
     "label": "Wynik",
     "title": "Wynik absolutny i wynik na jednostkę",
     "duration": 16
+   },
+   {
+    "label": "Raport",
+    "title": "Uproszczony raport i weryfikacja danych",
+    "duration": 12
    },
    {
     "label": "Komunikat",
@@ -316,37 +571,72 @@
  {
   "n": 8,
   "title": "Opowiedz o firmie i policz potrzeby",
-  "duration": 102,
+  "duration": 232,
   "stages": [
    {
+    "label": "Udziały i dług",
+    "title": "Kapitał udziałowy czy dług",
+    "duration": 16
+   },
+   {
+    "label": "Kto inwestuje",
+    "title": "Od rodziny do funduszu: kto daje pieniądze i czego chce",
+    "duration": 14
+   },
+   {
     "label": "Dla kogo",
-    "title": "Ten sam projekt, różni odbiorcy",
+    "title": "Po co jest pitch i kto go słucha",
     "duration": 10
    },
    {
     "label": "Sześć kart",
     "title": "Sześć kart i zero ogólników",
-    "duration": 14
+    "duration": 18
+   },
+   {
+    "label": "Narracja",
+    "title": "Trzy akty, liczby i emocje",
+    "duration": 10
    },
    {
     "label": "Dowody",
-    "title": "Dowody, że ktoś za to płaci",
-    "duration": 12
+    "title": "Trakcja: dowody, że ktoś za to płaci",
+    "duration": 14
    },
    {
     "label": "Zespół i rynek",
-    "title": "Rynek, który obsłużysz, i zespół, który to wykona",
-    "duration": 10
+    "title": "Zespół, który to wykona, i rynek, który obsłużysz",
+    "duration": 14
+   },
+   {
+    "label": "Oczy inwestora",
+    "title": "Produkt, ekonomia jednego klienta i dopasowanie",
+    "duration": 16
+   },
+   {
+    "label": "Etapy rund",
+    "title": "Rundy finansowania: drabina dla firm szybkiego wzrostu",
+    "duration": 16
+   },
+   {
+    "label": "Rozwodnienie",
+    "title": "Rozwodnienie: mniejszy kawałek większego tortu",
+    "duration": 14
+   },
+   {
+    "label": "Alternatywy",
+    "title": "Crowdfunding, aniołowie i finansowanie z przychodu",
+    "duration": 18
+   },
+   {
+    "label": "Źródła",
+    "title": "Skąd pieniądze dla małej firmy i co za nie oddajesz",
+    "duration": 18
    },
    {
     "label": "Kwota",
     "title": "Kwota, która wynika z planu",
     "duration": 18
-   },
-   {
-    "label": "Źródła",
-    "title": "Skąd pieniądze i co za nie oddajesz",
-    "duration": 16
    },
    {
     "label": "Bank i partner",
@@ -357,6 +647,11 @@
     "label": "Próba",
     "title": "Trzy minuty, trudne pytania i jedna poprawka",
     "duration": 12
+   },
+   {
+    "label": "Coach Corner",
+    "title": "Coach Corner: pięć pytań o Twoje finansowanie",
+    "duration": 14
    }
   ]
  }

@@ -38,3 +38,13 @@ test('lista modułów: wszystkie ścieżki i link z etapu', async ({ page }) => 
   await page.getByRole('link', { name: 'Wszystkie moduły' }).click();
   await expect(page.locator('h1')).toContainText(`${modules.length} modułów`);
 });
+
+test('pasek etapów pokazuje bieżący etap także na telefonie', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const unit = modules.reduce((a, b) => (b.sections.length > a.sections.length ? b : a));
+  const last = unit.sections.length;
+  await page.goto(`index.html#/modul/${unit.n}/${last}`);
+  const box = await page.locator('.stages .is-current').boundingBox();
+  expect(box.x).toBeGreaterThanOrEqual(0);
+  expect(box.x + box.width).toBeLessThanOrEqual(390);
+});

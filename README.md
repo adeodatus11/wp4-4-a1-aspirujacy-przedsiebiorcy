@@ -7,7 +7,7 @@ Samodzielna platforma programu WP4.4.A1 (WIN4SMEs CoVE) dla **uczestnika i prowa
 - Osiem modułów: coaching, postawa przedsiębiorcza, walidacja, model biznesowy i Lean, cyfryzacja i AI, marketing, ESG, pitch i finansowanie.
 - Pełne wcześniejsze opracowania oraz nowe wprowadzenia, osiem polskich przypadków fikcyjnych i instrukcje ćwiczeń.
 - 48 pól projektu, 24 pytania z wyjaśnieniami, lokalny zapis postępów.
-- Do każdego modułu ścieżka pracy własnej (lekcje/index.html#/modul/N, 85–102 min): 7–9 etapów z wyjaśnieniem, polskim przypadkiem, zadaniami z informacją zwrotną i wszystkimi sześcioma polami projektu. Wpisy trafiają do „Mojego projektu”. Na końcu nie ma karty oceny — jest podsumowanie: rezultat modułu, uzupełnione pola, co przygotować na spotkanie w grupie i jak pracować bez grupy.
+- Do każdego modułu ścieżka pracy własnej (lekcje/index.html#/moduly, 110–240 min, razem ok. 25 h): 10–22 etapy, które przerabiają całe opracowanie modułu (każdy rozdział ma swój etap; mapę rozdział → etap widać w stopce ścieżki), z wyjaśnieniem, polskim przypadkiem, zadaniami z informacją zwrotną, Coach Corner i wszystkimi sześcioma polami projektu. Wpisy trafiają do „Mojego projektu”. Na końcu nie ma karty oceny — jest podsumowanie: rezultat modułu, uzupełnione pola, co przygotować na spotkanie w grupie i jak pracować bez grupy.
 - Eksport/import kopii JSON, notatki TXT, druk projektu i usuwanie danych.
 - Karty pracy, Lean Canvas, kalkulator i arkusz cash flow XLSX, pakiet offline ZIP.
 - Biblioteka 17 źródeł z wydawcą, sposobem i datą sprawdzenia; wyszukiwanie działa bez zewnętrznego API.
@@ -55,7 +55,7 @@ Otwórz http://localhost:8000. Kolejność ma znaczenie: build.py czyta katalog 
 | src/course.json | nowe treści ośmiu modułów, ćwiczenia, pola projektu, quizy i rubryki |
 | lekcje-src/content/lessons/NN-*.js | treść 29 lekcji: etapy, wyjaśnienia, zadania, klucze, notatki prowadzącego |
 | lekcje-src/content/trainings/*.js | pięć treningów: ściąga i pula zadań z generatorami danych |
-| lekcje-src/content/modules/NN-*.js | ścieżki pracy własnej do ośmiu modułów; nazwy pól projektu muszą być takie jak w src/course.json |
+| lekcje-src/content/modules/NN-*.js | ścieżki pracy własnej do ośmiu modułów; nazwy pól projektu jak w src/course.json, pole source.covers wiąże rozdziały src/0N_*.md z etapami |
 | lekcje-src/content/realia.js | polskie fakty prawne i liczbowe z datą sprawdzenia |
 | lekcje-src/app, components, lib | aplikacja lekcji (React + Vite), punktacja i zapis |
 | src/curriculum.json | formalna mapa odniesień; pole lessons wskazuje numery lekcji 01–34 |

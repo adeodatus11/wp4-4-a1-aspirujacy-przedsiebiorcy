@@ -26,6 +26,13 @@ export function ModuleView({ unit, stage: routeStage, state, update }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key, section.id]);
 
+  // Przy wielu etapach pasek przewija się w poziomie — bieżący etap ma być widoczny.
+  useEffect(() => {
+    const bar = document.querySelector('.stages');
+    const current = bar?.querySelector('.is-current');
+    if (bar && current) bar.scrollLeft = current.offsetLeft - bar.offsetLeft - (bar.clientWidth - current.offsetWidth) / 2;
+  }, [stage]);
+
   function setAnswer(id, value) {
     update(s => withLesson(s, key, current => ({ ...current, answers: { ...current.answers, [id]: value } })));
   }
@@ -182,7 +189,7 @@ export function ModuleCatalog({ state }) {
         <p className="eyebrow">Program dla aspirujących przedsiębiorców · praca własna</p>
         <h1>{modules.length} modułów krok po kroku.</h1>
         <p className="lead">
-          Każdy moduł programu ma ścieżkę na około półtorej godziny: wyjaśnienia z polskimi przykładami, zadania z informacją zwrotną i pola, które trafiają do „Mojego projektu”. Razem ok. {Math.round(total / 60)} godzin. Moduły można przechodzić po kolei albo zacząć od tego, którego najbardziej potrzebujesz.
+          Każda ścieżka przeprowadza przez całe opracowanie modułu: wyjaśnienia z polskimi przykładami, zadania z informacją zwrotną, pytania do autorefleksji i pola, które trafiają do „Mojego projektu”. Można ją przejść bez prowadzącego, w kilku podejściach — odpowiedzi się zapisują. Razem ok. {Math.round(total / 60)} godzin. Moduły można przechodzić po kolei albo zacząć od tego, którego najbardziej potrzebujesz.
         </p>
       </section>
       <ol className="module-paths">
