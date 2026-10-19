@@ -1,39 +1,194 @@
-import { choice, number } from '../schema.js';
+import { choice, number, text } from '../schema.js';
 
 export default {
   id: 'm5',
   n: 5,
   topic: 'Cyfryzacja i AI',
   title: 'Narzędzia, które wykonują pracę',
-  subtitle: 'Strona oferty, która odpowiada na pytania klienta, i mały eksperyment z AI: z pomiarem czasu, kontrolą błędów i decyzją.',
-  duration: 85,
+  subtitle: 'Obecność w internecie od domeny do historii firmy, prosta strona oferty, codzienne zastosowania AI i mały eksperyment: z pomiarem czasu, kontrolą błędów i decyzją.',
+  duration: 178,
   outcome: 'Szkic strony oferty i karta małego eksperymentu AI.',
   realia: ['daneNaStronie', 'cookies', 'aiDane'],
   objectives: [
-    'Piszę stronę oferty, z której klient w pół minuty wie, co dostanie i co zrobić dalej.',
+    'Zaczynam od potrzeby firmy, a narzędzie dobieram potem — i nie przenoszę bałaganu do komputera.',
+    'Wybieram domenę według kryteriów i porównuję koszt jej utrzymania przez kilka lat.',
+    'Piszę stronę oferty, z której klient w pół minuty wie, co dostanie i co zrobić dalej, i historię firmy zamiast samego cennika.',
     'Sprawdzam, co musi być na stronie, zanim zacznę przez nią przyjmować zamówienia.',
-    'Piszę polecenie dla AI z zadaniem, kontekstem, danymi, ograniczeniami i formatem.',
+    'Piszę polecenie dla AI z rolą, kontekstem, zadaniem, danymi, ograniczeniami i formatem.',
+    'Oceniam pomysły na AI według wartości i trudności wdrożenia, w pięciu polach.',
     'Usuwam dane klientów z przykładów i ustalam, kiedy sprawę przejmuje człowiek.',
     'Liczę zysk z narzędzia razem z czasem sprawdzania i podejmuję decyzję na podstawie liczb.',
   ],
   forGroup:
-    'Na spotkanie weź szkic strony oferty i swoje polecenie dla AI. W parach: jedna osoba czyta stronę drugiej przez 30 sekund i mówi, dla kogo jest oferta i jaki jest następny krok. Potem sprawdźcie swoje polecenia na tych samych pięciu zmyślonych zapytaniach i porównajcie, czyje szkice wymagały mniej poprawek.',
+    'Na spotkanie weź historię firmy, szkic strony oferty i swoje polecenie dla AI. Najpierw przeczytaj historię na głos — grupa mówi, czy chciałaby kupić od tej osoby. Potem w parach: jedna osoba czyta stronę drugiej przez 30 sekund i mówi, dla kogo jest oferta i jaki jest następny krok. Potem sprawdźcie swoje polecenia na tych samych pięciu zmyślonych zapytaniach i porównajcie, czyje szkice wymagały mniej poprawek.',
   solo:
-    'Bez grupy: pokaż szkic strony osobie spoza branży i zapytaj, co zrobi po przeczytaniu. Jeśli nie wie — popraw wezwanie do działania. Eksperyment z AI prowadź przez dwa tygodnie, zapisując czas i błędy w tabelce, i dopiero wtedy zdecyduj o płatnym narzędziu.',
+    'Bez grupy: podyktuj komuś przez telefon wybraną domenę i sprawdź, czy wpisze ją bez literowania. Pokaż szkic strony osobie spoza branży i zapytaj, co zrobi po przeczytaniu. Jeśli nie wie — popraw wezwanie do działania. Eksperyment z AI prowadź przez dwa tygodnie, zapisując czas i błędy w tabelce, i dopiero wtedy zdecyduj o płatnym narzędziu.',
+  source: {
+    file: '05_Modul_5_Narzedzia_cyfrowe_AI.md',
+    covers: [
+      ['1.1. Czym jest obecność online', 'obecnosc'],
+      ['1.2. Jak zacząć', 'domena'],
+      ['1.2. Jak zacząć', 'oferta'],
+      ['1.2. Jak zacząć', 'historia'],
+      ['1.2. Jak zacząć', 'przy-zyciu'],
+      ['1.3. Przykład kompletny', 'przyklad'],
+      ['2.1. Warsztat podstawowy', 'ai-codziennie'],
+      ['2.1. Warsztat podstawowy', 'polecenie'],
+      ['2.2. Warsztat zaawansowany', 'wybor-ai'],
+      ['2.3. Ćwiczenie do wykorzystania', 'wybor-ai'],
+      ['2.3. Ćwiczenie do wykorzystania', 'bilans'],
+    ],
+  },
   sections: [
+    {
+      id: 'strategia',
+      label: 'Najpierw cel',
+      title: 'Najpierw potrzeba, potem narzędzie',
+      duration: 8,
+      intro: 'Ten moduł ma dwie części: obecność firmy w internecie i sztuczna inteligencja w codziennej pracy. Obie zaczynają się od tej samej zasady.',
+      reading: {
+        paragraphs: [
+          'Firmy przeciętne gonią za nowinkami, bo boją się zostać w tyle. Firmy, którym się udaje, najpierw zapisują, czego potrzebują — więcej zapytań, mniej czasu na odpisywanie, mniej pomyłek w zamówieniach — a dopiero potem dobierają narzędzie. Technologia nie nadaje firmie rozpędu. Wzmacnia rozpęd, który już jest.',
+          'Z myślenia Lean (moduł 4) pochodzi druga połowa zasady: jeśli przeniesiesz do komputera źle zorganizowany proces, bałagan zostanie wbudowany w system i będzie kosztował więcej. Dlatego kolejność w tym module jest stała: widoczność i porządek, potem AI.',
+        ],
+      },
+      activities: [
+        choice(
+          'm5-kolejnosc',
+          'Ania słyszy od znajomej, że „wszyscy już mają chatbota”. Co powinna zrobić najpierw?',
+          [
+            'Kupić chatbota, zanim konkurencja ją wyprzedzi',
+            'Zapisać, jaki problem ma rozwiązać (np. 160 minut tygodniowo na odpowiedzi) i sprawdzić, czy odpowiedzi opierają się na aktualnym cenniku',
+            'Poczekać, aż technologia stanieje, i nic nie zmieniać',
+          ],
+          1,
+          'Najpierw cel i uporządkowany proces. Bez aktualnego cennika chatbot szybciej rozsyłałby błędne ceny.',
+          [
+            'Zakup bez celu to strach przed zostaniem w tyle, nie decyzja. Nie wiadomo nawet, co narzędzie ma poprawić.',
+            null,
+            'Czekanie też jest decyzją bez celu. Problem z czasem na odpowiedzi zostaje.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'obecnosc',
+      label: 'Obecność',
+      title: 'Dlaczego firma powinna być w internecie',
+      duration: 12,
+      intro: 'Obecność online oznacza, że ludzie mogą Cię znaleźć, dowiedzieć się, co robisz, i łatwo się z Tobą skontaktować. Dotyczy to także firmy, która jest dopiero pomysłem.',
+      reading: {
+        paragraphs: [
+          'Pięć powodów. Po pierwsze, ludzie najpierw szukają: kto usłyszy o Twojej usłudze, wpisze nazwę w wyszukiwarkę — a gdy nic nie znajdzie, może uznać, że firma nie jest „prawdziwa”. Po drugie, prosta i schludna strona buduje zaufanie, jak wizytówka, tylko mocniejsza. Po trzecie, strona pracuje cały czas: klient z innej dzielnicy czy miasta trafi do Ciebie także w nocy.',
+          'Po czwarte, strona to centrum, które łączy wszystko: profile w mediach społecznościowych, formularz kontaktowy, sklep, newsletter. Po piąte, domena i strona należą do Ciebie, a profil w serwisie społecznościowym nie — zasady, zasięgi i dostęp do konta ustala właściciel serwisu.',
+        ],
+      },
+      activities: [
+        {
+          type: 'matching',
+          id: 'm5-argumenty',
+          question: 'Który powód obecności online pokazuje każda sytuacja?',
+          options: ['Ludzie najpierw szukają', 'Zaufanie', 'Zasięg i dostępność', 'Centrum komunikacji', 'To jest Twoje'],
+          rows: [
+            { label: 'Klientka z Oleśnicy znajduje cennik poprawek o 23:00 i rano przywozi płaszcz', correct: 2 },
+            { label: 'Serwis społecznościowy zablokował konto pracowni na tydzień — strona i e-mail działają dalej', correct: 4 },
+            { label: 'Sąsiad poleca Anię, a znajomy wpisuje „krawcowa Nadodrze” w wyszukiwarkę', correct: 0 },
+            { label: 'Na stronie są link do profilu, formularz przymiarki i mapa dojazdu', correct: 3 },
+            { label: 'Schludna strona z adresem i zdjęciami pracowni sprawia, że nowa klientka nie boi się zostawić drogiej sukni', correct: 1 },
+          ],
+          explanation: 'Każdy z pięciu powodów działa inaczej: wyszukiwanie, zaufanie, dostępność przez całą dobę, jedno miejsce na wszystkie kanały i niezależność od cudzego serwisu.',
+        },
+        {
+          type: 'checklist',
+          id: 'm5-audyt-widocznosci',
+          question: 'Wpisz w wyszukiwarkę nazwę swojej firmy (albo planowaną nazwę) i miasto. Co widać na pierwszej stronie wyników?',
+          items: [
+            'Moją stronę internetową',
+            'Wizytówkę firmy w mapach, z aktualnymi godzinami',
+            'Mój profil w mediach społecznościowych',
+            'Opinie klientów',
+            'Inną firmę o podobnej nazwie',
+            'Nic, co dotyczy mojej firmy',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'domena',
+      label: 'Nazwa i domena',
+      title: 'Nazwa i domena, którą da się podyktować',
+      duration: 14,
+      intro: 'Domena to adres Twojej strony, np. pracownia-ani.pl. Wybierasz ją raz na lata, więc warto poświęcić jej kwadrans.',
+      reading: {
+        paragraphs: [
+          'Dobra domena jest krótka, łatwa do wpisania i kojarzy się z firmą. Bez spacji i symboli — tylko litery, cyfry i ewentualnie myślnik. Polskie litery są technicznie możliwe, ale wiele osób wpisze adres bez nich, więc bezpieczniej ich unikać. Jeśli nazwa jest zajęta, dodaj słowo kluczowe albo miejsce: krawiectwo, wroclaw. Test: podyktuj adres przez telefon. Jeśli musisz literować, jest za długi.',
+          'Domeny .pl prowadzi rejestr NASK, a kupujesz je u jednego z rejestratorów. Porównaj nie tylko cenę pierwszego roku, ale też odnowienia i przeniesienia do innego rejestratora — promocja na start bywa wielokrotnie tańsza niż kolejne lata. Zanim zamówisz szyld i wizytówki, sprawdź w bazie znaków towarowych Urzędu Patentowego, czy podobna nazwa nie jest zastrzeżona w Twojej branży.',
+        ],
+        table: {
+          head: ['Kryterium', 'Dobrze', 'Źle'],
+          rows: [
+            ['Krótko i prosto', 'pracownia-ani.pl', 'krawiectwo-ani-poprawki-szycie-wroclaw-24.pl'],
+            ['Związek z firmą', 'krawiectwo-nadodrze.pl', 'ania1987.pl'],
+            ['Bez znaków specjalnych', 'szycie-ani.pl', 'szycie_ani.pl, szycieAni!.pl'],
+          ],
+        },
+      },
+      activities: [
+        {
+          type: 'multi',
+          id: 'm5-domeny',
+          question: 'Ania wybiera domenę. Które propozycje spełniają kryteria? Zaznacz wszystkie dobre.',
+          options: [
+            'krawiectwo-nadodrze.pl',
+            'pracownia_ani_poprawki.pl',
+            'pracownia-ani.pl',
+            'najlepsze-poprawki-krawieckie-we-wroclawiu-ania.pl',
+            'aniaszyje.pl',
+          ],
+          correct: [0, 2, 4],
+          explanation: 'Krótkie, kojarzą się z pracownią i da się je podyktować. Podkreślnik nie jest dozwolony w domenie, a bardzo długi adres trudno zapamiętać i wpisać bez błędu.',
+          hint: 'Spróbuj każdą „podyktować” w myślach przez telefon.',
+        },
+        choice(
+          'm5-rejestrator',
+          'Rejestrator A: 9 zł za pierwszy rok, 99 zł za każde odnowienie. Rejestrator B: 49 zł za pierwszy rok, 49 zł za odnowienie. Który jest tańszy w ciągu trzech lat?',
+          ['A — bo pierwszy rok jest tańszy', 'Oba kosztują tyle samo', 'B — 147 zł wobec 207 zł u A'],
+          2,
+          'A: 9 + 99 + 99 = 207 zł. B: 3 × 49 = 147 zł. Liczy się koszt odnowienia, bo domenę trzymasz latami. Kwoty są przykładowe — aktualne ceny sprawdź u rejestratorów.',
+          ['Promocja na pierwszy rok to pułapka: od drugiego roku płacisz znacznie więcej.', 'Policz trzy lata: 207 zł wobec 147 zł.', null],
+        ),
+        text('m5-moje-domeny', 'Zapisz trzy warianty domeny dla swojej firmy i sprawdź u rejestratora, które są wolne. Który wybierasz i dlaczego?', 'Na przykład: pracownia-ani.pl (wolna), aniaszyje.pl (wolna), krawiectwo-nadodrze.pl (zajęta). Wybieram pracownia-ani.pl — krótka i zgodna z szyldem; w bazie znaków towarowych nie ma podobnej nazwy.', { minLength: 30 }),
+      ],
+    },
     {
       id: 'oferta',
       label: 'Strona oferty',
-      title: 'Strona, która odpowiada na pytania klienta',
-      duration: 15,
+      title: 'Trzy podstrony, które odpowiadają na pytania klienta',
+      duration: 18,
       intro: 'Ania prowadzi zakład krawiecki na wrocławskim Nadodrzu. Połowę dnia zajmują jej wiadomości z pytaniami, na które mogłaby odpowiedzieć strona. Przypadek jest fikcyjny.',
       reading: {
         paragraphs: [
           'Klient na stronie szuka odpowiedzi na cztery pytania: czy to dla mnie, co dokładnie dostanę, ile to kosztuje albo jak poznam cenę, co mam teraz zrobić. Nagłówek mówi, co robisz i dla kogo. Opis — jaki problem znika. Cena lub zasada wyceny. Na końcu jedna, konkretna czynność: zadzwoń, przyjdź w godzinach, wyślij zdjęcie.',
           'Zacznij od treści, nie od wyglądu. Kartka z tymi czterema odpowiedziami jest lepsza niż ładny szablon z hasłem „profesjonalizm i pasja”. Obiecuj tylko to, co możesz dotrzymać przy pełnym kalendarzu.',
+          'Programowanie nie jest potrzebne: kreatory stron typu „przeciągnij i upuść” prowadzą krok po kroku i zwykle mają bezpłatny okres próbny. Plan płatny przydaje się, gdy chcesz własną domenę i strony bez cudzych reklam — porównaj ceny w złotych za kilka lat, nie tylko za pierwszy miesiąc. Na start wystarczą trzy podstrony: główna (kim jesteś, co robisz, dla kogo), oferta (usługi z krótkim opisem, zdjęciem i ceną) i kontakt (telefon, e-mail, adres, mapa, godziny).',
         ],
       },
       activities: [
+        {
+          type: 'matching',
+          id: 'm5-trzy-strony',
+          question: 'Na której z trzech podstron Ania umieści każdą informację?',
+          options: ['Strona główna', 'Oferta', 'Kontakt'],
+          rows: [
+            { label: 'Mapa dojazdu i godziny pracowni', correct: 2 },
+            { label: 'Jedno zdanie: poprawki krawieckie na Nadodrzu, zwykle w 5 dni roboczych', correct: 0 },
+            { label: 'Wymiana zamka w kurtce: 80–110 zł, zależnie od długości', correct: 1 },
+            { label: 'Zdjęcie Ani przy maszynie i trzy zdania historii pracowni', correct: 0 },
+            { label: 'Telefon i adres e-mail', correct: 2 },
+            { label: 'Zwężenie sukienki: od 60 zł, wycena po przymiarce, zdjęcie przed i po', correct: 1 },
+          ],
+          explanation: 'Główna mówi, kim jesteś i dla kogo. Oferta — co i za ile. Kontakt — jak dotrzeć. Więcej podstron dodasz, gdy te trzy będą działać.',
+        },
         {
           type: 'spotErrors',
           id: 'm5-szkic-strony',
@@ -56,6 +211,101 @@ export default {
           label: 'Zadanie klienta i treść mojej strony oferty',
           prompt: 'Zapisz: dla kogo, jaki problem, co klient dostaje, cena lub zasada wyceny, jeden następny krok.',
           example: 'Dla osób z okolicy, które kupiły ubranie, ale ono nie pasuje. Nagłówek: Poprawki krawieckie na Nadodrzu — zwykle w 5 dni roboczych. Ceny od 35 zł, przy sukienkach wycena po przymiarce. Następny krok: przyjdź pon.–pt. 10–18 albo wyślij zdjęcie i wymiary.',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      label: 'Historia firmy',
+      title: 'Historia, która sprzedaje lepiej niż cennik',
+      duration: 12,
+      intro: 'Ludzie wolą kupować od ludzi niż od bezimiennej firmy. Kilka zdań o tym, dlaczego robisz to, co robisz, często przekonuje bardziej niż lista cen.',
+      reading: {
+        paragraphs: [
+          'Dobra historia firmy odpowiada na trzy pytania: skąd wziął się pomysł na Twoją działalność, co Cię inspiruje i co sprawia, że Twoja usługa jest inna. Wystarczą trzy, cztery zdania, pisane tak, jak mówisz do klienta przy ladzie.',
+          'To praktyczne zastosowanie zasady z modułu 4: produkt to nie tylko towar. Motocykl można sprzedawać jako maszynę albo jako poczucie wolności. Poprawka krawiecka to nie „skrócenie nogawki”, tylko ulubione spodnie, które znów można nosić. Używaj własnych zdjęć i prawdziwych szczegółów — ogólniki brzmią jak każda inna firma.',
+        ],
+      },
+      activities: [
+        choice(
+          'm5-historia',
+          'Która historia pracowni Ani najlepiej buduje zaufanie?',
+          [
+            'Pracownia krawiecka Ania. Profesjonalizm, jakość, pasja. Zapraszamy!',
+            'Ceny: skrócenie spodni 35 zł, wymiana zamka od 80 zł, zwężenie od 60 zł.',
+            'Przez 12 lat szyłam w zakładzie konfekcyjnym. Pracownię na Nadodrzu otworzyłam, bo szkoda mi było ubrań, które ludzie oddają tylko dlatego, że źle leżą. Przy przymiarce zawsze pokazuję, jak będzie wyglądać poprawka.',
+            'Jesteśmy liderem rynku usług krawieckich w regionie.',
+          ],
+          2,
+          'Konkret (12 lat, Nadodrze), powód (szkoda dobrych ubrań) i coś, co wyróżnia (pokazuje poprawkę przy przymiarce). Takiej historii nie skopiuje konkurencja.',
+          [
+            'Same przymiotniki — tak może napisać każda pracownia.',
+            'Cennik jest potrzebny, ale nie mówi, dlaczego warto zaufać właśnie Ani.',
+            null,
+            'Twierdzenie bez dowodu, które w małej pracowni brzmi nieprawdziwie.',
+          ],
+        ),
+        text('m5-moja-historia', 'Napisz trzy, cztery zdania historii swojej firmy: dlaczego zaczynasz, co Cię inspiruje i co wyróżnia Twoją ofertę.', 'Na przykład: Od dziecka naprawiam rowery całej rodzinie. Serwis mobilny zakładam, bo rodzice z małymi dziećmi nie mają jak zawieźć trzech rowerów do warsztatu. Przyjeżdżam pod blok, a naprawę pokazuję krok po kroku.', { minLength: 60 }),
+      ],
+    },
+    {
+      id: 'przy-zyciu',
+      label: 'Strona żyje',
+      title: 'Strona, która nie umiera po miesiącu',
+      duration: 8,
+      intro: 'Strony nie robi się raz na zawsze. Nieaktualne godziny i cennik sprzed dwóch lat odstraszają bardziej niż brak strony.',
+      reading: {
+        paragraphs: [
+          'Ustal mały, stały rytm: raz w miesiącu sprawdź godziny, ceny i zdjęcia, dodaj jedną nowość (zdjęcie realizacji, nową usługę, krótką aktualność). Na wiadomości odpowiadaj szybko — najlepiej tego samego dnia. To pokazuje, że firma działa.',
+        ],
+      },
+      activities: [
+        choice(
+          'm5-aktualnosc',
+          'Na stronie Ani wciąż wiszą godziny sprzed przeprowadzki i cennik z ubiegłego roku. Co jest najrozsądniejsze?',
+          [
+            'Zostawić — klienci i tak zadzwonią',
+            'Poprawić dane od razu i wpisać w kalendarz stały termin przeglądu strony raz w miesiącu',
+            'Usunąć stronę, skoro nie ma czasu jej prowadzić',
+            'Zlecić przebudowę całej strony od nowa',
+          ],
+          1,
+          'Szybka poprawka usuwa błąd, a stały termin w kalendarzu zapobiega następnemu. Przegląd zajmuje kwadrans.',
+          [
+            'Część klientów nie zadzwoni, tylko przyjdzie pod zamknięte drzwi albo pójdzie gdzie indziej.',
+            null,
+            'Strona to wizytówka i miejsce, gdzie ludzie szukają najpierw. Problemem są nieaktualne dane, nie sama strona.',
+            'Problem to dwie nieaktualne informacje. Przebudowa kosztuje dużo i nie rozwiązuje braku rytmu aktualizacji.',
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'przyklad',
+      label: 'Przykład',
+      title: 'Przykład kompletny: piekarnia w Oławie',
+      duration: 8,
+      intro: 'Piekarnia z Oławy, którą znasz z modułu 4, zakłada pierwszą stronę. Zobacz, jak wszystkie kroki składają się w całość.',
+      reading: {
+        paragraphs: [
+          'Właścicielka rejestruje domenę piekarnia-poranek.pl i w kreatorze stron składa trzy podstrony: główną ze zdjęciem wypieków i trzema zdaniami o tym, dlaczego piecze nocą; ofertę z cenami i koszykami dla biur; kontakt z adresem, mapą, telefonem i godzinami. Uzupełnia też bezpłatną wizytówkę firmy w mapach internetowych.',
+          'Po kilku tygodniach osoby, które wpisują „świeże rogale Oława”, znajdują piekarnię i przychodzą do sklepu. Do tego nie trzeba być ekspertem technicznym. Trzeba być widocznym, wiarygodnym i konsekwentnym: zacząć od małego i dbać o aktualność.',
+        ],
+      },
+      activities: [
+        {
+          type: 'multi',
+          id: 'm5-znalezc',
+          question: 'Co pomoże, żeby osoby szukające „świeże rogale Oława” znalazły piekarnię i do niej przyszły?',
+          options: [
+            'Miasto, adres i nazwy wypieków napisane zwykłym tekstem na stronie',
+            'Cała oferta umieszczona wyłącznie jako zdjęcie ulotki',
+            'Aktualna wizytówka w mapach z godzinami otwarcia',
+            'Animacja powitalna, którą trzeba obejrzeć przed wejściem na stronę',
+            'Własne zdjęcia wypieków i sklepu',
+          ],
+          correct: [0, 2, 4],
+          explanation: 'Wyszukiwarka czyta tekst, a mapy pokazują godziny i drogę. Zdjęcia budują zaufanie. Ulotka w formie obrazka jest dla wyszukiwarki prawie niewidoczna, a animacja tylko opóźnia klienta.',
         },
       ],
     },
@@ -99,6 +349,98 @@ export default {
           'Zgoda na pliki, które nie są niezbędne do działania strony, musi być wcześniejsza, dobrowolna i świadoma. Odmowa ma być równie łatwa jak zgoda.',
           ['Wielkość strony nie ma znaczenia — liczy się zapisywanie plików na urządzeniu użytkownika.', 'Samo wejście na stronę nie jest zgodą. Zgoda wymaga działania i wyboru.', null],
         ),
+      ],
+    },
+    {
+      id: 'ai-codziennie',
+      label: 'AI na co dzień',
+      title: 'Do czego mała firma używa AI na co dzień',
+      duration: 14,
+      intro: 'Druga część modułu opiera się na dwóch warsztatach AI dla małych firm. Pierwszy pokazuje proste zastosowania w codziennej pracy — i ich granice.',
+      reading: {
+        paragraphs: [
+          'Typowe zadania: szkic oferty lub wiadomości do klienta, streszczenie długiego dokumentu, tłumaczenie, uporządkowanie tabeli, pomysły na nazwę czy akcję, ilustracja do posta. Czat z modelem językowym jest dostępny w wielu narzędziach, także bezpłatnych. Wybór konkretnego zależy od zasad przetwarzania danych i tego, czego potrzebujesz — nie od mody.',
+          'Polecenie ma stały schemat: rola („jesteś asystentem pracowni krawieckiej”), kontekst, zadanie, dane wejściowe, a na końcu format, język i długość odpowiedzi. Złożone zadanie dziel na etapy i poprawiaj polecenie po ocenie pierwszego wyniku. Przy obrazach opisz cel, temat, otoczenie, styl, kolorystykę, proporcje i to, czego ma nie być.',
+          'Granice: AI potrafi zmyślać fakty, źle zrozumieć pytanie, a wklejone dane mogą trafić tam, gdzie nie chcesz. Ćwicz na danych przykładowych, a wynik zawsze sprawdza człowiek — szczególnie liczby, ceny i informacje techniczne. Obowiązki oznaczania treści stworzonych z AI zależą od zastosowania i przepisów; nie ma prostej reguły „każdy post trzeba podpisać”, ale nie ma też zwolnienia z myślenia — sprawdź aktualne zasady dla swojego przypadku.',
+        ],
+      },
+      activities: [
+        {
+          type: 'matching',
+          id: 'm5-co-sprawdzic',
+          question: 'Co trzeba sprawdzić w wyniku każdego zadania dla AI?',
+          options: ['Ton i zgodność z ofertą', 'Źródła i aktualność danych', 'Zgodność z wgranym dokumentem', 'Co musi zatwierdzić człowiek'],
+          rows: [
+            { label: 'Firma remontowa: AI pomaga w ofertach, zakupach materiałów i harmonogramie prac', correct: 3 },
+            { label: 'Salon fryzjerski: krótki post o nowej usłudze koloryzacji', correct: 0 },
+            { label: 'Hurtownia budowlana: wybór trzech dachówek wyłącznie z wgranego cennika', correct: 2 },
+            { label: 'Szkoła językowa: zestawienie konkurencji w Opolu z cenami kursów', correct: 1 },
+          ],
+          explanation: 'Post — czy brzmi jak salon i nie obiecuje usług, których nie ma. Zestawienie konkurencji — skąd dane i czy są aktualne. Wybór z cennika — czy nazwy, kolory i ceny zgadzają się z dokumentem. Proces z pieniędzmi i terminami — kto zatwierdza każdy krok.',
+        },
+        choice(
+          'm5-oznaczanie',
+          'Znajomy twierdzi, że „od sierpnia 2026 każdy post zrobiony z AI musi mieć oznaczenie, inaczej grozi kara”. Jak do tego podejść?',
+          [
+            'Uznać to za regułę i oznaczać wszystko, co powstało z pomocą AI',
+            'Zignorować, bo przepisy o AI dotyczą tylko dużych firm technologicznych',
+            'Sprawdzić obowiązki dla swojego konkretnego zastosowania w aktualnych przepisach i regulaminie narzędzia — zamiast przyjmować uogólnienie',
+          ],
+          2,
+          'Obowiązki zależą od rodzaju treści i zastosowania, a przepisy są wdrażane etapami. Uogólnienia z prezentacji czy rozmów nie zastąpią sprawdzenia źródła.',
+          [
+            'Oznaczanie nie szkodzi, ale przyjmowanie uogólnienia jako prawa to zły nawyk — kolejne „reguły” mogą być nieprawdziwe w drugą stronę.',
+            'Część obowiązków dotyczy też firm, które z AI tylko korzystają. To również uogólnienie bez sprawdzenia.',
+            null,
+          ],
+        ),
+      ],
+    },
+    {
+      id: 'wybor-ai',
+      label: 'Wartość i trud',
+      title: 'Które zastosowanie AI ma sens w Twojej firmie',
+      duration: 14,
+      intro: 'Drugi warsztat zadaje jedno pytanie: które zastosowanie da firmie wartość i jest wykonalne przy jej danych, umiejętnościach i pieniądzach?',
+      reading: {
+        paragraphs: [
+          'Każdy pomysł porównaj na dwóch osiach: wpływ na firmę oraz wysiłek, złożoność i ryzyko. Ambicję projektu ogranicza dojrzałość firmy — mała pracownia bez uporządkowanych danych nie zacznie od prognozowania popytu. Opisz pomysł w pięciu polach: cel biznesowy i miernik, potrzebne dane i wiedza, narzędzie, oczekiwana wartość, złożoność i wykonalność.',
+          'Przykłady dydaktyczne z warsztatu (fikcyjne, nie wyniki wdrożeń): sklep spożywczy z 15 osobami — prognoza popytu, promocje, zamówienia online; producent części metalowych z 50 osobami — przewidywanie awarii maszyn, kontrola jakości na zdjęciach; agencja projektowa z 10 osobami — porządkowanie plików, treści kampanii. Porównanie skrajne: klasyfikowanie wydatków w biurze rachunkowym ma prostą ścieżkę wdrożenia, a telekonsultacje medyczne — dużą złożoność prawną, integracyjną i odpowiedzialność.',
+          'Ćwiczenie z opracowania: wybierz jeden powtarzalny proces we własnej firmie, sprawdź, czy jest uporządkowany, wypełnij pięć pól i oceń wartość oraz trudność — najlepiej w parze. Zaczynaj od danych niewrażliwych i zadania, którego wynik łatwo sprawdzić. Kolejne etapy prowadzą Cię przez taki eksperyment krok po kroku.',
+        ],
+      },
+      activities: [
+        {
+          type: 'matching',
+          id: 'm5-piec-pol',
+          question: 'Do którego z pięciu pól karty należy każdy zapis Ani?',
+          options: ['Cel i miernik', 'Dane i wiedza', 'Narzędzie', 'Wartość', 'Złożoność i wykonalność'],
+          rows: [
+            { label: 'Zatwierdzony cennik i 20 zmyślonych zapytań na wzór prawdziwych', correct: 1 },
+            { label: 'Skrócić odpowiedzi z 160 do 90 minut tygodniowo, bez błędnych cen u klientów', correct: 0 },
+            { label: 'Niska: jedno zadanie, łatwe do sprawdzenia, bez integracji z innymi systemami', correct: 4 },
+            { label: 'Czat z modelem językowym, z wyłączonym użyciem rozmów do trenowania', correct: 2 },
+            { label: 'Ponad godzina tygodniowo więcej na przymiarki i szybsze odpowiedzi dla klientów', correct: 3 },
+          ],
+          explanation: 'Pięć pól porządkuje pomysł, zanim wydasz pieniądze: po co, z czego, czym, co to da i jak trudne jest wdrożenie.',
+        },
+        choice(
+          'm5-pierwszy-projekt',
+          'Biuro rachunkowe i firma telemedyczna chcą zacząć od AI. Który projekt ma prostszą ścieżkę wdrożenia?',
+          [
+            'Telekonsultacje medyczne z AI, bo mają większy wpływ',
+            'Oba są tak samo trudne, bo to ta sama technologia',
+            'Wstępne klasyfikowanie wydatków w biurze rachunkowym, sprawdzane przez księgową',
+          ],
+          2,
+          'Dane są uporządkowane, błąd łatwo wychwycić, a odpowiedzialność zostaje przy księgowej. W medycynie dochodzą przepisy, integracja z systemami i odpowiedzialność za zdrowie.',
+          [
+            'Duży wpływ nie wystarczy — złożoność prawna i ryzyko są tu bardzo wysokie.',
+            'Technologia podobna, ale dane, ryzyko i odpowiedzialność zupełnie inne.',
+            null,
+          ],
+        ),
+        text('m5-moj-proces', 'Wybierz jeden powtarzalny proces ze swojej firmy. Czy jest uporządkowany (ktoś mógłby go wykonać według opisu)? Opisz go w pięciu polach: cel i miernik, dane, narzędzie, wartość, złożoność.', 'Na przykład: wyceny napraw rowerów. Uporządkowany — mam cennik części. Cel: wycena w 10 minut zamiast 30. Dane: cennik i opis usterki bez danych klienta. Narzędzie: czat z AI. Wartość: 2 godziny tygodniowo. Złożoność: niska, wynik sprawdzam przed wysłaniem.', { minLength: 60 }),
       ],
     },
     {
@@ -154,7 +496,7 @@ export default {
       intro: 'AI pisze płynnie także wtedy, gdy nie zna odpowiedzi. Dobre polecenie mówi, z czego wolno korzystać, a czego nie wolno dopowiadać.',
       reading: {
         paragraphs: [
-          'Polecenie ma pięć części: zadanie (co zrobić), kontekst (kim jesteś, kto jest odbiorcą), dane wejściowe (cennik, wiadomość klienta), ograniczenia (czego nie robić, co zrobić, gdy brakuje informacji) i format (długość, forma zwracania się, co na końcu).',
+          'Polecenie ma pięć części: zadanie (co zrobić), kontekst (kim jesteś, kto jest odbiorcą), dane wejściowe (cennik, wiadomość klienta), ograniczenia (czego nie robić, co zrobić, gdy brakuje informacji) i format (długość, forma zwracania się, co na końcu). Możesz zacząć od roli, np. „jesteś asystentem pracowni krawieckiej” — pomaga ustawić ton. Pierwszy wynik rzadko jest idealny: popraw polecenie tam, gdzie wynik się myli.',
           'Najważniejsze są ograniczenia. „Podawaj tylko ceny z cennika” i „gdy czegoś nie wiesz, zadaj jedno pytanie” zmniejszają liczbę wymyślonych odpowiedzi bardziej niż długie opisy firmy.',
         ],
         table: {
@@ -287,7 +629,7 @@ export default {
       reading: {
         paragraphs: [
           'Oszczędność to czas bez narzędzia minus czas z narzędziem — a ten drugi obejmuje przygotowanie szkicu i jego sprawdzenie. Pominięcie sprawdzania to najczęstszy powód, dla którego eksperymenty z AI wyglądają lepiej na papierze niż w praktyce.',
-          'Koszt zaoszczędzonej godziny porównaj z wartością Twojej godziny z modułu 4. Jeśli narzędzie kosztuje mniej niż godzina, którą odzyskujesz, i błędy nie docierają do klientów — warto. Decyzję zapisz z datą kolejnego pomiaru.',
+          'Karta eksperymentu z warsztatu ma sześć elementów: problem, przykładowe dane, zadanie dla narzędzia, sposób kontroli wyniku, osobę odpowiedzialną i miernik porównania z obecną pracą. Koszt zaoszczędzonej godziny porównaj z wartością Twojej godziny z modułu 4. Jeśli narzędzie kosztuje mniej niż godzina, którą odzyskujesz, i błędy nie docierają do klientów — warto. Decyzję zapisz z datą kolejnego pomiaru.',
         ],
       },
       activities: [
@@ -327,7 +669,7 @@ export default {
           id: 'm5-pole-decyzja',
           field: 'm5-5',
           label: 'Wynik eksperymentu i decyzja o dalszym użyciu',
-          example: 'Wynik: 160 → 80 min tygodniowo, narzędzie 90 zł/mies., ok. 17 zł za zaoszczędzoną godzinę. Błędy: 3 z 40, wszystkie wyłapane. Decyzja: używam dalej ze sprawdzaniem, poprawiam polecenie dla dżinsów, kolejny pomiar 15 maja.',
+          example: 'Wynik: 160 → 80 min tygodniowo, narzędzie 90 zł/mies., ok. 17 zł za zaoszczędzoną godzinę. Błędy: 3 z 40, wszystkie wyłapane. Odpowiada: Ania. Decyzja: używam dalej ze sprawdzaniem, poprawiam polecenie dla dżinsów, kolejny pomiar 15 maja.',
         },
       ],
     },
