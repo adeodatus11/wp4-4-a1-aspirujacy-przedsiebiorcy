@@ -1,25 +1,38 @@
-import { choice, number } from '../schema.js';
+import { choice, number, text } from '../schema.js';
 
 export default {
   id: 'm3',
   n: 3,
   topic: 'Walidacja pomysłu',
   title: 'Sprawdź pomysł u klientów',
-  subtitle: 'Jak odróżnić uprzejmość od popytu, zadać pytania, które dają fakty, i zaplanować test, który powie „tak”, „zmień” albo „zatrzymaj”.',
-  duration: 90,
+  subtitle: 'Po co zakładać firmę i jak sprawdzić, czy ktoś naprawdę potrzebuje Twojego pomysłu: trzy kroki walidacji, cztery pytania do klienta, skala „uprzejmość — sygnał — dowód” i decyzja na podstawie progu.',
+  duration: 146,
   outcome: 'Karta eksperymentu i scenariusz pięciu rozmów z klientami.',
   realia: ['bdl'],
   objectives: [
-    'Układam sygnały popytu od najsłabszego do najsilniejszego.',
+    'Nazywam swoje powody, żeby prowadzić firmę, i wiem, że motywacja nie zastępuje dowodu popytu.',
+    'Opisuję problem, rozwiązanie w jednym zdaniu i możliwie wąską grupę klientów.',
+    'Prowadzę rozmowę według czterech pytań walidacyjnych i rozpoznaję czerwone flagi w odpowiedziach.',
+    'Dzielę odpowiedzi na uprzejmość, sygnał i dowód — i tylko dowód traktuję jako walidację.',
     'Zapisuję problem, klienta i hipotezę tak, żeby dało się je obalić.',
     'Zadaję pytania o to, co klient zrobił, a nie o to, co by zrobił.',
     'Szacuję lokalny rynek od liczby mieszkańców do liczby możliwych klientów.',
-    'Ustalam miernik i próg decyzji przed testem, a nie po nim.',
+    'Ustalam miernik i próg decyzji przed testem, a nie po nim, i umiem przyjąć wynik negatywny.',
   ],
+  source: {
+    file: '03_Modul_3_Walidacja_pomyslu.md',
+    covers: [
+      ['2. Dlaczego warto zostać przedsiębiorcą', 'dlaczego'],
+      ['3. Walidacja pomysłu', 'problem'],
+      ['3. Walidacja pomysłu', 'cztery'],
+      ['3. Walidacja pomysłu', 'odpowiedzi'],
+      ['5. Coach', 'coach-corner'],
+    ],
+  },
   forGroup:
-    'Na spotkanie przynieś swoje pięć pytań i hipotezę. W grupie przetestujecie pytania na sobie nawzajem i wymienicie kontakty do osób z waszych segmentów — łatwiej porozmawiać z obcą osobą poleconą przez kogoś z grupy niż z własną ciocią.',
+    'Na spotkanie przynieś opis pomysłu na 90 sekund (problem — rozwiązanie w jednym zdaniu — dla kogo), notatki z co najmniej trzech rozmów z osobami spoza kręgu znajomych i swoją hipotezę. W grupie sprawdzicie, czyja grupa klientów jest jeszcze za szeroka, podzielicie zebrane odpowiedzi na uprzejmość, sygnał i dowód oraz wymienicie kontakty do kolejnych rozmów — łatwiej porozmawiać z obcą osobą poleconą przez kogoś z grupy niż z własną ciocią.',
   solo:
-    'Bez grupy: przeprowadź pięć rozmów z osobami spoza rodziny i przyjaciół — przez grupy osiedlowe, fora branżowe albo pytając klientów podobnych firm. Po każdej rozmowie zapisz trzy fakty, zanim zaczniesz je interpretować.',
+    'Bez grupy: przeprowadź co najmniej pięć rozmów z osobami spoza rodziny i przyjaciół — przez grupy osiedlowe, fora branżowe albo pytając klientów podobnych firm. Po każdej rozmowie zapisz trzy fakty, zanim zaczniesz je interpretować, i oznacz każdą odpowiedź jako uprzejmość, sygnał albo dowód. Odpowiedzi z Coach Corner przeczytaj ponownie po tygodniu.',
   sections: [
     {
       id: 'uprzejmosc',

@@ -64,7 +64,7 @@ for (const unit of units) {
     const headings = md
       .split('\n')
       .map(line => line.match(/^(#{1,2}) (.+)/))
-      .filter(m => m && (m[1] === '##' ? !skip.test(m[2]) : /Coach|autorefleksji/i.test(m[2])))
+      .filter(m => m && (m[1] === '##' ? !skip.test(m[2]) : /Coach.{0,3}Corner|autorefleksji/i.test(m[2])))
       .map(m => m[2].replace(/[*_]/g, '').trim());
     const ids = new Set(unit.sections.map(s => s.id));
     for (const [heading, stage] of unit.source.covers) {

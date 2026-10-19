@@ -6,7 +6,7 @@ export default {
   topic: 'Coaching',
   title: 'Od celu do działania',
   subtitle: 'Jak samemu dojść do decyzji, kogo pytać o radę i jak zaplanować pierwszy krok, który zależy tylko od Ciebie.',
-  duration: 90,
+  duration: 110,
   realia: ['przezywalnosc', 'bur'],
   objectives: [
     'Odróżniam coaching od mentoringu, doradztwa i szkolenia i wiem, gdzie szukać każdego z nich.',
@@ -14,12 +14,23 @@ export default {
     'Prowadzę rozmowę według GROW: cel, sytuacja, możliwości, decyzja.',
     'Zapisuję cel na 14 dni, który zależy ode mnie i da się sprawdzić.',
     'Daję informację zwrotną, opisując zachowanie, a nie osobę.',
+    'Wiem, czego nauczę się w kolejnych modułach, i oceniam narzędzie z zewnątrz na liczbach, zanim je wprowadzę.',
   ],
   outcome: 'Kontrakt rozwojowy i plan działania na 14 dni.',
   forGroup:
     'Na spotkaniu w grupie przydadzą się trzy rzeczy z tej ścieżki: dwuminutowe przedstawienie siebie i swojego pomysłu, jedna przeszkoda, o której chcesz porozmawiać (tylko jeśli chcesz), i jedno zdanie o zmianie, którą wprowadzisz w ciągu 14 dni.',
   solo:
     'Bez grupy: przeprowadź rozmowę GROW z zaufaną osobą, która obieca tylko pytać, a nie radzić. Albo odpowiedz na pytania GROW na piśmie, odłóż kartkę na dzień i przeczytaj ją jeszcze raz. Po 14 dniach porównaj plan z tym, co udało się zrobić.',
+  source: {
+    file: '01_Modul_1_Coaching.md',
+    covers: [
+      ['2. Treść merytoryczna', 'pierwszy-rok'],
+      ['2. Treść merytoryczna', 'wsparcie'],
+      ['2. Treść merytoryczna', 'program'],
+      ['3. Studium przypadku', 'przypadek'],
+      ['4. Coach Corner', 'coach-corner'],
+    ],
+  },
   sections: [
     {
       id: 'pierwszy-rok',
@@ -115,6 +126,61 @@ export default {
             'Emocje bywają ważne, ale Ania potrzebuje też konkretnej odpowiedzi — od specjalisty.',
           ],
         ),
+      ],
+    },
+    {
+      id: 'program',
+      label: 'Mapa programu',
+      title: 'Czego możesz się spodziewać w tym programie',
+      duration: 10,
+      intro: 'Zanim zaczniesz, zobacz całą drogę. Program ma osiem modułów, a każdy odpowiada na jedno pytanie, które zadaje sobie osoba zakładająca albo prowadząca małą firmę.',
+      reading: {
+        paragraphs: [
+          'Program jest bezpłatny i nie wymaga wcześniejszej wiedzy z zarządzania. Pracujesz we własnym tempie, na przykładach z małych firm. Jest uporządkowany, ale elastyczny: możesz iść po kolei albo zacząć od modułu, którego najbardziej potrzebujesz. Nie dostaniesz gotowych odpowiedzi. Dostaniesz narzędzia i pytania, dzięki którym znajdziesz własne.',
+          'Najwięcej skorzystają osoby, które zaczynają działalność, właściciele rosnących firm, którzy zaczynają zarządzać ludźmi, osoby przejmujące firmę rodzinną i ci, którzy po wcześniejszym niepowodzeniu chcą zacząć jeszcze raz — tym razem z planem.',
+        ],
+        table: {
+          head: ['Moduł', 'Pytanie przewodnie'],
+          rows: [
+            ['1. Od celu do działania', 'Jak jaśniej widzieć cele i podejmować decyzje?'],
+            ['2. Przedsiębiorczość', 'Dlaczego to Ty jesteś najważniejszym zasobem firmy?'],
+            ['3. Walidacja', 'Czy ktoś naprawdę zapłaci za to, co chcesz oferować?'],
+            ['4. Model biznesowy', 'Jak zamienić pomysł w firmę, która się utrzyma?'],
+            ['5. Narzędzia i AI', 'Które narzędzia oszczędzą Ci czas, a które tylko kosztują?'],
+            ['6. Marketing', 'Jak znaleźć klientów przy małym budżecie?'],
+            ['7. ESG', 'Jak mniejsze straty mogą stać się przewagą firmy?'],
+            ['8. Pitch i finansowanie', 'Jak przekonać innych do wsparcia i ile pieniędzy potrzebujesz?'],
+          ],
+        },
+      },
+      activities: [
+        {
+          type: 'matching',
+          id: 'm1-mapa',
+          question: 'Który moduł odpowie na pytanie tej osoby?',
+          options: ['2. Przedsiębiorczość', '3. Walidacja', '4. Model biznesowy', '5. Narzędzia i AI', '6. Marketing', '8. Pitch i finansowanie'],
+          rows: [
+            { label: 'Mam pomysł na catering dla biur, ale nie wiem, czy ktoś go kupi', correct: 1 },
+            { label: 'Sprzedaję dużo, a na koncie ciągle brakuje pieniędzy', correct: 2 },
+            { label: 'Fundusz pożyczkowy prosi o prezentację firmy w 10 minut', correct: 5 },
+            { label: 'Robię wszystko sama w firmie i nie wiem, w czym jestem naprawdę dobra', correct: 0 },
+            { label: 'Odpisuję na te same pytania klientów po kilkanaście razy dziennie', correct: 3 },
+            { label: 'Ulotki rozdaję wszystkim, a klientów nie przybywa', correct: 4 },
+          ],
+          explanation: 'Każdy moduł zaczyna się od konkretnego kłopotu. Jeśli któryś z nich jest Twój, możesz zacząć od tego modułu.',
+        },
+        {
+          type: 'checklist',
+          id: 'm1-dla-kogo',
+          question: 'Która sytuacja jest najbliższa Twojej? Zaznacz dla siebie.',
+          items: [
+            'Dopiero zaczynam albo planuję firmę',
+            'Prowadzę firmę i zaczynam zatrudniać ludzi',
+            'Przejmuję firmę rodzinną',
+            'Po wcześniejszym niepowodzeniu zaczynam od nowa',
+            'Chcę świadomie rozwijać się jako szefowa lub szef',
+          ],
+        },
       ],
     },
     {
@@ -369,6 +435,46 @@ export default {
             end: { end: true, text: 'Kuba postanawia zacząć od ceny i jednego zdania o tym, dla kogo jest usługa. Następny pitch mieści się w 90 sekundach.' },
           },
         },
+      ],
+    },
+    {
+      id: 'przypadek',
+      label: 'Przypadek',
+      title: 'Narzędzie z zewnątrz — użyte z głową',
+      duration: 10,
+      intro: 'Coaching pomaga podejmować własne decyzje. Podobnie działa dobrze dobrane narzędzie z zewnątrz: nie decyduje za Ciebie, ale zdejmuje część niepewności. Przypadek jest fikcyjny.',
+      reading: {
+        paragraphs: [
+          'Kasia prowadzi z Poznania sklep internetowy z kosmetykami dla salonów fryzjerskich. Salony chcą płacić przelewem za 30 dni, a Kasia płaci hurtowni od razu. Im lepiej idzie sprzedaż, tym mniej gotówki ma na koncie. Wymaganie przedpłaty odstrasza salony, a czekanie 30 dni na każdą fakturę blokuje zakupy towaru.',
+          'Kasia sprawdza usługę odroczonej płatności dla firm (działa podobnie jak faktoring): firma zewnętrzna płaci jej za fakturę od razu, potrąca prowizję, a salon spłaca fakturę po 30 dniach. Zanim podpisze umowę, Kasia liczy, ile prowizja zabierze z marży, i ustala, że wróci do tej decyzji po trzech miesiącach. To decyzja strategiczna, a nie reakcja na pusty rachunek.',
+          'Z tego przypadku płyną cztery wnioski: firma może rosnąć bez dodatkowego długu, narzędzie z zewnątrz pomaga podjąć konkretną decyzję, innowację wprowadza się z planem, a nie w panice, i rozwój idzie krok po kroku.',
+        ],
+      },
+      activities: [
+        number('m1-prowizja', 'Salon zamawia towar za 4000 zł. Marża Kasi to 25% (1000 zł), a prowizja za odroczoną płatność — 2% wartości faktury. Ile zostanie Kasi z marży po prowizji?', 920, 'Prowizja: 2% × 4000 = 80 zł. Z marży zostaje 1000 − 80 = 920 zł, ale pieniądze są na koncie od razu.', {
+          unit: 'zł',
+          tolerance: 0,
+          mistakes: [
+            { value: 3920, text: 'To kwota, którą Kasia dostanie za całą fakturę. Pytanie dotyczy tego, co zostaje z marży.' },
+            { value: 980, text: 'Tu prowizję policzono od marży. Liczy się ją od wartości faktury: 2% × 4000 zł.' },
+          ],
+        }),
+        choice(
+          'm1-strategicznie',
+          'Kiedy wprowadzenie takiego narzędzia jest decyzją strategiczną, a nie reakcją na kłopot?',
+          [
+            'Gdy na koncie zostało 200 zł, a jutro trzeba zapłacić hurtowni',
+            'Gdy Kasia policzyła prowizję wobec marży, sprawdziła warunki umowy i wyznaczyła termin oceny efektu',
+            'Gdy konkurencja już z niego korzysta, więc trzeba szybko zrobić to samo',
+          ],
+          1,
+          'Decyzja strategiczna ma liczby, warunki i datę sprawdzenia. Narzędzie służy celowi, który Kasia sama ustaliła.',
+          [
+            'To reakcja pod presją. Umowę podpisuje się wtedy bez porównania warunków.',
+            null,
+            'Naśladowanie to nie strategia. U Kasi marża i klienci mogą wyglądać inaczej.',
+          ],
+        ),
       ],
     },
     {
