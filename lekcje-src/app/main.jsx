@@ -8,7 +8,7 @@ import { TeacherDrawer, TeacherPlan, groupingLabel } from '../components/teacher
 import { TrainingCatalog, TrainingView } from '../components/training.jsx';
 import { trainings } from '../content/trainings/index.js';
 import { modules } from '../content/modules/index.js';
-import { ModuleView } from '../components/module.jsx';
+import { ModuleCatalog, ModuleView } from '../components/module.jsx';
 import { sectionDone } from '../lib/scoring.js';
 import { clearAll, lessonState, loadState, saveState, withLesson, withoutLesson } from '../lib/store.js';
 import './style.css';
@@ -17,6 +17,7 @@ function readRoute() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if (parts[0] === 'lekcja' && parts[1]) return { page: 'lesson', id: parts[1], stage: Number(parts[2] || 1) - 1 };
   if (parts[0] === 'plan' && parts[1]) return { page: 'plan', id: parts[1] };
+  if (parts[0] === 'moduly') return { page: 'modules' };
   if (parts[0] === 'modul' && parts[1]) return { page: 'module', id: parts[1], stage: Number(parts[2] || 1) - 1 };
   if (parts[0] === 'trening' && parts[1]) return { page: 'training', id: parts[1] };
   if (parts[0] === 'trening') return { page: 'trainings' };
@@ -55,10 +56,10 @@ function App() {
   const lesson = route.page === 'lesson' || route.page === 'plan' ? lessons.find(l => l.id === route.id) : null;
   const unit = route.page === 'module' ? modules.find(m => String(m.n) === route.id) : null;
   const training = route.page === 'training' ? trainings.find(t => t.id === route.id) : null;
-  const isTraining = route.page === 'training' || route.page === 'trainings' || route.page === 'module';
+  const isTraining = route.page === 'training' || route.page === 'trainings' || route.page === 'module' || route.page === 'modules';
 
   useEffect(() => {
-    const title = unit ? `Moduł ${unit.n}: ${unit.title}` : lesson ? `${lesson.title} · Lekcje handlu` : training ? `${training.title} · Trening` : isTraining ? 'Trening dla dorosłych' : 'Lekcje handlu i sprzedaży';
+    const title = route.page === 'modules' ? 'Moduły programu: praca własna' : unit ? `Moduł ${unit.n}: ${unit.title}` : lesson ? `${lesson.title} · Lekcje handlu` : training ? `${training.title} · Trening` : isTraining ? 'Trening dla dorosłych' : 'Lekcje handlu i sprzedaży';
     document.title = route.page === 'plan' ? `Plan: ${title}` : title;
     window.scrollTo(0, 0);
   }, [route.page, route.id, lesson, training, isTraining, unit]);
@@ -68,6 +69,7 @@ function App() {
   else if (route.page === 'training' && !training) content = <NotFound />;
   else if (route.page === 'module' && !unit) content = <NotFound />;
   else if (route.page === 'module') content = <ModuleView key={unit.n} unit={unit} stage={route.stage} state={state} update={update} />;
+  else if (route.page === 'modules') content = <ModuleCatalog state={state} />;
   else if (route.page === 'training') content = <TrainingView key={training.id} training={training} state={state} update={update} />;
   else if (route.page === 'trainings') content = <TrainingCatalog state={state} />;
   else if (route.page === 'lesson') content = <LessonView lesson={lesson} stage={route.stage} state={state} update={update} mode={mode} />;
@@ -102,6 +104,7 @@ function Header({ mode, setMode, showMode }) {
       </a>
       <nav aria-label="Główna">
         <a href="#/">Lekcje HAN</a>
+        <a href="#/moduly">Moduły programu</a>
         <a href="#/trening">Trening dla dorosłych</a>
         <a href="#/o-lekcjach">Jak korzystać</a>
         <a href="../szkola.html">Mapa HAN.01 / HAN.02 ↗</a>

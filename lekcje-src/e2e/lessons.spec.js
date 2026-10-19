@@ -76,7 +76,7 @@ test('katalog: filtr i wyszukiwanie', async ({ page }) => {
 
 test('dostępność (axe): katalog, lekcja, plan, trening', async ({ page }) => {
   const lesson = lessons[0];
-  for (const hash of ['', `#/lekcja/${lesson.id}`, `#/lekcja/${lesson.id}/${lesson.sections.length}`, `#/plan/${lesson.id}`, '#/o-lekcjach', '#/trening', '#/trening/zwroty', '#/modul/1', '#/modul/1/8', '#/modul/6/2', '#/modul/6/5', '#/modul/8/5', '#/modul/8/8']) {
+  for (const hash of ['', `#/lekcja/${lesson.id}`, `#/lekcja/${lesson.id}/${lesson.sections.length}`, `#/plan/${lesson.id}`, '#/o-lekcjach', '#/trening', '#/trening/zwroty', '#/moduly', '#/modul/1', '#/modul/1/8', '#/modul/6/2', '#/modul/6/5', '#/modul/8/5', '#/modul/8/8']) {
     await page.goto(`index.html${hash}`);
     const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
     expect(result.violations.map(v => `${hash}: ${v.id} — ${v.nodes.length}`)).toEqual([]);

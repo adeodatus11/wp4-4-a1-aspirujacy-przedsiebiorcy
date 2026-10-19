@@ -46,7 +46,7 @@ export function ModuleView({ unit, stage: routeStage, state, update }) {
     <main id="main" className="lesson module">
       <header className="lesson-head">
         <p className="eyebrow">
-          <a href={`../modul-${unit.n}.html`}>Moduł {unit.n}</a> · {unit.topic} · ok. {unit.duration} min pracy własnej
+          <a href="#/moduly">Wszystkie moduły</a> · <a href={`../modul-${unit.n}.html`}>Moduł {unit.n}</a> · {unit.topic} · ok. {unit.duration} min pracy własnej
         </p>
         <h1>{unit.title}</h1>
         <p className="lead">{unit.subtitle}</p>
@@ -155,5 +155,41 @@ function ModuleSummary({ unit }) {
         {next ? <a href={`#/modul/${next.n}`}>Następny moduł: {next.title} →</a> : <a href={`../modul-${unit.n + 1}.html`}>Następny moduł →</a>}
       </p>
     </aside>
+  );
+}
+
+// Lista ścieżek do wszystkich modułów programu z postępem etapów.
+export function ModuleCatalog({ state }) {
+  const total = modules.reduce((sum, m) => sum + m.duration, 0);
+  return (
+    <main id="main" className="page">
+      <section className="hero">
+        <p className="eyebrow">Program dla aspirujących przedsiębiorców · praca własna</p>
+        <h1>{modules.length} modułów krok po kroku.</h1>
+        <p className="lead">
+          Każdy moduł programu ma ścieżkę na około półtorej godziny: wyjaśnienia z polskimi przykładami, zadania z informacją zwrotną i pola, które trafiają do „Mojego projektu”. Razem ok. {Math.round(total / 60)} godzin. Moduły można przechodzić po kolei albo zacząć od tego, którego najbardziej potrzebujesz.
+        </p>
+      </section>
+      <ol className="module-paths">
+        {modules.map(m => {
+          const saved = lessonState(state, `modul-${m.n}`);
+          const done = m.sections.filter(s => saved.visited?.includes(s.id) && sectionDone(s, saved.answers)).length;
+          return (
+            <li key={m.n}>
+              <a href={`#/modul/${m.n}`}>
+                <span className="eyebrow">
+                  Moduł {m.n} · {m.topic}
+                </span>
+                <b>{m.title}</b>
+                <span>{m.outcome}</span>
+                <span className="small muted">
+                  {m.sections.length} etapów · ok. {m.duration} min{done > 0 ? ` · ukończone etapy: ${done} z ${m.sections.length}` : ''}
+                </span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </main>
   );
 }

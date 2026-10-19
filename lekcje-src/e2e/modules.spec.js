@@ -29,3 +29,12 @@ for (const unit of modules) {
     }
   });
 }
+
+test('lista modułów: wszystkie ścieżki i link z etapu', async ({ page }) => {
+  await page.goto('index.html#/moduly');
+  await expect(page.locator('.module-paths a')).toHaveCount(modules.length);
+  for (const unit of modules) await expect(page.locator(`.module-paths a[href="#/modul/${unit.n}"]`)).toContainText(unit.title);
+  await page.goto(`index.html#/modul/${modules.at(-1).n}/2`);
+  await page.getByRole('link', { name: 'Wszystkie moduły' }).click();
+  await expect(page.locator('h1')).toContainText(`${modules.length} modułów`);
+});
